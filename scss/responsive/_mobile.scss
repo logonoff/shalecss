@@ -1,0 +1,235 @@
+/*
+** Hamburger Menu (initial)
+*/
+/* Burger Button */
+.burger-button {
+	border-radius: 1em;
+	cursor: pointer;
+	display: inline-block;
+	left: 1.5rem;
+	position: relative;
+	top: .6em;
+	z-index: 9999;
+
+	&:hover { .bar1, .bar2, .bar3 { background-color: white; } }
+}
+
+.bar1, .bar2, .bar3 {
+	background-color: darkgrey;
+	border-radius: 1em;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .75));
+	height: .125rem;
+	margin: .313rem 0;
+	transition: .3s;
+	width: 1.25em;
+}
+
+/*
+** Mobile + Printer stuff
+*/
+/* Printer adjustments */
+@media print {
+	.header, nav, .header-space, .side, .button, footer { display: none; }
+	a { color: black; }
+	body { background: none; }
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 76rem) {
+
+	.grid-body {
+		grid-template-areas: "left content content content content content";
+		margin: 1em;
+
+		.toc {
+			display: none;
+			visibility: hidden;
+		}
+
+	}
+	.one-box { margin: 3em 1em; }
+}
+
+@media all and (max-width: 50.75rem) {
+	.grid-body { display: block; } // disable grid when screen too small for it
+
+	.index {
+		.hero {
+			margin: 3em 0;
+
+			.left-half, .right-half { width: calc(100vw - 2rem); }
+		}
+
+		.hero, .features, .slide {
+			div {
+				display: inline-block;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				max-height: initial;
+				max-width: calc(100vw - 6em);
+			}
+		}
+
+		.slide {
+			margin: auto auto 1em;
+
+			.left-half, .right-half {
+				order: 0;
+				text-align: left;
+				width: initial;
+			}
+
+			.right-half { img { position: static; } }
+		}
+	}
+
+	footer .logo-group {
+		padding-bottom: 1em;
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 37.5rem) {
+	footer .footer-flex .flex-item {
+		line-height: 1.5em;
+		margin: 0 1em;
+		padding-bottom: 1em;
+		// text-align: center;
+		width: 100%;
+
+		&.logo-group a {
+			background-position: -2em;
+		}
+
+		// Increase tap targets
+		a {
+			margin: .1em;
+			padding: .3em;
+		}
+	}
+
+	.no-scroll-mobile-only {
+		/*overflow-y: scroll;
+		position: fixed;*/
+		overflow: hidden;
+	}
+
+	.header-space { height: 3rem; }
+
+	.marketplace.one-box { margin: 3em 0 0 0; }
+
+	.marketplace-flex { // centers marketplace cards
+		display: block;
+		text-align: center;
+		
+		a { margin: 0; }
+
+		div { margin: 0 0 2em; }
+	}
+
+	.footer-flex {
+		align-content: center;
+		margin: 0 1em;
+		div { align-self: center; }
+	}
+
+	.footer-text { padding: 0 1em; }
+
+	.header {
+		height: 3rem;
+
+		.burger-button {
+			cursor: pointer;
+			opacity: 1;
+			pointer-events: visible;
+		}
+
+		nav { visibility: hidden; }
+
+		.menu-bar {
+			display: block;
+			height: 0;
+			padding: 0;
+		}
+
+		.command-bar {
+			border-bottom: 1px solid #9B9B9B;
+			box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .75);
+		}
+
+		/* Burger Menu */
+		&.slide-up, &.slide-down {
+			.menu-bar, .caption-menu {
+				transition: height .3s ease, background .25s ease, visibility .3s linear, opacity .3s linear;
+			}
+		}
+
+		&.slide-up {
+			.menu-bar {
+				height: 0;
+				padding: 0;
+				visibility: hidden;
+
+				.button {
+					box-shadow: unset;
+					opacity: 0;
+					width: 0;
+				}
+			}
+		}
+
+		&.slide-down {
+			background: #454545;
+
+			.bar1 {
+				filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+				transform: rotate(-45deg) translate(-.375rem, .25rem);
+			}
+
+			.bar2 { opacity: 0; }
+
+			.bar3 {
+				filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+				transform: rotate(45deg) translate(-.375rem, -.25rem);
+			}
+
+			.menu-bar {
+				background: #454545;
+				height: 100vh;
+				visibility: visible;
+
+				.button {
+					box-shadow: initial;
+					opacity: 1;
+					padding: 0 1em 0 1em;
+					text-align: left;
+					width: calc(100% - 3em);
+
+					&.current { opacity: .7; }
+				}
+			}
+
+			.caption-menu {
+				opacity: .5;
+			}
+		}
+	}
+
+	.module-page .cover .card {
+		display: block;
+		height: auto;
+		min-height: 10rem;
+
+		span {
+			display: block;
+			margin: 1em;
+		}
+	}
+
+}
+
+@media screen and (min-width: 37.5rem) {
+	html { overflow-y: scroll; }
+}

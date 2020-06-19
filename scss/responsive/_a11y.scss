@@ -1,0 +1,62 @@
+/*
+** a11y
+*/
+/* Tab Skip */
+.skip-to-content {
+	height: 1px;
+	left: -25565vw;
+	overflow: hidden;
+	position: absolute;
+	top: 1em;
+	width: 1px;
+	z-index: -1337;
+
+	&:focus-visible, &:active {
+		background: #575757;
+		border: 3px solid white;
+		border-radius: 15px;
+		color: white;
+		font-size: 1rem;
+		height: auto;
+		left: calc(50vw - 6rem);
+		margin: 1rem .5rem;
+		overflow: auto;
+		padding: .5rem 1rem;
+		text-align: center;
+		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
+		width: auto;
+		z-index: 6969;
+	}
+}
+
+.skip-target {
+	float: right;
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+}
+
+/* screen reader only text */
+.vox-only { // hidden text for narrators
+	height: 1px;
+	left: -420691337px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
+
+/* :focus styling + remove it when mouse is used */
+// slightly increase visibility when tabbing to links
+a:not(.button):not(.ignore-jerry-mouse) { // sass-lint:disable-line force-pseudo-nesting
+	&:focus { background-color: var(--link-focus-bg); }
+}
+
+// :focus styling serves no purpose when a mouse is being used, and is removed
+.jerry-mouse { // styles reset when mouse used
+	&:focus { outline: none; }
+
+	a:not(.button):not(.ignore-jerry-mouse) { // sass-lint:disable-line force-pseudo-nesting
+		&:focus { background-color: transparent; }
+	}
+}

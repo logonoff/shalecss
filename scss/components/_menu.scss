@@ -1,0 +1,125 @@
+/*
+** Menu
+*/
+/* Caption Buttons */
+.a11y-menu, .caption-menu {
+//  display: none;
+	float: right;
+	line-height: 3rem;
+	padding-right: 1rem;
+	pointer-events: auto;
+	position: relative;
+}
+
+/* Required for _mobile */
+.mobile-logo { display: none; }
+
+/*
+** Anchor link offset
+** https://stackoverflow.com/a/24298427
+*/
+*[id]::before {
+	content: " ";
+	display: block;
+	height: 4rem;
+	margin-top: -4rem;
+	visibility: hidden;
+}
+
+/* Header + Menu Bar */
+.header {
+	background: #575757 linear-gradient(#575757 0%, #454545 100%);
+	border-bottom: 1px solid #9B9B9B;
+	box-shadow: 0 5px 20px 1px rgba(0, 0, 0, .75);
+	color: white;
+	display: block;
+	fill: white;
+	position: sticky; // note This might not be how it works
+	top: -3rem; // note This might not be proper use of sticky positioning
+	transition: transform .3s ease;
+	user-select: none;
+	width: 100%;
+	z-index: 41;
+
+	&.scroll-up { transform: translateY(-3em); }
+
+	.burger-button {
+		display: block;
+		float: left;
+		line-height: 3rem;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.title {
+		font-size: var(--font-1);
+		height: 3rem;
+		line-height: 3rem;
+		opacity: .7;
+		text-align: center;
+
+		.title-text {
+			display: inline-block;
+			margin: 0;
+			text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
+		}
+	}
+
+	nav {
+		background: transparent;
+		bottom: .225em;
+		display: inline-block;
+		height: 3rem;
+		line-height: 3.25rem;
+		position: relative;
+		text-align: center;
+		width: inherit;
+		z-index: 42;
+
+		.button {
+			background: transparent;
+			border: initial;
+			border-radius: initial;
+			color: inherit;
+			display: inline-block;
+			line-height: 3rem;
+			opacity: .7;
+			padding: 0 5%;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 0 0 6px rgba(0, 0, 0, .75);
+			transition: box-shadow .125s ease;
+
+			&:hover, &.current {
+				box-shadow: inset 0 -.25rem 0 0 rgb(var(--accent)), inset 0 -3.25rem 1rem -3rem rgba(var(--accent), .69);
+				opacity: 1;
+			}
+
+			/*
+			!! For old Edge and Firefox, combining :focus-visible and :hover disables styling for both.
+			!! Therefore, the same style is duplicated, as shown in the next block.
+			*/
+			&:focus-visible {
+				box-shadow: inset 0 -.25rem 0 0 rgb(var(--accent)), inset 0 -3.25rem 1rem -3rem rgba(var(--accent), .69);
+				opacity: 1;
+			}
+
+			&:active { box-shadow: inset 0 -.25em 0 0 rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36)); }
+
+			&.disabled {
+				box-shadow: inherit;
+				opacity: .6;
+				text-shadow: none;
+			}
+		}
+	}
+}
+
+/*
+** Command Bar
+*/
+.command-bar {
+	background: linear-gradient(rgb(var(--card-1)), rgb(var(--card-2)));
+	border-top: 1px #9B9B9B solid;
+	padding: .5em;
+}

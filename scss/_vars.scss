@@ -1,0 +1,30 @@
+// sass-lint:disable-all
+/*
+** Variables
+*/
+// Define variables
+:root {
+/* Font Sizes (1.25 scale) */
+--scale: 1.25;
+
+--font-7: calc(var(--font-6) * var(--scale));
+--font-6: calc(var(--font-5) * var(--scale));
+--font-5: calc(var(--font-4) * var(--scale));
+--font-4: calc(var(--font-3) * var(--scale));
+--font-3: calc(var(--font-2) * var(--scale));
+--font-2: calc(var(--font-1) * var(--scale));
+--font-1: calc(var(--font-0) * var(--scale));
+--font-0: 1rem;
+--font--1: calc(var(--font-0) / var(--scale));
+--font--2: calc(var(--font--1) / var(--scale));
+--font--3: calc(var(--font--2) / var(--scale));
+
+/* Dynamic accent colour */
+// --accent: rgb(157, 198, 218);
+
+// A is short for accent cuz I don't want to type accent every time I'm using it
+--a-r: 157;
+--a-g: 198;
+--a-b: 218;
+--accent: var(--a-r), var(--a-g), var(--a-b);
+}

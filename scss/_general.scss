@@ -1,0 +1,72 @@
+/*
+** HTML and body styling
+*/
+html {
+	background: var(--background);
+	color: var(--text);
+	font-family: "Ubuntu", "Segoe UI", sans-serif;
+	font-size: var(--font-0);
+	line-height: 1.5rem;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+}
+
+// use this if you're not pairing with another layout system
+.one-box {
+	align-content: center;
+	margin: 3em auto;
+	max-width: 75em;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+}
+
+/*
+** General
+*/
+.transition { transition: all .3s ease !important; }
+
+.byline { font-style: italic; }
+
+.invisible { // hides element in 3 ways incase the other two fail
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.disabled {
+	opacity: .6;
+	pointer-events: none;
+	user-select: none;
+}
+
+.resize { height: 25em; }
+
+.pixelated { image-rendering: optimizeSpeed; }
+
+.spoiler {
+	background-color: black;
+	color: black;
+	padding: 0 .5em;
+
+	&:hover { color: white; }
+}
+
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+}
+
+.card {
+	background: linear-gradient(rgb(var(--card-1)), rgb(var(--card-2)));
+	border-radius: .2em;
+	box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .32);
+	padding: 1em;
+}

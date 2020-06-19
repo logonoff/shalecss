@@ -1,0 +1,31 @@
+/*
+** Typography
+*/
+/* Headers */
+h1, h2, h3, h4, h5 {
+	font-weight: 500;
+	margin: 2.75rem 0 1rem;
+}
+
+h1 { font-size: var(--font-3); }
+h2 { font-size: var(--font-2); }
+h3 { font-size: var(--font-1); }
+
+/* Code */
+pre, code, .hll, .code { background-color: #EEE; }
+
+.code, code {
+	border-radius: .2em;
+	color: #171700;
+	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
+	margin: -.2em 0;
+	padding: .2em;
+	white-space: pre-wrap;
+}
+
+pre {
+	border-radius: .2rem;
+	padding: .25rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}

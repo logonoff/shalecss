@@ -1,0 +1,43 @@
+/*
+** Buttons
+*/
+a {
+	color: #00729E;
+	text-decoration: none;
+
+	[data-iconame$="newtab"] {
+		font-size: .75em;
+		padding-left: .25em;
+	}
+
+	&:hover { text-decoration: underline; }
+
+	&.button {
+		background: #EEE linear-gradient(#EEE , #DADADA);
+		border: 1px solid #B5B5B5;
+		border-radius: 3px;
+		color: var(--text);
+		display: inline-block;
+		font-size: var(--font--1);
+		line-height: 1.75em;
+		min-height: 1.75em;
+		padding: .5rem .65rem;
+		text-align: center;
+		text-decoration: none;
+		transition: background .3s ease, border-color .3s ease;
+		user-select: none;
+		vertical-align: middle;
+
+		&:hover {
+			background: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
+			border-color: #CECECE;
+		}
+
+		&:active, &:focus-visible, &.current {
+			background: rgb(calc(var(--a-r) + 57), calc(var(--a-g) + 38), calc(var(--a-b) + 28)) linear-gradient(rgb(calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20)), rgb(var(--accent)));
+			border-color: rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36));
+		}
+
+		&.disabled { background: #CCC linear-gradient(#CCC, #AAA); }
+	}
+}

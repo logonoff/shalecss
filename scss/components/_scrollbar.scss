@@ -1,0 +1,99 @@
+// sass-lint:disable no-vendor-prefixes nesting-depth force-pseudo-nesting
+/*
+** Scrollbars
+** based off https://stackoverflow.com/a/52895808
+** will be a pain to read
+** HACK: CSS SCROLLBARS ARE NON STANDARD
+** NOTE: Syntax may change in the future
+**/
+
+html:not(.no-custom-scrollbar) {
+// Base track
+::-webkit-scrollbar-track { background: var(--scrollbar-track-bg); }
+
+// Something happens here
+::-webkit-scrollbar {
+	box-shadow: -5px 0 5px 0 rgba(0, 0, 0, .18);
+	width: 17px;
+}
+
+// Scrollbar bar thingy
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(var(--scrollbar-thumb-1), var(--scrollbar-thumb-2));
+	border: 1px solid var(--scrollbar-border);
+
+	&:hover {
+		background: linear-gradient(var(--scrollbar-thumb-hover-1), var(--scrollbar-thumb-hover-2));
+		border: 1px solid var(--scrollbar-border-hover);
+		// box-shadow: inset 0 0 0 1px linear-gradient(#D6ECF6, rgb(var(--scrollbar-inset-border)));
+	}
+
+	&:active {
+		background: linear-gradient(rgb(var(--scrollbar-thumb-active-1)), rgb(var(--scrollbar-thumb-active-2)));
+		border: 1px solid rgb(var(--scrollbar-border-active));
+		box-shadow: inset 0 0 0 1px linear-gradient(#D6ECF6, rgb(var(--scrollbar-inset-border)));
+	}
+}
+
+// Flush out the corner
+::-webkit-scrollbar-corner { background-color: var(--scrollbar-corner); }
+
+// Scrollbar Buttons
+::-webkit-scrollbar-button {
+	height: 17px;
+	width: 17px;
+
+	&:vertical {
+		&:start:decrement {
+			background: linear-gradient(134deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(233deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(0deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
+			border: 1px solid var(--scrollbar-border);
+			box-shadow: inset 0 0 0 1px linear-gradient(#FBFBFB, #E2E2E2);
+
+			&:hover {
+				background: linear-gradient(134deg, var(--scrollbar-hover-1) 40%, transparent 41%), linear-gradient(233deg, var(--scrollbar-hover-1) 40%, transparent 41%), linear-gradient(0deg, var(--scrollbar-hover) 40%, transparent 41%) var(--scrollbar-arrow);
+				box-shadow: inset 0 0 0 1px linear-gradient(#D5ECF6, rgb(var(--scrollbar-inset-border)));
+			}
+
+			&:active {
+				background: linear-gradient(134deg, rgb(var(--scrollbar-active-1)) 40%, transparent 41%), linear-gradient(233deg, rgb(var(--scrollbar-active-1)) 40%, transparent 41%), linear-gradient(0deg, rgb(var(--scrollbar-active)) 40%, transparent 41%) var(--scrollbar-arrow);
+				border: 1px solid rgb(var(--scrollbar-border-active));
+				box-shadow: inset 0 0 0 1px linear-gradient(#D5ECF6, rgb(var(--scrollbar-inset-border)));
+			}
+		}
+
+		&:end:increment {
+			background: linear-gradient(315deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(45deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(180deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
+			border: 1px solid var(--scrollbar-border);
+			box-shadow: inset 0 0 0 1px linear-gradient(#FCFCFC, #E2E2E2);
+
+			&:active {
+				background: linear-gradient(315deg, rgb(var(--scrollbar-active)) 40%, transparent 41%), linear-gradient(45deg, rgb(var(--scrollbar-active)) 40%, transparent 41%), linear-gradient(180deg, rgb(var(--scrollbar-active-1)) 40%, transparent 41%) var(--scrollbar-arrow);
+				border: 1px solid rgb(var(--scrollbar-border-active));
+				box-shadow: inset 0 0 0 1px linear-gradient(#D5ECF6, rgb(var(--scrollbar-inset-border)));
+			}
+		}
+	}
+
+	&:horizontal {
+		&:start:decrement {
+			background: linear-gradient(45deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(145deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(270deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
+
+			&:active {
+				background: linear-gradient(45deg, rgb(var(--scrollbar-active)) 40%, transparent 41%), linear-gradient(145deg, rgb(var(--scrollbar-active)) 40%, transparent 41%), linear-gradient(270deg, rgb(var(--scrollbar-active-1)) 40%, transparent 41%) var(--scrollbar-arrow);
+				border: 1px solid rgb(var(--scrollbar-border-active));
+				box-shadow: inset 0 0 0 1px linear-gradient(#D5ECF6, rgb(var(--scrollbar-inset-border)));
+			}
+		}
+
+		&:end:increment {
+			background: linear-gradient(225deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(315deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(90deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
+
+			&:active {
+				background: inear-gradient(255deg, rgb(var(--scrollbar-active-1)) 40%, transparent 41%), linear-gradient(315deg, rgb(var(--scrollbar-active)) 40%, transparent 41%), linear-gradient(90deg, rgb(var(--scrollbar-active)) 40%, transparent 41%) var(--scrollbar-arrow);
+				border: 1px solid rgb(var(--scrollbar-border-active));
+				box-shadow: inset 0 0 0 1px linear-gradient(#D5ECF6, rgb(var(--scrollbar-inset-border)));
+			}
+		}
+	}
+}
+}

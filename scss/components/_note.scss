@@ -1,0 +1,67 @@
+/*
+** Alert, Info, Warning
+*/
+$note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+$note-info-dark: #093044;
+
+$note-alert-base: linear-gradient(#F9D2D2, #D9B2B2);
+$note-alert-dark: #440909;
+
+$note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+$note-warn-dark: #404409;
+
+$note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+$note-tip-dark: #094409;
+
+// todo: color the icons
+
+.note {
+	border: 1px solid transparent;
+	border-radius: .2rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: .9rem;
+
+	.note-title::before {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		content: " ";
+		display: inline-block;
+		height: 1em;
+		margin-right: .3em;
+		width: 1em;
+	}
+
+	&.info {
+		background: $note-info-base;
+		border-color: $note-info-dark;
+		color: $note-info-dark;
+
+		.note-title::before { background-image: url("icons.svg#icon-info"); }
+	}
+
+	&.alert {
+		background: $note-alert-base;
+		border-color: $note-alert-dark;
+		color: $note-alert-dark;
+	
+		.note-title::before { background-image: url("icons.svg#icon-warning"); }
+	}
+
+	&.warn {
+		background: $note-warn-base;
+		border-color: $note-warn-dark;
+		color: $note-warn-dark;
+	
+		.note-title::before { background-image: url("icons.svg#icon-danger"); }
+	}
+
+	&.tip {
+		background: $note-tip-base;
+		border-color: $note-tip-dark;
+		color: $note-tip-dark;
+	
+		.note-title::before { background-image: url("icons.svg#icon-lightbulb"); }
+	}
+}
