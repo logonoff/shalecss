@@ -22,7 +22,14 @@ input {
 	}
 
 	&[type="checkbox"], &[type="radio"] {
-		display: none;
+		opacity: 0;
+		position: absolute;
+
+		&:focus + label .sc-input {
+			background: linear-gradient(#F2F2F2, #E9E9E9);
+			border: 1px solid #CECECE;
+			box-shadow: inset 0 0 0 1px white;
+		}
 
 		+ label { user-select: none; }
 
