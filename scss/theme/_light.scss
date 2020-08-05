@@ -10,6 +10,8 @@
 --background: linear-gradient(#CCC, #BEBEBE); // site background
 --text: black;
 
+--link-colour: #00729E;
+
 --link-focus-bg: white;
 
 --input-fill: calc(var(--a-r) - 144), calc(var(--a-g) - 136), calc(var(--a-b) - 136); // fill for the center of radio and checkbox
@@ -19,24 +21,42 @@
 --card-1: 238, 238, 238; // card background (gradient stop 1)
 --card-2: 218, 218, 218; // card background (gradient stop 2)
 
+/* Notes */
+--note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+--note-info-dark: #093044;
+
+--note-alert-base: linear-gradient(#F9D2D2, #D9B2B2);
+--note-alert-dark: #440909;
+
+--note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+--note-warn-dark: #404409;
+
+--note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+--note-tip-dark: #094409;
+
+/* Button */
+--button: #EEE linear-gradient(#E0E0E0, #CCC);
+--button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
+--button-active: rgb(var(--accent)) linear-gradient(rgb(calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20)), rgb(var(--accent)));
+--button-disabled: #CCC linear-gradient(#CCC, #AAA);
+
+--button-border: #B5B5B5;
+--button-border-hover: #CECECE;
+--button-border-active: rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36));
+
+--button-inset-border: #E3E3E3;
+--button-inset-border-hover: #FDFDFD;
+--button-inset-border-active: rgb(var(--accent));
+
 /* Scrollbar */
 --scrollbar-corner: #F0F0F0;
---scrollbar-track-bg: #F5F5F5;
---scrollbar-thumb-1: #EEE;
---scrollbar-thumb-2: #DADADA;
---scrollbar-thumb-hover-1: #F2F2F2;
---scrollbar-thumb-hover-2: #E9E9E9;
---scrollbar-thumb-active-1: calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20);
---scrollbar-thumb-active-2: var(--accent);
+
+--scrollbar-track-bg: #F5F5F5 linear-gradient(#DFDFDF, #CDCDCD); // todo: fix poor contrast
 
 --scrollbar-button: #DADADA; // scrollbar button initial
---scrollbar-inset-border: calc(var(--a-r) + 9), calc(var(--a-g) + 11), calc(var(--a-b) + 10); // scrollbar button inset border
---scrollbar-border: #B5B5B5; // scrollbar button border
---scrollbar-border-hover: #FDFDFD; // scrollbar button border
---scrollbar-border-active: calc(var(--a-r) - 41), calc(var(--a-g) - 32), calc(var(--a-b) - 36); // scrollbar button active not inset border
 --scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
 --scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
---scrollbar-active: calc(var(--a-r) + 19), calc(var(--a-g) + 33), calc(var(--a-b) - 18); // scrollbar button active (bottom)
---scrollbar-active-1: calc(var(--a-r) + 10), calc(var(--a-g) + 24), calc(var(--a-b) + 9); // scrollbar button active (top)
+--scrollbar-active: calc(var(--a-r) + 10), calc(var(--a-g) + 10), calc(var(--a-b) + 10); // scrollbar button active (bottom)
+--scrollbar-active-1: calc(var(--a-r) + 25), calc(var(--a-g) + 25), calc(var(--a-b) + 25); // scrollbar button active (top)
 --scrollbar-arrow: #333; // color of scrollbar arrow
 }

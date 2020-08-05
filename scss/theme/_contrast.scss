@@ -1,6 +1,7 @@
 /*
 ** Contrast
 	TODO: get user feedback, improve theme
+	!!!! FIX THIS !!!!
 	review potential debt: some links use accent color instead of txt color for style
 */
 
@@ -25,7 +26,7 @@
 
 	// change caption button
 	.caption-button {
-		&.js-contrast svg { transform: rotate(180deg); } // horizontal-flip contrast button
+		&.js-contrast .icon { transform: rotate(180deg); } // horizontal-flip contrast button
 
 		// disable dark button when contrast is enabled (they don't mix well)
 		&.js-darkmode {
@@ -89,16 +90,6 @@
 
 			--accent: 63, 242, 63;
 		}
-	}
-
-	// HACK: !important is used here
-	.marketplace.flex-item, .card {
-		border: 1px solid transparent !important;
-		border-color: rgb(var(--accent)) !important;
-	}
-
-	.marketplace-flex .flex-item{
-		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25), inset 0 0 0 0.25em var(--accent);
 	}
 
 	// header

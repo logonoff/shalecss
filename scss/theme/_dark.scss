@@ -3,34 +3,62 @@
 */
 
 .dark {
+
+--link-focus-bg: #444;
+/* General */
 --background: linear-gradient(#333, #252525);
 --text: white;
 
---card-1: 85, 85, 85; // card background (gradient stop 1)
---card-2: 65, 65, 65; // card background (gradient stop 2)
+--link-colour: #4CB9E2;
+--link-focus-bg: white;
 
 --input-fill: calc(var(--a-r) + 11), calc(var(--a-g) + 4), calc(var(--a-b) + 5); // fill for the center of radio and checkbox
 
---scrollbar-corner: #454545;
---scrollbar-track-bg: linear-gradient(#464646, #343434);
---scrollbar-thumb-1: #555;
---scrollbar-thumb-2: #414141;
---scrollbar-thumb-hover-1: #595959;
---scrollbar-thumb-hover-2: #505050;
---scrollbar-thumb-active-1: calc(var(--a-r) - 50), calc(var(--a-g) - 69), calc(var(--a-b) - 96);
---scrollbar-thumb-active-2: calc(var(--a-r) - 73), calc(var(--a-g) - 89), calc(var(--a-b) - 107);
+/* Cards */
+// these are in decimal to allow for alpha transparency in marketplace
+--card-1: 85, 85, 85; // card background (gradient stop 1)
+--card-2: 65, 65, 65; // card background (gradient stop 2)
+	
+// docs notes
+// fixme: colours look bad
+--note-info-base: linear-gradient(#093044, #082A3B);
+--note-info-dark: #D2ECF9;
+
+--note-alert-base: linear-gradient(#440909, #3B0808);
+--note-alert-dark: #F9D2D2;
+
+--note-warn-base: linear-gradient(#404409, #373B08);
+--note-warn-dark: #F7F9D2;
+
+--note-tip-base: linear-gradient(#094409, #083B08);
+--note-tip-dark: #D2F9D2;
+	
+/* Button */
+--button: #333 linear-gradient(#474747, #333);
+--button-hover: #595959 linear-gradient(#595959, #505050);
+--button-active: rgb(var(--accent)) linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
+--button-disabled: #2D2D2D;
+
+--button-border: #1C1C1C;
+--button-border-hover: #353535;
+--button-border-active: rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 132));
+
+--button-inset-border: #555;
+--button-inset-border-hover: #666;
+--button-inset-border-active: rgb(calc(var(--a-r) - 43), calc(var(--a-g) - 59), calc(var(--a-b) - 92));
+	
+/* Scrollbar */
+--scrollbar-track-bg: #343434 linear-gradient(#464646, #343434); // todo: fix poor contrast
 
 --scrollbar-button: #555; // scrollbar button initial
---scrollbar-border: #2A2A2A; // scrollbar button border
---scrollbar-border-hover: #626262; // scrollbar button border
 --scrollbar-hover: #515151; // scrollbar button hover (bottom)
 --scrollbar-hover-1: #535353; // scrollbar button hover (top)
 --scrollbar-active: calc(var(--a-r) - 73), calc(var(--a-g) - 88), calc(var(--a-b) - 105); // scrollbar button active (bottom)
 --scrollbar-active-1: calc(var(--a-r) - 71), calc(var(--a-g) - 86), calc(var(--a-b) - 103); // scrollbar button active (top)
 --scrollbar-arrow: #CCC; // color of scrollbar arrow
+--scrollbar-corner: #454545;
 
---link-focus-bg: #444;
-
+// firefox scrollbar
 scrollbar-color: #4D4D4D #171717;
 scrollbar-color: dark;
 
@@ -41,21 +69,9 @@ scrollbar-color: dark;
 	user-select: none;
 }
 
-a { color: #4CB9E2; }
+.note { .note-title::before { filter: invert(1); } }
 
 p:not(.title-text), li { opacity: .8; }
-
-.toc {
-	ul li {
-		border-left: rgba(255, 255, 255, .2) 1px solid;
-	}
-
-	ul li {
-		&.current {
-			border-left: rgba(255, 255, 255, .5) 1px solid;
-		}
-	}
-}
 
 .command-bar { background: linear-gradient(#646464, #4E4E4E)}
 
@@ -63,49 +79,9 @@ p:not(.title-text), li { opacity: .8; }
 
 // .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
 
-.code, code {
+.code, code, pre {
 	background: #191919;
 	color: var(--text);
-}
-
-// docs notes
-// fixme: colours look bad
-$note-info-base: linear-gradient(#093044, #082A3B);
-$note-info-light: #D2ECF9;
-
-$note-alert-base: linear-gradient(#440909, #3B0808);
-$note-alert-light: #F9D2D2;
-
-$note-warn-base: linear-gradient(#404409, #373B08);
-$note-warn-light: #F7F9D2;
-
-$note-tip-base: linear-gradient(#094409, #083B08);
-$note-tip-light: #D2F9D2;
-
-.note {
-	&.info {
-		background: $note-info-base;
-		color: $note-info-light;
-		svg { use { fill: $note-info-light; } }
-	}
-
-	&.alert {
-		background: $note-alert-base;
-		color: $note-alert-light;
-		svg { use { fill: $note-alert-light; } }
-	}
-
-	&.warn {
-		background: $note-warn-base;
-		color: $note-warn-light;
-		svg { use { fill: $note-warn-light; } }
-	}
-
-	&.tip {
-		background: $note-tip-base;
-		color: $note-tip-light;
-		svg { use { fill: $note-tip-light; } }
-	}
 }
 
 // HACK: !important is used here
@@ -119,44 +95,6 @@ input {
 			box-shadow: 0 0 0 1px rgb(calc(var(--a-r) - 66), calc(var(--a-g) - 78), calc(var(--a-b) - 97)), 0 0 0 2px rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 117)) !important; // TODO: make this line shorter
 			outline: 1px solid #414141 !important;
 		}
-	}
-
-	&[type="radio"], &[type="checkbox"] {
-		+ label .custom-input {
-			border: 1px solid #1C1C1C !important;
-			box-shadow: inset 0 0 0 1px #555 !important;
-		}
-
-		&:hover + label .custom-input {
-			background: linear-gradient(#595959, #505050) !important;
-			border: 1px solid #353535 !important;
-			box-shadow: inset 0 0 0 1px #666 !important;
-		}
-	}
-}
-
-.button:not(.menu-bar-button) {
-	background: linear-gradient(#474747, #333333);
-	border: 1px solid #1C1C1C;
-	border-radius: 3px;
-	box-shadow: inset 0 0 0 1px #555;
-	color: white;
-
-	&:hover {
-		background: linear-gradient(#595959, #505050);
-		border: 1px solid #353535;
-		box-shadow: inset 0 0 0 1px #666;
-	}
-
-	&:active, &:focus, &.current {
-		background: linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
-		border: 1px solid rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 132));
-		box-shadow: inset 0 0 0 1px #798B8C;
-	}
-
-	.disabled {
-		background: #2D2D2D;
-		border: 1px solid #404040;
 	}
 }
 

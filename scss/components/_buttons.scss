@@ -1,8 +1,39 @@
 /*
 ** Buttons
 */
+
+@mixin button-style {
+	background: var(--button);
+	border: 1px solid var(--button-border);
+	color: var(--text);
+	transition: background .3s ease, border-color .3s ease;
+	box-shadow: inset 0 0 0 1px var(--button-inset-border);
+
+	&:hover {
+		background: var(--button-hover);
+		border-color: var(--button-border-hover);
+		box-shadow: inset 0 0 0 1px var(--button-inset-border-hover);
+
+	}
+
+	&:active {
+		background: var(--button-active);
+		border-color: var(--button-border-active);
+		box-shadow: inset 0 0 0 1px var(--button-inset-border-active);
+	}
+
+	// done like this because scrollbar wants active to be the only selector in style for some reason
+	&:focus-visible, &.current {
+		background: var(--button-active);
+		border-color: var(--button-border-active);
+		box-shadow: inset 0 0 0 1px var(--button-inset-border-active);
+	}
+
+	&.disabled { background: var(--button-disabled) }
+}
+
 a {
-	color: #00729E;
+	color: var(--link-colour);
 	text-decoration: none;
 
 	[data-iconame$="newtab"] {
@@ -13,8 +44,7 @@ a {
 	&:hover { text-decoration: underline; }
 
 	&.button {
-		background: #EEE linear-gradient(#EEE , #DADADA);
-		border: 1px solid #B5B5B5;
+		@include button-style;
 		border-radius: 3px;
 		color: var(--text);
 		display: inline-block;
@@ -24,20 +54,7 @@ a {
 		padding: .5rem .65rem;
 		text-align: center;
 		text-decoration: none;
-		transition: background .3s ease, border-color .3s ease;
 		user-select: none;
 		vertical-align: middle;
-
-		&:hover {
-			background: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
-			border-color: #CECECE;
-		}
-
-		&:active, &:focus-visible, &.current {
-			background: rgb(calc(var(--a-r) + 57), calc(var(--a-g) + 38), calc(var(--a-b) + 28)) linear-gradient(rgb(calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20)), rgb(var(--accent)));
-			border-color: rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36));
-		}
-
-		&.disabled { background: #CCC linear-gradient(#CCC, #AAA); }
 	}
 }

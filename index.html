@@ -9,7 +9,6 @@
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com/" crossorigin="anonymous"/>
 		<link rel="stylesheet" href="build/shalecss.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" crossorigin="anonymous">
-		<script src="main.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -25,32 +24,39 @@
 				<p class="title-text">shale.css<sup>working</sup></p>
 
 				<span class="caption-menu a11y-menu">
-					<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size" role="button">
+					<a class="caption-button js-textsize" onclick="toggleTextSize(this)" role="button">
 						<span class="icon icon-a-uppercase"></span>
 						<span class="vox-only">Toggle text size</span> 
 					</a>
 
 					<span class="invisible">&nbsp;</span>
 
-					<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast" role="button">
+					<a class="caption-button js-contrast" onclick="toggleContrast(this)" role="button">
 						<span class="icon icon-contrast"></span>
 						<span class="vox-only">Toggle contrast</span> 
 					</a>
 
 					<span class="invisible">&nbsp;</span>
 
-					<a class="caption-button js-darkmode ignore-jerry-mouse" href="javascript:void(0);" title="Toggle dark mode" role="button">
+					<a class="caption-button js-darkmode" onclick="toggleDark(this)" role="button">
 						<span class="icon icon-moon-stroke"></span>
 						<span class="vox-only">Toggle dark mode</span> 
 					</a>
 				</span>
 			</div>
 
-			<nav class="menu-bar"> <a class="button menu-bar-button current">menu item 1</a> <a class="button menu-bar-button">menu item 2</a> <a class="button menu-bar-button">menu item 3</a> <a class="button menu-bar-button">menu item 4</a> <a class="button menu-bar-button">menu item 5</a> <span class="invisible">&nbsp;<br></span> </nav>
+			<nav class="menu-bar">
+				<a class="button menu-bar-button current">menu item 1</a>
+				<a class="button menu-bar-button">menu item 2</a>
+				<a class="button menu-bar-button">menu item 3</a>
+				<a class="button menu-bar-button">menu item 4</a>
+				<a class="button menu-bar-button">menu item 5</a>
+				<span class="invisible">&nbsp;<br></span>
+			</nav>
 
 		</header>
 
-		<main class="one-box js-self-link" data-order="1">
+		<main class="one-box">
 			<div class="skip-target" id="maincontent"></div>
 			<section>
 				<h1>Header</h1>
@@ -128,5 +134,8 @@ public static v o i d main {
 				add a footer here later
 			</div>
 		</footer>
+
+		<script src="main.js"></script>
+
 	</body>
 </html>

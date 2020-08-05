@@ -51,8 +51,8 @@ body {
 .pixelated { image-rendering: optimizeSpeed; }
 
 .spoiler {
-	background-color: black;
-	color: black;
+	background-color: var(--text);
+	color: var(--text);
 	padding: 0 .5em;
 
 	&:hover { color: white; }
