@@ -101,6 +101,29 @@ function loadFromLocalStorage() {
 
 loadFromLocalStorage();
 
+/**
+ * Hamburger toggle
+ * 
+ * @param {element} e element whos child has a .bar1-3 elem
+ */
+function toggleHamburgler(e) {
+	if (e.classList.contains("open")) {
+		// closed
+		document.querySelector("html").classList.remove("no-scroll-mobile-only");
+		document.querySelector(".header").classList.remove("slide-down");
+		document.querySelector(".header").classList.add("slide-up");
+		e.classList.add("closed");
+		e.classList.remove("open");
+	} else {
+		// open
+		document.querySelector("html").classList.add("no-scroll-mobile-only");
+		document.querySelector(".header").classList.remove("slide-up");
+		document.querySelector(".header").classList.add("slide-down");
+		e.classList.add("open");
+		e.classList.remove("closed");
+	}
+};
+
 /*
 ** kounami code accent colour rainbow thing
 ** https://stackoverflow.com/a/45576888
