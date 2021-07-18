@@ -1,8 +1,7 @@
 /*
-** Alert, Info, Warning
-*/
-
-// todo: color the icons
+ * Alert, Info, Warning
+ * icons coloured using https://codepen.io/sosuke/pen/Pjoqqp
+ */
 
 .note {
 	border: 1px solid transparent;
@@ -27,7 +26,10 @@
 		border-color: var(--note-info-dark);
 		color: var(--note-info-dark);
 
-		.note-title::before { background-image: url("icons.svg#icon-info"); }
+		.note-title::before { 
+			background-image: url("icons.svg#icon-info"); 
+			filter: invert(15%) sepia(6%) saturate(7037%) hue-rotate(156deg) brightness(95%) contrast(95%);
+		}
 	}
 
 	&.alert {
@@ -35,7 +37,10 @@
 		border-color: var(--note-alert-dark);
 		color: var(--note-alert-dark);
 	
-		.note-title::before { background-image: url("icons.svg#icon-warning"); }
+		.note-title::before { 
+			background-image: url("icons.svg#icon-warning"); 
+			filter: invert(8%) sepia(48%) saturate(3094%) hue-rotate(340deg) brightness(98%) contrast(104%);
+		}
 	}
 
 	&.warn {
@@ -43,7 +48,10 @@
 		border-color: var(--note-warn-dark);
 		color: var(--note-warn-dark);
 	
-		.note-title::before { background-image: url("icons.svg#icon-danger"); }
+		.note-title::before { 
+			background-image: url("icons.svg#icon-danger"); 
+			filter: invert(19%) sepia(85%) saturate(611%) hue-rotate(28deg) brightness(97%) contrast(93%);
+		}
 	}
 
 	&.tip {
@@ -51,6 +59,9 @@
 		border-color: var(--note-tip-dark);
 		color: var(--note-tip-dark);
 	
-		.note-title::before { background-image: url("icons.svg#icon-lightbulb"); }
+		.note-title::before { 
+			background-image: url("icons.svg#icon-lightbulb"); 
+			filter: invert(11%) sepia(37%) saturate(7188%) hue-rotate(107deg) brightness(91%) contrast(93%);
+		}
 	}
 }

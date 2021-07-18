@@ -62,14 +62,31 @@
 scrollbar-color: #4D4D4D #171717;
 scrollbar-color: dark;
 
+//change note colour icons
+.note {
+	&.info .note-title::before { 
+		filter: invert(90%) sepia(5%) saturate(1221%) hue-rotate(174deg) brightness(102%) contrast(95%);
+	}
+
+	&.alert .note-title::before { 
+		filter: invert(90%) sepia(2%) saturate(3585%) hue-rotate(314deg) brightness(95%) contrast(105%);
+	}
+
+	&.warn .note-title::before { 
+		filter: invert(95%) sepia(2%) saturate(2228%) hue-rotate(17deg) brightness(100%) contrast(103%);
+	}
+
+	&.tip .note-title::before { 
+		filter: invert(93%) sepia(8%) saturate(894%) hue-rotate(64deg) brightness(103%) contrast(95%);
+	}
+}
+
 // disable contrast button when dark is enabled (they don't mix well)
 .js-contrast {
 	opacity: .3;
 	pointer-events: none;
 	user-select: none;
 }
-
-.note { .note-title::before { filter: invert(1); } }
 
 p:not(.title-text), li { opacity: .8; }
 
