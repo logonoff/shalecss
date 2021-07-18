@@ -1,6 +1,6 @@
 /*
-** Hamburger Menu (initial)
-*/
+ * Hamburger Menu (initial)
+ */
 /* Burger Button */
 .burger-button {
 	border-radius: 1em;
@@ -25,18 +25,16 @@
 }
 
 /*
-** Mobile + Printer stuff
-*/
+ * Mobile + Printer stuff
+ */
 /* Printer adjustments */
 @media print {
 	.header, nav, .header-space, .side, .button, footer { display: none; }
 	a { color: black; }
-	body { background: none; }
 }
 
 /* Mobile Adjustments */
 @media screen and (max-width: 76rem) {
-
 	.grid-body {
 		grid-template-areas: "left content content content content content";
 		margin: 1em;

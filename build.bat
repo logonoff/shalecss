@@ -1,1 +1,0 @@
-sass scss/shalecss.scss build/shalecss.css

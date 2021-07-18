@@ -1,0 +1,243 @@
+/*
+** Contrast
+	TODO: get user feedback, improve theme
+	!!!! FIX THIS !!!!
+	review potential debt: some links use accent color instead of txt color for style
+*/
+
+.contrast {
+	--a-r: 255;
+	--a-g: 255;
+	--a-b: 255;
+
+	--background: black;
+	--text: white;
+
+	--hover: #FF0;
+	--active: #1AEBFF;
+	--disabled: #3FF23F;
+
+	--card-1: 0, 0, 0; // card background (gradient stop 1)
+	--card-2: 0, 0, 0; // card background (gradient stop 2)
+
+	--input-fill: calc(var(--a-r) + 11), calc(var(--a-g) + 4), calc(var(--a-b) + 5); // fill for the center of radio and checkbox
+
+	--link-focus-bg: var(--background);
+
+	// change caption button
+	.caption-button {
+		&.js-contrast .icon { transform: rotate(180deg); } // horizontal-flip contrast button
+
+		// disable dark button when contrast is enabled (they don't mix well)
+		&.js-darkmode {
+			opacity: .3;
+			pointer-events: none;
+			user-select: none;
+		}
+	}
+
+	// change selection
+	::selection {
+		background: rgb(161, 370, 390);
+		color: var(--background);
+	}
+
+	* { opacity: 1; } // disable opacity
+
+	.header nav .button {
+		border: 1px solid transparent;
+		border-bottom: initial;
+		border-color: rgb(var(--accent));
+		border-top: initial;
+	}
+
+	.burger-button { .bar1, .bar2, .bar3 { background-color: rgb(var(--accent)); } }
+
+	.header.slide-down .menu-bar, .header.slide-down {
+		background: var(--background);
+	}
+
+	.button, input, a, .icon {
+		// change accent color on hover and active states
+		&:focus-visible, &:focus, &:hover,
+		&:focus-visible .icon, &:focus .icon, &:hover .icon {
+			font-weight: 500;
+
+			// repeated code forces the browser to recalculate variable
+			fill: rgb(var(--accent));
+			border-color: rgb(var(--accent));
+
+			--a-r: 255 !important;
+			--a-g: 255 !important;
+			--a-b: 0   !important;
+			--accent: 255, 255, 0;
+		}
+
+		&:active, &:active .icon, &.current {
+			fill: rgb(var(--accent));
+			border-color: rgb(var(--accent));
+
+			--a-r:  26 !important;
+			--a-g: 235 !important;
+			--a-b: 255 !important;
+			--accent: 26, 235, 235;
+		}
+
+		&:disabled, &:disabled .icon {
+			border-color: var(--disabled);
+			fill: var(--disabled);
+			border: 1px solid var(--disabled);
+
+			--accent: 63, 242, 63;
+		}
+	}
+
+	// header
+	.header {
+		background: var(--background);
+		border-bottom: 1px solid rgb(var(--accent));
+
+		.menu-bar {
+			border-top: 1px solid rgb(var(--accent));
+		}
+	}
+
+	.command-bar {
+		background: var(--background);
+		border-color: rgb(var(--accent));
+	}
+
+	// posts, text
+	.note.card {
+		background: black;
+		
+		.note-icon {
+			height: var(--font-2);
+			width: var(--font-2);
+		}
+
+		.note-title { 
+			font-size: 1.1em;
+			text-decoration: underline;
+		}
+
+		// .icon, .note-title { filter: brightness(6.9); }
+
+		.note-content { color: white; }
+
+		&.alert {
+			border-color: #FE3E3E !important;
+			.note-title { color: #FE3E3E !important; }
+			.icon { use { fill: #FE3E3E !important; } }
+		}
+
+		&.warn {
+			border-color: #FEFE3E !important;
+			.note-title { color: #FEFE3E !important; }
+			.icon { use { fill: #FEFE3E !important; } }
+		}
+
+		&.tip{
+			border-color: #3EFE3E !important;
+			.note-title { color: #3EFE3E !important; }
+			.icon { use { fill: #3EFE3E !important; } }
+		}
+
+		&.info {
+			border-color: #3EFEFE !important;
+			.note-title { color: #3EFEFE !important; }
+			.icon { use { fill: #3EFEFE !important; } }
+		}
+	}
+
+	.toc {
+		ul li {
+			border-left: rgba(255, 255, 255, .2) 1px solid;
+		}
+
+		ul li {
+			&.current {
+				border-left: var(--active) 1px solid;
+			}
+		}
+	}
+
+	h2:hover .self-link, h3:hover .self-link { opacity: 1; }
+
+	.icon { fill: var(--text); } // make icons color of text
+
+	a { color: var(--hover); }
+
+	// controls
+	.button:not(.menu-bar-button) {
+		background: var(--background);
+		border: 1px solid transparent;
+		border-color: rgb(var(--accent));
+		border-radius: 3px;
+		box-shadow: inset 0 0 0 1px rgb(var(--accent));
+		color: rgb(var(--text));
+
+		&:active, &:focus {
+			background: linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
+		}
+	}
+
+	.button, input, .card {
+		border: 1px solid transparent;
+		box-shadow: none;
+		line-height: 1.5;
+
+		&:focus-visible, &:focus, &:active {
+			border-width: 3px;
+		}
+
+		&:disabled {
+			border-color: var(--disabled) !important;
+			color: var(--disabled) !important;
+		}
+	}
+
+	// HACK: !important is used here
+	input {
+		&[type="text"] {
+			background-color: var(--background);
+			border-color: rgb(var(--accent));
+			color: var(--text);
+			font-family: inherit;
+			padding: .5em;
+		}
+	}
+
+	// inline code, code blocks
+	.code, code {
+		background: #191919;
+		color: var(--text);
+	}
+
+	.highlight {
+		color: var(--text);
+		background: var(--background);
+		border: 1px solid rgb(var(--accent));
+		border-radius: .3em;
+
+		pre, code, .hll { background-color: var(--background); }
+	}
+
+	// footer
+	footer {
+		background: var(--background);
+		border-top: 1px solid rgb(var(--accent));
+
+		a, a .icon {
+			color: rgb(var(--accent));
+			fill: rgb(var(--accent));
+		}
+
+		.logo-group {
+			filter: invert(1);
+
+			a { filter: initial; }
+		}
+	}
+
+}

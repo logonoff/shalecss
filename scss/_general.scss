@@ -22,9 +22,6 @@ body {
 	margin: 3em auto;
 	max-width: 75em;
 	min-height: 100%;
-	padding: 0;
-	position: relative;
-	vertical-align: top;
 }
 
 /*
@@ -40,23 +37,13 @@ body {
 	visibility: hidden;
 }
 
-.disabled {
+*:disabled {
 	opacity: .6;
 	pointer-events: none;
 	user-select: none;
 }
 
 .resize { height: 25em; }
-
-.pixelated { image-rendering: optimizeSpeed; }
-
-.spoiler {
-	background-color: var(--text);
-	color: var(--text);
-	padding: 0 .5em;
-
-	&:hover { color: white; }
-}
 
 .icon {
 	display: inline-block;

@@ -1,10 +1,8 @@
 // sass-lint:disable no-vendor-prefixes nesting-depth force-pseudo-nesting
 /*
-** Scrollbars
-** based off https://stackoverflow.com/a/52895808
-** will be a pain to read
-** HACK: CSS SCROLLBARS ARE NON STANDARD
-**/
+ * Scrollbars
+ * based off https://stackoverflow.com/a/52895808
+ */
 
 html:not(.no-custom-scrollbar) {
 // Base track
@@ -82,4 +80,5 @@ html:not(.no-custom-scrollbar) {
 		}
 	}
 }
+
 }
