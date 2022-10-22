@@ -5,7 +5,7 @@ body {
 	min-height: calc(100vh - 14rem); // for footer to stay on the bottom.. kind of
 }
 
-footer {
+.footer {
 	background: #FCFCFC linear-gradient(#FCFCFC, #E6E6E6);
 	border-top: 1px solid #9B9B9B;
 	box-shadow: 0 -4px 25px 0 rgba(0, 0, 0, .2);

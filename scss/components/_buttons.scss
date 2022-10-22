@@ -43,18 +43,24 @@ a {
 
 	&:hover { text-decoration: underline; }
 
-	&.button {
-		@include button-style;
-		border-radius: 3px;
-		color: var(--text);
-		display: inline-block;
-		font-size: var(--font--1);
-		line-height: 1.75em;
-		min-height: 1.75em;
-		padding: .5rem .65rem;
-		text-align: center;
-		text-decoration: none;
-		user-select: none;
-		vertical-align: middle;
+}
+
+.button {
+	@include button-style;
+	border-radius: 3px;
+	color: var(--text);
+	display: inline-block;
+	font-size: var(--font--1);
+	line-height: 1.75em;
+	min-height: 1.75em;
+	padding: .5rem .65rem;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	vertical-align: middle;
+
+	[data-iconame$="newtab"] {
+		font-size: .75em;
+		padding-left: .25em;
 	}
 }
