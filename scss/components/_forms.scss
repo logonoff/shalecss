@@ -13,9 +13,9 @@ input {
 		padding: .5em;
 		transition: .3s box-shadow ease;
 
-		&:hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
+		&:hover, &.hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
 
-		&:focus {
+		&:focus, &.focus {
 			box-shadow: 0 0 0 1px rgb(calc(var(--a-r) + 55), calc(var(--a-g) + 44), calc(var(--a-b) + 26)), 0 0 0 2px rgb(calc(var(--a-r) + 27), calc(var(--a-g) + 22), calc(var(--a-b) + 37)); // TODO: make this line shorter
 			outline: 1px solid white;
 		}
