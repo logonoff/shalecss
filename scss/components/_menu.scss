@@ -43,6 +43,10 @@
 
 	&.scroll-up { transform: translateY(-3em); }
 
+	&.disabled {
+		background: #8a8a8a linear-gradient(#8a8a8a 0%, #787878 100%);
+	}
+
 	.burger-button {
 		display: block;
 		float: left;
