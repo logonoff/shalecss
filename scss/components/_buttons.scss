@@ -29,7 +29,7 @@
 		box-shadow: inset 0 0 0 1px var(--button-inset-border-active);
 	}
 
-	&:disabled { background: var(--button-disabled) }
+	&:disabled, .disabled { background: var(--button-disabled) }
 }
 
 a {
