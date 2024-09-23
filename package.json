@@ -1,0 +1,22 @@
+{
+  "name": "shalecss",
+  "version": "0.0.0",
+  "private": true,
+  "description": "a pseudo-skeuomorph CSS framework",
+  "scripts": {
+    "build": "sass scss/shale.scss:build/shale.css --style=compressed --error-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logonoff/shalecss.git"
+  },
+  "author": "logonoff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/logonoff/shalecss/issues"
+  },
+  "homepage": "https://github.com/logonoff/shalecss#readme",
+  "devDependencies": {
+    "sass": "^1.79.3"
+  }
+}

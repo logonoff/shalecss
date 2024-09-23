@@ -1,1 +1,0 @@
-sass ".\scss\shale.scss" ".\build\shale.css"
