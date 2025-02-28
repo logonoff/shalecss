@@ -2,27 +2,29 @@
  * shale.css
  * https://github.com/logonoff/shalecss
  */
+// Reset
+@import "reset";
 
 // Light theme colours
 @import "variables";
-
-// Components
-@import "components/buttons";
-@import "components/forms";
-@import "components/caption-button";
-@import "components/footer";
-@import "components/menu";
-@import "components/notes";
-@import "components/icons";
-@import "components/scrollbar";
-
-@import "general";
-@import "typography";
-
-@import "responsive/accessibility";
-@import "responsive/mobile";
 
 // Themes
 @import "theme/light";
 @import "theme/contrast";
 @import "theme/dark";
+
+// Components
+@import "components/body";
+@import "components/buttons";
+@import "components/caption-button";
+@import "components/card";
+@import "components/footer";
+@import "components/forms";
+@import "components/icons";
+@import "components/menu";
+@import "components/notes";
+@import "components/scrollbar";
+@import "components/tab-skip";
+
+@import "general";
+@import "typography";

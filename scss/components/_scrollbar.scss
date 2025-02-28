@@ -6,7 +6,7 @@
 
 html:not(.no-custom-scrollbar) {
 // Base track
-::-webkit-scrollbar-track { background: var(--scrollbar-track-bg); }
+::-webkit-scrollbar-track { background: var(--#{$shale}scrollbar-track-bg); }
 
 // Something happens here
 ::-webkit-scrollbar {
@@ -20,62 +20,62 @@ html:not(.no-custom-scrollbar) {
 }
 
 // Flush out the corner
-::-webkit-scrollbar-corner { background-color: var(--scrollbar-corner); }
+::-webkit-scrollbar-corner { background-color: var(--#{$shale}scrollbar-corner); }
 
 // Scrollbar Buttons
 ::-webkit-scrollbar-button {
 	height: 17px;
 	width: 17px;
 
-	border: 1px solid var(--button-border);
-	box-shadow: inset 0 0 0 1px var(--button-inset-border);
+	border: var(--#{$shale}border-width) solid var(--#{$shale}button-border);
+	box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border);
 
 	&:hover {
-		border: 1px solid var(--button-border-hover);
-		box-shadow: inset 0 0 0 1px var(--button-inset-border-hover);
+		border: var(--#{$shale}border-width) solid var(--#{$shale}button-border-hover);
+		box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border-hover);
 	}
 
 	&:active {
-		border: 1px solid var(--button-border-active);
-		box-shadow: inset 0 0 0 1px var(--button-inset-border-active);
+		border: var(--#{$shale}border-width) solid var(--#{$shale}button-border-active);
+		box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border-active);
 	}
 
 	&:vertical {
 		&:start:decrement {
-			background: linear-gradient(134deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(233deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(0deg, var(--scrollbar-button) 40%, transparent 40%) var(--scrollbar-arrow);
+			background: linear-gradient(134deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(233deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(0deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 
 			&:hover {
-				background: linear-gradient(134deg, var(--scrollbar-hover-1) 40%, transparent 40%), linear-gradient(233deg, var(--scrollbar-hover-1) 40%, transparent 40%), linear-gradient(0deg, var(--scrollbar-hover) 40%, transparent 40%) var(--scrollbar-arrow);
+				background: linear-gradient(134deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(233deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(0deg, var(--#{$shale}scrollbar-hover) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 			}
 
 			&:active {
-				background: linear-gradient(134deg, rgb(var(--scrollbar-active-1)) 40%, transparent 40%), linear-gradient(233deg, rgb(var(--scrollbar-active-1)) 40%, transparent 40%), linear-gradient(0deg, rgb(var(--scrollbar-active)) 40%, transparent 40%) var(--scrollbar-arrow);
+				background: linear-gradient(134deg, rgb(var(--#{$shale}scrollbar-active-1)) 40%, transparent 40%), linear-gradient(233deg, rgb(var(--#{$shale}scrollbar-active-1)) 40%, transparent 40%), linear-gradient(0deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 			}
 		}
 
 		&:end:increment {
-			background: linear-gradient(315deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(45deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(180deg, var(--scrollbar-button) 40%, transparent 40%) var(--scrollbar-arrow);
+			background: linear-gradient(315deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(45deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(180deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 
 			&:active {
-				background: linear-gradient(315deg, rgb(var(--scrollbar-active)) 40%, transparent 40%), linear-gradient(45deg, rgb(var(--scrollbar-active)) 40%, transparent 40%), linear-gradient(180deg, rgb(var(--scrollbar-active-1)) 40%, transparent 40%) var(--scrollbar-arrow);
+				background: linear-gradient(315deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%), linear-gradient(45deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%), linear-gradient(180deg, rgb(var(--#{$shale}scrollbar-active-1)) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 			}
 		}
 	}
 
 	&:horizontal {
 		&:start:decrement {
-			background: linear-gradient(45deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(145deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(270deg, var(--scrollbar-button) 40%, transparent 40%) var(--scrollbar-arrow);
+			background: linear-gradient(45deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(145deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(270deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 
 			&:active {
-				background: linear-gradient(45deg, rgb(var(--scrollbar-active)) 40%, transparent 40%), linear-gradient(145deg, rgb(var(--scrollbar-active)) 40%, transparent 40%), linear-gradient(270deg, rgb(var(--scrollbar-active-1)) 40%, transparent 40%) var(--scrollbar-arrow);
+				background: linear-gradient(45deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%), linear-gradient(145deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%), linear-gradient(270deg, rgb(var(--#{$shale}scrollbar-active-1)) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 			}
 		}
 
 		&:end:increment {
-			background: linear-gradient(225deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(315deg, var(--scrollbar-button) 40%, transparent 40%), linear-gradient(90deg, var(--scrollbar-button) 40%, transparent 40%) var(--scrollbar-arrow);
+			background: linear-gradient(225deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(315deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(90deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 
 			&:active {
-				background: inear-gradient(255deg, rgb(var(--scrollbar-active-1)) 40%, transparent 40%), linear-gradient(315deg, rgb(var(--scrollbar-active)) 40%, transparent 40%), linear-gradient(90deg, rgb(var(--scrollbar-active)) 40%, transparent 40%) var(--scrollbar-arrow);
+				background: inear-gradient(255deg, rgb(var(--#{$shale}scrollbar-active-1)) 40%, transparent 40%), linear-gradient(315deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%), linear-gradient(90deg, rgb(var(--#{$shale}scrollbar-active)) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
 			}
 		}
 	}

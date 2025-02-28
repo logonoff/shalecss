@@ -5,15 +5,15 @@
 
 /**
  * toggles dark theme
- * 
+ *
  * @param {element} e element whos child has a .icon elem
  */
 function toggleDark(e) {
 	console.log(e);
 
-	if (document.documentElement.classList.contains("dark")) {
+	if (document.documentElement.classList.contains("shale-v1-dark")) {
 		// dark mode is enabled, turn it off
-		document.documentElement.classList.remove("dark");
+		document.documentElement.classList.remove("shale-v1-dark");
 
 		e.querySelector(".icon").classList.remove("icon-moon-fill");
 		e.querySelector(".icon").classList.add("icon-moon-stroke");
@@ -32,7 +32,7 @@ function toggleDark(e) {
 
 /**
  * toggles contrast theme
- * 
+ *
  * @param {element} e element whos child has a .icon elem
  */
 function toggleContrast(e) {
@@ -53,7 +53,7 @@ function toggleContrast(e) {
 
 /**
  * toggles larger text size
- * 
+ *
  * @param {element} e element whos child has a .icon elem
  */
 function toggleTextSize(e) {
@@ -100,29 +100,6 @@ function loadFromLocalStorage() {
 }
 
 loadFromLocalStorage();
-
-/**
- * Hamburger toggle
- * 
- * @param {element} e element whos child has a .bar1-3 elem
- */
-function toggleHamburgler(e) {
-	if (e.classList.contains("open")) {
-		// closed
-		document.querySelector("html").classList.remove("no-scroll-mobile-only");
-		document.querySelector(".header").classList.remove("slide-down");
-		document.querySelector(".header").classList.add("slide-up");
-		e.classList.add("closed");
-		e.classList.remove("open");
-	} else {
-		// open
-		document.querySelector("html").classList.add("no-scroll-mobile-only");
-		document.querySelector(".header").classList.remove("slide-up");
-		document.querySelector(".header").classList.add("slide-down");
-		e.classList.add("open");
-		e.classList.remove("closed");
-	}
-};
 
 /*
 ** kounami code accent colour rainbow thing
@@ -175,4 +152,8 @@ function rainbowz() {
 /* Put both together */
 onKonamiCode(function() {
 	setInterval(rainbowz, 100);
+});
+
+document.querySelectorAll("[data-indeterminate]").forEach((e) => {
+	e.indeterminate = true;
 });

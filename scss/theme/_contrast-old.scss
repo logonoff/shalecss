@@ -20,9 +20,9 @@
 	--card-1: 0, 0, 0; // card background (gradient stop 1)
 	--card-2: 0, 0, 0; // card background (gradient stop 2)
 
-	--input-fill: calc(var(--a-r) + 11), calc(var(--a-g) + 4), calc(var(--a-b) + 5); // fill for the center of radio and checkbox
+	--input-fill: calc(var(--#{$shale}a-r) + 11), calc(var(--#{$shale}a-g) + 4), calc(var(--#{$shale}a-b) + 5); // fill for the center of radio and checkbox
 
-	--link-focus-bg: var(--background);
+	--link-focus-bg: var(--#{$shale}background);
 
 	// change caption button
 	.caption-button {
@@ -39,22 +39,22 @@
 	// change selection
 	::selection {
 		background: rgb(161, 370, 390);
-		color: var(--background);
+		color: var(--#{$shale}background);
 	}
 
 	* { opacity: 1; } // disable opacity
 
 	.header nav .button {
-		border: 1px solid transparent;
+		border: var(--#{$shale}border-width) solid transparent;
 		border-bottom: initial;
-		border-color: rgb(var(--accent));
+		border-color: rgb(var(--#{$shale}accent));
 		border-top: initial;
 	}
 
-	.burger-button { .bar1, .bar2, .bar3 { background-color: rgb(var(--accent)); } }
+	.burger-button { .bar1, .bar2, .bar3 { background-color: rgb(var(--#{$shale}accent)); } }
 
 	.header.slide-down .menu-bar, .header.slide-down {
-		background: var(--background);
+		background: var(--#{$shale}background);
 	}
 
 	.button, input, a, .icon {
@@ -64,8 +64,8 @@
 			font-weight: 500;
 
 			// repeated code forces the browser to recalculate variable
-			fill: rgb(var(--accent));
-			border-color: rgb(var(--accent));
+			fill: rgb(var(--#{$shale}accent));
+			border-color: rgb(var(--#{$shale}accent));
 
 			--a-r: 255 !important;
 			--a-g: 255 !important;
@@ -74,8 +74,8 @@
 		}
 
 		&:active, &:active .icon, &.current {
-			fill: rgb(var(--accent));
-			border-color: rgb(var(--accent));
+			fill: rgb(var(--#{$shale}accent));
+			border-color: rgb(var(--#{$shale}accent));
 
 			--a-r:  26 !important;
 			--a-g: 235 !important;
@@ -84,9 +84,9 @@
 		}
 
 		&:disabled, &:disabled .icon {
-			border-color: var(--disabled);
-			fill: var(--disabled);
-			border: 1px solid var(--disabled);
+			border-color: var(--#{$shale}disabled);
+			fill: var(--#{$shale}disabled);
+			border: var(--#{$shale}border-width) solid var(--#{$shale}disabled);
 
 			--accent: 63, 242, 63;
 		}
@@ -94,29 +94,29 @@
 
 	// header
 	.header {
-		background: var(--background);
-		border-bottom: 1px solid rgb(var(--accent));
+		background: var(--#{$shale}background);
+		border-bottom: var(--#{$shale}border-width) solid rgb(var(--#{$shale}accent));
 
 		.menu-bar {
-			border-top: 1px solid rgb(var(--accent));
+			border-top: var(--#{$shale}border-width) solid rgb(var(--#{$shale}accent));
 		}
 	}
 
 	.command-bar {
-		background: var(--background);
-		border-color: rgb(var(--accent));
+		background: var(--#{$shale}background);
+		border-color: rgb(var(--#{$shale}accent));
 	}
 
 	// posts, text
 	.note.card {
 		background: black;
-		
+
 		.note-icon {
-			height: var(--font-2);
-			width: var(--font-2);
+			height: var(--#{$shale}font-2);
+			width: var(--#{$shale}font-2);
 		}
 
-		.note-title { 
+		.note-title {
 			font-size: 1.1em;
 			text-decoration: underline;
 		}
@@ -157,33 +157,33 @@
 
 		ul li {
 			&.current {
-				border-left: var(--active) 1px solid;
+				border-left: var(--#{$shale}active) 1px solid;
 			}
 		}
 	}
 
 	h2:hover .self-link, h3:hover .self-link { opacity: 1; }
 
-	.icon { fill: var(--text); } // make icons color of text
+	.icon { fill: var(--#{$shale}text); } // make icons color of text
 
-	a { color: var(--hover); }
+	a { color: var(--#{$shale}hover); }
 
 	// controls
 	.button:not(.menu-bar-button) {
-		background: var(--background);
-		border: 1px solid transparent;
-		border-color: rgb(var(--accent));
+		background: var(--#{$shale}background);
+		border: var(--#{$shale}border-width) solid transparent;
+		border-color: rgb(var(--#{$shale}accent));
 		border-radius: 3px;
-		box-shadow: inset 0 0 0 1px rgb(var(--accent));
-		color: rgb(var(--text));
+		box-shadow: inset 0 0 0 var(--#{$shale}border-width) rgb(var(--#{$shale}accent));
+		color: rgb(var(--#{$shale}text));
 
 		&:active, &:focus {
-			background: linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
+			background: linear-gradient(rgb(calc(var(--#{$shale}a-r) - 58), calc(var(--#{$shale}a-g) - 69), calc(var(--#{$shale}a-b) - 86)), rgb(calc(var(--#{$shale}a-r) - 74), calc(var(--#{$shale}a-g) - 89), calc(var(--#{$shale}a-b) - 106)));
 		}
 	}
 
 	.button, input, .card {
-		border: 1px solid transparent;
+		border: var(--#{$shale}border-width) solid transparent;
 		box-shadow: none;
 		line-height: 1.5;
 
@@ -192,17 +192,17 @@
 		}
 
 		&:disabled {
-			border-color: var(--disabled) !important;
-			color: var(--disabled) !important;
+			border-color: var(--#{$shale}disabled) !important;
+			color: var(--#{$shale}disabled) !important;
 		}
 	}
 
 	// HACK: !important is used here
 	input {
 		&[type="text"] {
-			background-color: var(--background);
-			border-color: rgb(var(--accent));
-			color: var(--text);
+			background-color: var(--#{$shale}background);
+			border-color: rgb(var(--#{$shale}accent));
+			color: var(--#{$shale}text);
 			font-family: inherit;
 			padding: .5em;
 		}
@@ -211,26 +211,26 @@
 	// inline code, code blocks
 	.code, code {
 		background: #191919;
-		color: var(--text);
+		color: var(--#{$shale}text);
 	}
 
 	.highlight {
-		color: var(--text);
-		background: var(--background);
-		border: 1px solid rgb(var(--accent));
+		color: var(--#{$shale}text);
+		background: var(--#{$shale}background);
+		border: var(--#{$shale}border-width) solid rgb(var(--#{$shale}accent));
 		border-radius: .3em;
 
-		pre, code, .hll { background-color: var(--background); }
+		pre, code, .hll { background-color: var(--#{$shale}background); }
 	}
 
 	// footer
 	footer {
-		background: var(--background);
-		border-top: 1px solid rgb(var(--accent));
+		background: var(--#{$shale}background);
+		border-top: var(--#{$shale}border-width) solid rgb(var(--#{$shale}accent));
 
 		a, a .icon {
-			color: rgb(var(--accent));
-			fill: rgb(var(--accent));
+			color: rgb(var(--#{$shale}accent));
+			fill: rgb(var(--#{$shale}accent));
 		}
 
 		.logo-group {

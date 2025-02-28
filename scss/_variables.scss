@@ -1,30 +1,41 @@
-// sass-lint:disable-all
 /*
 ** Variables
 */
+// global prefix for all CSS variables
+$shale: "shale-v1-" !default;
+
+// global class names for forcing a hover/focus/active state
+$hover: ".#{$shale}-hover" !default;
+$focus: ".#{$shale}-focus" !default;
+$active: ".#{$shale}-active" !default;
+$disabled: ".#{$shale}-disabled" !default;
+$checked: ".#{$shale}-checked" !default;
+$indeterminate: ".#{$shale}-indeterminate" !default;
+
+// Prefix for all CSS variables
 // Define variables
 :root {
 /* Font Sizes (1.25 scale) */
---scale: 1.25;
+--#{$shale}scale: 1.25;
 
---font-7: calc(var(--font-6) * var(--scale));
---font-6: calc(var(--font-5) * var(--scale));
---font-5: calc(var(--font-4) * var(--scale));
---font-4: calc(var(--font-3) * var(--scale));
---font-3: calc(var(--font-2) * var(--scale));
---font-2: calc(var(--font-1) * var(--scale));
---font-1: calc(var(--font-0) * var(--scale));
---font-0: 1rem;
---font--1: calc(var(--font-0) / var(--scale));
---font--2: calc(var(--font--1) / var(--scale));
---font--3: calc(var(--font--2) / var(--scale));
+--#{$shale}font-7: calc(var(--#{$shale}font-6) * var(--#{$shale}scale));
+--#{$shale}font-6: calc(var(--#{$shale}font-5) * var(--#{$shale}scale));
+--#{$shale}font-5: calc(var(--#{$shale}font-4) * var(--#{$shale}scale));
+--#{$shale}font-4: calc(var(--#{$shale}font-3) * var(--#{$shale}scale));
+--#{$shale}font-3: calc(var(--#{$shale}font-2) * var(--#{$shale}scale));
+--#{$shale}font-2: calc(var(--#{$shale}font-1) * var(--#{$shale}scale));
+--#{$shale}font-1: calc(var(--#{$shale}font-0) * var(--#{$shale}scale));
+--#{$shale}font-0: 1rem;
+--#{$shale}font--1: calc(var(--#{$shale}font-0) / var(--#{$shale}scale));
+--#{$shale}font--2: calc(var(--#{$shale}font--1) / var(--#{$shale}scale));
+--#{$shale}font--3: calc(var(--#{$shale}font--2) / var(--#{$shale}scale));
 
 /* Dynamic accent colour */
-// --accent: rgb(157, 198, 218);
+// --#{$shale}accent: rgb(157, 198, 218);
 
 // A is short for accent cuz I don't want to type accent every time I'm using it
---a-r: 157;
---a-g: 198;
---a-b: 218;
---accent: var(--a-r), var(--a-g), var(--a-b);
+--#{$shale}a-r: 157;
+--#{$shale}a-g: 198;
+--#{$shale}a-b: 218;
+--#{$shale}accent: var(--#{$shale}a-r), var(--#{$shale}a-g), var(--#{$shale}a-b);
 }

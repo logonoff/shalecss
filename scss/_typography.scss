@@ -2,32 +2,27 @@
 ** Typography
 */
 /* Headers */
-h1, h2, h3, h4, h5 {
+.#{$shale}h1, .#{$shale}h2, .#{$shale}h3, .#{$shale}h4 {
 	font-weight: 500;
-	// margin: 2.75rem 0 1rem;
+	margin: 0.5em 0 0.25em;
 }
 
-h1 { font-size: var(--font-3); }
-h2 { font-size: var(--font-2); }
-h3 { font-size: var(--font-1); }
+.#{$shale}h1 { font-size: var(--#{$shale}font-4); }
+.#{$shale}h2 { font-size: var(--#{$shale}font-3); }
+.#{$shale}h3 { font-size: var(--#{$shale}font-2); }
+.#{$shale}h4 { font-size: var(--#{$shale}font-1); }
+
+@for $i from -3 through 7 {
+	.#{$shale}font-#{$i} { font-size: var(--#{$shale}font-#{$i}); }
+}
 
 /* Code */
-pre, code, .hll, .code { background-color: #EEE; }
-
-.code, code {
-	border-radius: .2em;
+.#{$shale}code {
+	background-color: #EEE;
+	border-radius: .2rem;
 	color: #171700;
 	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
-	margin: -.2em 0;
-	padding: .2em;
-	white-space: pre-wrap;
-}
-
-pre {
-	border-radius: .2rem;
 	padding: .25rem;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
-
-.bigger-text { --font-0: 1.25rem; }

@@ -1,6 +1,10 @@
 /* Caption Buttons */
-.caption-menu {
-	.caption-button {
+.#{$shale}caption {
+	.#{$shale}icon {
+		filter: invert(1) drop-shadow(2px 2px 5px rgba(0, 0, 0, .5));
+	}
+
+	&-button {
 		align-items: center;
 		background: none;
 		color: white;
@@ -14,21 +18,17 @@
 		transition: opacity .125s ease;
 		vertical-align: middle;
 
-		.icon {
-			filter: invert(1) drop-shadow(2px 2px 5px rgba(0, 0, 0, .5));
-		}
-
-		&:hover, &:focus-visible {
+		&:hover, &:focus-visible, &#{$hover}, &#{$focus} {
 			opacity: 1;
 			text-decoration: none;
 		}
 
-		&:focus-visible {
+		&:focus-visible, &#{$focus} {
 			text-shadow: initial;
 			.icon { filter: invert(1); }
 		}
 
-		&:active { opacity: .3; }
+		&:active, &#{$active} { opacity: .3; }
 
 	}
 }

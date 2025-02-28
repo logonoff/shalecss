@@ -1,0 +1,40 @@
+/*
+ * Accessibility
+ */
+/* Tab Skip */
+.#{$shale}skip {
+	height: 1px;
+	left: -25565vw;
+	overflow: hidden;
+	position: absolute;
+	top: 1em;
+	width: 1px;
+	z-index: -1337;
+
+	&:focus-visible, &:active, #{$focus}, #{$active} {
+		background: #575757;
+		border: 3px solid white;
+		border-radius: 15px;
+		color: white;
+		font-size: 1rem;
+		height: auto;
+		left: calc(50vw - 6rem);
+		margin: 1rem .5rem;
+		overflow: auto;
+		padding: .5rem 1rem;
+		text-align: center;
+		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
+		width: auto;
+		z-index: 6969;
+	}
+}
+
+/* screen reader only text */
+.#{$shale}sr-only { // hidden text for narrators
+	height: 1px;
+	left: -420691337px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}

@@ -1,0 +1,7 @@
+
+.#{$shale}card {
+	background: linear-gradient(rgb(var(--#{$shale}card-1)), rgb(var(--#{$shale}card-2)));
+	border-radius: .2em;
+	box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .32);
+	padding: 1em;
+}

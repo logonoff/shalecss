@@ -2,81 +2,81 @@
 ** Dark Theme
 */
 
-.dark {
+.#{$shale}dark {
 
---link-focus-bg: #444;
+--#{$shale}link-focus-bg: #444;
 /* General */
---background: linear-gradient(#333, #252525);
---text: white;
+--#{$shale}background: linear-gradient(#333, #252525);
+--#{$shale}text-colour: white;
 
---link-colour: #4CB9E2;
---link-focus-bg: white;
+--#{$shale}link-colour: #4CB9E2;
+--#{$shale}link-focus-bg: white;
 
---input-fill: calc(var(--a-r) + 11), calc(var(--a-g) + 4), calc(var(--a-b) + 5); // fill for the center of radio and checkbox
+--#{$shale}input-fill: calc(var(--#{$shale}a-r) + 11), calc(var(--#{$shale}a-g) + 4), calc(var(--#{$shale}a-b) + 5); // fill for the center of radio and checkbox
 
 /* Cards */
 // these are in decimal to allow for alpha transparency in marketplace
---card-1: 85, 85, 85; // card background (gradient stop 1)
---card-2: 65, 65, 65; // card background (gradient stop 2)
-	
+--#{$shale}card-1: 85, 85, 85; // card background (gradient stop 1)
+--#{$shale}card-2: 65, 65, 65; // card background (gradient stop 2)
+
 // docs notes
 // fixme: colours look bad
---note-info-base: linear-gradient(#093044, #082A3B);
---note-info-dark: #D2ECF9;
+--#{$shale}note-info-base: linear-gradient(#093044, #082A3B);
+--#{$shale}note-info-dark: #D2ECF9;
 
---note-alert-base: linear-gradient(#440909, #3B0808);
---note-alert-dark: #F9D2D2;
+--#{$shale}note-alert-base: linear-gradient(#440909, #3B0808);
+--#{$shale}note-alert-dark: #F9D2D2;
 
---note-warn-base: linear-gradient(#404409, #373B08);
---note-warn-dark: #F7F9D2;
+--#{$shale}note-warn-base: linear-gradient(#404409, #373B08);
+--#{$shale}note-warn-dark: #F7F9D2;
 
---note-tip-base: linear-gradient(#094409, #083B08);
---note-tip-dark: #D2F9D2;
-	
+--#{$shale}note-tip-base: linear-gradient(#094409, #083B08);
+--#{$shale}note-tip-dark: #D2F9D2;
+
 /* Button */
---button: #333 linear-gradient(#474747, #333);
---button-hover: #595959 linear-gradient(#595959, #505050);
---button-active: rgb(var(--accent)) linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
---button-disabled: #2D2D2D;
+--#{$shale}button: #333 linear-gradient(#474747, #333);
+--#{$shale}button-hover: #595959 linear-gradient(#595959, #505050);
+--#{$shale}button-active: rgb(var(--#{$shale}accent)) linear-gradient(rgb(calc(var(--#{$shale}a-r) - 58), calc(var(--#{$shale}a-g) - 69), calc(var(--#{$shale}a-b) - 86)), rgb(calc(var(--#{$shale}a-r) - 74), calc(var(--#{$shale}a-g) - 89), calc(var(--#{$shale}a-b) - 106)));
+--#{$shale}button-disabled: #2D2D2D;
 
---button-border: #1C1C1C;
---button-border-hover: #353535;
---button-border-active: rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 132));
+--#{$shale}button-border: #1C1C1C;
+--#{$shale}button-border-hover: #353535;
+--#{$shale}button-border-active: rgb(calc(var(--#{$shale}a-r) - 83), calc(var(--#{$shale}a-g) - 99), calc(var(--#{$shale}a-b) - 132));
 
---button-inset-border: #555;
---button-inset-border-hover: #666;
---button-inset-border-active: rgb(calc(var(--a-r) - 43), calc(var(--a-g) - 59), calc(var(--a-b) - 92));
-	
+--#{$shale}button-inset-border: #555;
+--#{$shale}button-inset-border-hover: #666;
+--#{$shale}button-inset-border-active: rgb(calc(var(--#{$shale}a-r) - 43), calc(var(--#{$shale}a-g) - 59), calc(var(--#{$shale}a-b) - 92));
+
 /* Scrollbar */
---scrollbar-track-bg: #343434 linear-gradient(#464646, #343434); // todo: fix poor contrast
+--#{$shale}scrollbar-track-bg: #343434 linear-gradient(#464646, #343434); // todo: fix poor contrast
 
---scrollbar-button: #555; // scrollbar button initial
---scrollbar-hover: #515151; // scrollbar button hover (bottom)
---scrollbar-hover-1: #535353; // scrollbar button hover (top)
---scrollbar-active: calc(var(--a-r) - 73), calc(var(--a-g) - 88), calc(var(--a-b) - 105); // scrollbar button active (bottom)
---scrollbar-active-1: calc(var(--a-r) - 71), calc(var(--a-g) - 86), calc(var(--a-b) - 103); // scrollbar button active (top)
---scrollbar-arrow: #CCC; // color of scrollbar arrow
---scrollbar-corner: #454545;
+--#{$shale}scrollbar-button: #555; // scrollbar button initial
+--#{$shale}scrollbar-hover: #515151; // scrollbar button hover (bottom)
+--#{$shale}scrollbar-hover-1: #535353; // scrollbar button hover (top)
+--#{$shale}scrollbar-active: calc(var(--#{$shale}a-r) - 73), calc(var(--#{$shale}a-g) - 88), calc(var(--#{$shale}a-b) - 105); // scrollbar button active (bottom)
+--#{$shale}scrollbar-active-1: calc(var(--#{$shale}a-r) - 71), calc(var(--#{$shale}a-g) - 86), calc(var(--#{$shale}a-b) - 103); // scrollbar button active (top)
+--#{$shale}scrollbar-arrow: #CCC; // color of scrollbar arrow
+--#{$shale}scrollbar-corner: #454545;
 
 // firefox scrollbar
 scrollbar-color: #4D4D4D #171717;
 scrollbar-color: dark;
 
-//change note colour icons
+// change note colour icons
 .note {
-	&.info .note-title::before { 
+	&.info .note-title::before {
 		filter: invert(90%) sepia(5%) saturate(1221%) hue-rotate(174deg) brightness(102%) contrast(95%);
 	}
 
-	&.alert .note-title::before { 
+	&.alert .note-title::before {
 		filter: invert(90%) sepia(2%) saturate(3585%) hue-rotate(314deg) brightness(95%) contrast(105%);
 	}
 
-	&.warn .note-title::before { 
+	&.warn .note-title::before {
 		filter: invert(95%) sepia(2%) saturate(2228%) hue-rotate(17deg) brightness(100%) contrast(103%);
 	}
 
-	&.tip .note-title::before { 
+	&.tip .note-title::before {
 		filter: invert(93%) sepia(8%) saturate(894%) hue-rotate(64deg) brightness(103%) contrast(95%);
 	}
 }
@@ -92,13 +92,13 @@ p:not(.title-text), li { opacity: .8; }
 
 .command-bar { background: linear-gradient(#646464, #4E4E4E)}
 
-.icon { fill: var(--text); } // svg icons
+.icon { fill: var(--#{$shale}text); } // svg icons
 
 // .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
 
 .code, code, pre {
 	background: #191919;
-	color: var(--text);
+	color: var(--#{$shale}text);
 }
 
 // HACK: !important is used here
@@ -109,7 +109,7 @@ input {
 		&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535 !important; }
 
 		&:focus {
-			box-shadow: 0 0 0 1px rgb(calc(var(--a-r) - 66), calc(var(--a-g) - 78), calc(var(--a-b) - 97)), 0 0 0 2px rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 117)) !important; // TODO: make this line shorter
+			box-shadow: 0 0 0 1px rgb(calc(var(--#{$shale}a-r) - 66), calc(var(--#{$shale}a-g) - 78), calc(var(--#{$shale}a-b) - 97)), 0 0 0 2px rgb(calc(var(--#{$shale}a-r) - 83), calc(var(--#{$shale}a-g) - 99), calc(var(--#{$shale}a-b) - 117)) !important; // TODO: make this line shorter
 			outline: 1px solid #414141 !important;
 		}
 	}
@@ -118,7 +118,7 @@ input {
 footer {
 	background: linear-gradient(#646464, #4E4E4E);
 
-	a { color: var(--text); }
+	a { color: var(--#{$shale}text); }
 
 	.logo-group {
 		filter: invert(1);
