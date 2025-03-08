@@ -1,5 +1,5 @@
 /*
-** Variables
+** CSS variables that don't pertain to a theme
 */
 // global prefix for all CSS variables
 $shale: "shale-v1-" !default;
@@ -12,7 +12,6 @@ $disabled: ".#{$shale}-disabled" !default;
 $checked: ".#{$shale}-checked" !default;
 $indeterminate: ".#{$shale}-indeterminate" !default;
 
-// Prefix for all CSS variables
 // Define variables
 :root {
 /* Font Sizes (1.25 scale) */
@@ -30,12 +29,17 @@ $indeterminate: ".#{$shale}-indeterminate" !default;
 --#{$shale}font--2: calc(var(--#{$shale}font--1) / var(--#{$shale}scale));
 --#{$shale}font--3: calc(var(--#{$shale}font--2) / var(--#{$shale}scale));
 
-/* Dynamic accent colour */
-// --#{$shale}accent: rgb(157, 198, 218);
 
-// A is short for accent cuz I don't want to type accent every time I'm using it
---#{$shale}a-r: 157;
---#{$shale}a-g: 198;
---#{$shale}a-b: 218;
---#{$shale}accent: var(--#{$shale}a-r), var(--#{$shale}a-g), var(--#{$shale}a-b);
+/* Dynamic accent colour */
+--#{$shale}accent: #8DD3D6FF;
+
+--#{$shale}accent-100: color-mix(in srgb, var(--#{$shale}accent), white 80%);
+--#{$shale}accent-200: color-mix(in srgb, var(--#{$shale}accent), white 60%);
+--#{$shale}accent-300: color-mix(in srgb, var(--#{$shale}accent), white 40%);
+--#{$shale}accent-400: color-mix(in srgb, var(--#{$shale}accent), white 20%);
+--#{$shale}accent-500: var(--#{$shale}accent);
+--#{$shale}accent-600: color-mix(in hsl, var(--#{$shale}accent), black 10%);
+--#{$shale}accent-700: color-mix(in hsl, var(--#{$shale}accent), black 20%);
+--#{$shale}accent-800: color-mix(in hsl, var(--#{$shale}accent), black 30%);
+--#{$shale}accent-900: color-mix(in hsl, var(--#{$shale}accent), black 40%);
 }

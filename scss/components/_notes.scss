@@ -4,7 +4,7 @@
  */
 
 .#{$shale}note {
-	border: var(--#{$shale}border-width) solid transparent;
+	border: 1px solid transparent;
 	border-radius: .2rem;
 	display: inline-block;
 	margin-bottom: 1rem;
@@ -23,8 +23,8 @@
 
 	&-info {
 		background: var(--#{$shale}note-info-base);
-		border-color: var(--#{$shale}note-info-dark);
-		color: var(--#{$shale}note-info-dark);
+		border-color: var(--#{$shale}note-info-border);
+		color: var(--#{$shale}note-info-text);
 
 		.#{$shale}note-title::before {
 			background-image: url("icons.svg#icon-info");
@@ -34,8 +34,8 @@
 
 	&-alert {
 		background: var(--#{$shale}note-alert-base);
-		border-color: var(--#{$shale}note-alert-dark);
-		color: var(--#{$shale}note-alert-dark);
+		border-color: var(--#{$shale}note-alert-border);
+		color: var(--#{$shale}note-alert-text);
 
 		.#{$shale}note-title::before {
 			background-image: url("icons.svg#icon-warning");
@@ -45,8 +45,8 @@
 
 	&-warn {
 		background: var(--#{$shale}note-warn-base);
-		border-color: var(--#{$shale}note-warn-dark);
-		color: var(--#{$shale}note-warn-dark);
+		border-color: var(--#{$shale}note-warn-border);
+		color: var(--#{$shale}note-warn-text);
 
 		.#{$shale}note-title::before {
 			background-image: url("icons.svg#icon-danger");
@@ -56,8 +56,8 @@
 
 	&-tip {
 		background: var(--#{$shale}note-tip-base);
-		border-color: var(--#{$shale}note-tip-dark);
-		color: var(--#{$shale}note-tip-dark);
+		border-color: var(--#{$shale}note-tip-border);
+		color: var(--#{$shale}note-tip-text);
 
 		.#{$shale}note-title::before {
 			background-image: url("icons.svg#icon-lightbulb");

@@ -3,50 +3,25 @@
  */
 .#{$shale}input input {
 	&[type="text"], &[type="password"], &[type="email"], &[type="url"], &[type="tel"], &[type="number"], &[type="search"], &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"], &[type="week"] {
-		background: linear-gradient(#F9F9F9, white);
-		border: 0;
+		background: var(--#{$shale}input-background);
 		border-radius: .2rem;
-		box-shadow: 0 0 0 1px #DADADA, 0 0 0 2px #B5B5B5;
+		border: 0;
+		box-shadow: 0 0 0 1px var(--#{$shale}input-border), 0 0 0 2px var(--#{$shale}input-inner-border);
 		color: var(--#{$shale}text);
 		font-family: inherit;
 		image-rendering: pixelated;
+		outline: 0;
 		padding: .5em;
 		transition: .3s box-shadow ease;
 
-		&:hover, &.hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
+		&:hover, &.hover {
+			--#{$shale}input-border: var(--#{$shale}input-border-hover);
+			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-hover);
+		}
 
 		&:focus, &.focus {
-			box-shadow: 0 0 0 1px rgb(calc(var(--#{$shale}a-r) + 55), calc(var(--#{$shale}a-g) + 44), calc(var(--#{$shale}a-b) + 26)), 0 0 0 2px rgb(calc(var(--#{$shale}a-r) + 27), calc(var(--#{$shale}a-g) + 22), calc(var(--#{$shale}a-b) + 37)); // TODO: make this line shorter
-			outline: 1px solid white;
-		}
-	}
-
-	&[type="range"] {
-		appearance: none;
-		background: var(--#{$shale}button);
-		border: 0;
-		height: 1em;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-
-		&::-webkit-slider-thumb {
-			-webkit-appearance: none;
-			background: var(--#{$shale}button);
-			border: 0;
-			border-radius: 100%;
-			box-shadow: 0 0 0 1px #DADADA, 0 0 0 2px #B5B5B5;
-			cursor: pointer;
-			height: 1em;
-			margin-top: -.5em;
-			width: 1em;
-		}
-
-		&:hover::-webkit-slider-thumb { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
-
-		&:focus::-webkit-slider-thumb {
-			box-shadow: 0 0 0 1px rgb(calc(var(--#{$shale}a-r) + 55), calc(var(--#{$shale}a-g) + 44), calc(var(--#{$shale}a-b) + 26)), 0 0 0 2px rgb(calc(var(--#{$shale}a-r) + 27), calc(var(--#{$shale}a-g) + 22), calc(var(--#{$shale}a-b) + 37)); // TODO: make this line shorter
-			outline: 1px solid white;
+			--#{$shale}input-border: var(--#{$shale}input-border-active);
+			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-active);
 		}
 	}
 
@@ -57,14 +32,15 @@
 		&:focus + label::before {
 			background: var(--#{$shale}button-hover);
 			border-color: var(--#{$shale}button-border-hover);
-			box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border-hover);
+			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
 		}
 
 		+ label {
-			--#{$shale}input-size: 1em;
+			--#{$shale}input-size: var(--#{$shale}font-0);
 			align-items: center;
-			gap: .25em;
+			color: var(--#{$shale}text-colour);
 			display: flex;
+			gap: .25em;
 			position: relative;
 			user-select: none;
 			vertical-align: middle;
@@ -72,12 +48,12 @@
 
 		+ label::before {
 			background: var(--#{$shale}button);
-			border: var(--#{$shale}border-width) solid var(--#{$shale}button-border);
-			box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border);
+			border-radius: 0.2em;
+			border: 1px solid var(--#{$shale}button-border);
+			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
 			box-sizing: border-box;
 			color: var(--#{$shale}text);
 			content: "";
-			display: inline-block;
 			display: inline-block;
 			height: var(--#{$shale}input-size);
 			transition: background .3s ease, border-color .3s ease;
@@ -96,18 +72,18 @@
 		}
 
 		&:checked + label::after, &:indeterminate + label::after {
-			background: rgb(var(--#{$shale}input-fill));
+			background: var(--#{$shale}input-fill);
 		}
 
 		&:hover + label::before, #{$hover} + label::before {
 			background: var(--#{$shale}button-hover);
 			border-color: var(--#{$shale}button-border-hover);
-			box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border-hover);
+			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
 		}
 
 		&:focus-visible + label::before, #{$focus} + label::before {
 			border-color: var(--#{$shale}button-border-active);
-			box-shadow: inset 0 0 0 var(--#{$shale}border-width) var(--#{$shale}button-inset-border-active);
+			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
 		}
 	}
 
@@ -115,11 +91,11 @@
 		+ label::after { border-radius: .25rem; }
 
 		+ label::after {
-			clip-path: polygon(50% 70%, 70% 16%, 80% 16%, 50% 100%, 40% 100%, 30% 50%, 40% 50%);
+			clip-path: polygon(50% 70%, 75% 10%, 90% 10%, 60% 90%, 45% 90%, 20% 50%, 35% 50%);
 		}
 
 		&:indeterminate + label::after {
-			clip-path: rect(20% 80% 80% 20% round 20%);
+			clip-path: rect(20% 80% 80% 20% round 10%);
 		}
 	}
 

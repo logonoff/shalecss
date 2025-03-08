@@ -9,22 +9,20 @@
  * @param {element} e element whos child has a .icon elem
  */
 function toggleDark(e) {
-	console.log(e);
-
 	if (document.documentElement.classList.contains("shale-v1-dark")) {
 		// dark mode is enabled, turn it off
 		document.documentElement.classList.remove("shale-v1-dark");
 
-		e.querySelector(".icon").classList.remove("icon-moon-fill");
-		e.querySelector(".icon").classList.add("icon-moon-stroke");
+		e.querySelector(".shale-v1-icon").classList.remove("icon-moon-fill");
+		e.querySelector(".shale-v1-icon").classList.add("icon-moon-stroke");
 
 		localStorage.setItem("theme", "light");
 	} else {
 		// dark mode is disabled, turn it on
-		document.documentElement.classList.add("dark");
+		document.documentElement.classList.add("shale-v1-dark");
 
-		e.querySelector(".icon").classList.remove("icon-moon-stroke");
-		e.querySelector(".icon").classList.add("icon-moon-fill");
+		e.querySelector(".shale-v1-icon").classList.remove("icon-moon-stroke");
+		e.querySelector(".shale-v1-icon").classList.add("icon-moon-fill");
 
 		localStorage.setItem("theme", "dark");
 	}
@@ -36,16 +34,14 @@ function toggleDark(e) {
  * @param {element} e element whos child has a .icon elem
  */
 function toggleContrast(e) {
-	console.log(e);
-
-	if (document.documentElement.classList.contains("contrast")) {
+	if (document.documentElement.classList.contains("shale-v1-contrast")) {
 		// contrast mode is enabled, turn it off
-		document.documentElement.classList.remove("contrast");
+		document.documentElement.classList.remove("shale-v1-contrast");
 
 		localStorage.setItem("theme", "light");
 	} else {
 		// contrast mode is disabled, turn it on
-		document.documentElement.classList.add("contrast");
+		document.documentElement.classList.add("shale-v1-contrast");
 
 		localStorage.setItem("theme", "contrast");
 	}
@@ -57,22 +53,20 @@ function toggleContrast(e) {
  * @param {element} e element whos child has a .icon elem
  */
 function toggleTextSize(e) {
-	console.log(e);
-
-	if (document.documentElement.classList.contains("bigger-text")) {
+	if (document.documentElement.classList.contains("shale-v1-bigger-text")) {
 		// larger text size is enabled, turn it off
-		document.documentElement.classList.remove("bigger-text");
+		document.documentElement.classList.remove("shale-v1-bigger-text");
 
-		e.querySelector(".icon").classList.remove("icon-a-lowercase");
-		e.querySelector(".icon").classList.add("icon-a-uppercase");
+		e.querySelector(".shale-v1-icon").classList.remove("icon-a-lowercase");
+		e.querySelector(".shale-v1-icon").classList.add("icon-a-uppercase");
 
 		localStorage.setItem("textSize", "medium");
 	} else {
 		// larger text size is disabled, turn it on
-		document.documentElement.classList.add("bigger-text");
+		document.documentElement.classList.add("shale-v1-bigger-text");
 
-		e.querySelector(".icon").classList.remove("icon-a-uppercase");
-		e.querySelector(".icon").classList.add("icon-a-lowercase");
+		e.querySelector(".shale-v1-icon").classList.remove("icon-a-uppercase");
+		e.querySelector(".shale-v1-icon").classList.add("icon-a-lowercase");
 
 		localStorage.setItem("textSize", "large");
 	}
@@ -101,10 +95,15 @@ function loadFromLocalStorage() {
 
 loadFromLocalStorage();
 
+document.querySelectorAll("[data-indeterminate]").forEach((e) => {
+	e.indeterminate = true;
+});
+
+
 /*
-** kounami code accent colour rainbow thing
-** https://stackoverflow.com/a/45576888
-*/
+ * kounami code accent colour rainbow thing
+ * https://stackoverflow.com/a/45576888
+ */
 function onKonamiCode(cb) {
 	var input = "";
 	var key = "38384040373937396665";
@@ -118,42 +117,35 @@ function onKonamiCode(cb) {
 	});
 }
 
-var r = 255, // pretty sure these have to be global
-	g = 0,
-	b = 0;
-
 function rainbowz() {
-	/*
-	** does one iteration of rgb color cycle thing
-	** and sets --a-r, --a-g, and --a-b css variables in the process
-	*/
+	// get rgb value of previous accent colour
+	let rgb = document.documentElement.style.getPropertyValue("--shale-v1-accent");
+	rgb = rgb ? rgb.match(/\d+/g) : [255, 0, 0];
+	let r = parseInt(rgb[0]);
+	let g = parseInt(rgb[1]);
+	let b = parseInt(rgb[2]);
+
 	// increment or decrement rgb values
 	if (r > 0 && b == 0) {
-		r -= 5;
-		g += 5;
+		r -= 1;
+		g += 1;
 	}
 
 	if (g > 0 && r == 0) {
-		g -= 5;
-		b += 5;
+		g -= 1;
+		b += 1;
 	}
 
 	if (b > 0 && g == 0) {
-		r += 5;
-		b -= 5;
+		r += 1;
+		b -= 1;
 	}
 
 	// overide accent colour variable
-	document.documentElement.style.setProperty("--a-r", r + "");
-	document.documentElement.style.setProperty("--a-g", g + "");
-	document.documentElement.style.setProperty("--a-b", b + "");
+	document.documentElement.style.setProperty("--shale-v1-accent", `rgb(${r}, ${g}, ${b})`);
 }
 
 /* Put both together */
 onKonamiCode(function() {
-	setInterval(rainbowz, 100);
-});
-
-document.querySelectorAll("[data-indeterminate]").forEach((e) => {
-	e.indeterminate = true;
+	setInterval(rainbowz, 10);
 });

@@ -4,7 +4,8 @@
 /* Headers */
 .#{$shale}h1, .#{$shale}h2, .#{$shale}h3, .#{$shale}h4 {
 	font-weight: 500;
-	margin: 0.5em 0 0.25em;
+	margin: 0.75em 0 0.5em;
+	color: var(--#{$shale}text-colour);
 }
 
 .#{$shale}h1 { font-size: var(--#{$shale}font-4); }
@@ -16,11 +17,13 @@
 	.#{$shale}font-#{$i} { font-size: var(--#{$shale}font-#{$i}); }
 }
 
+.#{$shale}bigger-text { --#{$shale}font-0: 1.25rem; }
+
 /* Code */
 .#{$shale}code {
-	background-color: #EEE;
+	background: var(--#{$shale}code-background);
 	border-radius: .2rem;
-	color: #171700;
+	color: var(--#{$shale}text-colour);
 	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
 	padding: .25rem;
 	white-space: pre-wrap;

@@ -12,19 +12,20 @@
 	z-index: -1337;
 
 	&:focus-visible, &:active, #{$focus}, #{$active} {
-		background: #575757;
-		border: 3px solid white;
+		background: var(--#{$shale}code-background);
+		border: 3px solid var(--#{$shale}button-border-active);
 		border-radius: 15px;
-		color: white;
+		color: var(--#{$shale}text-colour);
+		outline: none;
 		font-size: 1rem;
 		height: auto;
-		left: calc(50vw - 6rem);
+		left: 1rem;
 		margin: 1rem .5rem;
 		overflow: auto;
 		padding: .5rem 1rem;
 		text-align: center;
-		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
 		width: auto;
+		text-decoration: none;
 		z-index: 6969;
 	}
 }

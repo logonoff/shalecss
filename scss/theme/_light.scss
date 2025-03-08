@@ -1,64 +1,84 @@
-// sass-lint:disable-all
 /*
-** Variables
-** (light theme)
-*/
-// Define variables
-:root {
+ * Light Theme (default)
+ */
+.#{$shale}light, :root {
+    /* General */
+    --#{$shale}background: linear-gradient(#CCC, #BEBEBE); // site background
+    --#{$shale}text-colour: black;
+    --#{$shale}link-colour: var(--#{$shale}accent-900);
+    --#{$shale}code-background: #EEE;
+    --#{$shale}secondary-border: #989898;
 
-/* General */
---#{$shale}background: linear-gradient(#CCC, #BEBEBE); // site background
---#{$shale}text-colour: black;
+    /* Header */
+    --#{$shale}header-background: linear-gradient(#575757, #454545);
+    --#{$shale}header-background-disabled: linear-gradient(#8a8a8a, #787878);
+    --#{$shale}header-text: white;
+    --#{$shale}header-bar-current: color-mix(in srgb, var(--#{$shale}accent-400), transparent 20%);
+    --#{$shale}header-glow-current: var(--#{$shale}accent-900);
+    --#{$shale}header-bar-hover: var(--#{$shale}accent-400);
+    --#{$shale}header-glow-hover: var(--#{$shale}accent-900);
+    --#{$shale}header-bar-active: var(--#{$shale}accent-800);
 
---#{$shale}link-colour: #00729E;
+    /* Footer */
+    --#{$shale}footer-background: linear-gradient(#FCFCFC, #E6E6E6);
 
---#{$shale}link-focus-bg: white;
+    /* Cards */
+    --#{$shale}card-background: linear-gradient(#eeeeee, #dadada);
 
---#{$shale}input-fill: calc(var(--#{$shale}a-r) - 144), calc(var(--#{$shale}a-g) - 136), calc(var(--#{$shale}a-b) - 136); // fill for the center of radio and checkbox
+    /* Notes */
+    --#{$shale}note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+    --#{$shale}note-info-border: #84bcd8;
+    --#{$shale}note-info-text: #093044;
 
---#{$shale}border-width: 1px;
+    --#{$shale}note-alert-base: linear-gradient(#EEB3B3, #DAA4A4);
+    --#{$shale}note-alert-border: #B58888;
+    --#{$shale}note-alert-text: #440909;
 
-/* Cards */
-// these are in decimal to allow for alpha transparency in marketplace
---#{$shale}card-1: 238, 238, 238; // card background (gradient stop 1)
---#{$shale}card-2: 218, 218, 218; // card background (gradient stop 2)
+    --#{$shale}note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+    --#{$shale}note-warn-border: #878b58;
+    --#{$shale}note-warn-text: #404409;
 
-/* Notes */
---#{$shale}note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
---#{$shale}note-info-dark: #093044;
+    --#{$shale}note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+    --#{$shale}note-tip-border: #6ea36e;
+    --#{$shale}note-tip-text: #094409;
 
---#{$shale}note-alert-base: linear-gradient(#F9D2D2, #D9B2B2);
---#{$shale}note-alert-dark: #440909;
+    /* Button */
+    --#{$shale}button: #EEE linear-gradient(#E0E0E0, #CCC);
+    --#{$shale}button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
+    --#{$shale}button-active: linear-gradient(in oklab, var(--#{$shale}accent-100), var(--#{$shale}accent-300));
+    --#{$shale}button-disabled: #CCC linear-gradient(#CCC, #AAA);
 
---#{$shale}note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
---#{$shale}note-warn-dark: #404409;
+    --#{$shale}button-border: #B5B5B5;
+    --#{$shale}button-border-hover: #CECECE;
+    --#{$shale}button-border-active: var(--#{$shale}accent);
 
---#{$shale}note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
---#{$shale}note-tip-dark: #094409;
+    --#{$shale}button-inset-border: #E3E3E3;
+    --#{$shale}button-inset-border-hover: #FDFDFD;
+    --#{$shale}button-inset-border-active: var(--#{$shale}accent-200);
 
-/* Button */
---#{$shale}button: #EEE linear-gradient(#E0E0E0, #CCC);
---#{$shale}button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
---#{$shale}button-active: rgb(var(--#{$shale}accent)) linear-gradient(rgb(calc(var(--#{$shale}a-r) + 20), calc(var(--#{$shale}a-g) + 20), calc(var(--#{$shale}a-b) + 20)), rgb(var(--#{$shale}accent)));
---#{$shale}button-disabled: #CCC linear-gradient(#CCC, #AAA);
+    /* Input */
+    --#{$shale}input-background: linear-gradient(#F9F9F9, white);
+    --#{$shale}input-border: #DADADA;
+    --#{$shale}input-inner-border: #B5B5B5;
+    --#{$shale}input-border-hover: white;
+    --#{$shale}input-inner-border-hover: #CECECE;
+    --#{$shale}input-border-active: var(--#{$shale}accent-200);
+    --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
+    --#{$shale}input-fill: linear-gradient(var(--#{$shale}accent-800),  var(--#{$shale}accent-900));
 
---#{$shale}button-border: #B5B5B5;
---#{$shale}button-border-hover: #CECECE;
---#{$shale}button-border-active: rgb(calc(var(--#{$shale}a-r) - 26), calc(var(--#{$shale}a-g) - 32), calc(var(--#{$shale}a-b) - 36));
+    /* Scrollbar */
+    --#{$shale}scrollbar-corner: #F0F0F0;
 
---#{$shale}button-inset-border: #E3E3E3;
---#{$shale}button-inset-border-hover: #FDFDFD;
---#{$shale}button-inset-border-active: rgb(var(--#{$shale}accent));
+    --#{$shale}scrollbar-track-bg: #F5F5F5 linear-gradient(#F5F5F5, #E5E5E5);
 
-/* Scrollbar */
---#{$shale}scrollbar-corner: #F0F0F0;
+    --#{$shale}scrollbar-button: #DADADA; // scrollbar button initial
+    --#{$shale}scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
+    --#{$shale}scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
+    --#{$shale}scrollbar-active: var(--#{$shale}accent-200);
+    --#{$shale}scrollbar-active-1: var(--#{$shale}accent-100);
+    --#{$shale}scrollbar-arrow: #333; // color of scrollbar arrow
 
---#{$shale}scrollbar-track-bg: #F5F5F5 linear-gradient(#DFDFDF, #CDCDCD); // todo: fix poor contrast
-
---#{$shale}scrollbar-button: #DADADA; // scrollbar button initial
---#{$shale}scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
---#{$shale}scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
---#{$shale}scrollbar-active: calc(var(--#{$shale}a-r) + 10), calc(var(--#{$shale}a-g) + 10), calc(var(--#{$shale}a-b) + 10); // scrollbar button active (bottom)
---#{$shale}scrollbar-active-1: calc(var(--#{$shale}a-r) + 25), calc(var(--#{$shale}a-g) + 25), calc(var(--#{$shale}a-b) + 25); // scrollbar button active (top)
---#{$shale}scrollbar-arrow: #333; // color of scrollbar arrow
+    ::-webkit-scrollbar-thumb {
+        --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-light);
+    }
 }
