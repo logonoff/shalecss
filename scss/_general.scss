@@ -1,22 +1,10 @@
-[class*="#{$shale}"] { box-sizing: border-box; }
+[class*="#{$shale}"] {
+	box-sizing: border-box;
+	font-family: var(--#{$shale}font-family);
+}
 
 @media (prefers-reduced-motion: reduce) {
-	[class*="#{$shale}"] .transition { transition: none !important; }
-}
-
-/* use this if you're not pairing with another layout system */
-.#{$shale}container {
-	margin: 3em auto;
-	max-width: 75em;
-	padding: 0 1em;
-}
-
-/* screen reader only text */
-.#{$shale}sr-only { // hidden text for narrators
-	height: 1px;
-	left: -420691337px;
-	overflow: hidden;
-	position: absolute;
-	top: auto;
-	width: 1px;
+	[class*="#{$shale}"] {
+		transition: none !important;
+	}
 }

@@ -1,0 +1,51 @@
+/*
+ * Select
+ */
+.#{$shale}select {
+    @include button-style;
+    align-items: center;
+    border-radius: 3px;
+    display: inline-grid;
+    grid-template-areas: "select";
+    position: relative;
+
+    & select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        cursor: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        grid-area: select;
+        line-height: inherit;
+        width: 100%;
+        padding: 0 1.5em 0 0.5em;
+        z-index: 1;
+
+        &:focus {
+            outline: 2px solid var(--#{$shale}button-border-active);
+        }
+
+        option, optgroup {
+            background: var(--#{$shale}card-background);
+            color: var(--#{$shale}text-colour);
+
+            &:disabled, &#{$disabled} {
+                background: var(--#{$shale}card-background-disabled);
+            }
+        }
+    }
+
+    // arrow
+    &::after {
+        background-color: var(--#{$shale}text-colour);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        content: "";
+        display: inline-block;
+        grid-area: select;
+        height: 0.3em;
+        justify-self: end;
+        margin-right: 0.5em;
+        width: 0.6em;
+    }
+}

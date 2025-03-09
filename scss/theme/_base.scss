@@ -1,0 +1,50 @@
+/*
+ * CSS variables that don't pertain to a theme
+ */
+// global prefix for all CSS variables
+$shale: "shale-v1-" !default;
+
+// global class names for forcing a hover/focus/active state
+$active: ".#{$shale}-active" !default;
+$checked: ".#{$shale}-checked" !default;
+$disabled: ".#{$shale}-disabled" !default;
+$focus: ".#{$shale}-focus" !default;
+$hover: ".#{$shale}-hover" !default;
+$indeterminate: ".#{$shale}-indeterminate" !default;
+
+:root {
+    /* Typography */
+    --#{$shale}font-family: 'Ubuntu', Cantarell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --#{$shale}font-family-mono: 'Ubuntu Mono', 'Consolas', 'Lucida Console', 'Monaco', monospace;
+
+    --#{$shale}font-scale: 1.25;
+
+    --#{$shale}font-5: calc(var(--#{$shale}font-4) * var(--#{$shale}font-scale));
+    --#{$shale}font-4: calc(var(--#{$shale}font-3) * var(--#{$shale}font-scale));
+    --#{$shale}font-3: calc(var(--#{$shale}font-2) * var(--#{$shale}font-scale));
+    --#{$shale}font-2: calc(var(--#{$shale}font-1) * var(--#{$shale}font-scale));
+    --#{$shale}font-1: calc(var(--#{$shale}font-0) * var(--#{$shale}font-scale));
+    --#{$shale}font-0: 1rem;
+    --#{$shale}font--1: calc(var(--#{$shale}font-0) / var(--#{$shale}font-scale));
+
+    /* Shadows */
+    --#{$shale}shadow-subtle: 0 2px 4px 0 rgba(0, 0, 0, .12);
+    --#{$shale}shadow-moderate: 0 4px 8px 0 rgba(0, 0, 0, .24);
+    --#{$shale}shadow-puffy: 0 8px 16px 0 rgba(0, 0, 0, .32);
+
+    /* Dynamic accent colour */
+    --#{$shale}accent: #bdecee;
+    --#{$shale}accent-light-tint: lightgray;
+    --#{$shale}accent-dark-tint: black;
+
+    // calculated shades
+    --#{$shale}accent-100: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 80%);
+    --#{$shale}accent-200: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 60%);
+    --#{$shale}accent-300: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 40%);
+    --#{$shale}accent-400: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 20%);
+    --#{$shale}accent-500: var(--#{$shale}accent);
+    --#{$shale}accent-600: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 10%);
+    --#{$shale}accent-700: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 20%);
+    --#{$shale}accent-800: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 30%);
+    --#{$shale}accent-900: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 40%);
+}

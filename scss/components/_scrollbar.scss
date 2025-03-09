@@ -4,7 +4,7 @@
  * based off https://stackoverflow.com/a/52895808
  */
 
-html:not(.no-custom-scrollbar) {
+.#{$shale}webkit-scrollbar {
 // Base track
 ::-webkit-scrollbar-track { background: var(--#{$shale}scrollbar-track-bg); }
 

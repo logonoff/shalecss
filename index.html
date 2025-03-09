@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="shale-v1-webkit-scrollbar shale-v1-light">
+
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>shale.css</title>
 		<meta name="theme-color" content="#454545" />
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com/" crossorigin="anonymous" />
-		<link rel="stylesheet" href="build/shale-v1.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap"
 			crossorigin="anonymous">
+		<link rel="stylesheet" href="build/shale.css" />
 	</head>
 
 	<body class="shale-v1-body">
@@ -18,11 +19,13 @@
 				<p class="shale-v1-header-text">shale.css</p>
 
 				<span class="shale-v1-caption-menu">
-					<a class="js-textsize shale-v1-caption-button" onclick="toggleTextSize(this)" title="Toggle text size">
+					<a class="js-textsize shale-v1-caption-button" onclick="toggleTextSize(this)"
+						title="Toggle text size">
 						<span class="shale-v1-icon icon-a-uppercase"></span>
 					</a>
 
-					<a class="js-contrast shale-v1-caption-button" onclick="toggleContrast(this)" title="Toggle contrast">
+					<a class="js-contrast shale-v1-caption-button" onclick="toggleContrast(this)"
+						title="Toggle contrast">
 						<span class="shale-v1-icon icon-contrast"></span>
 					</a>
 
@@ -32,137 +35,442 @@
 				</span>
 			</div>
 
-			<nav class="shale-v1-nav">
-				<a href="#" class="shale-v1-menu-bar-button shale-v1-current">menu item 1</a>
-				<a href="#" class="shale-v1-menu-bar-button">menu item 2</a>
-				<a href="#" class="shale-v1-menu-bar-button">menu item 3</a>
-				<a href="#" class="shale-v1-menu-bar-button">menu item 4</a>
-				<a href="#" class="shale-v1-menu-bar-button" disabled>menu item 5</a>
-			</nav>
-
-			<div class="shale-v1-command-bar">
-				<a class="shale-v1-button shale-v1--secondary" href="#">
-					😂 Live
-				</a>
-				<a class="shale-v1-button shale-v1--secondary" href="#">
-					🤔 Laugh
-				</a>
-				<a class="shale-v1-button shale-v1--secondary" href="#">
-					🥰 Love
-				</a>
-			</div>
-
-
 		</header>
 
 		<main class="shale-v1-container" id="maincontent">
+			<section class="shale-v1-flex-space-between">
+				<div class="shale-v1-card shale-v1-flex-grow shale-v1-flex-space-between">
+					<div>
+						<h1 class="shale-v1-h1">shale.css</h1>
+						<p class="shale-v1-h4">simple pseudo-skeuomorph CSS styles</p>
+						<p class="shale-v1-p">
+							shale.css provides a simple set of CSS styles to quickly make a prototype look presentable
+						</p>
+					</div>
+					<div class="shale-v1-flex-align-center">
+						<a href="https://github.com/logonoff/shalecss/" class="shale-v1-button"
+							aria-label="GitHub repository for shale.css">
+							GitHub
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="shale-v1-flex-space-between">
+				<div class="shale-v1-card shale-v1-flex-third">
+					<h2 class="shale-v1-h3">
+						customizable
+					</h2>
+					<p class="shale-v1-p">
+						every colour is set by a CSS variable to make it easier to
+						change how things look. dark, light, and high contrast themes are already included
+					</p>
+				</div>
+				<div class="shale-v1-card shale-v1-flex-third">
+					<h2 class="shale-v1-h3">
+						no overrides
+					</h2>
+					<p class="shale-v1-p">
+						shale.css does not override any global styles, so it can be used in
+						any project, alongside any other CSS framework if you'd like
+					</p>
+				</div>
+				<div class="shale-v1-card shale-v1-flex-third">
+					<h2 class="shale-v1-h3">
+						based on browser elements
+					</h2>
+					<p class="shale-v1-p">
+						no wonky custom components. shale.css directly uses browser functionality
+						so everything works exactly as you would expect
+					</p>
+				</div>
+			</section>
+
 			<section>
-				<h1 class="shale-v1-h1">Header</h1>
-				<h2 class="shale-v1-h2">Header</h2>
-				<h3 class="shale-v1-h3">Header</h3>
-				<h4 class="shale-v1-h4">Header</h4>
+				<div class="shale-v1-flex-center">
+					<h2 class="shale-v1-h2">check out some styles</h2>
+				</div>
+
+				<h1 class="shale-v1-h1">Heading level 1</h1>
+				<h2 class="shale-v1-h2">Heading level 2</h2>
+				<h3 class="shale-v1-h3">Heading level 3</h3>
+				<h4 class="shale-v1-h4">Heading level 4</h4>
+				<h5 class="shale-v1-h5">Heading level 5</h5>
+				<h6 class="shale-v1-h6">Heading level 6</h6>
+
 				<div id="buttone-main">
-					<br>
 					<pre class="shale-v1-code">
-public static v o i d main {
-	print (bruv);
-}</pre>
+def get_a_million_dollars():
+	return P == NP
 
-			</section>
-			<section>
-				<h2 class="shale-v1-h2">Color palette</h2>
-				<h3 class="shale-v1-h3">Accent</h3>
-				<div class="shale-v1-card" style="display: grid;grid-template-columns: repeat(9, 1fr);grid-gap: 1em;">
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-100);">100</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-200);">200</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-300);">300</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-400);">400</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-500);">500</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-600);">600</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-700);">700</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-800);">800</div>
-					<div style="padding: 1em;background-color: var(--shale-v1-accent-900);">900</div>
-				</div>
-			</section>
-			<section>
-				<h2 class="shale-v1-h2">Notes</h2>
-				<div class="shale-v1-card shale-v1-note shale-v1-note-info">
-					<div class="shale-v1-note-title">Note</div>
-					<div class="shale-v1-note-content">Doo doo doo-doo doo doo doo doo</div>
-				</div>
-
-				<br>
-
-				<div class="shale-v1-card shale-v1-note shale-v1-note-alert">
-					<div class="shale-v1-note-title">Important</div>
-					<div class="shale-v1-note-content">Doo doo doo-doo doo doo doo doo</div>
-				</div>
-
-				<br>
-
-				<div class="shale-v1-card shale-v1-note shale-v1-note-warn">
-					<div class="shale-v1-note-title">Warning</div>
-					<div class="shale-v1-note-content">Doo doo doo-doo doo doo doo doo</div>
-				</div>
-
-				<br>
-
-				<div class="shale-v1-card shale-v1-note shale-v1-note-tip">
-					<div class="shale-v1-note-title">Tip</div>
-					<div class="shale-v1-note-content">Doo doo doo-doo doo doo doo doo</div>
-				</div>
+print(get_a_million_dollars())
+</pre>
 
 			</section>
 
-			<section>
-				<h2 class="shale-v1-h2">Buttons and forms</h2>
+			<div class="shale-v1-card shale-v1-flex-space-between">
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-100);">100
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-200);">200
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-300);">300
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-400);">400
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-500);">500
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-600);">600
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-700);">700
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-800);">800
+				</div>
+				<div class="shale-v1-flex-grow" style="padding: 1em; background-color: var(--shale-v1-accent-900);">900
+				</div>
+			</div>
 
-				<div class="shale-v1-input">
-					<input placeholder="input" type="text">
+
+			<div class="shale-v1-flex-space-between">
+				<div class="shale-v1-card shale-v1-flex-third" style="box-shadow: var(--shale-v1-shadow-subtle);">subtle
+					shadows
+				</div>
+				<div class="shale-v1-card shale-v1-flex-third" style="box-shadow: var(--shale-v1-shadow-moderate);">
+					moderate shadows</div>
+				<div class="shale-v1-card shale-v1-flex-third" style="box-shadow: var(--shale-v1-shadow-puffy);">puffy
+					shadows
+				</div>
+			</div>
+
+			<div class="shale-v1-flex-space-between">
+				<div class="shale-v1-note-info shale-v1-flex-quarter">
+					<strong>Note</strong>
+					<p class="shale-v1-note-text">Doo doo doo-doo doo doo doo doo</p>
 				</div>
 
-				<br>
+				<div class="shale-v1-note-alert shale-v1-flex-quarter">
+					<strong>Important</strong>
+					<p class="shale-v1-note-text">Doo doo doo-doo doo doo doo doo</p>
+				</div>
 
-				<form>
-					<div class="shale-v1-input">
-						<input type="radio" name="demo input" id="valuea">
-						<label for="valuea">Radio1</label>
+				<div class="shale-v1-note-warn shale-v1-flex-quarter">
+					<strong>Warning</strong>
+					<p class="shale-v1-note-text">Doo doo doo-doo doo doo doo doo</p>
+				</div>
+
+				<div class="shale-v1-note-tip shale-v1-flex-quarter">
+					<strong>Tip</strong>
+					<p class="shale-v1-note-text">Doo doo doo-doo doo doo doo doo</p>
+				</div>
+			</div>
+
+			<section>
+				<h2 class="shale-v1-h2">buttons and forms</h2>
+
+				<h3 class="shale-v1-h3">enabled</h3>
+
+				<div class="shale-v1-flex-space-between">
+					<form class="shale-v1-flex-form">
+						<div class="shale-v1-input">
+							<input placeholder="text" type="text">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="password" type="password">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="email" type="email">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="url" type="url">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="tel" type="tel">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="number" type="number">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="search" type="search">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="date" type="date">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="time" type="time">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="datetime-local" type="datetime-local">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="month" type="month">
+						</div>
+						<div class="shale-v1-input">
+							<input placeholder="week" type="week">
+						</div>
+						<input placeholder="color" type="color" class="shale-v1-button">
+						<div class="shale-v1-select">
+							<select name="demo input" id="valueg">
+								<optgroup label="Fruits">
+									<option>Apples</option>
+									<option>Oranges</option>
+									<option>Pomegranates</option>
+								</optgroup>
+								<optgroup label="Vegetables" disabled>
+									<option>Carrots</option>
+									<option>Peas</option>
+									<option>Broccoli</option>
+								</optgroup>
+								<option>Meat</option>
+								<option>Dairy</option>
+								<option disabled>Grains</option>
+							</select>
+						</div>
+						<a href="#" class="shale-v1-button">button</a>
+						<a href="#" class="shale-v1-button shale-v1--secondary">secondary button</a>
+						<a href="#" class="shale-v1-link">link</a>
+
+						<div class="shale-v1-input">
+							<input type="radio" name="demo input" id="valuea">
+							<label for="valuea">Radio1</label>
+						</div>
+						<div class="shale-v1-input">
+							<input type="radio" name="demo input" id="valueb" checked>
+							<label for="valueb">Radio2</label>
+						</div>
+
+						<div class="shale-v1-input">
+							<input type="checkbox" name="demo input" id="valued" checked>
+							<label for="valued">Checkbox1</label>
+						</div>
+						<div class="shale-v1-input">
+							<input type="checkbox" name="demo input" id="valuee" data-indeterminate>
+							<label for="valuee">Checkbox2</label>
+						</div>
+						<div class="shale-v1-input">
+							<input type="checkbox" name="demo input" id="valuef">
+							<label for="valuef">Checkbox3</label>
+						</div>
+					</form>
+
+					<h3 class="shale-v1-h3">disabled</h3>
+
+					<form class="shale-v1-flex-form">
+						<div class="shale-v1-input">
+							<input disabled placeholder="text" type="text">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="password" type="password">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="email" type="email">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="url" type="url">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="tel" type="tel">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="number" type="number">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="search" type="search">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="date" type="date">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="time" type="time">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="datetime-local" type="datetime-local">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="month" type="month">
+						</div>
+						<div class="shale-v1-input">
+							<input disabled placeholder="week" type="week">
+						</div>
+						<input disabled placeholder="color" type="color" class="shale-v1-button">
+						<div class="shale-v1-select shale-v1--disabled">
+							<select disabled name="demo input" id="valueg">
+								<option>Apples</option>
+							</select>
+						</div>
+						<a class="shale-v1--disabled shale-v1-button">button</a>
+						<a class="shale-v1--disabled shale-v1-button shale-v1--secondary">secondary button</a>
+						<a class="shale-v1--disabled shale-v1-link">link</a>
+
+						<div class="shale-v1-input">
+							<input disabled type="radio" name="demo input" id="valueaa">
+							<label for="valueaa">Radio3</label>
+						</div>
+						<div class="shale-v1-input">
+							<input disabled type="radio" name="demo input" id="valuebb" checked>
+							<label for="valuebb">Radio4</label>
+						</div>
+
+						<div class="shale-v1-input">
+							<input disabled type="checkbox" name="demo input" id="valuedd" checked>
+							<label for="valuedd">Checkbox4</label>
+						</div>
+						<div class="shale-v1-input">
+							<input disabled type="checkbox" name="demo input" id="valueee" data-indeterminate>
+							<label for="valueee">Checkbox5</label>
+						</div>
+						<div class="shale-v1-input">
+							<input disabled type="checkbox" name="demo input" id="valueff">
+							<label for="valueff">Checkbox6</label>
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="shale-v1-flex-space-between">
+				<h2 class="shale-v1-h2">headers and footers</h2>
+
+				<header class="shale-v1-header">
+					<div class="shale-v1-header-title">
+						<p class="shale-v1-header-text">example header bar (just the header)</p>
 					</div>
-					<div class="shale-v1-input">
-						<input type="radio" name="demo input" id="valueb">
-						<label for="valueb">Radio2</label>
+				</header>
+
+				<header class="shale-v1-header shale-v1--disabled">
+					<div class="shale-v1-header-title">
+						<p class="shale-v1-header-text">example header bar (disabled)</p>
 					</div>
-					<div class="shale-v1-input">
-						<input type="radio" name="demo input" id="valuec">
-						<label for="valuec">Radio3</label>
+
+					<nav class="shale-v1-nav">
+						<a href="#" class="shale-v1-menu-bar-button shale-v1-current">current option</a>
+						<a href="#" class="shale-v1-menu-bar-button shale-v1--hover">hovered over</a>
+						<a href="#" class="shale-v1-menu-bar-button shale-v1--active">clicked on</a>
+						<a href="#" class="shale-v1-menu-bar-button">idle</a>
+						<a class="shale-v1-menu-bar-button" disabled>disabled</a>
+					</nav>
+				</header>
+
+				<header class="shale-v1-header">
+					<div class="shale-v1-header-title">
+						<p class="shale-v1-header-text">example header bar with all the bells and whistles</p>
+
+						<span class="shale-v1-caption-menu">
+							<a class="shale-v1-caption-button" title="Toggle text size" href="#">
+								<span class="shale-v1-icon icon-a-uppercase"></span>
+							</a>
+
+							<a class="shale-v1-caption-button" title="Toggle contrast" href="#">
+								<span class="shale-v1-icon icon-contrast"></span>
+							</a>
+
+							<a class="shale-v1-caption-button" title="Toggle dark mode" href="#">
+								<span class="shale-v1-icon icon-moon-stroke"></span>
+							</a>
+						</span>
 					</div>
-				</form>
-				<br>
-				<form>
-					<div class="shale-v1-input">
-						<input type="checkbox" name="demo input" id="valued" checked>
-						<label for="valued">Checkbox1</label>
+
+					<nav class="shale-v1-nav">
+						<a href="#" class="shale-v1-menu-bar-button shale-v1-current">current option</a>
+						<a href="#" class="shale-v1-menu-bar-button shale-v1--hover">hovered over</a>
+						<a href="#" class="shale-v1-menu-bar-button shale-v1--active">clicked on</a>
+						<a href="#" class="shale-v1-menu-bar-button">idle</a>
+						<a class="shale-v1-menu-bar-button" disabled>disabled</a>
+					</nav>
+
+					<div class="shale-v1-command-bar">
+						<a class="shale-v1-button shale-v1--secondary" href="#">😂 Live</a>
+						<a class="shale-v1-button shale-v1--secondary" href="#">🤔 Laugh</a>
+						<a class="shale-v1-button shale-v1--secondary" href="#">🥰 Love</a>
+						(command bar for optional actions)
 					</div>
-					<div class="shale-v1-input">
-						<input type="checkbox" name="demo input" id="valuee" data-indeterminate>
-						<label for="valuee">Checkbox2</label>
+				</header>
+
+				<div class="shale-v1-command-bar shale-v1-flex-grow">
+					command bar and navbar can be used separately if you want
+					<a class="shale-v1-button shale-v1--secondary" href="#">😋 Yum</a>
+				</div>
+
+				<footer class="shale-v1-footer">
+					<div class="shale-v1-container">
+						<p class="shale-v1-p">
+							footer
+						</p>
 					</div>
-					<div class="shale-v1-input">
-						<input type="checkbox" name="demo input" id="valuef">
-						<label for="valuef">Checkbox3</label>
+				</footer>
+			</section>
+
+			<section>
+				<h2 class="shale-v1-h2">containers</h2>
+
+				<h3 class="shale-v1-h3">halves</h3>
+				<div class="shale-v1-flex-center">
+					<div class="shale-v1-card shale-v1-flex-half">
 					</div>
-				</form>
-				<br>
-				<a href="#" class="shale-v1-button">button</a>
-				<a href="#" class="shale-v1-button shale-v1--secondary">button</a>
-				<a href="#" class="shale-v1-link">link</a>
+					<div class="shale-v1-card shale-v1-flex-half">
+					</div>
+				</div>
+				<h3 class="shale-v1-h3">third</h3>
+				<div class="shale-v1-flex-center">
+					<div class="shale-v1-card shale-v1-flex-third">
+					</div>
+					<div class="shale-v1-card shale-v1-flex-third">
+					</div>
+					<div class="shale-v1-card shale-v1-flex-third">
+					</div>
+				</div>
+				<h3 class="shale-v1-h3">quarters</h3>
+				<div class="shale-v1-flex-center">
+					<div class="shale-v1-card shale-v1-flex-quarter">
+					</div>
+					<div class="shale-v1-card shale-v1-flex-quarter">
+					</div>
+					<div class="shale-v1-card shale-v1-flex-quarter">
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="shale-v1-flex-center">
+					<h2 class="shale-v1-h2">yup thats it</h2>
+				</div>
+				<div class="shale-v1-flex-center">
+					<p class="shale-v1-h4">it aint much but its honest work</p>
 				</div>
 			</section>
 		</main>
 
 		<footer class="shale-v1-footer">
-			<div class="shale-v1-footer-text">
-				add a footer here later
+			<div class="shale-v1-container">
+				<p class="shale-v1-p">
+					shale.css <code class="shale-v1-code">v1.0.0-prelease</code> (and it will probably stay prerelease
+					forever)
+					<br>
+					<span class="shale-v1-h6">
+						(c) 2017-2025 <a class="shale-v1-link" href="https://logonoff.co">logonoff</a>. licensed under the
+						<a href="https://github.com/logonoff/shalecss/blob/master/LICENSE" class="shale-v1-link">
+							MIT license
+						</a>
+					</span>
+				</p>
+				<div>
+					<button onclick="localStorage.clear();location.reload();" class="shale-v1-button">
+						reset stored theme preferences
+					</button>
+					<button onclick="document.querySelector('html').classList.toggle('shale-v1-light');"
+						class="shale-v1-button">
+						toggle light mode
+					</button>
+					<button onclick="toggleDark(document.querySelector('.js-darkmode'))" class="shale-v1-button">
+						toggle dark mode
+					</button>
+					<button onclick="toggleContrast(document.querySelector('.js-contrast'))" class="shale-v1-button">
+						toggle contrast
+					</button>
+					<button onclick="toggleTextSize(document.querySelector('.js-textsize'))" class="shale-v1-button">
+						toggle text size
+					</button>
+					<button onclick="setInterval(rainbowz, 10);this.disabled=true;" class="shale-v1-button">
+						rainbows
+					</button>
+				</div>
 			</div>
 		</footer>
 

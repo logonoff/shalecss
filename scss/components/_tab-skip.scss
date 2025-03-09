@@ -1,6 +1,3 @@
-/*
- * Accessibility
- */
 /* Tab Skip */
 .#{$shale}skip {
 	height: 1px;
@@ -13,29 +10,20 @@
 
 	&:focus-visible, &:active, #{$focus}, #{$active} {
 		background: var(--#{$shale}code-background);
-		border: 3px solid var(--#{$shale}button-border-active);
 		border-radius: 15px;
+		border: 3px solid var(--#{$shale}button-border-active);
+		box-shadow: var(--#{$shale}shadow-puffy);
 		color: var(--#{$shale}text-colour);
-		outline: none;
 		font-size: 1rem;
 		height: auto;
 		left: 1rem;
 		margin: 1rem .5rem;
+		outline: none;
 		overflow: auto;
 		padding: .5rem 1rem;
 		text-align: center;
-		width: auto;
 		text-decoration: none;
+		width: auto;
 		z-index: 6969;
 	}
-}
-
-/* screen reader only text */
-.#{$shale}sr-only { // hidden text for narrators
-	height: 1px;
-	left: -420691337px;
-	overflow: hidden;
-	position: absolute;
-	top: auto;
-	width: 1px;
 }

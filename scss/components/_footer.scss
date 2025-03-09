@@ -4,7 +4,7 @@
 .#{$shale}footer {
 	background: var(--#{$shale}footer-background);
 	border-top: 1px solid var(--#{$shale}secondary-border);
-	box-shadow: 0 -4px 25px 0 rgba(0, 0, 0, .2);
+	box-shadow: var(--#{$shale}shadow-puffy);
 	color: var(--#{$shale}text-colour);
 	font-size: var(--#{$shale}font-0);
 	width: 100%;

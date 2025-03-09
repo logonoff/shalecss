@@ -5,9 +5,11 @@
 @mixin button-style {
 	background: var(--#{$shale}button);
 	border: 1px solid var(--#{$shale}button-border);
-	color: var(--#{$shale}text-colour);
-	transition: background .3s ease, border-color .3s ease;
-	box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
+	box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border), var(--#{$shale}shadow-subtle);
+	color: var(--#{$shale}button-text-colour, var(--#{$shale}text-colour));
+	font-family: inherit;
+	outline: none;
+	transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
 
 	&.#{$shale}-secondary {
 		background: transparent;
@@ -16,25 +18,32 @@
 	}
 
 	&:hover, &#{$hover} {
+		--#{$shale}button-text-colour: var(--#{$shale}button-hover-text-colour);
 		background: var(--#{$shale}button-hover);
 		border-color: var(--#{$shale}button-border-hover);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
+		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover), var(--#{$shale}shadow-moderate);
 	}
 
 	&:active, &#{$active} {
+		--#{$shale}button-text-colour: var(--#{$shale}button-active-text-colour);
 		background: var(--#{$shale}button-active);
 		border-color: var(--#{$shale}button-border-active);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
+		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active), var(--#{$shale}shadow-subtle);
 	}
 
 	// done like this because scrollbar wants active to be the only selector in style for some reason
 	&:focus-visible, &#{$focus} {
+		--#{$shale}button-text-colour: var(--#{$shale}button-active-text-colour);
 		background: var(--#{$shale}button-active);
 		border-color: var(--#{$shale}button-border-active);
 		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
 	}
 
-	&:disabled, &#{$disabled} { background: var(--#{$shale}button-disabled) }
+	&:disabled, &#{$disabled} {
+		background: var(--#{$shale}button-disabled);
+		border-color: var(--#{$shale}button-border-disabled, var(--#{$shale}button-border));
+		box-shadow: none;
+	}
 }
 
 .#{$shale}link {
@@ -46,8 +55,19 @@
 		padding-left: .25em;
 	}
 
-	&:hover { text-decoration: underline; }
+	&:hover, &:focus-visible, &#{$hover}, &#{$focus} {
+		text-decoration: underline;
+	}
 
+	&:active, &#{$active} {
+		color: var(--#{$shale}link-colour-active, var(--#{$shale}link-colour));
+	}
+
+	&:disabled, &#{$disabled} {
+		color: var(--#{$shale}link-colour-disabled, var(--#{$shale}link-colour));
+		pointer-events: none;
+		text-decoration: line-through;
+	}
 }
 
 .#{$shale}button {

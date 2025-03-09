@@ -72,11 +72,10 @@ function toggleTextSize(e) {
 	}
 }
 
-/**
+/*
  * loads "theme" and "textSize" items from localStorage and toggles themes accordingly
  */
 function loadFromLocalStorage() {
-	// !! this will only work if the js embed is at the bottom !! //
 	// dark
 	if (localStorage.getItem("theme") == "dark") {
 		toggleDark(document.querySelector(".js-darkmode"));

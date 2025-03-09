@@ -7,6 +7,7 @@
     /* General */
     --#{$shale}background: black;
     --#{$shale}text-colour: white;
+    --#{$shale}text-colour-secondary: white;
     --#{$shale}link-colour: #FF0;
     --#{$shale}code-background: #111111;
     --#{$shale}secondary-border: white;
@@ -16,14 +17,18 @@
     --#{$shale}header-background-disabled: #333;
     --#{$shale}header-text: white;
     --#{$shale}header-bar-current: #3FF23F;
+    --#{$shale}header-glow-current: transparent;
     --#{$shale}header-bar-hover: #FF0;
+    --#{$shale}header-glow-hover: transparent;
     --#{$shale}header-bar-active: #1AEBFF;
+    --#{$shale}header-glow-active: transparent;
 
     /* Footer */
     --#{$shale}footer-background: black;
 
     /* Cards */
     --#{$shale}card-background: black;
+    --#{$shale}card-border-color: white;
 
     // docs notes
     --#{$shale}note-info-base:  black;
@@ -48,7 +53,7 @@
     --#{$shale}button-active: #1AEBFF;
     --#{$shale}button-disabled: #3FF23F;
 
-    --#{$shale}button-border: #1C1C1C;
+    --#{$shale}button-border: white;
     --#{$shale}button-border-hover: #FF0;
     --#{$shale}button-border-active: #1AEBFF;
 
@@ -65,6 +70,9 @@
     --#{$shale}input-border-active: #1AEBFF;
     --#{$shale}input-inner-border-active: #1AEBFF;
     --#{$shale}input-fill: red;
+    --#{$shale}input-background-disabled: transparent;
+    --#{$shale}input-border-disabled: #3FF23F;
+    --#{$shale}input-inner-border-disabled: #3FF23F;
 
     /* Scrollbar */
     --#{$shale}scrollbar-track-bg: black;
@@ -80,4 +88,9 @@
     ::-webkit-scrollbar-thumb {
         --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-dark);
     }
+
+    /* Shadows */
+    --#{$shale}shadow-subtle: unset;
+    --#{$shale}shadow-moderate: unset;
+    --#{$shale}shadow-puffy: unset;
 }

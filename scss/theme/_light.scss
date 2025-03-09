@@ -1,52 +1,57 @@
 /*
  * Light Theme (default)
  */
-.#{$shale}light, :root {
+.#{$shale}light {
     /* General */
-    --#{$shale}background: linear-gradient(#CCC, #BEBEBE); // site background
+    --#{$shale}background: #BEBEBE linear-gradient(#CCC, #BEBEBE); // site background
     --#{$shale}text-colour: black;
+    --#{$shale}text-colour-secondary: #000a;
     --#{$shale}link-colour: var(--#{$shale}accent-900);
     --#{$shale}code-background: #EEE;
     --#{$shale}secondary-border: #989898;
 
     /* Header */
-    --#{$shale}header-background: linear-gradient(#575757, #454545);
-    --#{$shale}header-background-disabled: linear-gradient(#8a8a8a, #787878);
+    --#{$shale}header-background: #454545 linear-gradient(#575757, #454545);
+    --#{$shale}header-background-disabled: #787878 linear-gradient(#8a8a8a, #787878);
     --#{$shale}header-text: white;
-    --#{$shale}header-bar-current: color-mix(in srgb, var(--#{$shale}accent-400), transparent 20%);
-    --#{$shale}header-glow-current: var(--#{$shale}accent-900);
-    --#{$shale}header-bar-hover: var(--#{$shale}accent-400);
-    --#{$shale}header-glow-hover: var(--#{$shale}accent-900);
-    --#{$shale}header-bar-active: var(--#{$shale}accent-800);
+    --#{$shale}header-bar-current: var(--#{$shale}accent-300);
+    --#{$shale}header-glow-current: var(--#{$shale}accent-300);
+    --#{$shale}header-bar-hover: var(--#{$shale}accent-200);
+    --#{$shale}header-glow-hover: var(--#{$shale}accent-300);
+    --#{$shale}header-bar-active: var(--#{$shale}accent-400);
 
     /* Footer */
-    --#{$shale}footer-background: linear-gradient(#FCFCFC, #E6E6E6);
+    --#{$shale}footer-background: #E6E6E6 linear-gradient(#FCFCFC, #E6E6E6);
 
     /* Cards */
-    --#{$shale}card-background: linear-gradient(#eeeeee, #dadada);
+    --#{$shale}card-background: #dadada linear-gradient(#eeeeee, #dadada);
+    --#{$shale}card-background-disabled: #eee linear-gradient(#fff, #ddd);
 
     /* Notes */
-    --#{$shale}note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+    --#{$shale}note-info-base: #B2CCD9 linear-gradient(#D2ECF9, #B2CCD9);
     --#{$shale}note-info-border: #84bcd8;
     --#{$shale}note-info-text: #093044;
 
-    --#{$shale}note-alert-base: linear-gradient(#EEB3B3, #DAA4A4);
+    --#{$shale}note-alert-base: #DAA4A4 linear-gradient(#EEB3B3, #DAA4A4);
     --#{$shale}note-alert-border: #B58888;
     --#{$shale}note-alert-text: #440909;
 
-    --#{$shale}note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+    --#{$shale}note-warn-base: #D9D6B2 linear-gradient(#F9F6D2, #D9D6B2);
     --#{$shale}note-warn-border: #878b58;
     --#{$shale}note-warn-text: #404409;
 
-    --#{$shale}note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+    --#{$shale}note-tip-base: #B2D9B2 linear-gradient(#D2F9D2, #B2D9B2);
     --#{$shale}note-tip-border: #6ea36e;
     --#{$shale}note-tip-text: #094409;
 
     /* Button */
     --#{$shale}button: #EEE linear-gradient(#E0E0E0, #CCC);
     --#{$shale}button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
-    --#{$shale}button-active: linear-gradient(in oklab, var(--#{$shale}accent-100), var(--#{$shale}accent-300));
+    --#{$shale}button-active: var(--#{$shale}accent-300) linear-gradient(in oklab, var(--#{$shale}accent-100), var(--#{$shale}accent-300));
     --#{$shale}button-disabled: #CCC linear-gradient(#CCC, #AAA);
+
+    --#{$shale}button-hover-text-colour: black;
+    --#{$shale}button-active-text-colour: black;
 
     --#{$shale}button-border: #B5B5B5;
     --#{$shale}button-border-hover: #CECECE;
@@ -57,14 +62,17 @@
     --#{$shale}button-inset-border-active: var(--#{$shale}accent-200);
 
     /* Input */
-    --#{$shale}input-background: linear-gradient(#F9F9F9, white);
+    --#{$shale}input-background: white linear-gradient(#F9F9F9, white);
     --#{$shale}input-border: #DADADA;
     --#{$shale}input-inner-border: #B5B5B5;
     --#{$shale}input-border-hover: white;
     --#{$shale}input-inner-border-hover: #CECECE;
     --#{$shale}input-border-active: var(--#{$shale}accent-200);
     --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
-    --#{$shale}input-fill: linear-gradient(var(--#{$shale}accent-800),  var(--#{$shale}accent-900));
+    --#{$shale}input-fill: var(--#{$shale}accent-900) linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
+    --#{$shale}input-background-disabled: #e3e3e3 linear-gradient(#e0e0e0, #e3e3e3);
+    --#{$shale}input-border-disabled: #eaeaea;
+    --#{$shale}input-inner-border-disabled: #a9a9a9;
 
     /* Scrollbar */
     --#{$shale}scrollbar-corner: #F0F0F0;

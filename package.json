@@ -4,8 +4,8 @@
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {
-    "build": "sass scss/shale.scss:build/shale-v1.css --style=compressed --error-css",
-    "build:dev": "sass scss/shale.scss:build/shale-v1.css --error-css --watch"
+    "build": "sass scss/shale.scss:build/shale.css --style=compressed --error-css",
+    "build:dev": "sass scss/shale.scss:build/shale.css --error-css --watch"
   },
   "repository": {
     "type": "git",
