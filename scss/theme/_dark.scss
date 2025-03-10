@@ -53,6 +53,10 @@
     --#{$shale}button-active: linear-gradient(var(--#{$shale}accent-700), var(--#{$shale}accent-900));
     --#{$shale}button-disabled: #2D2D2D;
 
+    --#{$shale}button-text-colour: var(--#{$shale}text-colour);
+    --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
+    --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
+
     --#{$shale}button-border: #1C1C1C;
     --#{$shale}button-border-hover: #353535;
     --#{$shale}button-border-active: var(--#{$shale}accent-700);

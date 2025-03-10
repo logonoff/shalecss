@@ -38,7 +38,7 @@
 	line-height: 3rem;
 	opacity: .7;
 	text-align: center;
-	text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
+	text-shadow: var(--#{$shale}text-shadow-puffy);
 }
 
 .#{$shale}header-text {
@@ -49,6 +49,7 @@
 	padding: 0;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	width: 100%;
 }
 
 .#{$shale}nav {
@@ -85,7 +86,7 @@
 	padding: 0 5% var(--#{$shale}header-bar-height);
 	text-align: center;
 	text-decoration: none;
-	text-shadow: 0 0 6px rgba(0, 0, 0, .75);
+	text-shadow: var(--#{$shale}text-shadow-puffy);
 	transition: box-shadow .125s ease;
 
 	&.shale-v1-current {

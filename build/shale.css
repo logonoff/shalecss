@@ -21,9 +21,12 @@
   --shale-v1-shadow-subtle: 0 2px 4px 0 rgba(0, 0, 0, .12);
   --shale-v1-shadow-moderate: 0 4px 8px 0 rgba(0, 0, 0, .24);
   --shale-v1-shadow-puffy: 0 8px 16px 0 rgba(0, 0, 0, .32);
+  --shale-v1-text-shadow-subtle: 0 0 2px rgba(0, 0, 0, .24);
+  --shale-v1-text-shadow-moderate: 0 0 4px rgba(0, 0, 0, .48);
+  --shale-v1-text-shadow-puffy: 0 0 8px rgba(0, 0, 0, .64);
   /* Dynamic accent colour */
-  --shale-v1-accent: #bdecee;
-  --shale-v1-accent-light-tint: lightgray;
+  --shale-v1-accent: #65dae0;
+  --shale-v1-accent-light-tint: white;
   --shale-v1-accent-dark-tint: black;
   --shale-v1-accent-100: color-mix(in hsl, var(--shale-v1-accent), var(--shale-v1-accent-light-tint) 80%);
   --shale-v1-accent-200: color-mix(in hsl, var(--shale-v1-accent), var(--shale-v1-accent-light-tint) 60%);
@@ -79,8 +82,9 @@
   --shale-v1-button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
   --shale-v1-button-active: var(--shale-v1-accent-300) linear-gradient(in oklab, var(--shale-v1-accent-100), var(--shale-v1-accent-300));
   --shale-v1-button-disabled: #CCC linear-gradient(#CCC, #AAA);
-  --shale-v1-button-hover-text-colour: black;
-  --shale-v1-button-active-text-colour: black;
+  --shale-v1-button-text-colour: var(--shale-v1-text-colour);
+  --shale-v1-button-hover-text-colour: var(--shale-v1-text-colour);
+  --shale-v1-button-active-text-colour: var(--shale-v1-text-colour);
   --shale-v1-button-border: #B5B5B5;
   --shale-v1-button-border-hover: #CECECE;
   --shale-v1-button-border-active: var(--shale-v1-accent);
@@ -236,6 +240,9 @@
   --shale-v1-button-hover: #595959 linear-gradient(#595959, #505050);
   --shale-v1-button-active: linear-gradient(var(--shale-v1-accent-700), var(--shale-v1-accent-900));
   --shale-v1-button-disabled: #2D2D2D;
+  --shale-v1-button-text-colour: var(--shale-v1-text-colour);
+  --shale-v1-button-hover-text-colour: var(--shale-v1-text-colour);
+  --shale-v1-button-active-text-colour: var(--shale-v1-text-colour);
   --shale-v1-button-border: #1C1C1C;
   --shale-v1-button-border-hover: #353535;
   --shale-v1-button-border-active: var(--shale-v1-accent-700);
@@ -340,13 +347,13 @@
   box-shadow: none;
 }
 .shale-v1-button:hover, .shale-v1-button.shale-v1--hover {
-  --shale-v1-button-text-colour: var(--shale-v1-button-hover-text-colour);
+  --shale-v1-button-text-colour: var(--shale-v1-button-hover-text-colour, var(--shale-v1-text-colour));
   background: var(--shale-v1-button-hover);
   border-color: var(--shale-v1-button-border-hover);
   box-shadow: inset 0 0 0 1px var(--shale-v1-button-inset-border-hover), var(--shale-v1-shadow-moderate);
 }
 .shale-v1-button:active, .shale-v1-button.shale-v1--active {
-  --shale-v1-button-text-colour: var(--shale-v1-button-active-text-colour);
+  --shale-v1-button-text-colour: var(--shale-v1-button-active-text-colour, var(--shale-v1-text-colour));
   background: var(--shale-v1-button-active);
   border-color: var(--shale-v1-button-border-active);
   box-shadow: inset 0 0 0 1px var(--shale-v1-button-inset-border-active), var(--shale-v1-shadow-subtle);
@@ -740,7 +747,7 @@
   line-height: 3rem;
   opacity: 0.7;
   text-align: center;
-  text-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--shale-v1-text-shadow-puffy);
 }
 
 .shale-v1-header-text {
@@ -751,6 +758,7 @@
   padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }
 
 .shale-v1-nav {
@@ -784,7 +792,7 @@
   padding: 0 5% var(--shale-v1-header-bar-height);
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+  text-shadow: var(--shale-v1-text-shadow-puffy);
   transition: box-shadow 0.125s ease;
 }
 .shale-v1-menu-bar-button.shale-v1-current {
@@ -976,13 +984,13 @@
   box-shadow: none;
 }
 .shale-v1-select:hover, .shale-v1-select.shale-v1--hover {
-  --shale-v1-button-text-colour: var(--shale-v1-button-hover-text-colour);
+  --shale-v1-button-text-colour: var(--shale-v1-button-hover-text-colour, var(--shale-v1-text-colour));
   background: var(--shale-v1-button-hover);
   border-color: var(--shale-v1-button-border-hover);
   box-shadow: inset 0 0 0 1px var(--shale-v1-button-inset-border-hover), var(--shale-v1-shadow-moderate);
 }
 .shale-v1-select:active, .shale-v1-select.shale-v1--active {
-  --shale-v1-button-text-colour: var(--shale-v1-button-active-text-colour);
+  --shale-v1-button-text-colour: var(--shale-v1-button-active-text-colour, var(--shale-v1-text-colour));
   background: var(--shale-v1-button-active);
   border-color: var(--shale-v1-button-border-active);
   box-shadow: inset 0 0 0 1px var(--shale-v1-button-inset-border-active), var(--shale-v1-shadow-subtle);

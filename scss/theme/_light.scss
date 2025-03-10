@@ -50,8 +50,9 @@
     --#{$shale}button-active: var(--#{$shale}accent-300) linear-gradient(in oklab, var(--#{$shale}accent-100), var(--#{$shale}accent-300));
     --#{$shale}button-disabled: #CCC linear-gradient(#CCC, #AAA);
 
-    --#{$shale}button-hover-text-colour: black;
-    --#{$shale}button-active-text-colour: black;
+    --#{$shale}button-text-colour: var(--#{$shale}text-colour);
+    --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
+    --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
 
     --#{$shale}button-border: #B5B5B5;
     --#{$shale}button-border-hover: #CECECE;

@@ -32,9 +32,13 @@ $indeterminate: ".#{$shale}-indeterminate" !default;
     --#{$shale}shadow-moderate: 0 4px 8px 0 rgba(0, 0, 0, .24);
     --#{$shale}shadow-puffy: 0 8px 16px 0 rgba(0, 0, 0, .32);
 
+    --#{$shale}text-shadow-subtle: 0 0 2px rgba(0, 0, 0, .24);
+    --#{$shale}text-shadow-moderate: 0 0 4px rgba(0, 0, 0, .48);
+    --#{$shale}text-shadow-puffy: 0 0 8px rgba(0, 0, 0, .64);
+
     /* Dynamic accent colour */
-    --#{$shale}accent: #bdecee;
-    --#{$shale}accent-light-tint: lightgray;
+    --#{$shale}accent: #65dae0;
+    --#{$shale}accent-light-tint: white;
     --#{$shale}accent-dark-tint: black;
 
     // calculated shades
