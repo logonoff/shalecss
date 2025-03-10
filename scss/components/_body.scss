@@ -1,5 +1,7 @@
+@use "../theme/base" as *;
+
 /*
- * body styling
+ * Body
  */
 .#{$shale}body {
 	background: var(--#{$shale}background);

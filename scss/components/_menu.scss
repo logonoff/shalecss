@@ -1,17 +1,26 @@
+@use "../theme/base" as *;
+
 /*
  * Menu
  */
 /* Caption Buttons */
 .#{$shale}caption-menu {
-	line-height: 3rem;
+	align-items: center;
+	display: flex;
+	gap: 0.75rem;
+	height: 3rem;
 	padding-right: 0.75rem;
 	pointer-events: auto;
 	position: absolute;
 	right: 0;
+	top: 0;
 }
 
 .#{$shale}caption-button {
-	filter: invert(1); // HACK
+	background: transparent;
+	border: none;
+	fill: var(--#{$shale}header-text);
+	outline-color: var(--#{$shale}accent-400);
 }
 
 /* Header + Menu Bar */
@@ -83,6 +92,7 @@
 	line-height: 2.5;
 	min-width: fit-content;
 	opacity: .7;
+	outline-color: var(--#{$shale}accent-400);
 	padding: 0 5% var(--#{$shale}header-bar-height);
 	text-align: center;
 	text-decoration: none;
@@ -111,15 +121,4 @@
 		opacity: .3;
 		text-shadow: none;
 	}
-}
-
-/*
- * Command Bar
- */
-.#{$shale}command-bar {
-	background: var(--#{$shale}card-background);
-	border-top: 1px var(--#{$shale}secondary-border) solid;
-	display: flex;
-	align-items: center;
-	color: var(--#{$shale}text-colour);
 }

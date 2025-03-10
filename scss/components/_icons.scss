@@ -1,52 +1,15 @@
-.#{$shale}icon {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	content:"";
-	display: inline-block;
-	height: 1em;
-	margin-right: .3em;
-	width: 1em;
+@use "../theme/base" as *;
 
-	&.icon-a-lowercase { background-image: url("icons.svg#icon-a-lowercase"); }
-	&.icon-a-uppercase { background-image: url("icons.svg#icon-a-uppercase"); }
-	&.icon-accessibility { background-image: url("icons.svg#icon-accessibility"); }
-	&.icon-blocked { background-image: url("icons.svg#icon-blocked"); }
-	&.icon-brightness-contrast { background-image: url("icons.svg#icon-brightness-contrast"); }
-	&.icon-bubbles { background-image: url("icons.svg#icon-bubbles"); }
-	&.icon-contrast { background-image: url("icons.svg#icon-contrast"); }
-	&.icon-danger { background-image: url("icons.svg#icon-danger"); }
-	&.icon-discord { background-image: url("icons.svg#icon-discord"); }
-	&.icon-download { background-image: url("icons.svg#icon-download"); }
-	&.icon-earth { background-image: url("icons.svg#icon-earth"); }
-	&.icon-embed { background-image: url("icons.svg#icon-embed"); }
-	&.icon-enlarge { background-image: url("icons.svg#icon-enlarge"); }
-	&.icon-github { background-image: url("icons.svg#icon-github"); }
-	&.icon-hashtag { background-image: url("icons.svg#icon-hashtag"); }
-	&.icon-info { background-image: url("icons.svg#icon-info"); }
-	&.icon-lightbulb { background-image: url("icons.svg#icon-lightbulb"); }
-	&.icon-link { background-image: url("icons.svg#icon-link"); }
-	&.icon-minus-circle { background-image: url("icons.svg#icon-minus-circle"); }
-	&.icon-minus { background-image: url("icons.svg#icon-minus"); }
-	&.icon-moon-fill { background-image: url("icons.svg#icon-moon-fill"); }
-	&.icon-moon-stroke { background-image: url("icons.svg#icon-moon-stroke"); }
-	&.icon-newtab { background-image: url("icons.svg#icon-newtab"); }
-	&.icon-notification { background-image: url("icons.svg#icon-notification"); }
-	&.icon-plus-circle { background-image: url("icons.svg#icon-plus-circl"); }
-	&.icon-plus { background-image: url("icons.svg#icon-plus"); }
-	&.icon-power { background-image: url("icons.svg#icon-power"); }
-	&.icon-quotes-left { background-image: url("icons.svg#icon-quotes-left"); }
-	&.icon-quotes-right { background-image: url("icons.svg#icon-quotes-right"); }
-	&.icon-reddit { background-image: url("icons.svg#icon-reddit"); }
-	&.icon-rss { background-image: url("icons.svg#icon-rss"); }
-	&.icon-search { background-image: url("icons.svg#icon-search"); }
-	&.icon-shrink { background-image: url("icons.svg#icon-shrink"); }
-	&.icon-stackoverflow { background-image: url("icons.svg#icon-stackoverflow"); }
-	&.icon-star-empty { background-image: url("icons.svg#icon-star-empt"); }
-	&.icon-sun { background-image: url("icons.svg#icon-sun"); }
-	&.icon-upload { background-image: url("icons.svg#icon-upload"); }
-	&.icon-warning { background-image: url("icons.svg#icon-warning"); }
-	&.icon-windows { background-image: url("icons.svg#icon-windows"); }
-	&.icon-windows8 { background-image: url("icons.svg#icon-windows8"); }
-	&.icon-youtube { background-image: url("icons.svg#icon-youtube"); }
+.#{$shale}icon {
+	display: inline-block;
+	height: var(--#{$shale}font-0);
+	width: var(--#{$shale}font-0);
+}
+
+.#{$shale}icon-flip-x {
+	transform: scaleX(-1);
+}
+
+.#{$shale}icon-flip-y {
+	transform: scaleY(-1);
 }

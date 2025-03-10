@@ -1,7 +1,17 @@
+@use "base" as *;
+
 /*
- * Light Theme (default)
+ * Light theme
  */
+.#{$shale}light-enabled { display: none !important; }
+.#{$shale}light-disabled { display: block !important; }
+
 .#{$shale}light {
+    color-scheme: light;
+
+    .#{$shale}light-enabled { display: block !important; }
+    .#{$shale}light-disabled { display: none !important; }
+
     /* General */
     --#{$shale}background: #BEBEBE linear-gradient(#CCC, #BEBEBE); // site background
     --#{$shale}text-colour: black;
@@ -26,7 +36,7 @@
     /* Cards */
     --#{$shale}card-background: #dadada linear-gradient(#eeeeee, #dadada);
     --#{$shale}card-background-disabled: #eee linear-gradient(#fff, #ddd);
-    --#{$shale}card-border-color: transparent;
+    --#{$shale}card-border-color: unset;
 
     /* Notes */
     --#{$shale}note-info-base: #B2CCD9 linear-gradient(#D2ECF9, #B2CCD9);

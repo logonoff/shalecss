@@ -1,28 +1,29 @@
-/*!
- * shale.css v1 prerelease
- * https://github.com/logonoff/shalecss
- */
+// Banner used in final output
+@use "banner";
+
 // Themes
-@import "theme/base";
-@import "theme/light";
-@import "theme/contrast";
-@import "theme/dark";
+@use "theme/base";
+@use "theme/light";
+@use "theme/contrast";
+@use "theme/dark";
 
 // Applies to all components
-@import "general";
+@use "general";
 
 // Components
-@import "components/body";
-@import "components/buttons";
-@import "components/caption-button";
-@import "components/card";
-@import "components/container";
-@import "components/footer";
-@import "components/icons";
-@import "components/input";
-@import "components/menu";
-@import "components/notes";
-@import "components/scrollbar";
-@import "components/select";
-@import "components/tab-skip";
-@import "components/typography";
+@use "components/body";
+@use "components/buttons";
+@use "components/caption-button";
+@use "components/card";
+@use "components/command-bar";
+@use "components/container";
+@use "components/footer";
+@use "components/icons";
+@use "components/input";
+@use "components/link";
+@use "components/menu";
+@use "components/notes";
+@use "components/scrollbar";
+@use "components/select";
+@use "components/tab-skip";
+@use "components/typography";

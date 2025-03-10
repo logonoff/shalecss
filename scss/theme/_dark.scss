@@ -1,8 +1,16 @@
+@use "base" as *;
+
 /*
- * Dark Theme
+ * Dark theme
  */
+.#{$shale}dark-enabled { display: none !important; }
+.#{$shale}dark-disabled { display: block !important; }
+
 .#{$shale}dark {
     color-scheme: dark;
+
+    .#{$shale}dark-enabled { display: block !important; }
+    .#{$shale}dark-disabled { display: none !important; }
 
     /* General */
     --#{$shale}background: #252525 linear-gradient(#333, #252525);
@@ -28,7 +36,7 @@
     /* Cards */
     --#{$shale}card-background: #414141 linear-gradient(#555555, #414141);
     --#{$shale}card-background-disabled: #333 linear-gradient(#444, #313131);
-    --#{$shale}card-border-color: transparent;
+    --#{$shale}card-border-color: unset;
 
     /* Notes */
     --#{$shale}note-info-base: #082A3B linear-gradient(#093044, #082A3B);

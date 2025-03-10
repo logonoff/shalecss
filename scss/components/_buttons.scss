@@ -1,7 +1,9 @@
+@use "../theme/base" as *;
+
 /*
  * Buttons
  */
-
+/// Base button style.
 @mixin button-style {
 	background: var(--#{$shale}button);
 	border: 1px solid var(--#{$shale}button-border);
@@ -43,30 +45,6 @@
 		background: var(--#{$shale}button-disabled);
 		border-color: var(--#{$shale}button-border-disabled, var(--#{$shale}button-border));
 		box-shadow: none;
-	}
-}
-
-.#{$shale}link {
-	color: var(--#{$shale}link-colour);
-	text-decoration: none;
-
-	.#{$shale}icon {
-		font-size: .75em;
-		padding-left: .25em;
-	}
-
-	&:hover, &:focus-visible, &#{$hover}, &#{$focus} {
-		text-decoration: underline;
-	}
-
-	&:active, &#{$active} {
-		color: var(--#{$shale}link-colour-active, var(--#{$shale}link-colour));
-	}
-
-	&:disabled, &#{$disabled} {
-		color: var(--#{$shale}link-colour-disabled, var(--#{$shale}link-colour));
-		pointer-events: none;
-		text-decoration: line-through;
 	}
 }
 

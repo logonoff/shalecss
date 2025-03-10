@@ -1,8 +1,10 @@
+@use "../theme/base" as *;
+
 /*
  * Checkboxes and Radio
  */
-.#{$shale}input input {
-	&[type="text"], &[type="password"], &[type="email"], &[type="url"], &[type="tel"], &[type="number"], &[type="search"], &[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"], &[type="week"] {
+.#{$shale}input {
+	input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="search"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea {
 		background: var(--#{$shale}input-background);
 		border-radius: .2rem;
 		border: 0;
@@ -11,6 +13,7 @@
 		font-family: inherit;
 		image-rendering: pixelated;
 		outline: 0;
+		line-height: 1;
 		padding: .5em;
 		transition: .3s box-shadow ease;
 
@@ -30,7 +33,9 @@
 			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-disabled);
 		}
 	}
+}
 
+.#{$shale}input input {
 	&[type="checkbox"], &[type="radio"] {
 		// hide the vendor default
 		opacity: 0;

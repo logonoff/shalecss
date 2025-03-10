@@ -1,3 +1,5 @@
+@use "../theme/base" as *;
+
 /*
  * Typography
  */
@@ -32,7 +34,15 @@
 }
 
 /* Font scale adjust */
-.#{$shale}bigger-text { --#{$shale}font-0: 1.25rem; }
+.#{$shale}bigger-text-enabled { display: none !important; }
+.#{$shale}bigger-text-disabled { display: block !important; }
+
+.#{$shale}bigger-text {
+	--#{$shale}font-0: 1.25rem;
+
+	.#{$shale}bigger-text-enabled { display: block !important; }
+	.#{$shale}bigger-text-disabled { display: none !important; }
+}
 
 /* Code */
 .#{$shale}code {

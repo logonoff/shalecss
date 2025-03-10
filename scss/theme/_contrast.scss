@@ -1,8 +1,16 @@
+@use "base" as *;
+
 /*
  * High contrast theme
  */
- .#{$shale}contrast {
+.#{$shale}contrast-enabled { display: none !important; }
+.#{$shale}contrast-disabled { display: block !important; }
+
+.#{$shale}contrast {
     color-scheme: dark;
+
+    .#{$shale}contrast-enabled { display: block !important; }
+    .#{$shale}contrast-disabled { display: none !important; }
 
     /* General */
     --#{$shale}background: black;

@@ -1,4 +1,9 @@
-/* use this if you're not pairing with another layout system */
+@use "../theme/base" as *;
+
+/*
+ * Containers
+ * use this if you're not pairing with another layout system
+ */
 .#{$shale}container {
 	margin: 0 auto;
 	max-width: 75em;

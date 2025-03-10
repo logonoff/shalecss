@@ -1,11 +1,15 @@
+@use "../theme/base" as *;
+@use "buttons";
+
 /*
  * Select
  */
 .#{$shale}select {
-    @include button-style;
+    @include buttons.button-style;
     align-items: center;
     border-radius: 3px;
     display: inline-grid;
+    padding: 0;
     grid-template-areas: "select";
     position: relative;
 
@@ -20,7 +24,7 @@
         grid-area: select;
         line-height: inherit;
         width: 100%;
-        padding: 0 1.5em 0 0.5em;
+        padding: 0.25em 1.5em 0.25em 0.5em;
         z-index: 1;
 
         &:hover, &#{$hover} {

@@ -1,4 +1,8 @@
-/* Tab Skip */
+@use "../theme/base" as *;
+
+/*
+ * Tab skip
+ */
 .#{$shale}skip {
 	height: 1px;
 	left: -25565vw;

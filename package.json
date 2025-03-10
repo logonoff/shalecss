@@ -5,7 +5,7 @@
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {
     "build": "sass scss/shale.scss:build/shale.css --style=compressed --error-css",
-    "build:dev": "sass scss/shale.scss:build/shale.css --error-css --watch"
+    "dev": "sass scss/shale.scss:build/shale.css --style=expanded --error-css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,8 @@
   "bugs": {
     "url": "https://github.com/logonoff/shalecss/issues"
   },
-  "homepage": "https://github.com/logonoff/shalecss#readme",
+  "homepage": "https://logonoff.co/shalecss",
   "devDependencies": {
-    "sass": "^1.79.3"
+    "sass": "^1.85.1"
   }
 }

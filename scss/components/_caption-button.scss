@@ -1,4 +1,8 @@
-/* Caption Buttons */
+@use "../theme/base" as *;
+
+/*
+ * Caption Buttons
+ */
 .#{$shale}caption {
 	&-button {
 		color: inherit;

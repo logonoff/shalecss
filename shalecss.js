@@ -1,6 +1,7 @@
-/*
-** shalecss
-*/
+/*!
+ * shale.css v1.0.0-prerelease (MIT)
+ * https://github.com/logonoff/shalecss
+ */
 "use strict";
 
 /**
@@ -12,18 +13,10 @@ function toggleDark(e) {
 	if (document.documentElement.classList.contains("shale-v1-dark")) {
 		// dark mode is enabled, turn it off
 		document.documentElement.classList.remove("shale-v1-dark");
-
-		e.querySelector(".shale-v1-icon").classList.remove("icon-moon-fill");
-		e.querySelector(".shale-v1-icon").classList.add("icon-moon-stroke");
-
 		localStorage.setItem("theme", "light");
 	} else {
 		// dark mode is disabled, turn it on
 		document.documentElement.classList.add("shale-v1-dark");
-
-		e.querySelector(".shale-v1-icon").classList.remove("icon-moon-stroke");
-		e.querySelector(".shale-v1-icon").classList.add("icon-moon-fill");
-
 		localStorage.setItem("theme", "dark");
 	}
 }
@@ -37,12 +30,10 @@ function toggleContrast(e) {
 	if (document.documentElement.classList.contains("shale-v1-contrast")) {
 		// contrast mode is enabled, turn it off
 		document.documentElement.classList.remove("shale-v1-contrast");
-
 		localStorage.setItem("theme", "light");
 	} else {
 		// contrast mode is disabled, turn it on
 		document.documentElement.classList.add("shale-v1-contrast");
-
 		localStorage.setItem("theme", "contrast");
 	}
 }
@@ -60,7 +51,7 @@ function toggleTextSize(e) {
 		e.querySelector(".shale-v1-icon").classList.remove("icon-a-lowercase");
 		e.querySelector(".shale-v1-icon").classList.add("icon-a-uppercase");
 
-		localStorage.setItem("textSize", "medium");
+		localStorage.setItem("shale-v1-text-size", "medium");
 	} else {
 		// larger text size is disabled, turn it on
 		document.documentElement.classList.add("shale-v1-bigger-text");
@@ -68,7 +59,7 @@ function toggleTextSize(e) {
 		e.querySelector(".shale-v1-icon").classList.remove("icon-a-uppercase");
 		e.querySelector(".shale-v1-icon").classList.add("icon-a-lowercase");
 
-		localStorage.setItem("textSize", "large");
+		localStorage.setItem("shale-v1-text-size", "large");
 	}
 }
 
@@ -77,27 +68,22 @@ function toggleTextSize(e) {
  */
 function loadFromLocalStorage() {
 	// dark
-	if (localStorage.getItem("theme") == "dark") {
+	if (localStorage.getItem("shale-v1-theme") == "dark") {
 		toggleDark(document.querySelector(".js-darkmode"));
 	}
 
 	// contrast
-	if (localStorage.getItem("theme") == "contrast") {
+	if (localStorage.getItem("shale-v1-theme") == "contrast") {
 		toggleContrast(document.querySelector(".js-contrast"));
 	}
 
 	// text size
-	if (localStorage.getItem("textSize") == "large") {
+	if (localStorage.getItem("shale-v1-text-size") == "large") {
 		toggleTextSize(document.querySelector(".js-textsize"));
 	}
 }
 
 loadFromLocalStorage();
-
-document.querySelectorAll("[data-indeterminate]").forEach((e) => {
-	e.indeterminate = true;
-});
-
 
 /*
  * kounami code accent colour rainbow thing
