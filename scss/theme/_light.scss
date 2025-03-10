@@ -26,6 +26,7 @@
     /* Cards */
     --#{$shale}card-background: #dadada linear-gradient(#eeeeee, #dadada);
     --#{$shale}card-background-disabled: #eee linear-gradient(#fff, #ddd);
+    --#{$shale}card-border-color: transparent;
 
     /* Notes */
     --#{$shale}note-info-base: #B2CCD9 linear-gradient(#D2ECF9, #B2CCD9);
@@ -64,16 +65,19 @@
 
     /* Input */
     --#{$shale}input-background: white linear-gradient(#F9F9F9, white);
-    --#{$shale}input-border: #DADADA;
-    --#{$shale}input-inner-border: #B5B5B5;
-    --#{$shale}input-border-hover: white;
-    --#{$shale}input-inner-border-hover: #CECECE;
-    --#{$shale}input-border-active: var(--#{$shale}accent-200);
-    --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
-    --#{$shale}input-fill: var(--#{$shale}accent-900) linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
     --#{$shale}input-background-disabled: #e3e3e3 linear-gradient(#e0e0e0, #e3e3e3);
+
+    --#{$shale}input-border: #DADADA;
+    --#{$shale}input-border-hover: white;
+    --#{$shale}input-border-active: var(--#{$shale}accent-200);
     --#{$shale}input-border-disabled: #eaeaea;
+
+    --#{$shale}input-inner-border: #B5B5B5;
+    --#{$shale}input-inner-border-hover: #CECECE;
+    --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
     --#{$shale}input-inner-border-disabled: #a9a9a9;
+
+    --#{$shale}input-fill: var(--#{$shale}accent-900) linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
 
     /* Scrollbar */
     --#{$shale}scrollbar-corner: #F0F0F0;

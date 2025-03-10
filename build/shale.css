@@ -64,6 +64,7 @@
   /* Cards */
   --shale-v1-card-background: #dadada linear-gradient(#eeeeee, #dadada);
   --shale-v1-card-background-disabled: #eee linear-gradient(#fff, #ddd);
+  --shale-v1-card-border-color: transparent;
   /* Notes */
   --shale-v1-note-info-base: #B2CCD9 linear-gradient(#D2ECF9, #B2CCD9);
   --shale-v1-note-info-border: #84bcd8;
@@ -93,16 +94,16 @@
   --shale-v1-button-inset-border-active: var(--shale-v1-accent-200);
   /* Input */
   --shale-v1-input-background: white linear-gradient(#F9F9F9, white);
-  --shale-v1-input-border: #DADADA;
-  --shale-v1-input-inner-border: #B5B5B5;
-  --shale-v1-input-border-hover: white;
-  --shale-v1-input-inner-border-hover: #CECECE;
-  --shale-v1-input-border-active: var(--shale-v1-accent-200);
-  --shale-v1-input-inner-border-active: var(--shale-v1-accent-500);
-  --shale-v1-input-fill: var(--shale-v1-accent-900) linear-gradient(var(--shale-v1-accent-800), var(--shale-v1-accent-900));
   --shale-v1-input-background-disabled: #e3e3e3 linear-gradient(#e0e0e0, #e3e3e3);
+  --shale-v1-input-border: #DADADA;
+  --shale-v1-input-border-hover: white;
+  --shale-v1-input-border-active: var(--shale-v1-accent-200);
   --shale-v1-input-border-disabled: #eaeaea;
+  --shale-v1-input-inner-border: #B5B5B5;
+  --shale-v1-input-inner-border-hover: #CECECE;
+  --shale-v1-input-inner-border-active: var(--shale-v1-accent-500);
   --shale-v1-input-inner-border-disabled: #a9a9a9;
+  --shale-v1-input-fill: var(--shale-v1-accent-900) linear-gradient(var(--shale-v1-accent-800), var(--shale-v1-accent-900));
   /* Scrollbar */
   --shale-v1-scrollbar-corner: #F0F0F0;
   --shale-v1-scrollbar-track-bg: #F5F5F5 linear-gradient(#F5F5F5, #E5E5E5);
@@ -143,6 +144,7 @@
   --shale-v1-footer-background: black;
   /* Cards */
   --shale-v1-card-background: black;
+  --shale-v1-card-background-disabled: #3ff23f;
   --shale-v1-card-border-color: white;
   --shale-v1-note-info-base: black;
   --shale-v1-note-info-border: #5ac8ff;
@@ -161,6 +163,9 @@
   --shale-v1-button-hover: #FF0;
   --shale-v1-button-active: #1AEBFF;
   --shale-v1-button-disabled: #3FF23F;
+  --shale-v1-button-text-colour: white;
+  --shale-v1-button-hover-text-colour: black;
+  --shale-v1-button-active-text-colour: black;
   --shale-v1-button-border: white;
   --shale-v1-button-border-hover: #FF0;
   --shale-v1-button-border-active: #1AEBFF;
@@ -169,17 +174,18 @@
   --shale-v1-button-inset-border-active: #1AEBFF;
   /* Input */
   --shale-v1-input-background: black;
-  --shale-v1-input-border: white;
-  --shale-v1-input-inner-border: white;
-  --shale-v1-input-border-hover: #FF0;
-  --shale-v1-input-inner-border-hover: #FF0;
-  --shale-v1-input-border-active: #1AEBFF;
-  --shale-v1-input-inner-border-active: #1AEBFF;
-  --shale-v1-input-fill: red;
   --shale-v1-input-background-disabled: transparent;
+  --shale-v1-input-border: white;
+  --shale-v1-input-border-hover: #FF0;
+  --shale-v1-input-border-active: #1AEBFF;
   --shale-v1-input-border-disabled: #3FF23F;
+  --shale-v1-input-inner-border: white;
+  --shale-v1-input-inner-border-hover: #FF0;
+  --shale-v1-input-inner-border-active: #1AEBFF;
   --shale-v1-input-inner-border-disabled: #3FF23F;
+  --shale-v1-input-fill: #1AEBFF;
   /* Scrollbar */
+  --shale-v1-scrollbar-corner: black;
   --shale-v1-scrollbar-track-bg: black;
   --shale-v1-scrollbar-button: black;
   --shale-v1-scrollbar-hover: #FF0;
@@ -187,11 +193,13 @@
   --shale-v1-scrollbar-active: #1AEBFF;
   --shale-v1-scrollbar-active-1: #1AEBFF;
   --shale-v1-scrollbar-arrow: white;
-  --shale-v1-scrollbar-corner: #000000;
   /* Shadows */
   --shale-v1-shadow-subtle: unset;
   --shale-v1-shadow-moderate: unset;
   --shale-v1-shadow-puffy: unset;
+  --shale-v1-text-shadow-subtle: unset;
+  --shale-v1-text-shadow-moderate: unset;
+  --shale-v1-text-shadow-puffy: unset;
 }
 .shale-v1-contrast ::-webkit-scrollbar-thumb {
   --shale-v1-scrollbar-thumb: var(--shale-v1-scrollbar-thumb-dark);
@@ -223,6 +231,8 @@
   /* Cards */
   --shale-v1-card-background: #414141 linear-gradient(#555555, #414141);
   --shale-v1-card-background-disabled: #333 linear-gradient(#444, #313131);
+  --shale-v1-card-border-color: transparent;
+  /* Notes */
   --shale-v1-note-info-base: #082A3B linear-gradient(#093044, #082A3B);
   --shale-v1-note-info-border: #051822;
   --shale-v1-note-info-text: #D2ECF9;
@@ -251,17 +261,18 @@
   --shale-v1-button-inset-border-active: var(--shale-v1-accent-800);
   /* Input */
   --shale-v1-input-background: #555 linear-gradient(#606060, #555);
-  --shale-v1-input-border: #555;
-  --shale-v1-input-inner-border: #414141;
-  --shale-v1-input-border-hover: #626262;
-  --shale-v1-input-inner-border-hover: #353535;
-  --shale-v1-input-border-active: var(--shale-v1-accent-800);
-  --shale-v1-input-inner-border-active: var(--shale-v1-accent-900);
-  --shale-v1-input-fill: var(--shale-v1-accent-900) linear-gradient(var(--shale-v1-accent-800), var(--shale-v1-accent-900));
   --shale-v1-input-background-disabled: #444 linear-gradient(#444, #333);
+  --shale-v1-input-border: #555;
+  --shale-v1-input-border-hover: #626262;
+  --shale-v1-input-border-active: var(--shale-v1-accent-800);
   --shale-v1-input-border-disabled: #333;
+  --shale-v1-input-inner-border: #414141;
+  --shale-v1-input-inner-border-hover: #353535;
+  --shale-v1-input-inner-border-active: var(--shale-v1-accent-900);
   --shale-v1-input-inner-border-disabled: #222;
+  --shale-v1-input-fill: var(--shale-v1-accent-900) linear-gradient(var(--shale-v1-accent-800), var(--shale-v1-accent-900));
   /* Scrollbar */
+  --shale-v1-scrollbar-corner: #454545;
   --shale-v1-scrollbar-track-bg: #353535;
   --shale-v1-scrollbar-button: #555;
   --shale-v1-scrollbar-hover: #515151;
@@ -269,7 +280,6 @@
   --shale-v1-scrollbar-active: var(--shale-v1-accent-700);
   --shale-v1-scrollbar-active-1: var(--shale-v1-accent-800);
   --shale-v1-scrollbar-arrow: #CCC;
-  --shale-v1-scrollbar-corner: #454545;
 }
 .shale-v1-dark ::-webkit-scrollbar-thumb {
   --shale-v1-scrollbar-thumb: var(--shale-v1-scrollbar-thumb-dark);
@@ -1010,6 +1020,7 @@
   appearance: none;
   background-color: transparent;
   border: none;
+  color: var(--shale-v1-button-text-colour, var(--shale-v1-text-colour));
   cursor: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -1019,7 +1030,13 @@
   padding: 0 1.5em 0 0.5em;
   z-index: 1;
 }
-.shale-v1-select select:focus {
+.shale-v1-select select:hover, .shale-v1-select select.shale-v1--hover {
+  color: var(--shale-v1-button-hover-text-colour, var(--shale-v1-text-colour));
+}
+.shale-v1-select select:active, .shale-v1-select select.shale-v1--active {
+  color: var(--shale-v1-button-active-text-colour, var(--shale-v1-text-colour));
+}
+.shale-v1-select select:focus, .shale-v1-select select.shale-v1--focus {
   outline: 2px solid var(--shale-v1-button-border-active);
 }
 .shale-v1-select select option, .shale-v1-select select optgroup {

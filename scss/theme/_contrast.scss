@@ -28,6 +28,7 @@
 
     /* Cards */
     --#{$shale}card-background: black;
+    --#{$shale}card-background-disabled: #3ff23f;
     --#{$shale}card-border-color: white;
 
     // docs notes
@@ -53,6 +54,10 @@
     --#{$shale}button-active: #1AEBFF;
     --#{$shale}button-disabled: #3FF23F;
 
+    --#{$shale}button-text-colour: white;
+    --#{$shale}button-hover-text-colour: black;
+    --#{$shale}button-active-text-colour: black;
+
     --#{$shale}button-border: white;
     --#{$shale}button-border-hover: #FF0;
     --#{$shale}button-border-active: #1AEBFF;
@@ -63,18 +68,23 @@
 
     /* Input */
     --#{$shale}input-background: black;
-    --#{$shale}input-border: white;
-    --#{$shale}input-inner-border: white;
-    --#{$shale}input-border-hover: #FF0;
-    --#{$shale}input-inner-border-hover: #FF0;
-    --#{$shale}input-border-active: #1AEBFF;
-    --#{$shale}input-inner-border-active: #1AEBFF;
-    --#{$shale}input-fill: red;
     --#{$shale}input-background-disabled: transparent;
+
+    --#{$shale}input-border: white;
+    --#{$shale}input-border-hover: #FF0;
+    --#{$shale}input-border-active: #1AEBFF;
     --#{$shale}input-border-disabled: #3FF23F;
+
+    --#{$shale}input-inner-border: white;
+    --#{$shale}input-inner-border-hover: #FF0;
+    --#{$shale}input-inner-border-active: #1AEBFF;
     --#{$shale}input-inner-border-disabled: #3FF23F;
 
+    --#{$shale}input-fill: #1AEBFF;
+
     /* Scrollbar */
+    --#{$shale}scrollbar-corner: black;
+
     --#{$shale}scrollbar-track-bg: black;
 
     --#{$shale}scrollbar-button: black; // scrollbar button initial
@@ -83,7 +93,6 @@
     --#{$shale}scrollbar-active: #1AEBFF; // scrollbar button active (bottom)
     --#{$shale}scrollbar-active-1: #1AEBFF; // scrollbar button active (top)
     --#{$shale}scrollbar-arrow: white; // color of scrollbar arrow
-    --#{$shale}scrollbar-corner: #000000;
 
     ::-webkit-scrollbar-thumb {
         --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-dark);
@@ -93,4 +102,8 @@
     --#{$shale}shadow-subtle: unset;
     --#{$shale}shadow-moderate: unset;
     --#{$shale}shadow-puffy: unset;
+
+    --#{$shale}text-shadow-subtle: unset;
+    --#{$shale}text-shadow-moderate: unset;
+    --#{$shale}text-shadow-puffy: unset;
 }
