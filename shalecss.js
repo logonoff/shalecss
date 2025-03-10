@@ -13,11 +13,11 @@ function toggleDark(e) {
 	if (document.documentElement.classList.contains("shale-v1-dark")) {
 		// dark mode is enabled, turn it off
 		document.documentElement.classList.remove("shale-v1-dark");
-		localStorage.setItem("theme", "light");
+		localStorage.setItem("shale-v1-theme", "light");
 	} else {
 		// dark mode is disabled, turn it on
 		document.documentElement.classList.add("shale-v1-dark");
-		localStorage.setItem("theme", "dark");
+		localStorage.setItem("shale-v1-theme", "dark");
 	}
 }
 
@@ -30,11 +30,11 @@ function toggleContrast(e) {
 	if (document.documentElement.classList.contains("shale-v1-contrast")) {
 		// contrast mode is enabled, turn it off
 		document.documentElement.classList.remove("shale-v1-contrast");
-		localStorage.setItem("theme", "light");
+		localStorage.setItem("shale-v1-theme", "light");
 	} else {
 		// contrast mode is disabled, turn it on
 		document.documentElement.classList.add("shale-v1-contrast");
-		localStorage.setItem("theme", "contrast");
+		localStorage.setItem("shale-v1-theme", "contrast");
 	}
 }
 
