@@ -63,6 +63,8 @@
 			content: "";
 			display: inline-block;
 			height: var(--#{$shale}input-size);
+			min-height: var(--#{$shale}input-size);
+			min-width: var(--#{$shale}input-size);
 			transition: background .3s ease, border-color .3s ease;
 			user-select: none;
 			vertical-align: middle;
