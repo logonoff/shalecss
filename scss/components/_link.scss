@@ -8,6 +8,7 @@
 	text-decoration: none;
 
 	.#{$shale}icon {
+		fill: var(--#{$shale}link-colour);
 		font-size: .75em;
 		padding-left: .25em;
 	}

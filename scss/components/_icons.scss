@@ -2,6 +2,7 @@
 
 .#{$shale}icon {
 	display: inline-block;
+	fill: var(--#{$shale}text-colour);
 	height: var(--#{$shale}font-0);
 	width: var(--#{$shale}font-0);
 }

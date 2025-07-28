@@ -17,7 +17,7 @@
 		border-radius: 15px;
 		border: 3px solid var(--#{$shale}button-border-active);
 		box-shadow: var(--#{$shale}shadow-puffy);
-		color: var(--#{$shale}text-colour);
+		color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
 		font-size: 1rem;
 		height: auto;
 		left: 1rem;
