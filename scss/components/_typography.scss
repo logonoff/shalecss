@@ -48,7 +48,7 @@
 .#{$shale}code {
 	background: var(--#{$shale}code-background);
 	border-radius: .2rem;
-	color: var(--#{$shale}text-colour);
+	color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
 	font-family: var(--#{$shale}font-family-mono);
 	padding: .25rem;
 	white-space: pre-wrap;

@@ -7,7 +7,7 @@
 /**
  * toggles dark theme
  *
- * @param {element} e element whos child has a .icon elem
+ * @param {Element} e element which has a .icon elem as a child
  */
 function toggleDark(e) {
 	if (document.documentElement.classList.contains("shale-v1-dark")) {
@@ -24,7 +24,7 @@ function toggleDark(e) {
 /**
  * toggles contrast theme
  *
- * @param {element} e element whos child has a .icon elem
+ * @param {Element} e element which has a .icon elem as a child
  */
 function toggleContrast(e) {
 	if (document.documentElement.classList.contains("shale-v1-contrast")) {
@@ -41,7 +41,7 @@ function toggleContrast(e) {
 /**
  * toggles larger text size
  *
- * @param {element} e element whos child has a .icon elem
+ * @param {Element} e element which has a .icon elem as a child
  */
 function toggleTextSize(e) {
 	if (document.documentElement.classList.contains("shale-v1-bigger-text")) {
@@ -130,7 +130,6 @@ function rainbowz() {
 	document.documentElement.style.setProperty("--shale-v1-accent", `rgb(${r}, ${g}, ${b})`);
 }
 
-/* Put both together */
 onKonamiCode(function() {
 	setInterval(rainbowz, 10);
 });
