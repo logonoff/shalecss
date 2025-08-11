@@ -1,7 +1,7 @@
 @use "base" as *;
 
 /*
- * High contrast theme
+ * High contrast theme using system color keywords for forced colors mode
  */
 .#{$shale}contrast-enabled { display: none !important; }
 .#{$shale}contrast-disabled { display: block !important; }
@@ -13,97 +13,97 @@
     .#{$shale}contrast-disabled { display: none !important; }
 
     /* General */
-    --#{$shale}background: black;
-    --#{$shale}text-colour: white;
-    --#{$shale}text-colour-secondary: white;
-    --#{$shale}link-colour: #FF0;
-    --#{$shale}code-background: #111111;
-    --#{$shale}secondary-border: white;
+    --#{$shale}background: Canvas;
+    --#{$shale}text-colour: CanvasText;
+    --#{$shale}text-colour-secondary: CanvasText;
+    --#{$shale}link-colour: LinkText;
+    --#{$shale}code-background: Canvas;
+    --#{$shale}secondary-border: GrayText;
 
     /* Header */
-    --#{$shale}header-background: black;
-    --#{$shale}header-background-disabled: #333;
-    --#{$shale}header-text: white;
-    --#{$shale}header-bar-current: #3FF23F;
+    --#{$shale}header-background: Canvas;
+    --#{$shale}header-background-disabled: GrayText;
+    --#{$shale}header-text: CanvasText;
+    --#{$shale}header-bar-current: Highlight;
     --#{$shale}header-glow-current: transparent;
-    --#{$shale}header-bar-hover: #FF0;
+    --#{$shale}header-bar-hover: LinkText;
     --#{$shale}header-glow-hover: transparent;
-    --#{$shale}header-bar-active: #1AEBFF;
+    --#{$shale}header-bar-active: Highlight;
     --#{$shale}header-glow-active: transparent;
 
     /* Footer */
-    --#{$shale}footer-background: black;
+    --#{$shale}footer-background: Canvas;
 
     /* Cards */
-    --#{$shale}card-background: black;
-    --#{$shale}card-background-disabled: #3ff23f;
-    --#{$shale}card-border-color: white;
+    --#{$shale}card-background: Canvas;
+    --#{$shale}card-background-disabled: GrayText;
+    --#{$shale}card-border-color: CanvasText;
 
     // docs notes
-    --#{$shale}note-info-base:  black;
-    --#{$shale}note-info-border: #5ac8ff;
-    --#{$shale}note-info-text: white;
+    --#{$shale}note-info-base: Canvas;
+    --#{$shale}note-info-border: Highlight;
+    --#{$shale}note-info-text: CanvasText;
 
-    --#{$shale}note-alert-base:  black;
-    --#{$shale}note-alert-border: rgb(255, 82, 82);
-    --#{$shale}note-alert-text: white;
+    --#{$shale}note-alert-base: Canvas;
+    --#{$shale}note-alert-border: HighlightText;
+    --#{$shale}note-alert-text: CanvasText;
 
-    --#{$shale}note-warn-base:  black;
-    --#{$shale}note-warn-border: #f6ff53;
-    --#{$shale}note-warn-text: white;
+    --#{$shale}note-warn-base: Canvas;
+    --#{$shale}note-warn-border: LinkText;
+    --#{$shale}note-warn-text: CanvasText;
 
-    --#{$shale}note-tip-base:  black;
-    --#{$shale}note-tip-border: #5dff5d;
-    --#{$shale}note-tip-text: white;
+    --#{$shale}note-tip-base: Canvas;
+    --#{$shale}note-tip-border: Highlight;
+    --#{$shale}note-tip-text: CanvasText;
 
     /* Button */
-    --#{$shale}button: black;
-    --#{$shale}button-hover: #FF0;
-    --#{$shale}button-active: #1AEBFF;
-    --#{$shale}button-disabled: #3FF23F;
+    --#{$shale}button: Canvas;
+    --#{$shale}button-hover: Highlight;
+    --#{$shale}button-active: Highlight;
+    --#{$shale}button-disabled: GrayText;
 
-    --#{$shale}button-text-colour: white;
-    --#{$shale}button-hover-text-colour: black;
-    --#{$shale}button-active-text-colour: black;
+    --#{$shale}button-text-colour: CanvasText;
+    --#{$shale}button-hover-text-colour: HighlightText;
+    --#{$shale}button-active-text-colour: HighlightText;
 
-    --#{$shale}button-border: white;
-    --#{$shale}button-border-hover: #FF0;
-    --#{$shale}button-border-active: #1AEBFF;
+    --#{$shale}button-border: CanvasText;
+    --#{$shale}button-border-hover: Highlight;
+    --#{$shale}button-border-active: Highlight;
 
-    --#{$shale}button-inset-border: #555;
-    --#{$shale}button-inset-border-hover: #FF0;
-    --#{$shale}button-inset-border-active: #1AEBFF;
+    --#{$shale}button-inset-border: GrayText;
+    --#{$shale}button-inset-border-hover: Highlight;
+    --#{$shale}button-inset-border-active: Highlight;
 
     /* Input */
-    --#{$shale}input-background: black;
+    --#{$shale}input-background: Canvas;
     --#{$shale}input-background-disabled: transparent;
 
-    --#{$shale}input-border: white;
-    --#{$shale}input-border-hover: #FF0;
-    --#{$shale}input-border-active: #1AEBFF;
-    --#{$shale}input-border-disabled: #3FF23F;
+    --#{$shale}input-border: CanvasText;
+    --#{$shale}input-border-hover: Highlight;
+    --#{$shale}input-border-active: Highlight;
+    --#{$shale}input-border-disabled: GrayText;
 
-    --#{$shale}input-inner-border: white;
-    --#{$shale}input-inner-border-hover: #FF0;
-    --#{$shale}input-inner-border-active: #1AEBFF;
-    --#{$shale}input-inner-border-disabled: #3FF23F;
+    --#{$shale}input-inner-border: CanvasText;
+    --#{$shale}input-inner-border-hover: Highlight;
+    --#{$shale}input-inner-border-active: Highlight;
+    --#{$shale}input-inner-border-disabled: GrayText;
 
-    --#{$shale}input-fill: #1AEBFF;
+    --#{$shale}input-fill: Highlight;
 
     /* Scrollbar */
-    --#{$shale}scrollbar-corner: black;
+    --#{$shale}scrollbar-corner: Canvas;
 
-    --#{$shale}scrollbar-track-bg: black;
+    --#{$shale}scrollbar-track-bg: Canvas;
 
-    --#{$shale}scrollbar-button: black; // scrollbar button initial
-    --#{$shale}scrollbar-hover: #FF0; // scrollbar button hover (bottom)
-    --#{$shale}scrollbar-hover-1: #FF0; // scrollbar button hover (top)
-    --#{$shale}scrollbar-active: #1AEBFF; // scrollbar button active (bottom)
-    --#{$shale}scrollbar-active-1: #1AEBFF; // scrollbar button active (top)
-    --#{$shale}scrollbar-arrow: white; // color of scrollbar arrow
+    --#{$shale}scrollbar-button: Canvas; // scrollbar button initial
+    --#{$shale}scrollbar-hover: Highlight; // scrollbar button hover (bottom)
+    --#{$shale}scrollbar-hover-1: Highlight; // scrollbar button hover (top)
+    --#{$shale}scrollbar-active: Highlight; // scrollbar button active (bottom)
+    --#{$shale}scrollbar-active-1: Highlight; // scrollbar button active (top)
+    --#{$shale}scrollbar-arrow: CanvasText; // color of scrollbar arrow
 
     ::-webkit-scrollbar-thumb {
-        --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-dark);
+        --#{$shale}scrollbar-thumb: Highlight;
     }
 
     /* Shadows */
