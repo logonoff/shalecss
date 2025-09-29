@@ -12,11 +12,12 @@
 		opacity: .75;
 		padding: 0 .3em;
 		text-decoration: none;
-		filter: drop-shadow(var(--#{$shale}shadow-moderate));
-		transition: opacity .125s ease;
+		filter: var(--#{$shale}filter-shadow-moderate);
+		transition: opacity .125s ease, filter .125s ease;
 
 		&:hover, &:focus-visible, &#{$hover}, &#{$focus} {
 			opacity: 1;
+			filter: var(--#{$shale}filter-shadow-puffy);
 			text-decoration: none;
 		}
 
@@ -26,6 +27,7 @@
 
 		&:active, &#{$active} {
 			opacity: .3;
+			filter: var(--#{$shale}filter-shadow-subtle);
 		}
 
 	}
