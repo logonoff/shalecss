@@ -4,8 +4,9 @@
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {
-    "build": "sass scss/shale.scss:build/shale.css --style=compressed --error-css",
-    "dev": "sass scss/shale.scss:build/shale.css --style=expanded --error-css --watch"
+    "prebuild": "cp ./shalecss.js ./build/shalecss.js && cp ./icons.svg ./build/icons.svg",
+    "build": "npm run prebuild && sass scss/shale.scss:build/shale.css --style=compressed --error-css",
+    "dev": "npm run prebuild && sass scss/shale.scss:build/shale.css --style=expanded --error-css --watch"
   },
   "repository": {
     "type": "git",
