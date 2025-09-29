@@ -19,6 +19,6 @@
   },
   "homepage": "https://logonoff.co/shalecss",
   "devDependencies": {
-    "sass": "^1.85.1"
+    "sass": "^1.93.2"
   }
 }
