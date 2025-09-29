@@ -21,6 +21,10 @@
 	border: none;
 	fill: var(--#{$shale}header-text);
 	outline-color: var(--#{$shale}accent-400);
+
+	.#{$shale}icon {
+		fill: var(--#{$shale}header-text);
+	}
 }
 
 /* Header + Menu Bar */
