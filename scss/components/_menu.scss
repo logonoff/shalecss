@@ -36,6 +36,11 @@
 	width: 100%;
 	z-index: 41;
 
+	&-invert-border {
+		border-top: 1px solid var(--#{$shale}secondary-border);
+		border-bottom: 0;
+	}
+
 	&[disabled], &#{$disabled} {
 		--#{$shale}header-background: var(--#{$shale}header-background-disabled);
 	}
