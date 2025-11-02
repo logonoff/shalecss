@@ -1,22 +1,16 @@
 import { clsx } from 'clsx';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-    /** The base component to render */
-    Component?: React.ElementType;
-}
-
-export const Container: React.FC<ContainerProps> = ({ Component = 'div', ...props }) => (
+export const Container: PolymorphicComponent<'div', {}> = ({ Component = 'div', ...props }) => (
     <Component {...props} className={clsx('shale-v1-container', props?.className)} />
 );
 
-export interface FlexContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BaseFlexContainerProps {
     /** The flex layout variant */
     variant?: 'space-between' | 'center' | 'align-center';
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const FlexContainer: React.FC<FlexContainerProps> = ({ Component = 'div', variant = 'space-between', ...props }) => (
+export const FlexContainer: PolymorphicComponent<'div', BaseFlexContainerProps> = ({ Component = 'div', variant = 'space-between', ...props }) => (
     <Component
         {...props}
         className={clsx(
@@ -30,8 +24,6 @@ export const FlexContainer: React.FC<FlexContainerProps> = ({ Component = 'div',
     />
 );
 
-export interface FlexFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
-
-export const FlexForm: React.FC<FlexFormProps> = ({ ...props }) => (
-    <form {...props} className={clsx('shale-v1-flex-form', props?.className)} />
+export const FlexForm: PolymorphicComponent<'form', {}> = ({ Component = 'form', ...props }) => (
+    <Component {...props} className={clsx('shale-v1-flex-form', props?.className)} />
 );

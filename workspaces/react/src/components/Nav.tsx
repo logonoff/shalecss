@@ -1,25 +1,19 @@
 import { clsx } from 'clsx';
-import { StateVariant } from '../const/variants';
+import type { StateVariant } from '../types/variants';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface NavProps extends React.HTMLAttributes<HTMLElement> {
-    /** The base component to render */
-    Component?: React.ElementType;
-}
-
-export const Nav: React.FC<NavProps> = ({ Component = 'nav', ...props }) => (
+export const Nav: PolymorphicComponent<'nav', {}> = ({ Component = 'nav', ...props }) => (
     <Component {...props} className={clsx('shale-v1-nav', props?.className)} />
 );
 
-export interface MenuBarButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface BaseMenuBarButtonProps {
     /** Whether this menu item is the current page */
     current?: boolean;
     /** The initial state of the menu button (if you want to force a specific state) */
     state?: StateVariant;
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const MenuBarButton: React.FC<MenuBarButtonProps> = ({ Component = 'a', current, state, ...props }) => (
+export const MenuBarButton: PolymorphicComponent<'a', BaseMenuBarButtonProps> = ({ Component = 'a', current, state, ...props }) => (
     <Component
         {...props}
         className={clsx(

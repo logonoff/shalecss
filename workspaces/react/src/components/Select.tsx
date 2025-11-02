@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { StateVariant } from '../const/variants';
+import type { StateVariant } from '../types/variants';
 
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
     /** The initial state of the select (if you want to force a specific state) */

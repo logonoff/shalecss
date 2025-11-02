@@ -1,13 +1,12 @@
 import { clsx } from 'clsx';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BaseCardProps {
     /** Flex sizing variant */
     flex?: 'grow' | 'half' | 'third' | 'quarter';
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const Card: React.FC<CardProps> = ({ Component = 'div', flex, ...props }) => (
+export const Card: PolymorphicComponent<'div', BaseCardProps> = ({ Component = 'div', flex, ...props }) => (
     <Component
         {...props}
         className={clsx(

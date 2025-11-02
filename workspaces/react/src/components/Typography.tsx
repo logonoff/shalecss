@@ -1,22 +1,22 @@
 import { clsx } from 'clsx';
+import type { PolymorphicComponent } from '../types/helpers';
 
 export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'code';
 
-export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
-    /** The base component to render */
+export interface BaseTypographyProps {
+    /** The variant style to apply */
     variant?: TypographyVariant;
-    Component?: React.ElementType;
 }
 
-export const Typography: React.FC<TypographyProps> = ({ variant = 'p', Component = variant, ...props }) => (
+export const Typography: PolymorphicComponent<'p', BaseTypographyProps> = ({ variant = 'p', Component = variant, ...props }) => (
     <Component
         {...props}
         className={clsx(`shale-v1-${variant}`, props.className)}
     />
 );
 
-const makeTypography = (variant: TypographyVariant, Component: React.ElementType = variant) =>
-    (props: TypographyProps) => <Typography {...props} Component={Component} variant={variant} />;
+const makeTypography = (variant: TypographyVariant, Component: React.ElementType = variant): PolymorphicComponent<typeof Component, BaseTypographyProps> =>
+    (props: any) => <Typography {...props} Component={Component} variant={variant} />;
 
 export const H1 = makeTypography('h1');
 export const H2 = makeTypography('h2');

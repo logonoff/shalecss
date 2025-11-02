@@ -1,14 +1,13 @@
 import { clsx } from 'clsx';
-import { StateVariant } from '../const/variants';
+import type { StateVariant } from '../types/variants';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
+export interface BaseHeaderProps {
     /** The initial state of the header (if you want to force a specific state) */
     state?: StateVariant;
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const Header: React.FC<HeaderProps> = ({ Component = 'header', state, ...props }) => (
+export const Header: PolymorphicComponent<'header', BaseHeaderProps> = ({ Component = 'header', state, ...props }) => (
     <Component
         {...props}
         className={clsx(
@@ -19,20 +18,10 @@ export const Header: React.FC<HeaderProps> = ({ Component = 'header', state, ...
     />
 );
 
-export interface HeaderTitleProps extends React.HTMLAttributes<HTMLDivElement> {
-    /** The base component to render */
-    Component?: React.ElementType;
-}
-
-export const HeaderTitle: React.FC<HeaderTitleProps> = ({ Component = 'div', ...props }) => (
+export const HeaderTitle: PolymorphicComponent<'div', {}> = ({ Component = 'div', ...props }) => (
     <Component {...props} className={clsx('shale-v1-header-title', props?.className)} />
 );
 
-export interface HeaderTextProps extends React.HTMLAttributes<HTMLParagraphElement> {
-    /** The base component to render */
-    Component?: React.ElementType;
-}
-
-export const HeaderText: React.FC<HeaderTextProps> = ({ Component = 'p', ...props }) => (
+export const HeaderText: PolymorphicComponent<'p', {}> = ({ Component = 'p', ...props }) => (
     <Component {...props} className={clsx('shale-v1-header-text', props?.className)} />
 );

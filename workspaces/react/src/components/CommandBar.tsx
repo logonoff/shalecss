@@ -1,13 +1,12 @@
 import { clsx } from 'clsx';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface CommandBarProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BaseCommandBarProps {
     /** Whether to make the command bar grow to fill available space */
     flexGrow?: boolean;
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const CommandBar: React.FC<CommandBarProps> = ({ Component = 'div', flexGrow, ...props }) => (
+export const CommandBar: PolymorphicComponent<'div', BaseCommandBarProps> = ({ Component = 'div', flexGrow, ...props }) => (
     <Component
         {...props}
         className={clsx(

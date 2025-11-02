@@ -1,15 +1,14 @@
 import { clsx } from 'clsx';
+import type { PolymorphicComponent } from '../types/helpers';
 
-export interface CaptionButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BaseCaptionButtonProps {
     /** Whether dark mode is disabled (used for theme toggles) */
     darkDisabled?: boolean;
     /** Whether contrast mode is disabled (used for theme toggles) */
     contrastDisabled?: boolean;
-    /** The base component to render */
-    Component?: React.ElementType;
 }
 
-export const CaptionButton: React.FC<CaptionButtonProps> = ({ Component = 'button', darkDisabled, contrastDisabled, ...props }) => (
+export const CaptionButton: PolymorphicComponent<'button', BaseCaptionButtonProps> = ({ Component = 'button', darkDisabled, contrastDisabled, ...props }) => (
     <Component
         {...props}
         className={clsx(
@@ -21,11 +20,6 @@ export const CaptionButton: React.FC<CaptionButtonProps> = ({ Component = 'butto
     />
 );
 
-export interface CaptionMenuProps extends React.HTMLAttributes<HTMLSpanElement> {
-    /** The base component to render */
-    Component?: React.ElementType;
-}
-
-export const CaptionMenu: React.FC<CaptionMenuProps> = ({ Component = 'span', ...props }) => (
+export const CaptionMenu: PolymorphicComponent<'span', {}> = ({ Component = 'span', ...props }) => (
     <Component {...props} className={clsx('shale-v1-caption-menu', props?.className)} />
 );

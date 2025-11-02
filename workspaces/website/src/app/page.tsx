@@ -286,7 +286,7 @@ print(get_a_million_dollars())`}</Code>
                 <option disabled>Grains</option>
               </Select>
 
-              <Button Component="a" href="#">
+              <Button Component="button">
                 button
               </Button>
               <Button Component="a" href="#" variant="secondary">
