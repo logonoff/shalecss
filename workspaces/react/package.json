@@ -1,0 +1,33 @@
+{
+  "name": "@shalecss/react",
+  "version": "0.0.0",
+  "description": "a pseudo-skeuomorph React component library",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "dev": "npm run clean && tsc -p tsconfig.json --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logonoff/shalecss.git"
+  },
+  "homepage": "https://logonoff.co/shalecss",
+  "author": "logonoff",
+  "license": "MIT",
+  "dependencies": {
+    "@shalecss/core": "^0.0.0",
+    "clsx": "^2.1.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.x | 19.x",
+    "react-dom": "18.x | 19.x"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2"
+  }
+}

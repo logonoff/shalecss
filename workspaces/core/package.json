@@ -1,0 +1,27 @@
+{
+  "name": "@shalecss/core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "a pseudo-skeuomorph CSS framework",
+  "main": "dist/shalecss.js",
+  "exports": {
+    ".": "./dist/shalecss.js",
+    "./dist/shale.css": "./dist/shale.css",
+    "./dist/icons.svg": "./dist/icons.svg"
+  },
+  "scripts": {
+    "prebuild": "mkdir -p dist && cp ./shalecss.js ./dist/shalecss.js && cp ./icons.svg ./dist/icons.svg",
+    "build": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=compressed --error-css",
+    "dev": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=expanded --error-css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logonoff/shalecss.git"
+  },
+  "homepage": "https://logonoff.co/shalecss",
+  "author": "logonoff",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

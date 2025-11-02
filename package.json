@@ -4,9 +4,8 @@
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {
-    "prebuild": "mkdir -p build && cp ./shalecss.js ./build/shalecss.js && cp ./icons.svg ./build/icons.svg",
-    "build": "npm run prebuild && sass scss/shale.scss:build/shale.css --style=compressed --error-css",
-    "dev": "npm run prebuild && sass scss/shale.scss:build/shale.css --style=expanded --error-css --watch"
+    "build:core": "cd workspaces/core && npm run build",
+    "dev:core": "cd workspaces/core && npm run dev"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,9 @@
     "url": "https://github.com/logonoff/shalecss/issues"
   },
   "homepage": "https://logonoff.co/shalecss",
-  "devDependencies": {
-    "sass": "^1.93.2"
-  }
+  "workspaces": [
+    "workspaces/core",
+    "workspaces/react",
+    "workspaces/website"
+  ]
 }
