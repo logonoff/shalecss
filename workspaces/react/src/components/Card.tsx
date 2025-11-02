@@ -1,22 +1,19 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { PolymorphicComponent } from '../types/helpers';
+import { FlexItem } from './FlexItem';
+import { ShadowVariant } from '../types/variants';
 
-export interface BaseCardProps {
-    /** Flex sizing variant */
-    flex?: 'grow' | 'half' | 'third' | 'quarter';
+export interface CardProps {
+    /** The type of shadow to apply to the card */
+    shadow?: ShadowVariant;
 }
 
-export const Card: PolymorphicComponent<'div', BaseCardProps> = ({ Component = 'div', flex, ...props }) => (
+export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({ Component = FlexItem, ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             'shale-v1-card',
-            {
-                'shale-v1-flex-grow': flex === 'grow',
-                'shale-v1-flex-half': flex === 'half',
-                'shale-v1-flex-third': flex === 'third',
-                'shale-v1-flex-quarter': flex === 'quarter',
-            },
+            { [`shale-v1--${props.shadow}`]: props.shadow },
             props?.className
         )}
     />

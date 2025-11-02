@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 
 export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
     /** The theme to apply to the document */
@@ -12,7 +12,7 @@ export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
 export const Html: React.FC<HtmlProps> = ({ Component = "html", theme, webkitScrollbar = false, ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             `shale-v1-${theme}`,
             { 'shale-v1-webkit-scrollbar': webkitScrollbar },
             props?.className

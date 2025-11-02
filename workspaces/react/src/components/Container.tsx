@@ -1,8 +1,8 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { PolymorphicComponent } from '../types/helpers';
 
 export const Container: PolymorphicComponent<'div', {}> = ({ Component = 'div', ...props }) => (
-    <Component {...props} className={clsx('shale-v1-container', props?.className)} />
+    <Component {...props} className={css('shale-v1-container', props?.className)} />
 );
 
 export interface BaseFlexContainerProps {
@@ -13,7 +13,7 @@ export interface BaseFlexContainerProps {
 export const FlexContainer: PolymorphicComponent<'div', BaseFlexContainerProps> = ({ Component = 'div', variant = 'space-between', ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             {
                 'shale-v1-flex-space-between': variant === 'space-between',
                 'shale-v1-flex-center': variant === 'center',
@@ -25,5 +25,5 @@ export const FlexContainer: PolymorphicComponent<'div', BaseFlexContainerProps> 
 );
 
 export const FlexForm: PolymorphicComponent<'form', {}> = ({ Component = 'form', ...props }) => (
-    <Component {...props} className={clsx('shale-v1-flex-form', props?.className)} />
+    <Component {...props} className={css('shale-v1-flex-form', props?.className)} />
 );

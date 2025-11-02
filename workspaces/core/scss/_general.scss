@@ -13,3 +13,16 @@
 		transition: none !important;
 	}
 }
+
+/**
+ * Shadow helpers
+ */
+.#{$shale}--shadow-subtle {
+	box-shadow: var(--#{$shale}shadow-subtle);
+}
+.#{$shale}--shadow-moderate {
+	box-shadow: var(--#{$shale}shadow-moderate);
+}
+.#{$shale}--shadow-puffy {
+	box-shadow: var(--#{$shale}shadow-puffy);
+}

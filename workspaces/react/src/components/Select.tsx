@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
@@ -8,7 +8,7 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
 
 export const Select: React.FC<SelectProps> = ({ state, ...props }) => (
     <div
-        className={clsx(
+        className={css(
             'shale-v1-select',
             { [`shale-v1--${state}`]: state }
         )}

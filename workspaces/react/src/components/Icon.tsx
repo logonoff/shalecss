@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
     /** The icon ID from the icons.svg sprite */
@@ -14,7 +14,7 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
 export const Icon: React.FC<IconProps> = ({ icon, flipX, flipY, iconPath = '/icons.svg', ...props }) => (
     <svg
         {...props}
-        className={clsx(
+        className={css(
             'shale-v1-icon',
             {
                 'shale-v1-icon-flip-x': flipX,

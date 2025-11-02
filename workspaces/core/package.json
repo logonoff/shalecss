@@ -2,6 +2,7 @@
   "name": "@shalecss/core",
   "version": "1.0.0-prerelease",
   "private": true,
+  "type": "module",
   "description": "a pseudo-skeuomorph CSS framework",
   "main": "dist/shalecss.js",
   "exports": {

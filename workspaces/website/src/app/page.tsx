@@ -17,7 +17,6 @@ import {
   CaptionMenu,
   CaptionButton,
   Icon,
-  Skip,
   Nav,
   MenuBarButton,
   CommandBar,
@@ -31,29 +30,45 @@ import {
   Note,
   NoteText,
   Footer,
+  FlexItem,
 } from "@shalecss/react";
-import { useState } from "react";
+import { useTheme } from "@/components/ThemeProvider";
 
 export default function Home() {
-  const [theme, setTheme] = useState<"light" | "dark" | "contrast">("light");
-  const [biggerText, setBiggerText] = useState(false);
+  const {
+    theme,
+    setTheme,
+    size,
+    setSize,
+  } = useTheme();
 
   const toggleTheme = () => {
-    setTheme((t) => {
-      if (t === "light") return "dark";
-      if (t === "dark") return "contrast";
-      return "light";
-    });
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  const toggleContrast = () => {
+    if (theme !== "contrast") {
+      setTheme("contrast");
+    } else {
+      setTheme("light");
+    }
   };
 
   const toggleTextSize = () => {
-    setBiggerText(!biggerText);
+    if (size === "regular") {
+      setSize("large");
+    } else {
+      setSize("regular");
+    }
   };
 
   return (
     <>
       <Header>
-        <Skip href="#maincontent">Skip to Content</Skip>
         <HeaderTitle>
           <HeaderText>shale.css</HeaderText>
 
@@ -67,9 +82,8 @@ export default function Home() {
             </CaptionButton>
 
             <CaptionButton
-              onClick={toggleTheme}
+              onClick={toggleContrast}
               title="Toggle theme"
-              contrastDisabled={theme !== "contrast"}
             >
               <Icon icon="contrast" className="shale-v1-contrast-enabled" />
               <Icon icon="contrast" flipX className="shale-v1-contrast-disabled" />
@@ -78,7 +92,6 @@ export default function Home() {
             <CaptionButton
               onClick={toggleTheme}
               title="Toggle dark mode"
-              darkDisabled={theme !== "dark"}
             >
               <Icon icon="moon-stroke" className="shale-v1-dark-enabled" />
               <Icon icon="moon-fill" className="shale-v1-dark-disabled" />
@@ -88,27 +101,25 @@ export default function Home() {
       </Header>
 
       <Container Component="main" id="maincontent">
-        <FlexContainer variant="space-between">
-          <Card flex="grow">
-            <div>
-              <H1>shale.css</H1>
-              <H4>simple pseudo-skeuomorph CSS styles</H4>
-              <P>
-                shale.css provides a simple set of CSS styles to quickly make a
-                prototype look presentable
-              </P>
-            </div>
-            <FlexContainer variant="align-center">
-              <Link
-                Component={Button}
-                href="https://github.com/logonoff/shalecss/"
-                aria-label="GitHub repository for shale.css"
-              >
-                GitHub
-              </Link>
-            </FlexContainer>
-          </Card>
-        </FlexContainer>
+        <Card Component={FlexContainer} variant="space-between" flex="grow">
+          <FlexItem>
+            <H1>shale.css</H1>
+            <H4>simple pseudo-skeuomorph CSS styles</H4>
+            <P>
+              shale.css provides a simple set of CSS styles to quickly make a
+              prototype look presentable
+            </P>
+          </FlexItem>
+          <FlexContainer variant="align-center">
+            <Button
+              Component="a"
+              href="https://github.com/logonoff/shalecss/"
+              aria-label="GitHub repository for shale.css"
+            >
+              GitHub
+            </Button>
+          </FlexContainer>
+        </Card>
 
         <FlexContainer variant="space-between">
           <Card flex="third">
@@ -147,7 +158,7 @@ export default function Home() {
           <H5>Heading level 5</H5>
           <H6>Heading level 6</H6>
 
-          <Code>{`def get_a_million_dollars():
+          <Code Component="pre">{`def get_a_million_dollars():
     return P == NP
 
 print(get_a_million_dollars())`}</Code>
@@ -213,13 +224,13 @@ print(get_a_million_dollars())`}</Code>
         </Card>
 
         <FlexContainer variant="space-between">
-          <Card flex="third" style={{ boxShadow: "var(--shale-v1-shadow-subtle)" }}>
+          <Card flex="third" shadow="subtle">
             subtle shadows
           </Card>
-          <Card flex="third" style={{ boxShadow: "var(--shale-v1-shadow-moderate)" }}>
+          <Card flex="third" shadow="moderate">
             moderate shadows
           </Card>
-          <Card flex="third" style={{ boxShadow: "var(--shale-v1-shadow-puffy)" }}>
+          <Card flex="third" shadow="puffy">
             puffy shadows
           </Card>
         </FlexContainer>

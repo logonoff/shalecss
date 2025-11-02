@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     /** The label text for the input */
@@ -18,7 +18,7 @@ export const Input: React.FC<InputProps> = ({ label, id, ...props }) => {
     }
 
     return (
-        <div className={clsx('shale-v1-input', props?.className)}>
+        <div className={css('shale-v1-input', props?.className)}>
             <input {...props} />
         </div>
     );

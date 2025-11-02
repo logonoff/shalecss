@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 import type { PolymorphicComponent } from '../types/helpers';
 
@@ -13,7 +13,7 @@ export const Button: PolymorphicComponent<'button', BaseButtonProps> = ({ Compon
     return (
         <Component
             {...props}
-            className={clsx(
+            className={css(
                 'shale-v1-button',
                 { 'shale-v1--secondary': variant === 'secondary' },
                 { [`shale-v1--${state}`]: state },

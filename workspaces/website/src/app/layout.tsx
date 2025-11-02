@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { Html } from "@shalecss/react";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Html, SkipToContent } from "@shalecss/react";
 import { Ubuntu } from "next/font/google";
+
 import "@shalecss/core/dist/shale.css";
 
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -20,10 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Html lang="en" className={ubuntu.className} theme="dark">
-      <body className="shale-v1-body">
-        {children}
-      </body>
-    </Html>
+    <ThemeProvider>
+      <Html lang="en" className={ubuntu.className} theme="dark">
+        <body className="shale-v1-body">
+          <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
+          {children}
+        </body>
+      </Html>
+    </ThemeProvider>
   );
 }

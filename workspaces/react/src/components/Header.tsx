@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 import type { PolymorphicComponent } from '../types/helpers';
 
@@ -10,7 +10,7 @@ export interface BaseHeaderProps {
 export const Header: PolymorphicComponent<'header', BaseHeaderProps> = ({ Component = 'header', state, ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             'shale-v1-header',
             { [`shale-v1--${state}`]: state },
             props?.className
@@ -19,9 +19,9 @@ export const Header: PolymorphicComponent<'header', BaseHeaderProps> = ({ Compon
 );
 
 export const HeaderTitle: PolymorphicComponent<'div', {}> = ({ Component = 'div', ...props }) => (
-    <Component {...props} className={clsx('shale-v1-header-title', props?.className)} />
+    <Component {...props} className={css('shale-v1-header-title', props?.className)} />
 );
 
 export const HeaderText: PolymorphicComponent<'p', {}> = ({ Component = 'p', ...props }) => (
-    <Component {...props} className={clsx('shale-v1-header-text', props?.className)} />
+    <Component {...props} className={css('shale-v1-header-text', props?.className)} />
 );

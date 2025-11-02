@@ -10,7 +10,7 @@ type PolymorphicComponentProp<
 > = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
 
 /** A helper type for a component which allows any HTML element to be used as the base component */
-export type PolymorphicComponent<DefaultElement extends ElementType, P> = <
+export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <
     C extends ElementType = DefaultElement
 >(
     props: PolymorphicComponentProp<C, Readonly<P>>

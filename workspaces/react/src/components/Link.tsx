@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 import type { PolymorphicComponent } from '../types/helpers';
 
@@ -10,7 +10,7 @@ export interface BaseLinkProps {
 export const Link: PolymorphicComponent<'a', BaseLinkProps> = ({ Component = 'a', state, ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             'shale-v1-link',
             { [`shale-v1--${state}`]: state },
             props?.className

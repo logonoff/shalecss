@@ -1,4 +1,4 @@
-import { clsx } from 'clsx';
+import { css } from '../utils/css';
 import type { PolymorphicComponent } from '../types/helpers';
 
 export interface BaseCommandBarProps {
@@ -9,7 +9,7 @@ export interface BaseCommandBarProps {
 export const CommandBar: PolymorphicComponent<'div', BaseCommandBarProps> = ({ Component = 'div', flexGrow, ...props }) => (
     <Component
         {...props}
-        className={clsx(
+        className={css(
             'shale-v1-command-bar',
             { 'shale-v1-flex-grow': flexGrow },
             props?.className

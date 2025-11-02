@@ -1,6 +1,7 @@
 // Layout & Structure
 export { Html } from './components/Html';
 export { Container, FlexContainer, FlexForm } from './components/Container';
+export { FlexItem } from './components/FlexItem';
 export { Card } from './components/Card';
 
 // Typography
@@ -17,7 +18,7 @@ export { Link } from './components/Link';
 export { Header, HeaderTitle, HeaderText } from './components/Header';
 export { Footer } from './components/Footer';
 export { Nav, MenuBarButton } from './components/Nav';
-export { Skip } from './components/Skip';
+export { SkipToContent } from './components/SkipToContent';
 
 // UI Components
 export { Icon } from './components/Icon';
