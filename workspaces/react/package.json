@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "description": "a pseudo-skeuomorph React component library",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc -p tsconfig.json",

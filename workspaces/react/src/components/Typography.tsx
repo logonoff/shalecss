@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'text' | 'code';
+export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'code';
 
 export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
     /** The base component to render */
