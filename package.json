@@ -1,11 +1,20 @@
 {
-  "name": "shalecss",
+  "name": "@shalecss/root",
   "version": "0.0.0",
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {
     "build:core": "cd workspaces/core && npm run build",
-    "dev:core": "cd workspaces/core && npm run dev"
+    "dev:core": "cd workspaces/core && npm run dev",
+    "build:react": "cd workspaces/react && npm run build",
+    "dev:react": "cd workspaces/react && npm run dev",
+    "build:website": "cd workspaces/website && npm run build",
+    "dev:website": "cd workspaces/website && npm run dev",
+    "build": "npm run build:core && npm run build:react && npm run build:website",
+    "dev": "concurrently --names core,react,website 'npm run dev:core' 'npm run dev:react' 'npm run dev:website'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   },
   "repository": {
     "type": "git",

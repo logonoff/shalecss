@@ -14,7 +14,6 @@ export const Html: React.FC<HtmlProps> = ({ Component = "html", theme, webkitScr
         {...props}
         className={clsx(
             `shale-v1-${theme}`,
-            `shale-v1-body`,
             { 'shale-v1-webkit-scrollbar': webkitScrollbar },
             props?.className
         )}

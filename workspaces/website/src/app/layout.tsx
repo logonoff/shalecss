@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <Html lang="en" className={ubuntu.className} theme="dark">
-      <body>
+      <body className="shale-v1-body">
         {children}
       </body>
     </Html>
