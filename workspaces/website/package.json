@@ -1,5 +1,6 @@
 {
   "name": "@shalecss/website",
+  "description": "showcase website for shalecss",
   "version": "0.1.0",
   "private": true,
   "scripts": {

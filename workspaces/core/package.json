@@ -1,6 +1,6 @@
 {
   "name": "@shalecss/core",
-  "version": "0.0.0",
+  "version": "1.0.0-prerelease",
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "main": "dist/shalecss.js",
@@ -10,7 +10,8 @@
     "./dist/icons.svg": "./dist/icons.svg"
   },
   "scripts": {
-    "prebuild": "mkdir -p dist && cp ./shalecss.js ./dist/shalecss.js && cp ./icons.svg ./dist/icons.svg",
+    "generate:banner": "node ./scripts/generate-banner.js",
+    "prebuild": "mkdir -p dist && cp ./shalecss.js ./dist/shalecss.js && cp ./icons.svg ./dist/icons.svg && npm run generate:banner",
     "build": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=compressed --error-css",
     "dev": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=expanded --error-css --watch"
   },
