@@ -1,0 +1,37 @@
+import { Button } from "@shalecss/react";
+
+The `Button` component is based off of the HTML `<button>` element and can be used to trigger actions when clicked.
+
+## Props
+
+*extends `React.ButtonHTMLAttributes<HTMLButtonElement>`*
+
+- `variant` (optional): Specifies the visual style of the button. Can be one of the following values:
+  - `primary`: The primary button style.
+  - `secondary`: The secondary button style.
+  - `tertiary`: The tertiary button style.
+  - Default is `primary`.
+- `state` (optional): Specifies the state of the button. Can be one of the following values:
+  - `default`: The default state.
+  - `hover`: The hover state.
+  - `active`: The active state.
+  - `disabled`: The disabled state.
+  - Default is `default`.
+
+## Example
+
+<Button variant="primary">
+  Click Me
+</Button>
+
+```tsx
+import { Button } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <Button variant="primary">
+      Click Me
+    </Button>
+  );
+};
+```

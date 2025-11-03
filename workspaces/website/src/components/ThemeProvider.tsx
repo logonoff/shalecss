@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { createContext, FC, useContext, useState, ReactNode, useEffect } from "react";
 
 type Theme = "light" | "dark" | "contrast";
 type FontSize = "large" | "regular";
@@ -15,9 +15,37 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>("light");
-    const [size, setSize] = useState<FontSize>("regular");
+const useLocalStorage = <T,>(key: string, initialValue: T): [T, (value: T) => void] => {
+    const [storedValue, setStoredValue] = useState<T>(() => {
+        if (typeof window === "undefined") {
+            return initialValue;
+        }
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? JSON.parse(item) : initialValue;
+        } catch (error) {
+            console.warn(`Error reading localStorage key "${key}":`, error);
+            return initialValue;
+        }
+    });
+
+    const setValue = (value: T) => {
+        try {
+            setStoredValue(value);
+            if (typeof window !== "undefined") {
+                window.localStorage.setItem(key, JSON.stringify(value));
+            }
+        } catch (error) {
+            console.warn(`Error setting localStorage key "${key}":`, error);
+        }
+    };
+
+    return [storedValue, setValue];
+};
+
+export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+    const [theme, setTheme] = useLocalStorage<Theme>("shalecss.theme", "light");
+    const [size, setSize] = useLocalStorage<FontSize>("shalecss.fontSize", "regular");
 
     useEffect(() => {
         document.documentElement.classList.remove("shale-v1-light", "shale-v1-dark", "shale-v1-contrast");

@@ -1,0 +1,106 @@
+import { Nav, MenuBarButton } from "@shalecss/react";
+
+Navigation components for creating menu bars and navigation structures.
+
+## Nav Component
+
+A container component for navigation menus.
+
+### Props
+
+- `Component` (optional): The underlying HTML element to render. Defaults to `nav`.
+
+### Example
+
+<Nav>
+  <MenuBarButton href="/">Home</MenuBarButton>
+  <MenuBarButton href="/about">About</MenuBarButton>
+  <MenuBarButton href="/docs" current>Docs</MenuBarButton>
+</Nav>
+
+```tsx
+import { Nav, MenuBarButton } from "@shalecss/react";
+
+const Navigation = () => {
+  return (
+    <Nav>
+      <MenuBarButton href="/">Home</MenuBarButton>
+      <MenuBarButton href="/about">About</MenuBarButton>
+      <MenuBarButton href="/docs">Docs</MenuBarButton>
+    </Nav>
+  );
+};
+```
+
+## MenuBarButton Component
+
+A navigation button/link component for use within menu bars.
+
+### Props
+
+- `current` (optional): Whether this menu item represents the current page. Defaults to `false`.
+- `state` (optional): The initial state of the menu button. Can be one of:
+  - `default`: The default state
+  - `hover`: The hover state
+  - `active`: The active state
+  - `disabled`: The disabled state
+- `Component` (optional): The underlying HTML element to render. Defaults to `a`.
+
+### Example
+
+```tsx
+<MenuBarButton href="/home" current>
+  Home
+</MenuBarButton>
+
+<MenuBarButton href="/settings" state="disabled">
+  Settings
+</MenuBarButton>
+```
+
+## Complete Navigation Example
+
+```tsx
+import { Nav, MenuBarButton } from "@shalecss/react";
+
+const MainNav = ({ currentPath }) => {
+  return (
+    <Nav>
+      <MenuBarButton href="/" current={currentPath === "/"}>
+        Home
+      </MenuBarButton>
+      <MenuBarButton href="/products" current={currentPath === "/products"}>
+        Products
+      </MenuBarButton>
+      <MenuBarButton href="/about" current={currentPath === "/about"}>
+        About
+      </MenuBarButton>
+      <MenuBarButton href="/contact" current={currentPath === "/contact"}>
+        Contact
+      </MenuBarButton>
+    </Nav>
+  );
+};
+```
+
+## Polymorphic Usage
+
+Both components are polymorphic and can integrate with routing libraries:
+
+```tsx
+import { Nav, MenuBarButton } from "@shalecss/react";
+import { Link } from "react-router-dom";
+
+const RouterNav = () => {
+  return (
+    <Nav>
+      <MenuBarButton Component={Link} to="/">
+        Home
+      </MenuBarButton>
+      <MenuBarButton Component={Link} to="/about">
+        About
+      </MenuBarButton>
+    </Nav>
+  );
+};
+```

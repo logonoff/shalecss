@@ -1,0 +1,107 @@
+import { Html } from "@shalecss/react";
+
+The `Html` component provides theme and scrollbar styling for your application's root element.
+
+## Props
+
+*extends `React.HTMLAttributes<HTMLHtmlElement>`*
+
+- `theme` (required): The theme to apply to the document. Can be one of:
+  - `light`: Light theme
+  - `dark`: Dark theme
+  - `contrast`: High contrast theme
+- `webkitScrollbar` (optional): Whether to enable webkit scrollbar styles. Defaults to `false`.
+- `Component` (optional): The base component to render. Defaults to `html`.
+
+## Example
+
+### Basic Usage (Next.js)
+
+In Next.js, you can use the Html component in your root layout:
+
+```tsx
+import { Html } from "@shalecss/react";
+
+export default function RootLayout({ children }) {
+  return (
+    <Html theme="light" lang="en">
+      <head />
+      <body>{children}</body>
+    </Html>
+  );
+}
+```
+
+### With Custom Scrollbar
+
+```tsx
+<Html theme="dark" webkitScrollbar lang="en">
+  <head />
+  <body>{children}</body>
+</Html>
+```
+
+### All Themes
+
+#### Light Theme
+
+```tsx
+<Html theme="light" lang="en">
+  {/* Your app */}
+</Html>
+```
+
+#### Dark Theme
+
+```tsx
+<Html theme="dark" lang="en">
+  {/* Your app */}
+</Html>
+```
+
+#### Contrast Theme
+
+```tsx
+<Html theme="contrast" lang="en">
+  {/* Your app */}
+</Html>
+```
+
+## Dynamic Theme Switching
+
+```tsx
+import { Html } from "@shalecss/react";
+import { useState } from "react";
+
+const App = () => {
+  const [theme, setTheme] = useState<'light' | 'dark' | 'contrast'>('light');
+
+  return (
+    <Html theme={theme} lang="en">
+      <head />
+      <body>
+        <button onClick={() => setTheme('light')}>Light</button>
+        <button onClick={() => setTheme('dark')}>Dark</button>
+        <button onClick={() => setTheme('contrast')}>Contrast</button>
+        {/* Your app content */}
+      </body>
+    </Html>
+  );
+};
+```
+
+## Alternative Component
+
+If you can't use the `html` element directly, you can render as a different component:
+
+```tsx
+<Html Component="div" theme="dark">
+  {/* Content */}
+</Html>
+```
+
+## Notes
+
+- The `theme` prop applies CSS classes that control the color scheme throughout your application
+- The `webkitScrollbar` prop enables custom scrollbar styling in webkit-based browsers
+- This component is typically used at the root level of your application

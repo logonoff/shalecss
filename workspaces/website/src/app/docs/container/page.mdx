@@ -1,0 +1,115 @@
+import { Container, FlexContainer, FlexForm } from "@shalecss/react";
+
+Container components provide layout structure and organization for your application.
+
+## Container
+
+A basic polymorphic container component for wrapping content.
+
+### Props
+
+- `Component` (optional): The underlying HTML element to render. Defaults to `div`.
+
+### Example
+
+<Container>
+  Content goes here
+</Container>
+
+```tsx
+import { Container } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <Container>
+      Content goes here
+    </Container>
+  );
+};
+```
+
+### Polymorphic Usage
+
+```tsx
+<Container Component="section">
+  Section content
+</Container>
+```
+
+## FlexContainer
+
+A flexible container with built-in flexbox layout variants.
+
+### Props
+
+- `variant` (optional): The flex layout variant. Can be one of:
+  - `space-between`: Space items evenly with space between them (default)
+  - `center`: Center all items
+  - `align-center`: Align items to the center
+- `Component` (optional): The underlying HTML element to render. Defaults to `div`.
+
+### Example
+
+<FlexContainer variant="space-between">
+  <div>Left</div>
+  <div>Right</div>
+</FlexContainer>
+
+```tsx
+import { FlexContainer } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <FlexContainer variant="space-between">
+      <div>Left</div>
+      <div>Right</div>
+    </FlexContainer>
+  );
+};
+```
+
+### Center Variant
+
+```tsx
+<FlexContainer variant="center">
+  <div>Centered content</div>
+</FlexContainer>
+```
+
+### Align Center Variant
+
+```tsx
+<FlexContainer variant="align-center">
+  <div>Vertically centered</div>
+</FlexContainer>
+```
+
+## FlexForm
+
+A form component with built-in flex layout styling.
+
+### Props
+
+- `Component` (optional): The underlying HTML element to render. Defaults to `form`.
+
+### Example
+
+<FlexForm>
+  <input type="text" placeholder="Name" />
+  <input type="email" placeholder="Email" />
+  <button type="submit">Submit</button>
+</FlexForm>
+
+```tsx
+import { FlexForm } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <FlexForm onSubmit={handleSubmit}>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <button type="submit">Submit</button>
+    </FlexForm>
+  );
+};
+```

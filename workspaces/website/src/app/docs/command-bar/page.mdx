@@ -1,0 +1,96 @@
+import { CommandBar } from "@shalecss/react";
+
+The `CommandBar` component provides a container for command-based UI elements, typically used for toolbars or action bars.
+
+## Props
+
+- `flexGrow` (optional): Whether to make the command bar grow to fill available space. Defaults to `false`.
+- `Component` (optional): The underlying HTML element to render. Defaults to `div`.
+
+## Example
+
+### Basic Command Bar
+
+<CommandBar>
+  <button>Save</button>
+  <button>Edit</button>
+  <button>Delete</button>
+</CommandBar>
+
+```tsx
+import { CommandBar } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <CommandBar>
+      <button>Save</button>
+      <button>Edit</button>
+      <button>Delete</button>
+    </CommandBar>
+  );
+};
+```
+
+### With Flex Grow
+
+When you want the command bar to expand and fill available space:
+
+```tsx
+<CommandBar flexGrow>
+  <button>Action 1</button>
+  <button>Action 2</button>
+  <button>Action 3</button>
+</CommandBar>
+```
+
+## Complete Example
+
+```tsx
+import { CommandBar, Button } from "@shalecss/react";
+
+const DocumentToolbar = () => {
+  return (
+    <CommandBar>
+      <Button variant="primary" onClick={handleSave}>
+        Save
+      </Button>
+      <Button variant="secondary" onClick={handleUndo}>
+        Undo
+      </Button>
+      <Button variant="secondary" onClick={handleRedo}>
+        Redo
+      </Button>
+      <Button variant="tertiary" onClick={handleExport}>
+        Export
+      </Button>
+    </CommandBar>
+  );
+};
+```
+
+## Layout Example
+
+```tsx
+<div style={{ display: 'flex' }}>
+  <CommandBar flexGrow>
+    <button>File</button>
+    <button>Edit</button>
+    <button>View</button>
+  </CommandBar>
+  <CommandBar>
+    <button>Settings</button>
+    <button>Help</button>
+  </CommandBar>
+</div>
+```
+
+## Polymorphic Usage
+
+The CommandBar component is polymorphic:
+
+```tsx
+<CommandBar Component="nav">
+  <a href="/home">Home</a>
+  <a href="/about">About</a>
+</CommandBar>
+```

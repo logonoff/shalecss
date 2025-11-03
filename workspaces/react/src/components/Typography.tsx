@@ -18,11 +18,11 @@ export const Typography: PolymorphicComponent<'p', BaseTypographyProps> = ({ var
 const makeTypography = (variant: TypographyVariant, Component: React.ElementType = variant): PolymorphicComponent<typeof Component, BaseTypographyProps> =>
     (props: any) => <Typography Component={Component} {...props} variant={variant} />;
 
-export const H1 = makeTypography('h1');
-export const H2 = makeTypography('h2');
-export const H3 = makeTypography('h3');
-export const H4 = makeTypography('h4');
-export const H5 = makeTypography('h5');
-export const H6 = makeTypography('h6');
-export const P = makeTypography('p');
-export const Code = makeTypography('code');
+export const H1: PolymorphicComponent<'h1'> = makeTypography('h1');
+export const H2: PolymorphicComponent<'h2'> = makeTypography('h2');
+export const H3: PolymorphicComponent<'h3'> = makeTypography('h3');
+export const H4: PolymorphicComponent<'h4'> = makeTypography('h4');
+export const H5: PolymorphicComponent<'h5'> = makeTypography('h5');
+export const H6: PolymorphicComponent<'h6'> = makeTypography('h6');
+export const P: PolymorphicComponent<'p'> = makeTypography('p');
+export const Code: PolymorphicComponent<'code'> = makeTypography('code');

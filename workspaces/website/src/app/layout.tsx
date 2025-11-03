@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Html, SkipToContent } from "@shalecss/react";
+import { Header, HeaderText, HeaderTitle, Html, MenuBarButton, Nav, SkipToContent } from "@shalecss/react";
+import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 
+import { PageFooter } from "@/components/PageFooter";
+import { ThemeMenu } from "@/components/ThemeMenu";
 import "@shalecss/core/dist/shale.css";
+import { PageHeader } from "@/components/PageHeader";
+import { ViewTransition } from "react";
 
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
@@ -26,7 +30,12 @@ export default function RootLayout({
       <Html lang="en" className={ubuntu.className} theme="dark">
         <body className="shale-v1-body">
           <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
-          {children}
+
+          <PageHeader />
+          <ViewTransition name="page">
+            {children}
+          </ViewTransition>
+          <PageFooter />
         </body>
       </Html>
     </ThemeProvider>

@@ -26,6 +26,10 @@
 .#{$shale}flex-grow { flex-grow: 1; }
 .#{$shale}flex-align-center { align-items: center; align-self: center; }
 
+.#{$shale}flex-custom {
+    --#{$shale}flex--width: auto;
+    flex: 1 1 calc(var(--#{$shale}flex--width) - var(--#{$shale}font-2));
+}
 
 .#{$shale}flex-half {
     flex: 1 1 calc(50% - var(--#{$shale}font-2));

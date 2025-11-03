@@ -1,0 +1,86 @@
+import { FlexItem } from "@shalecss/react";
+
+The `FlexItem` component provides flexible sizing for items within flex containers.
+
+## Props
+
+- `flex` (optional): The flex sizing strategy. Can be one of:
+  - `grow`: Allow the item to grow to fill available space
+  - `half`: Take up half the width
+  - `third`: Take up one-third the width
+  - `quarter`: Take up one-quarter the width
+  - `custom`: Use a custom flex value (requires `flexAmount` prop)
+- `flexAmount` (required when `flex="custom"`): A custom CSS value for the flex width (e.g., "2", "300px", "30%")
+- `Component` (optional): The underlying HTML element to render. Defaults to `div`.
+
+## Example
+
+### Basic Flex Grow
+
+<FlexItem flex="grow">
+  This item will grow to fill space
+</FlexItem>
+
+```tsx
+import { FlexItem } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <FlexItem flex="grow">
+      This item will grow to fill space
+    </FlexItem>
+  );
+};
+```
+
+### Fixed Width Fractions
+
+```tsx
+<div style={{ display: 'flex' }}>
+  <FlexItem flex="half">Half width</FlexItem>
+  <FlexItem flex="half">Half width</FlexItem>
+</div>
+
+<div style={{ display: 'flex' }}>
+  <FlexItem flex="third">One-third</FlexItem>
+  <FlexItem flex="third">One-third</FlexItem>
+  <FlexItem flex="third">One-third</FlexItem>
+</div>
+
+<div style={{ display: 'flex' }}>
+  <FlexItem flex="quarter">Quarter</FlexItem>
+  <FlexItem flex="quarter">Quarter</FlexItem>
+  <FlexItem flex="quarter">Quarter</FlexItem>
+  <FlexItem flex="quarter">Quarter</FlexItem>
+</div>
+```
+
+### Custom Flex Values
+
+```tsx
+<div style={{ display: 'flex' }}>
+  <FlexItem flex="custom" flexAmount="2">
+    Grows twice as much
+  </FlexItem>
+  <FlexItem flex="custom" flexAmount="1">
+    Grows once
+  </FlexItem>
+</div>
+
+<div style={{ display: 'flex' }}>
+  <FlexItem flex="custom" flexAmount="300px">
+    Fixed 300px width
+  </FlexItem>
+  <FlexItem flex="grow">
+    Fills remaining space
+  </FlexItem>
+</div>
+```
+
+## Polymorphic Usage
+
+```tsx
+<FlexItem Component="section" flex="half">
+  Section content
+</FlexItem>
+```

@@ -1,0 +1,50 @@
+import { Select } from "@shalecss/react";
+
+The `Select` component is a wrapper around the HTML `<select>` element with state variant support.
+
+## Props
+
+*extends `React.SelectHTMLAttributes<HTMLSelectElement>`*
+
+- `state` (optional): The initial state of the select. Can be one of the following values:
+  - `default`: The default state.
+  - `hover`: The hover state.
+  - `active`: The active state.
+  - `disabled`: The disabled state.
+
+## Example
+
+### Basic Select
+
+<Select>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</Select>
+
+```tsx
+import { Select } from "@shalecss/react";
+
+const MyComponent = () => {
+  return (
+    <Select>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </Select>
+  );
+};
+```
+
+### With State
+
+```tsx
+<Select state="disabled" disabled>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+```
+
+## Notes
+
+The `state` prop allows you to force a specific visual state, which can be useful for styling or demonstration purposes.

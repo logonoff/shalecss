@@ -1,9 +1,18 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   /* config options here */
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   reactCompiler: true,
-  transpilePackages: ["@shalecss/react", "@shalecss/core"],
+  transpilePackages: ["@shalecss/core"],
+  experimental: {
+    viewTransition: true,
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.(md|mdx)$/,
+})
+
+export default withMDX(nextConfig);
