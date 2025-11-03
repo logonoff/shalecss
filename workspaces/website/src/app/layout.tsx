@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <Html lang="en" className={ubuntu.className} theme="dark">
+      <Html lang="en" className={ubuntu.className} theme="dark" webkitScrollbar>
         <body className="shale-v1-body">
           <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
 
