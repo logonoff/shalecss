@@ -1,15 +1,20 @@
 import type { ComponentPropsWithoutRef, ElementType, FC } from "react";
 
-type ComponentProp<C extends ElementType> = {
+/** @alpha */
+export type ComponentProp<C extends ElementType> = {
     Component?: C;
 };
 
-type PolymorphicComponentProp<
+/** @alpha */
+export type PolymorphicComponentProp<
     C extends ElementType,
     Props = {}
 > = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
 
-/** A helper type for a component which allows any HTML element to be used as the base component */
+/**
+ * A helper type for a component which allows any HTML element to be used as the base component
+ * @alpha
+ */
 export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <
     C extends ElementType = DefaultElement
 >(

@@ -8,9 +8,38 @@ import type { ComponentPropsWithoutRef } from 'react';
 import type { ElementType } from 'react';
 import type { FC } from 'react';
 
-// Warning: (ae-forgotten-export) The symbol "PolymorphicComponent" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "BaseButtonProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha (undocumented)
+export interface BaseButtonProps {
+    state?: StateVariant;
+    variant?: 'primary' | 'secondary';
+}
+
+// @alpha (undocumented)
+export interface BaseCommandBarProps {
+    flexGrow?: boolean;
+}
+
+// @alpha (undocumented)
+export interface BaseFlexContainerProps {
+    variant?: 'space-between' | 'center' | 'align-center';
+}
+
+// @alpha (undocumented)
+export interface BaseHeaderProps {
+    state?: StateVariant;
+}
+
+// @alpha (undocumented)
+export interface BaseLinkProps {
+    state?: StateVariant;
+}
+
+// @alpha (undocumented)
+export interface BaseMenuBarButtonProps {
+    current?: boolean;
+    state?: StateVariant;
+}
+
 // @alpha
 export const Button: PolymorphicComponent<'button', BaseButtonProps>;
 
@@ -20,34 +49,44 @@ export const CaptionButton: PolymorphicComponent<'button'>;
 // @alpha
 export const CaptionMenu: PolymorphicComponent<'span', {}>;
 
-// Warning: (ae-forgotten-export) The symbol "CardProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const Card: PolymorphicComponent<typeof FlexItem, CardProps>;
 
 // @alpha (undocumented)
+export interface CardProps {
+    shadow?: ShadowVariant;
+}
+
+// @alpha (undocumented)
 export const Code: PolymorphicComponent<'code'>;
 
-// Warning: (ae-forgotten-export) The symbol "BaseCommandBarProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const CommandBar: PolymorphicComponent<'div', BaseCommandBarProps>;
+
+// @alpha (undocumented)
+export type ComponentProp<C extends ElementType> = {
+    Component?: C;
+};
 
 // @alpha
 export const Container: PolymorphicComponent<'div', {}>;
 
-// Warning: (ae-forgotten-export) The symbol "BaseFlexContainerProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const FlexContainer: PolymorphicComponent<'div', BaseFlexContainerProps>;
 
 // @alpha
 export const FlexForm: PolymorphicComponent<'form', {}>;
 
-// Warning: (ae-forgotten-export) The symbol "FlexItemProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const FlexItem: PolymorphicComponent<'div', FlexItemProps>;
+
+// @alpha (undocumented)
+export type FlexItemProps = {
+    flex?: 'grow' | 'half' | 'third' | 'quarter';
+} | {
+    flex: 'custom';
+    flexAmount: string;
+};
 
 // @alpha
 export const Footer: PolymorphicComponent<'footer', {}>;
@@ -70,8 +109,6 @@ export const H5: PolymorphicComponent<'h5'>;
 // @alpha (undocumented)
 export const H6: PolymorphicComponent<'h6'>;
 
-// Warning: (ae-forgotten-export) The symbol "BaseHeaderProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const Header: PolymorphicComponent<'header', BaseHeaderProps>;
 
@@ -81,38 +118,52 @@ export const HeaderText: PolymorphicComponent<'p', {}>;
 // @alpha
 export const HeaderTitle: PolymorphicComponent<'div', {}>;
 
-// Warning: (ae-forgotten-export) The symbol "HtmlProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const Html: React.FC<HtmlProps>;
 
-// Warning: (ae-forgotten-export) The symbol "IconProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha (undocumented)
+export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
+    Component?: React.ElementType;
+    theme: 'light' | 'dark' | 'contrast';
+    webkitScrollbar?: boolean;
+}
+
 // @alpha
 export const Icon: React.FC<IconProps>;
 
-// Warning: (ae-forgotten-export) The symbol "InputProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha (undocumented)
+export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
+    flipX?: boolean;
+    flipY?: boolean;
+    icon: string;
+    iconPath?: string;
+}
+
 // @alpha
 export const Input: React.FC<InputProps>;
 
-// Warning: (ae-forgotten-export) The symbol "BaseLinkProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha (undocumented)
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    id?: string;
+    label?: string;
+}
+
 // @alpha
 export const Link: PolymorphicComponent<'a', BaseLinkProps>;
 
-// Warning: (ae-forgotten-export) The symbol "BaseMenuBarButtonProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const MenuBarButton: PolymorphicComponent<'a', BaseMenuBarButtonProps>;
 
 // @alpha
 export const Nav: PolymorphicComponent<'nav', {}>;
 
-// Warning: (ae-forgotten-export) The symbol "NoteProps" needs to be exported by the entry point index.d.ts
-//
 // @alpha
 export const Note: PolymorphicComponent<typeof FlexItem, NoteProps>;
+
+// @alpha (undocumented)
+export interface NoteProps {
+    variant: 'info' | 'alert' | 'warn' | 'tip';
+}
 
 // @alpha
 export const NoteText: PolymorphicComponent<'p', {}>;
@@ -120,19 +171,34 @@ export const NoteText: PolymorphicComponent<'p', {}>;
 // @alpha (undocumented)
 export const P: PolymorphicComponent<'p'>;
 
-// Warning: (ae-forgotten-export) The symbol "SelectProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha
+export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <C extends ElementType = DefaultElement>(props: PolymorphicComponentProp<C, Readonly<P>>) => ReturnType<FC<P>>;
+
+// @alpha (undocumented)
+export type PolymorphicComponentProp<C extends ElementType, Props = {}> = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
+
 // @alpha
 export const Select: React.FC<SelectProps>;
+
+// @alpha (undocumented)
+export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+    state?: StateVariant;
+}
+
+// @alpha (undocumented)
+export type ShadowVariant = 'subtle' | 'moderate' | 'puffy';
 
 // @alpha
 export const SkipToContent: PolymorphicComponent<'a'>;
 
-// Warning: (ae-forgotten-export) The symbol "TextareaProps" needs to be exported by the entry point index.d.ts
-//
+// @alpha (undocumented)
+export type StateVariant = 'hover' | 'active' | 'focus' | 'disabled';
+
 // @alpha
 export const Textarea: React.FC<TextareaProps>;
 
-// (No @packageDocumentation comment for this package)
+// @alpha (undocumented)
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+}
 
 ```
