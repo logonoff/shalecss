@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
+  // support for GH pages
+  output: 'export',
+  basePath: process.env.PAGES_BASE_PATH,
 };
 
 const withMDX = createMDX({

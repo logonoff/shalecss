@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && cp -r ../core/dist ./out/build",
     "start": "next start"
   },
   "dependencies": {

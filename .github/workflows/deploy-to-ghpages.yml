@@ -35,14 +35,16 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
 
-      - name: Build css
+      - name: Build monorepo
         run: npm run build
+        env:
+          PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: build
+          path: ./workspaces/website/out
 
   deploy:
     needs: build
