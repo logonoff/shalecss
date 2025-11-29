@@ -5,6 +5,8 @@
   "exclude": ["**/node_modules", "node_modules"],
   "compilerOptions": {
     "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
     "jsx": "react-jsx",
     "lib": ["dom", "esnext"],
     "module": "ESNext",

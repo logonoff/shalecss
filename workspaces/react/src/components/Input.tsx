@@ -1,5 +1,6 @@
 import { css } from '../utils/css';
 
+/** @alpha */
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     /** The label text for the input */
     label?: string;
@@ -7,6 +8,11 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
     id?: string;
 }
 
+/**
+ * An input component.
+ *
+ * @alpha
+ */
 export const Input: React.FC<InputProps> = ({ label, id, ...props }) => {
     if (label && id) {
         return (

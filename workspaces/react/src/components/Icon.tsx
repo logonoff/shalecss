@@ -1,5 +1,6 @@
 import { css } from '../utils/css';
 
+/** @alpha */
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
     /** The icon ID from the icons.svg sprite */
     icon: string;
@@ -11,6 +12,11 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
     iconPath?: string;
 }
 
+/**
+ * An icon component.
+ *
+ * @alpha
+ */
 export const Icon: React.FC<IconProps> = ({ icon, flipX, flipY, iconPath = '/icons.svg', ...props }) => (
     <svg
         {...props}

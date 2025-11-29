@@ -2,6 +2,7 @@ import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 import type { PolymorphicComponent } from '../types/helpers';
 
+/** @alpha */
 export interface BaseButtonProps {
     /** The variant of the button */
     variant?: 'primary' | 'secondary';
@@ -9,6 +10,11 @@ export interface BaseButtonProps {
     state?: StateVariant;
 };
 
+/**
+ * A button component that supports different variants and states.
+ *
+ * @alpha
+ */
 export const Button: PolymorphicComponent<'button', BaseButtonProps> = ({ Component = 'button', variant = 'primary', state, ...props }) => {
     return (
         <Component

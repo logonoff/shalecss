@@ -1,5 +1,6 @@
 import { css } from '../utils/css';
 
+/** @alpha */
 export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
     /** The theme to apply to the document */
     theme: 'light' | 'dark' | 'contrast';
@@ -9,6 +10,11 @@ export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
     Component?: React.ElementType;
 }
 
+/**
+ * An html component to set document-level styles.
+ *
+ * @alpha
+ */
 export const Html: React.FC<HtmlProps> = ({ Component = "html", theme, webkitScrollbar = false, ...props }) => (
     <Component
         {...props}

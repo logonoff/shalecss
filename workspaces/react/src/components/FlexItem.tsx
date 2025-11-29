@@ -1,6 +1,7 @@
 import { css } from '../utils/css';
 import type { PolymorphicComponent } from '../types/helpers';
 
+/** @alpha */
 export type FlexItemProps = {
     /** The flex grow value */
     flex?: 'grow' | 'half' | 'third' | 'quarter';
@@ -11,6 +12,11 @@ export type FlexItemProps = {
     flexAmount: string;
 }
 
+/**
+ * A flex item component.
+ *
+ * @alpha
+ */
 export const FlexItem: PolymorphicComponent<'div', FlexItemProps> = ({ Component = 'div', flex, flexAmount, ...props }) => (
     <Component
         {...props}

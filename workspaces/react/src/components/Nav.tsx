@@ -2,10 +2,16 @@ import { css } from '../utils/css';
 import type { StateVariant } from '../types/variants';
 import type { PolymorphicComponent } from '../types/helpers';
 
+/**
+ * The navigation component.
+ *
+ * @alpha
+ */
 export const Nav: PolymorphicComponent<'nav', {}> = ({ Component = 'nav', ...props }) => (
     <Component {...props} className={css('shale-v1-nav', props?.className)} />
 );
 
+/** @alpha */
 export interface BaseMenuBarButtonProps {
     /** Whether this menu item is the current page */
     current?: boolean;
@@ -13,6 +19,11 @@ export interface BaseMenuBarButtonProps {
     state?: StateVariant;
 }
 
+/**
+ * A menu bar button component.
+ *
+ * @alpha
+ */
 export const MenuBarButton: PolymorphicComponent<'a', BaseMenuBarButtonProps> = ({ Component = 'a', current, state, ...props }) => (
     <Component
         {...props}

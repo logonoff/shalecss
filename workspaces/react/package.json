@@ -10,8 +10,9 @@
     "dist"
   ],
   "scripts": {
+    "api-extractor": "api-extractor run --local --verbose",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsgo -p tsconfig.json",
+    "build": "npm run clean && tsgo -p tsconfig.json && npm run api-extractor",
     "dev": "npm run clean && tsgo -p tsconfig.json --watch"
   },
   "repository": {
@@ -32,6 +33,7 @@
     "react-dom": "18.x | 19.x"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.55.1",
     "@typescript/native-preview": "^7.0.0-dev.20251129.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3"
