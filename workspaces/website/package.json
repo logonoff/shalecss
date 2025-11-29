@@ -8,21 +8,21 @@
     "build": "next build && cp -r ../core/dist ./out/build",
     "start": "next start"
   },
-  "dependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.0.5",
-    "@shalecss/react": "*",
-    "next": "16.0.5",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
-  },
   "devDependencies": {
+    "@microsoft/api-extractor-model": "^7.32.1",
+    "@microsoft/tsdoc": "^0.16.0",
+    "@shalecss/react": "*",
     "@types/mdx": "^2.0.13",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
+    "next": "16.0.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "react-live": "^4.1.8"
   }
 }

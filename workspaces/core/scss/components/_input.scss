@@ -4,130 +4,177 @@
  * Checkboxes and Radio
  */
 .#{$shale}input {
-	input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="search"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea {
-		background: var(--#{$shale}input-background);
-		border-radius: .2rem;
-		border: 0;
-		box-shadow: 0 0 0 1px var(--#{$shale}input-border), 0 0 0 2px var(--#{$shale}input-inner-border);
-		color: var(--#{$shale}text);
-		font-family: inherit;
-		image-rendering: pixelated;
-		outline: 0;
-		line-height: 1;
-		padding: .5em;
-		transition: .3s box-shadow ease;
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  textarea {
+    background: var(--#{$shale}input-background);
+    border-radius: 0.2rem;
+    border: 0;
+    box-shadow:
+      0 0 0 1px var(--#{$shale}input-border),
+      0 0 0 2px var(--#{$shale}input-inner-border);
+    color: var(--#{$shale}text);
+    font-family: inherit;
+    image-rendering: pixelated;
+    outline: 0;
+    line-height: 1;
+    padding: 0.5em;
+    transition: 0.3s box-shadow ease;
 
-		&:hover, &#{$hover} {
-			--#{$shale}input-border: var(--#{$shale}input-border-hover);
-			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-hover);
-		}
+    &:hover,
+    &#{$hover} {
+      --#{$shale}input-border: var(--#{$shale}input-border-hover);
+      --#{$shale}input-inner-border: var(--#{$shale}input-inner-border-hover);
+    }
 
-		&:focus, &#{$focus} {
-			--#{$shale}input-border: var(--#{$shale}input-border-active);
-			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-active);
-		}
+    &:focus,
+    &#{$focus} {
+      --#{$shale}input-border: var(--#{$shale}input-border-active);
+      --#{$shale}input-inner-border: var(--#{$shale}input-inner-border-active);
+    }
 
-		&:disabled, &#{$disabled} {
-			--#{$shale}input-background: var(--#{$shale}input-background-disabled);
-			--#{$shale}input-border: var(--#{$shale}input-border-disabled);
-			--#{$shale}input-inner-border: var(--#{$shale}input-inner-border-disabled);
-		}
-	}
+    &:disabled,
+    &#{$disabled} {
+      --#{$shale}input-background: var(--#{$shale}input-background-disabled);
+      --#{$shale}input-border: var(--#{$shale}input-border-disabled);
+      --#{$shale}input-inner-border: var(
+        --#{$shale}input-inner-border-disabled
+      );
+    }
+  }
 }
 
 .#{$shale}input input {
-	&[type="checkbox"], &[type="radio"] {
-		// hide the vendor default
-		opacity: 0;
-		position: absolute;
+  &[type="checkbox"],
+  &[type="radio"] {
+    // hide the vendor default
+    opacity: 0;
+    position: absolute;
 
-		+ label {
-			--#{$shale}input-size: var(--#{$shale}font-0);
-			align-items: center;
-			color: var(--#{$shale}text-colour);
-			display: flex;
-			gap: .25em;
-			position: relative;
-			user-select: none;
-			vertical-align: middle;
-		}
+    + label {
+      --#{$shale}input-size: var(--#{$shale}font-0);
+      align-items: center;
+      color: var(--#{$shale}text-colour);
+      display: flex;
+      gap: 0.25em;
+      position: relative;
+      user-select: none;
+      vertical-align: middle;
+    }
 
-		// the box
-		+ label::before {
-			background: var(--#{$shale}button);
-			border-radius: 0.2em;
-			border: 1px solid var(--#{$shale}button-border);
-			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border), var(--#{$shale}shadow-subtle);
-			box-sizing: border-box;
-			color: var(--#{$shale}text);
-			content: "";
-			display: inline-block;
-			height: var(--#{$shale}input-size);
-			min-height: var(--#{$shale}input-size);
-			min-width: var(--#{$shale}input-size);
-			transition: background .3s ease, border-color .3s ease;
-			user-select: none;
-			vertical-align: middle;
-			width: var(--#{$shale}input-size);
-		}
+    // the box
+    + label::before {
+      background: var(--#{$shale}button);
+      border-radius: 0.2em;
+      border: 1px solid var(--#{$shale}button-border);
+      box-shadow:
+        inset 0 0 0 1px var(--#{$shale}button-inset-border),
+        var(--#{$shale}shadow-subtle);
+      box-sizing: border-box;
+      color: var(--#{$shale}text);
+      content: "";
+      display: inline-block;
+      height: var(--#{$shale}input-size);
+      min-height: var(--#{$shale}input-size);
+      min-width: var(--#{$shale}input-size);
+      transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+      user-select: none;
+      vertical-align: middle;
+      width: var(--#{$shale}input-size);
+    }
 
-		&:focus + label::before {
-			background: var(--#{$shale}button-hover);
-			border-color: var(--#{$shale}button-border-hover);
-			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover), var(--#{$shale}shadow-subtle);
-		}
+    &:focus + label::before {
+      background: var(--#{$shale}button-hover);
+      border-color: var(--#{$shale}button-border-hover);
+      box-shadow:
+        inset 0 0 0 1px var(--#{$shale}button-inset-border-hover),
+        var(--#{$shale}shadow-subtle);
+    }
 
-		&:hover + label::before, #{$hover} + label::before {
-			background: var(--#{$shale}button-hover);
-			border-color: var(--#{$shale}button-border-hover);
-			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover), var(--#{$shale}shadow-subtle);
-		}
+    &:hover + label::before,
+    #{$hover} + label::before {
+      background: var(--#{$shale}button-hover);
+      border-color: var(--#{$shale}button-border-hover);
+      box-shadow:
+        inset 0 0 0 1px var(--#{$shale}button-inset-border-hover),
+        var(--#{$shale}shadow-subtle);
+    }
 
-		&:focus-visible + label::before, #{$focus} + label::before {
-			border-color: var(--#{$shale}button-border-active);
-			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active), var(--#{$shale}shadow-moderate);
-		}
+    &:focus-visible + label::before,
+    #{$focus} + label::before {
+      border-color: var(--#{$shale}button-border-active);
+      box-shadow:
+        inset 0 0 0 1px var(--#{$shale}button-inset-border-active),
+        var(--#{$shale}shadow-moderate);
+    }
 
-		&:disabled + label::before, #{$disabled} + label::before {
-			background: var(--#{$shale}button-disabled);
-			border-color: var(--#{$shale}button-border-disabled, var(--#{$shale}button-border));
-			box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-disabled), var(--#{$shale}shadow-subtle);
-		}
+    &:disabled + label::before,
+    #{$disabled} + label::before {
+      background: var(--#{$shale}button-disabled);
+      border-color: var(
+        --#{$shale}button-border-disabled,
+        var(--#{$shale}button-border)
+      );
+      box-shadow:
+        inset 0 0 0 1px var(--#{$shale}button-inset-border-disabled),
+        var(--#{$shale}shadow-subtle);
+    }
 
-		// the check
-		+ label::after {
-			background: transparent;
-			content: "";
-			display: block;
-			height: var(--#{$shale}input-size);
-			position: absolute;
-			transition: background .3s ease;
-			width: var(--#{$shale}input-size);
-		}
+    // the check
+    + label::after {
+      background: transparent;
+      content: "";
+      display: block;
+      height: var(--#{$shale}input-size);
+      position: absolute;
+      transition: background 0.3s ease;
+      width: var(--#{$shale}input-size);
+    }
 
-		&:checked + label::after, &:indeterminate + label::after {
-			background: var(--#{$shale}input-fill);
-		}
-	}
+    &:checked + label::after,
+    &:indeterminate + label::after {
+      background: var(--#{$shale}input-fill);
+    }
+  }
 
-	&[type="checkbox"] {
-		+ label::after {
-			border-radius: .25rem;
-			clip-path: polygon(50% 70%, 75% 10%, 90% 10%, 60% 90%, 45% 90%, 20% 50%, 35% 50%);
-		}
+  &[type="checkbox"] {
+    + label::after {
+      border-radius: 0.25rem;
+      clip-path: polygon(
+        50% 70%,
+        75% 10%,
+        90% 10%,
+        60% 90%,
+        45% 90%,
+        20% 50%,
+        35% 50%
+      );
+    }
 
-		&:indeterminate + label::after {
-			clip-path: rect(20% 80% 80% 20% round 10%);
-		}
-	}
+    &:indeterminate + label::after {
+      clip-path: rect(20% 80% 80% 20% round 10%);
+    }
+  }
 
-	&[type="radio"] {
-		+ label::before {
-			border-radius: 100%;
-		}
+  &[type="radio"] {
+    + label::before {
+      border-radius: 100%;
+    }
 
-		+ label::after {
-			clip-path: circle(25% at 50% 50%);
-		}
-	}
+    + label::after {
+      clip-path: circle(25% at 50% 50%);
+    }
+  }
 }

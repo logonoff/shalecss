@@ -1,21 +1,21 @@
 import type { NextConfig } from "next";
-import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   /* config options here */
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "ts", "tsx"],
   reactCompiler: true,
   transpilePackages: ["@shalecss/core"],
+  serverExternalPackages: [
+    "@microsoft/api-extractor-model",
+    "@microsoft/tsdoc",
+    "@microsoft/tsdoc-config",
+  ],
   experimental: {
     viewTransition: true,
   },
   // support for GH pages
-  output: 'export',
+  output: "export",
   basePath: process.env.PAGES_BASE_PATH,
 };
 
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-})
-
-export default withMDX(nextConfig);
+export default nextConfig;

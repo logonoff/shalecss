@@ -4,53 +4,90 @@
  * Typography
  */
 /* Headings */
-.#{$shale}h1, .#{$shale}h2, .#{$shale}h3, .#{$shale}title-primary {
-	color: var(--#{$shale}text-colour);
-	font-weight: 500;
-	margin: 0.75em 0 0.5em;
-	padding: 0;
+.#{$shale}h1,
+.#{$shale}h2,
+.#{$shale}h3,
+.#{$shale}title-primary {
+  color: var(--#{$shale}text-colour);
+  font-weight: 500;
+  margin: 0.75em 0 0.5em;
+  padding: 0;
 }
 
-.#{$shale}h4, .#{$shale}h5, .#{$shale}h6, .#{$shale}title-secondary {
-	color: var(--#{$shale}text-colour-secondary, var(--#{$shale}text-colour));
-	font-weight: 400;
-	margin: 0.75em 0 0.5em;
-	padding: 0;
+.#{$shale}h4,
+.#{$shale}h5,
+.#{$shale}h6,
+.#{$shale}title-secondary {
+  color: var(--#{$shale}text-colour-secondary, var(--#{$shale}text-colour));
+  font-weight: 400;
+  margin: 0.75em 0 0.5em;
+  padding: 0;
 }
 
-.#{$shale}h1 { font-size: var(--#{$shale}font-4); }
-.#{$shale}h2 { font-size: var(--#{$shale}font-3); }
-.#{$shale}h3 { font-size: var(--#{$shale}font-2); }
-.#{$shale}h4 { font-size: var(--#{$shale}font-1); }
-.#{$shale}h5, .#{$shale}p { font-size: var(--#{$shale}font-0); }
-.#{$shale}h6 { font-size: var(--#{$shale}font--1); }
+.#{$shale}h1 {
+  font-size: var(--#{$shale}font-4);
+}
+.#{$shale}h2 {
+  font-size: var(--#{$shale}font-3);
+}
+.#{$shale}h3 {
+  font-size: var(--#{$shale}font-2);
+}
+.#{$shale}h4 {
+  font-size: var(--#{$shale}font-1);
+}
+.#{$shale}h5,
+.#{$shale}p {
+  font-size: var(--#{$shale}font-0);
+}
+.#{$shale}h6 {
+  font-size: var(--#{$shale}font--1);
+}
 
-.#{$shale}no-margin { margin: 0; }
-.#{$shale}no-padding { padding: 0; }
+.#{$shale}p {
+  line-height: 1.69;
+}
+
+.#{$shale}no-margin {
+  margin: 0;
+}
+.#{$shale}no-padding {
+  padding: 0;
+}
 
 /* Font sizes */
 @for $i from -3 through 7 {
-	.#{$shale}font-#{$i} { font-size: var(--#{$shale}font-#{$i}); }
+  .#{$shale}font-#{$i} {
+    font-size: var(--#{$shale}font-#{$i});
+  }
 }
 
 /* Font scale adjust */
-.#{$shale}bigger-text-enabled { display: none !important; }
-.#{$shale}bigger-text-disabled { display: block !important; }
+.#{$shale}bigger-text-enabled {
+  display: none !important;
+}
+.#{$shale}bigger-text-disabled {
+  display: block !important;
+}
 
 .#{$shale}bigger-text {
-	--#{$shale}font-0: 1.25rem;
+  --#{$shale}font-0: 1.25rem;
 
-	.#{$shale}bigger-text-enabled { display: block !important; }
-	.#{$shale}bigger-text-disabled { display: none !important; }
+  .#{$shale}bigger-text-enabled {
+    display: block !important;
+  }
+  .#{$shale}bigger-text-disabled {
+    display: none !important;
+  }
 }
 
 /* Code */
 .#{$shale}code {
-	background: var(--#{$shale}code-background);
-	border-radius: .2rem;
-	color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
-	font-family: var(--#{$shale}font-family-mono);
-	padding: .25rem;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+  background: var(--#{$shale}code-background);
+  border-radius: 0.2rem;
+  color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
+  font-family: var(--#{$shale}font-family-mono);
+  padding: 0.25rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

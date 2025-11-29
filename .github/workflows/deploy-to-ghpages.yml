@@ -20,8 +20,8 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     permissions:
-      contents: write   # to build the repo
-      id-token: write   # to verify the deployment originates from an appropriate source
+      contents: write # to build the repo
+      id-token: write # to verify the deployment originates from an appropriate source
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -58,9 +58,9 @@ jobs:
 
     # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
     permissions:
-      contents: write   # to build the repo
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      contents: write # to build the repo
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
 
     steps:
       # get build artifact
@@ -77,7 +77,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.' # upload entire directory
+          path: "." # upload entire directory
 
       - name: Deploy to GitHub Pages
         id: deployment

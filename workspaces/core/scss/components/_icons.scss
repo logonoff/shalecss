@@ -1,16 +1,16 @@
 @use "../theme/base" as *;
 
 .#{$shale}icon {
-	display: inline-block;
-	fill: var(--#{$shale}text-colour);
-	height: var(--#{$shale}font-0);
-	width: var(--#{$shale}font-0);
+  display: inline-block;
+  fill: var(--#{$shale}text-colour);
+  height: var(--#{$shale}font-0);
+  width: var(--#{$shale}font-0);
 }
 
 .#{$shale}icon-flip-x {
-	transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .#{$shale}icon-flip-y {
-	transform: scaleY(-1);
+  transform: scaleY(-1);
 }

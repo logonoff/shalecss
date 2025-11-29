@@ -5,46 +5,56 @@
  * use this if you're not pairing with another layout system
  */
 .#{$shale}container {
-	margin: 0 auto;
-	max-width: 75em;
-	padding: var(--#{$shale}font-0);
-    display: flex;
-    flex-direction: column;
-    gap: var(--#{$shale}font-2);
+  margin: 0 auto;
+  max-width: 75em;
+  padding: var(--#{$shale}font-0);
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$shale}font-2);
 }
 
-.#{$shale}flex-space-between, .#{$shale}flex-center {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--#{$shale}font-2);
-    align-content: stretch;
+.#{$shale}flex-space-between,
+.#{$shale}flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--#{$shale}font-2);
+  align-content: stretch;
 }
 
-.#{$shale}flex-space-between { justify-content: space-between; }
-.#{$shale}flex-center { justify-content: center; }
+.#{$shale}flex-space-between {
+  justify-content: space-between;
+}
+.#{$shale}flex-center {
+  justify-content: center;
+}
 
-.#{$shale}flex-grow { flex-grow: 1; }
-.#{$shale}flex-align-center { align-items: center; align-self: center; }
+.#{$shale}flex-grow {
+  flex-grow: 1;
+}
+.#{$shale}flex-align-center {
+  align-items: center;
+  align-self: center;
+}
 
 .#{$shale}flex-custom {
-    --#{$shale}flex--width: auto;
-    flex: 1 1 calc(var(--#{$shale}flex--width) - var(--#{$shale}font-2));
+  --#{$shale}flex--width: auto;
+  flex: 1 1 calc(var(--#{$shale}flex--width) - var(--#{$shale}font-2));
 }
 
 .#{$shale}flex-half {
-    flex: 1 1 calc(50% - var(--#{$shale}font-2));
+  flex: 1 1 calc(50% - var(--#{$shale}font-2));
 }
 
 .#{$shale}flex-third {
-    flex: 1 1 calc(33.3333% - var(--#{$shale}font-2));
+  flex: 1 1 calc(33.3333% - var(--#{$shale}font-2));
 }
 
 .#{$shale}flex-quarter {
-    flex: 1 1 calc(25% - var(--#{$shale}font-2));
+  flex: 1 1 calc(25% - var(--#{$shale}font-2));
 }
 
 .#{$shale}flex-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--#{$shale}font-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--#{$shale}font-2);
 }

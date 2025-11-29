@@ -3,105 +3,126 @@
 /*
  * Dark theme
  */
-.#{$shale}dark-enabled { display: none !important; }
-.#{$shale}dark-disabled { display: block !important; }
+.#{$shale}dark-enabled {
+  display: none !important;
+}
+.#{$shale}dark-disabled {
+  display: block !important;
+}
 
 .#{$shale}dark {
-    color-scheme: dark;
+  color-scheme: dark;
 
-    .#{$shale}dark-enabled { display: block !important; }
-    .#{$shale}dark-disabled { display: none !important; }
+  .#{$shale}dark-enabled {
+    display: block !important;
+  }
+  .#{$shale}dark-disabled {
+    display: none !important;
+  }
 
-    /* General */
-    --#{$shale}background: #252525 linear-gradient(#333, #252525);
-    --#{$shale}text-colour: white;
-    --#{$shale}text-colour-secondary: #fffa;
-    --#{$shale}link-colour: var(--#{$shale}accent-300);
-    --#{$shale}code-background: #191919;
-    --#{$shale}secondary-border: #777777;
+  /* General */
+  --#{$shale}background: #252525 linear-gradient(#333, #252525);
+  --#{$shale}text-colour: white;
+  --#{$shale}text-colour-secondary: #fffa;
+  --#{$shale}link-colour: var(--#{$shale}accent-300);
+  --#{$shale}code-background: #191919;
+  --#{$shale}secondary-border: #777777;
 
-    /* Header */
-    --#{$shale}header-background: #454545 linear-gradient(#575757, #454545);
-    --#{$shale}header-background-disabled: #787878 linear-gradient(#8a8a8a, #787878);
-    --#{$shale}header-text: white;
-    --#{$shale}header-bar-current: color-mix(in srgb, var(--#{$shale}accent-400), transparent 20%);
-    --#{$shale}header-glow-current: var(--#{$shale}accent-400);
-    --#{$shale}header-bar-hover: var(--#{$shale}accent-400);
-    --#{$shale}header-glow-hover: var(--#{$shale}accent-400);
-    --#{$shale}header-bar-active: var(--#{$shale}accent-800);
+  /* Header */
+  --#{$shale}header-background: #454545 linear-gradient(#575757, #454545);
+  --#{$shale}header-background-disabled: #787878
+    linear-gradient(#8a8a8a, #787878);
+  --#{$shale}header-text: white;
+  --#{$shale}header-bar-current: color-mix(
+    in srgb,
+    var(--#{$shale}accent-400),
+    transparent 20%
+  );
+  --#{$shale}header-glow-current: var(--#{$shale}accent-400);
+  --#{$shale}header-bar-hover: var(--#{$shale}accent-400);
+  --#{$shale}header-glow-hover: var(--#{$shale}accent-400);
+  --#{$shale}header-bar-active: var(--#{$shale}accent-800);
 
-    /* Footer */
-    --#{$shale}footer-background: #4E4E4E linear-gradient(#646464, #4E4E4E);
+  /* Footer */
+  --#{$shale}footer-background: #4e4e4e linear-gradient(#646464, #4e4e4e);
 
-    /* Cards */
-    --#{$shale}card-background: #414141 linear-gradient(#555555, #414141);
-    --#{$shale}card-background-disabled: #333 linear-gradient(#444, #313131);
-    --#{$shale}card-border-color: unset;
+  /* Cards */
+  --#{$shale}card-background: #414141 linear-gradient(#555555, #414141);
+  --#{$shale}card-background-disabled: #333 linear-gradient(#444, #313131);
+  --#{$shale}card-border-color: unset;
 
-    /* Notes */
-    --#{$shale}note-info-base: #082A3B linear-gradient(#093044, #082A3B);
-    --#{$shale}note-info-border: #051822;
-    --#{$shale}note-info-text: #D2ECF9;
+  /* Notes */
+  --#{$shale}note-info-base: #082a3b linear-gradient(#093044, #082a3b);
+  --#{$shale}note-info-border: #051822;
+  --#{$shale}note-info-text: #d2ecf9;
 
-    --#{$shale}note-alert-base: #3B0808 linear-gradient(#440909, #3B0808);
-    --#{$shale}note-alert-border: #1f0404;
-    --#{$shale}note-alert-text: #F9D2D2;
+  --#{$shale}note-alert-base: #3b0808 linear-gradient(#440909, #3b0808);
+  --#{$shale}note-alert-border: #1f0404;
+  --#{$shale}note-alert-text: #f9d2d2;
 
-    --#{$shale}note-warn-base: #373B08 linear-gradient(#404409, #373B08);
-    --#{$shale}note-warn-border: #191b01;
-    --#{$shale}note-warn-text: #F7F9D2;
+  --#{$shale}note-warn-base: #373b08 linear-gradient(#404409, #373b08);
+  --#{$shale}note-warn-border: #191b01;
+  --#{$shale}note-warn-text: #f7f9d2;
 
-    --#{$shale}note-tip-base: #083B08 linear-gradient(#094409, #083B08);
-    --#{$shale}note-tip-border: #021f02;
-    --#{$shale}note-tip-text: #D2F9D2;
+  --#{$shale}note-tip-base: #083b08 linear-gradient(#094409, #083b08);
+  --#{$shale}note-tip-border: #021f02;
+  --#{$shale}note-tip-text: #d2f9d2;
 
-    /* Button */
-    --#{$shale}button: #333 linear-gradient(#474747, #333);
-    --#{$shale}button-hover: #595959 linear-gradient(#595959, #505050);
-    --#{$shale}button-active: linear-gradient(var(--#{$shale}accent-700), var(--#{$shale}accent-900));
-    --#{$shale}button-disabled: #2D2D2D;
+  /* Button */
+  --#{$shale}button: #333 linear-gradient(#474747, #333);
+  --#{$shale}button-hover: #595959 linear-gradient(#595959, #505050);
+  --#{$shale}button-active: linear-gradient(
+    var(--#{$shale}accent-700),
+    var(--#{$shale}accent-900)
+  );
+  --#{$shale}button-disabled: #2d2d2d;
 
-    --#{$shale}button-text-colour: var(--#{$shale}text-colour);
-    --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
-    --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
 
-    --#{$shale}button-border: #1C1C1C;
-    --#{$shale}button-border-hover: #353535;
-    --#{$shale}button-border-active: var(--#{$shale}accent-700);
+  --#{$shale}button-border: #1c1c1c;
+  --#{$shale}button-border-hover: #353535;
+  --#{$shale}button-border-active: var(--#{$shale}accent-700);
 
-    --#{$shale}button-inset-border: #555;
-    --#{$shale}button-inset-border-hover: #666;
-    --#{$shale}button-inset-border-active: var(--#{$shale}accent-800);
+  --#{$shale}button-inset-border: #555;
+  --#{$shale}button-inset-border-hover: #666;
+  --#{$shale}button-inset-border-active: var(--#{$shale}accent-800);
 
-    /* Input */
-    --#{$shale}input-background: #555 linear-gradient(#606060, #555);
-    --#{$shale}input-background-disabled: #444 linear-gradient(#444, #333);
+  /* Input */
+  --#{$shale}input-background: #555 linear-gradient(#606060, #555);
+  --#{$shale}input-background-disabled: #444 linear-gradient(#444, #333);
 
-    --#{$shale}input-border: #555;
-    --#{$shale}input-border-hover: #626262;
-    --#{$shale}input-border-active: var(--#{$shale}accent-800);
-    --#{$shale}input-border-disabled: #333;
+  --#{$shale}input-border: #555;
+  --#{$shale}input-border-hover: #626262;
+  --#{$shale}input-border-active: var(--#{$shale}accent-800);
+  --#{$shale}input-border-disabled: #333;
 
-    --#{$shale}input-inner-border: #414141;
-    --#{$shale}input-inner-border-hover: #353535;
-    --#{$shale}input-inner-border-active: var(--#{$shale}accent-900);
-    --#{$shale}input-inner-border-disabled: #222;
+  --#{$shale}input-inner-border: #414141;
+  --#{$shale}input-inner-border-hover: #353535;
+  --#{$shale}input-inner-border-active: var(--#{$shale}accent-900);
+  --#{$shale}input-inner-border-disabled: #222;
 
-    --#{$shale}input-fill: var(--#{$shale}accent-900) linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
+  --#{$shale}input-fill: var(--#{$shale}accent-900)
+    linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
 
-    /* Scrollbar */
-    --#{$shale}scrollbar-corner: #454545;
+  /* Scrollbar */
+  --#{$shale}scrollbar-corner: #454545;
 
-    --#{$shale}scrollbar-track-bg: #353535;
+  --#{$shale}scrollbar-track-bg: #353535;
 
-    --#{$shale}scrollbar-button: #555; // scrollbar button initial
-    --#{$shale}scrollbar-hover: #515151; // scrollbar button hover (bottom)
-    --#{$shale}scrollbar-hover-1: #535353; // scrollbar button hover (top)
-    --#{$shale}scrollbar-active: var(--#{$shale}accent-700); // scrollbar button active (bottom)
-    --#{$shale}scrollbar-active-1: var(--#{$shale}accent-800); // scrollbar button active (top)
-    --#{$shale}scrollbar-arrow: #CCC; // color of scrollbar arrow
+  --#{$shale}scrollbar-button: #555; // scrollbar button initial
+  --#{$shale}scrollbar-hover: #515151; // scrollbar button hover (bottom)
+  --#{$shale}scrollbar-hover-1: #535353; // scrollbar button hover (top)
+  --#{$shale}scrollbar-active: var(
+    --#{$shale}accent-700
+  ); // scrollbar button active (bottom)
+  --#{$shale}scrollbar-active-1: var(
+    --#{$shale}accent-800
+  ); // scrollbar button active (top)
+  --#{$shale}scrollbar-arrow: #ccc; // color of scrollbar arrow
 
-    ::-webkit-scrollbar-thumb {
-        --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-dark);
-    }
+  ::-webkit-scrollbar-thumb {
+    --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-dark);
+  }
 }

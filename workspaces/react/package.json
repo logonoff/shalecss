@@ -12,8 +12,8 @@
   "scripts": {
     "api-extractor": "api-extractor run --local --verbose",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsgo -p tsconfig.json && npm run api-extractor",
-    "dev": "npm run clean && tsgo -p tsconfig.json --watch"
+    "build": "tsgo -p tsconfig.json && npm run api-extractor",
+    "dev": "npm-watch"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,20 @@
     "@microsoft/api-extractor": "^7.55.1",
     "@typescript/native-preview": "^7.0.0-dev.20251129.1",
     "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3"
+    "@types/react-dom": "^19.2.3",
+    "npm-watch": "0.13.0"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+      ],
+      "extensions": "ts,tsx",
+      "ignore": [
+        "dist/**"
+      ],
+      "delay": 200
+    }
   }
 }

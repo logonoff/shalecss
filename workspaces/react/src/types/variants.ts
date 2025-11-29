@@ -1,5 +1,5 @@
 /** @alpha */
-export type StateVariant = 'hover' | 'active' | 'focus' | 'disabled';
+export type StateVariant = "hover" | "active" | "focus" | "disabled";
 
 /** @alpha */
-export type ShadowVariant = 'subtle' | 'moderate' | 'puffy';
+export type ShadowVariant = "subtle" | "moderate" | "puffy";

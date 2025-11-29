@@ -4,9 +4,9 @@
  * Card
  */
 .#{$shale}card {
-	background: var(--#{$shale}card-background);
-	border-radius: .2em;
-	border: 1px solid var(--#{$shale}card-border-color);
-	box-shadow: var(--#{$shale}shadow-moderate);
-	padding: 1em;
+  background: var(--#{$shale}card-background);
+  border-radius: 0.2em;
+  border: 1px solid var(--#{$shale}card-border-color);
+  box-shadow: var(--#{$shale}shadow-moderate);
+  padding: 1em;
 }

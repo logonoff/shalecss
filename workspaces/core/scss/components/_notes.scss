@@ -3,48 +3,51 @@
 /*
  * Alert, Info, Warning
  */
-.#{$shale}note-alert, .#{$shale}note-info, .#{$shale}note-warn, .#{$shale}note-tip {
-	border-radius: .2rem;
-	border: 1px solid;
-	box-shadow: var(--#{$shale}shadow-moderate);
-	display: inline-block;
-	font-size: var(--#{$shale}font-0);
-	margin-bottom: 1rem;
-	padding: 1em;
+.#{$shale}note-alert,
+.#{$shale}note-info,
+.#{$shale}note-warn,
+.#{$shale}note-tip {
+  border-radius: 0.2rem;
+  border: 1px solid;
+  box-shadow: var(--#{$shale}shadow-moderate);
+  display: inline-block;
+  font-size: var(--#{$shale}font-0);
+  margin-bottom: 1rem;
+  padding: 1em;
 }
 
 .#{$shale}note {
-	&-info {
-		background: var(--#{$shale}note-info-base);
-		border-color: var(--#{$shale}note-info-border);
-		color: var(--#{$shale}note-info-text);
-		fill: var(--#{$shale}note-info-text);
-	}
+  &-info {
+    background: var(--#{$shale}note-info-base);
+    border-color: var(--#{$shale}note-info-border);
+    color: var(--#{$shale}note-info-text);
+    fill: var(--#{$shale}note-info-text);
+  }
 
-	&-alert {
-		background: var(--#{$shale}note-alert-base);
-		border-color: var(--#{$shale}note-alert-border);
-		color: var(--#{$shale}note-alert-text);
-		fill: var(--#{$shale}note-alert-text);
-	}
+  &-alert {
+    background: var(--#{$shale}note-alert-base);
+    border-color: var(--#{$shale}note-alert-border);
+    color: var(--#{$shale}note-alert-text);
+    fill: var(--#{$shale}note-alert-text);
+  }
 
-	&-warn {
-		background: var(--#{$shale}note-warn-base);
-		border-color: var(--#{$shale}note-warn-border);
-		color: var(--#{$shale}note-warn-text);
-		fill: var(--#{$shale}note-warn-text);
-	}
+  &-warn {
+    background: var(--#{$shale}note-warn-base);
+    border-color: var(--#{$shale}note-warn-border);
+    color: var(--#{$shale}note-warn-text);
+    fill: var(--#{$shale}note-warn-text);
+  }
 
-	&-tip {
-		background: var(--#{$shale}note-tip-base);
-		border-color: var(--#{$shale}note-tip-border);
-		color: var(--#{$shale}note-tip-text);
-		fill: var(--#{$shale}note-tip-text);
-	}
+  &-tip {
+    background: var(--#{$shale}note-tip-base);
+    border-color: var(--#{$shale}note-tip-border);
+    color: var(--#{$shale}note-tip-text);
+    fill: var(--#{$shale}note-tip-text);
+  }
 
-	&-text {
-		display: block;
-		margin: 0;
-		padding: 0;
-	}
+  &-text {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }

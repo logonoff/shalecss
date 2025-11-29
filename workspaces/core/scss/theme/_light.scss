@@ -3,105 +3,121 @@
 /*
  * Light theme
  */
-.#{$shale}light-enabled { display: none !important; }
-.#{$shale}light-disabled { display: block !important; }
+.#{$shale}light-enabled {
+  display: none !important;
+}
+.#{$shale}light-disabled {
+  display: block !important;
+}
 
 .#{$shale}light {
-    color-scheme: light;
+  color-scheme: light;
 
-    .#{$shale}light-enabled { display: block !important; }
-    .#{$shale}light-disabled { display: none !important; }
+  .#{$shale}light-enabled {
+    display: block !important;
+  }
+  .#{$shale}light-disabled {
+    display: none !important;
+  }
 
-    /* General */
-    --#{$shale}background: #BEBEBE linear-gradient(#CCC, #BEBEBE); // site background
-    --#{$shale}text-colour: black;
-    --#{$shale}text-colour-secondary: #000a;
-    --#{$shale}link-colour: var(--#{$shale}accent-900);
-    --#{$shale}code-background: #EEE;
-    --#{$shale}secondary-border: #989898;
+  /* General */
+  --#{$shale}background: #bebebe linear-gradient(#ccc, #bebebe); // site background
+  --#{$shale}text-colour: black;
+  --#{$shale}text-colour-secondary: #000a;
+  --#{$shale}link-colour: var(--#{$shale}accent-900);
+  --#{$shale}code-background: #eee;
+  --#{$shale}secondary-border: #989898;
 
-    /* Header */
-    --#{$shale}header-background: #454545 linear-gradient(#575757, #454545);
-    --#{$shale}header-background-disabled: #787878 linear-gradient(#8a8a8a, #787878);
-    --#{$shale}header-text: white;
-    --#{$shale}header-bar-current: var(--#{$shale}accent-300);
-    --#{$shale}header-glow-current: var(--#{$shale}accent-300);
-    --#{$shale}header-bar-hover: var(--#{$shale}accent-200);
-    --#{$shale}header-glow-hover: var(--#{$shale}accent-300);
-    --#{$shale}header-bar-active: var(--#{$shale}accent-400);
+  /* Header */
+  --#{$shale}header-background: #454545 linear-gradient(#575757, #454545);
+  --#{$shale}header-background-disabled: #787878
+    linear-gradient(#8a8a8a, #787878);
+  --#{$shale}header-text: white;
+  --#{$shale}header-bar-current: var(--#{$shale}accent-300);
+  --#{$shale}header-glow-current: var(--#{$shale}accent-300);
+  --#{$shale}header-bar-hover: var(--#{$shale}accent-200);
+  --#{$shale}header-glow-hover: var(--#{$shale}accent-300);
+  --#{$shale}header-bar-active: var(--#{$shale}accent-400);
 
-    /* Footer */
-    --#{$shale}footer-background: #E6E6E6 linear-gradient(#FCFCFC, #E6E6E6);
+  /* Footer */
+  --#{$shale}footer-background: #e6e6e6 linear-gradient(#fcfcfc, #e6e6e6);
 
-    /* Cards */
-    --#{$shale}card-background: #dadada linear-gradient(#eeeeee, #dadada);
-    --#{$shale}card-background-disabled: #eee linear-gradient(#fff, #ddd);
-    --#{$shale}card-border-color: unset;
+  /* Cards */
+  --#{$shale}card-background: #dadada linear-gradient(#eeeeee, #dadada);
+  --#{$shale}card-background-disabled: #eee linear-gradient(#fff, #ddd);
+  --#{$shale}card-border-color: unset;
 
-    /* Notes */
-    --#{$shale}note-info-base: #B2CCD9 linear-gradient(#D2ECF9, #B2CCD9);
-    --#{$shale}note-info-border: #84bcd8;
-    --#{$shale}note-info-text: #093044;
+  /* Notes */
+  --#{$shale}note-info-base: #b2ccd9 linear-gradient(#d2ecf9, #b2ccd9);
+  --#{$shale}note-info-border: #84bcd8;
+  --#{$shale}note-info-text: #093044;
 
-    --#{$shale}note-alert-base: #DAA4A4 linear-gradient(#EEB3B3, #DAA4A4);
-    --#{$shale}note-alert-border: #B58888;
-    --#{$shale}note-alert-text: #440909;
+  --#{$shale}note-alert-base: #daa4a4 linear-gradient(#eeb3b3, #daa4a4);
+  --#{$shale}note-alert-border: #b58888;
+  --#{$shale}note-alert-text: #440909;
 
-    --#{$shale}note-warn-base: #D9D6B2 linear-gradient(#F9F6D2, #D9D6B2);
-    --#{$shale}note-warn-border: #878b58;
-    --#{$shale}note-warn-text: #404409;
+  --#{$shale}note-warn-base: #d9d6b2 linear-gradient(#f9f6d2, #d9d6b2);
+  --#{$shale}note-warn-border: #878b58;
+  --#{$shale}note-warn-text: #404409;
 
-    --#{$shale}note-tip-base: #B2D9B2 linear-gradient(#D2F9D2, #B2D9B2);
-    --#{$shale}note-tip-border: #6ea36e;
-    --#{$shale}note-tip-text: #094409;
+  --#{$shale}note-tip-base: #b2d9b2 linear-gradient(#d2f9d2, #b2d9b2);
+  --#{$shale}note-tip-border: #6ea36e;
+  --#{$shale}note-tip-text: #094409;
 
-    /* Button */
-    --#{$shale}button: #EEE linear-gradient(#E0E0E0, #CCC);
-    --#{$shale}button-hover: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
-    --#{$shale}button-active: var(--#{$shale}accent-300) linear-gradient(in oklab, var(--#{$shale}accent-100), var(--#{$shale}accent-300));
-    --#{$shale}button-disabled: #CCC linear-gradient(#CCC, #AAA);
+  /* Button */
+  --#{$shale}button: #eee linear-gradient(#e0e0e0, #ccc);
+  --#{$shale}button-hover: #f2f2f2 linear-gradient(#f2f2f2, #e9e9e9);
+  --#{$shale}button-active: var(--#{$shale}accent-300)
+    linear-gradient(
+      in oklab,
+      var(--#{$shale}accent-100),
+      var(--#{$shale}accent-300)
+    );
+  --#{$shale}button-disabled: #ccc linear-gradient(#ccc, #aaa);
 
-    --#{$shale}button-text-colour: var(--#{$shale}text-colour);
-    --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
-    --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
 
-    --#{$shale}button-border: #B5B5B5;
-    --#{$shale}button-border-hover: #CECECE;
-    --#{$shale}button-border-active: var(--#{$shale}accent);
+  --#{$shale}button-border: #b5b5b5;
+  --#{$shale}button-border-hover: #cecece;
+  --#{$shale}button-border-active: var(--#{$shale}accent);
 
-    --#{$shale}button-inset-border: #E3E3E3;
-    --#{$shale}button-inset-border-hover: #FDFDFD;
-    --#{$shale}button-inset-border-active: var(--#{$shale}accent-200);
+  --#{$shale}button-inset-border: #e3e3e3;
+  --#{$shale}button-inset-border-hover: #fdfdfd;
+  --#{$shale}button-inset-border-active: var(--#{$shale}accent-200);
 
-    /* Input */
-    --#{$shale}input-background: white linear-gradient(#F9F9F9, white);
-    --#{$shale}input-background-disabled: #e3e3e3 linear-gradient(#e0e0e0, #e3e3e3);
+  /* Input */
+  --#{$shale}input-background: white linear-gradient(#f9f9f9, white);
+  --#{$shale}input-background-disabled: #e3e3e3
+    linear-gradient(#e0e0e0, #e3e3e3);
 
-    --#{$shale}input-border: #DADADA;
-    --#{$shale}input-border-hover: white;
-    --#{$shale}input-border-active: var(--#{$shale}accent-200);
-    --#{$shale}input-border-disabled: #eaeaea;
+  --#{$shale}input-border: #dadada;
+  --#{$shale}input-border-hover: white;
+  --#{$shale}input-border-active: var(--#{$shale}accent-200);
+  --#{$shale}input-border-disabled: #eaeaea;
 
-    --#{$shale}input-inner-border: #B5B5B5;
-    --#{$shale}input-inner-border-hover: #CECECE;
-    --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
-    --#{$shale}input-inner-border-disabled: #a9a9a9;
+  --#{$shale}input-inner-border: #b5b5b5;
+  --#{$shale}input-inner-border-hover: #cecece;
+  --#{$shale}input-inner-border-active: var(--#{$shale}accent-500);
+  --#{$shale}input-inner-border-disabled: #a9a9a9;
 
-    --#{$shale}input-fill: var(--#{$shale}accent-900) linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
+  --#{$shale}input-fill: var(--#{$shale}accent-900)
+    linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
 
-    /* Scrollbar */
-    --#{$shale}scrollbar-corner: #F0F0F0;
+  /* Scrollbar */
+  --#{$shale}scrollbar-corner: #f0f0f0;
 
-    --#{$shale}scrollbar-track-bg: #F5F5F5 linear-gradient(#F5F5F5, #E5E5E5);
+  --#{$shale}scrollbar-track-bg: #f5f5f5 linear-gradient(#f5f5f5, #e5e5e5);
 
-    --#{$shale}scrollbar-button: #DADADA; // scrollbar button initial
-    --#{$shale}scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
-    --#{$shale}scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
-    --#{$shale}scrollbar-active: var(--#{$shale}accent-200);
-    --#{$shale}scrollbar-active-1: var(--#{$shale}accent-100);
-    --#{$shale}scrollbar-arrow: #333; // color of scrollbar arrow
+  --#{$shale}scrollbar-button: #dadada; // scrollbar button initial
+  --#{$shale}scrollbar-hover: #f2f2f2; // scrollbar button hover (bottom)
+  --#{$shale}scrollbar-hover-1: #e9e9e9; // scrollbar button hover (top)
+  --#{$shale}scrollbar-active: var(--#{$shale}accent-200);
+  --#{$shale}scrollbar-active-1: var(--#{$shale}accent-100);
+  --#{$shale}scrollbar-arrow: #333; // color of scrollbar arrow
 
-    ::-webkit-scrollbar-thumb {
-        --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-light);
-    }
+  ::-webkit-scrollbar-thumb {
+    --#{$shale}scrollbar-thumb: var(--#{$shale}scrollbar-thumb-light);
+  }
 }

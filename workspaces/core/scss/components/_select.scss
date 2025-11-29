@@ -5,60 +5,71 @@
  * Select
  */
 .#{$shale}select {
-    @include buttons.button-style;
-    align-items: center;
-    border-radius: 3px;
-    display: inline-grid;
-    padding: 0;
-    grid-template-areas: "select";
-    position: relative;
+  @include buttons.button-style;
+  align-items: center;
+  border-radius: 3px;
+  display: inline-grid;
+  padding: 0;
+  grid-template-areas: "select";
+  position: relative;
 
-    & select {
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        color: var(--#{$shale}button-text-colour, var(--#{$shale}text-colour));
-        cursor: inherit;
-        font-family: inherit;
-        font-size: inherit;
-        grid-area: select;
-        line-height: inherit;
-        width: 100%;
-        padding: 0.25em 1.5em 0.25em 0.5em;
-        z-index: 1;
+  & select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: var(--#{$shale}button-text-colour, var(--#{$shale}text-colour));
+    cursor: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    grid-area: select;
+    line-height: inherit;
+    width: 100%;
+    padding: 0.25em 1.5em 0.25em 0.5em;
+    z-index: 1;
 
-        &:hover, &#{$hover} {
-            color: var(--#{$shale}button-hover-text-colour, var(--#{$shale}text-colour));
-        }
-
-        &:active, &#{$active} {
-            color: var(--#{$shale}button-active-text-colour, var(--#{$shale}text-colour));
-        }
-
-        &:focus, &#{$focus} {
-            outline: 2px solid var(--#{$shale}button-border-active);
-        }
-
-        option, optgroup {
-            background: var(--#{$shale}card-background);
-            color: var(--#{$shale}text-colour);
-
-            &:disabled, &#{$disabled} {
-                background: var(--#{$shale}card-background-disabled);
-            }
-        }
+    &:hover,
+    &#{$hover} {
+      color: var(
+        --#{$shale}button-hover-text-colour,
+        var(--#{$shale}text-colour)
+      );
     }
 
-    // arrow
-    &::after {
-        background-color: var(--#{$shale}text-colour);
-        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-        content: "";
-        display: inline-block;
-        grid-area: select;
-        height: 0.3em;
-        justify-self: end;
-        margin-right: 0.5em;
-        width: 0.6em;
+    &:active,
+    &#{$active} {
+      color: var(
+        --#{$shale}button-active-text-colour,
+        var(--#{$shale}text-colour)
+      );
     }
+
+    &:focus,
+    &#{$focus} {
+      outline: 2px solid var(--#{$shale}button-border-active);
+    }
+
+    option,
+    optgroup {
+      background: var(--#{$shale}card-background);
+      color: var(--#{$shale}text-colour);
+
+      &:disabled,
+      &#{$disabled} {
+        background: var(--#{$shale}card-background-disabled);
+      }
+    }
+  }
+
+  // arrow
+  &::after {
+    background-color: var(--#{$shale}text-colour);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    content: "";
+    display: inline-block;
+    grid-area: select;
+    height: 0.3em;
+    justify-self: end;
+    margin-right: 0.5em;
+    width: 0.6em;
+  }
 }

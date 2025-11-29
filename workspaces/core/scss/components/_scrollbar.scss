@@ -7,120 +7,321 @@
  */
 
 .#{$shale}webkit-scrollbar {
-// Enable the scrollbar
-::-webkit-scrollbar {
-	width: 17px;
-	height: 17px;
-}
+  // Enable the scrollbar
+  ::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+  }
 
-// Base track
-::-webkit-scrollbar-track { background: var(--#{$shale}scrollbar-track-bg); }
+  // Base track
+  ::-webkit-scrollbar-track {
+    background: var(--#{$shale}scrollbar-track-bg);
+  }
 
-// copied from _button.scss but with the override classes removed since it breaks styling
-::-webkit-scrollbar-thumb {
-	&:horizontal {
-		--#{$shale}scrollbar-thumb-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='black' fill-rule='evenodd' d='M2.9 16c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.5c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H2.9Zm4.9 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.4c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H7.8Zm4.8 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4H14c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4h-1.4Z'/%3E%3C/svg%3E") no-repeat center center;
-		--#{$shale}scrollbar-thumb-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='white' fill-rule='evenodd' d='M2.9 16c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.5c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H2.9Zm4.9 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.4c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H7.8Zm4.8 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4H14c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4h-1.4Z'/%3E%3C/svg%3E") no-repeat center center;
-	}
+  // copied from _button.scss but with the override classes removed since it breaks styling
+  ::-webkit-scrollbar-thumb {
+    &:horizontal {
+      --#{$shale}scrollbar-thumb-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='black' fill-rule='evenodd' d='M2.9 16c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.5c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H2.9Zm4.9 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.4c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H7.8Zm4.8 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4H14c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4h-1.4Z'/%3E%3C/svg%3E")
+        no-repeat center center;
+      --#{$shale}scrollbar-thumb-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='white' fill-rule='evenodd' d='M2.9 16c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.5c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H2.9Zm4.9 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4h1.4c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4H7.8Zm4.8 0c-.2 0-.4-.2-.4-.4V1.4c0-.2.2-.4.4-.4H14c.2 0 .4.2.4.4v14.2c0 .2-.2.4-.4.4h-1.4Z'/%3E%3C/svg%3E")
+        no-repeat center center;
+    }
 
-	&:vertical {
-		--#{$shale}scrollbar-thumb-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='black' fill-rule='evenodd' d='M1 2.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.5c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V2.9Zm0 4.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.4c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V7.8Zm0 4.8c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4V14c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4v-1.4Z'/%3E%3C/svg%3E") no-repeat center center;
-		--#{$shale}scrollbar-thumb-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='white' fill-rule='evenodd' d='M1 2.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.5c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V2.9Zm0 4.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.4c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V7.8Zm0 4.8c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4V14c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4v-1.4Z'/%3E%3C/svg%3E") no-repeat center center;
+    &:vertical {
+      --#{$shale}scrollbar-thumb-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='black' fill-rule='evenodd' d='M1 2.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.5c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V2.9Zm0 4.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.4c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V7.8Zm0 4.8c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4V14c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4v-1.4Z'/%3E%3C/svg%3E")
+        no-repeat center center;
+      --#{$shale}scrollbar-thumb-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath fill-opacity='.2' fill='white' fill-rule='evenodd' d='M1 2.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.5c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V2.9Zm0 4.9c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4v1.4c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4V7.8Zm0 4.8c0-.2.2-.4.4-.4h14.2c.2 0 .4.2.4.4V14c0 .2-.2.4-.4.4H1.4c-.2 0-.4-.2-.4-.4v-1.4Z'/%3E%3C/svg%3E")
+        no-repeat center center;
+    }
 
-	}
+    background: var(--#{$shale}scrollbar-thumb), var(--#{$shale}button);
+    border: 1px solid var(--#{$shale}button-border);
+    box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
+    border-radius: 1px;
 
-	background: var(--#{$shale}scrollbar-thumb), var(--#{$shale}button);
-	border: 1px solid var(--#{$shale}button-border);
-	box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
-	border-radius: 1px;
+    &:hover {
+      background: var(--#{$shale}scrollbar-thumb), var(--#{$shale}button-hover);
+      border-color: var(--#{$shale}button-border-hover);
+      box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
+    }
 
-	&:hover {
-		background: var(--#{$shale}scrollbar-thumb), var(--#{$shale}button-hover);
-		border-color: var(--#{$shale}button-border-hover);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
-	}
+    &:active {
+      background:
+        var(--#{$shale}scrollbar-thumb), var(--#{$shale}button-active);
+      border-color: var(--#{$shale}button-border-active);
+      box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
+    }
 
-	&:active {
-		background: var(--#{$shale}scrollbar-thumb), var(--#{$shale}button-active);
-		border-color: var(--#{$shale}button-border-active);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
-	}
+    &:disabled {
+      background: var(--#{$shale}button-disabled);
+    }
+  }
 
-	&:disabled { background: var(--#{$shale}button-disabled) }
-}
+  // Flush out the corner
+  ::-webkit-scrollbar-corner {
+    background-color: var(--#{$shale}scrollbar-corner);
+  }
 
-// Flush out the corner
-::-webkit-scrollbar-corner { background-color: var(--#{$shale}scrollbar-corner); }
+  // Scrollbar Buttons
+  ::-webkit-scrollbar-button {
+    height: 17px;
+    width: 17px;
 
-// Scrollbar Buttons
-::-webkit-scrollbar-button {
-	height: 17px;
-	width: 17px;
+    border: 1px solid var(--#{$shale}button-border);
+    box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
 
-	border: 1px solid var(--#{$shale}button-border);
-	box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
+    &:hover {
+      border: 1px solid var(--#{$shale}button-border-hover);
+      box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
+    }
 
-	&:hover {
-		border: 1px solid var(--#{$shale}button-border-hover);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-hover);
-	}
+    &:active {
+      border: 1px solid var(--#{$shale}button-border-active);
+      box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
+    }
 
-	&:active {
-		border: 1px solid var(--#{$shale}button-border-active);
-		box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-active);
-	}
+    &:vertical {
+      &:start:decrement {
+        background:
+          linear-gradient(
+            135deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+            225deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+              0deg,
+              var(--#{$shale}scrollbar-button) 40%,
+              transparent 40%
+            )
+            var(--#{$shale}scrollbar-arrow);
 
-	&:vertical {
-		&:start:decrement {
-			background: linear-gradient(135deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(225deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(0deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
+        &:hover {
+          background:
+            linear-gradient(
+              135deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              225deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                0deg,
+                var(--#{$shale}scrollbar-hover) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
 
-			&:hover {
-				background: linear-gradient(135deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(225deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(0deg, var(--#{$shale}scrollbar-hover) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
+        &:active {
+          background:
+            linear-gradient(
+              135deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              225deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                0deg,
+                var(--#{$shale}scrollbar-active-1) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
+      }
 
-			&:active {
-				background: linear-gradient(135deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(225deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(0deg, var(--#{$shale}scrollbar-active-1) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
-		}
+      &:end:increment {
+        background:
+          linear-gradient(
+            315deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+            45deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+              180deg,
+              var(--#{$shale}scrollbar-button) 40%,
+              transparent 40%
+            )
+            var(--#{$shale}scrollbar-arrow);
 
-		&:end:increment {
-			background: linear-gradient(315deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(45deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(180deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
+        &:hover {
+          background:
+            linear-gradient(
+              315deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              45deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                180deg,
+                var(--#{$shale}scrollbar-hover) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
 
-			&:hover {
-				background: linear-gradient(315deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(45deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(180deg, var(--#{$shale}scrollbar-hover) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
+        &:active {
+          background:
+            linear-gradient(
+              315deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              45deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                180deg,
+                var(--#{$shale}scrollbar-active-1) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
+      }
+    }
 
-			&:active {
-				background: linear-gradient(315deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(45deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(180deg, var(--#{$shale}scrollbar-active-1) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
-		}
-	}
+    &:horizontal {
+      &:start:decrement {
+        background:
+          linear-gradient(
+            45deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+            135deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+              270deg,
+              var(--#{$shale}scrollbar-button) 40%,
+              transparent 40%
+            )
+            var(--#{$shale}scrollbar-arrow);
 
-	&:horizontal {
-		&:start:decrement {
-			background: linear-gradient(45deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(135deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(270deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
+        &:hover {
+          background:
+            linear-gradient(
+              45deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              135deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                270deg,
+                var(--#{$shale}scrollbar-hover) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
 
-			&:hover {
-				background: linear-gradient(45deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(135deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(270deg, var(--#{$shale}scrollbar-hover) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
+        &:active {
+          background:
+            linear-gradient(
+              45deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              135deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                270deg,
+                var(--#{$shale}scrollbar-active-1) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
+      }
 
-			&:active {
-				background: linear-gradient(45deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(135deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(270deg, var(--#{$shale}scrollbar-active-1) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
-		}
+      &:end:increment {
+        background:
+          linear-gradient(
+            225deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+            315deg,
+            var(--#{$shale}scrollbar-button) 40%,
+            transparent 40%
+          ),
+          linear-gradient(
+              90deg,
+              var(--#{$shale}scrollbar-button) 40%,
+              transparent 40%
+            )
+            var(--#{$shale}scrollbar-arrow);
 
-		&:end:increment {
-			background: linear-gradient(225deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(315deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%), linear-gradient(90deg, var(--#{$shale}scrollbar-button) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
+        &:hover {
+          background:
+            linear-gradient(
+              225deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              315deg,
+              var(--#{$shale}scrollbar-hover-1) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                90deg,
+                var(--#{$shale}scrollbar-hover) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
 
-			&:hover {
-				background: linear-gradient(225deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(315deg, var(--#{$shale}scrollbar-hover-1) 40%, transparent 40%), linear-gradient(90deg, var(--#{$shale}scrollbar-hover) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
-
-			&:active {
-				background: linear-gradient(225deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(315deg, var(--#{$shale}scrollbar-active) 40%, transparent 40%), linear-gradient(90deg, var(--#{$shale}scrollbar-active-1) 40%, transparent 40%) var(--#{$shale}scrollbar-arrow);
-			}
-		}
-	}
-}
-
+        &:active {
+          background:
+            linear-gradient(
+              225deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+              315deg,
+              var(--#{$shale}scrollbar-active) 40%,
+              transparent 40%
+            ),
+            linear-gradient(
+                90deg,
+                var(--#{$shale}scrollbar-active-1) 40%,
+                transparent 40%
+              )
+              var(--#{$shale}scrollbar-arrow);
+        }
+      }
+    }
+  }
 }

@@ -4,25 +4,25 @@
  * General
  */
 [class*="#{$shale}"] {
-	box-sizing: border-box;
-	font-family: var(--#{$shale}font-family);
+  box-sizing: border-box;
+  font-family: var(--#{$shale}font-family);
 }
 
 @media (prefers-reduced-motion: reduce) {
-	[class*="#{$shale}"] {
-		transition: none !important;
-	}
+  [class*="#{$shale}"] {
+    transition: none !important;
+  }
 }
 
 /**
  * Shadow helpers
  */
 .#{$shale}--shadow-subtle {
-	box-shadow: var(--#{$shale}shadow-subtle);
+  box-shadow: var(--#{$shale}shadow-subtle);
 }
 .#{$shale}--shadow-moderate {
-	box-shadow: var(--#{$shale}shadow-moderate);
+  box-shadow: var(--#{$shale}shadow-moderate);
 }
 .#{$shale}--shadow-puffy {
-	box-shadow: var(--#{$shale}shadow-puffy);
+  box-shadow: var(--#{$shale}shadow-puffy);
 }

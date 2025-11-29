@@ -11,10 +11,12 @@
     "build:website": "cd workspaces/website && npm run build",
     "dev:website": "cd workspaces/website && npm run dev",
     "build": "npm run build:core && npm run build:react && npm run build:website",
-    "dev": "concurrently --names core,react,website 'npm run dev:core' 'npm run dev:react' 'npm run dev:website'"
+    "dev": "concurrently --names core,react,website 'npm run dev:core' 'npm run dev:react' 'npm run dev:website'",
+    "pretty": "prettier --write . \"!**/reports/*.md\""
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "prettier": "3.7.3"
   },
   "repository": {
     "type": "git",

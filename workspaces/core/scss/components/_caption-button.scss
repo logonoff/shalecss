@@ -4,31 +4,37 @@
  * Caption Buttons
  */
 .#{$shale}caption {
-	&-button {
-		color: inherit;
-		display: inline-block;
-		font-size: 1rem;
-		font-weight: bold;
-		opacity: .75;
-		padding: 0 .3em;
-		text-decoration: none;
-		filter: var(--#{$shale}filter-shadow-moderate);
-		transition: opacity .125s ease, filter .125s ease;
+  &-button {
+    color: inherit;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.75;
+    padding: 0 0.3em;
+    text-decoration: none;
+    filter: var(--#{$shale}filter-shadow-moderate);
+    transition:
+      opacity 0.125s ease,
+      filter 0.125s ease;
 
-		&:hover, &:focus-visible, &#{$hover}, &#{$focus} {
-			opacity: 1;
-			filter: var(--#{$shale}filter-shadow-puffy);
-			text-decoration: none;
-		}
+    &:hover,
+    &:focus-visible,
+    &#{$hover},
+    &#{$focus} {
+      opacity: 1;
+      filter: var(--#{$shale}filter-shadow-puffy);
+      text-decoration: none;
+    }
 
-		&:focus-visible, &#{$focus} {
-			text-shadow: initial;
-		}
+    &:focus-visible,
+    &#{$focus} {
+      text-shadow: initial;
+    }
 
-		&:active, &#{$active} {
-			opacity: .3;
-			filter: var(--#{$shale}filter-shadow-subtle);
-		}
-
-	}
+    &:active,
+    &#{$active} {
+      opacity: 0.3;
+      filter: var(--#{$shale}filter-shadow-subtle);
+    }
+  }
 }

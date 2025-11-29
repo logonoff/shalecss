@@ -4,30 +4,33 @@
  * Tab skip
  */
 .#{$shale}skip {
-	height: 1px;
-	left: -25565vw;
-	overflow: hidden;
-	position: absolute;
-	top: 1em;
-	width: 1px;
-	z-index: -1337;
+  height: 1px;
+  left: -25565vw;
+  overflow: hidden;
+  position: absolute;
+  top: 1em;
+  width: 1px;
+  z-index: -1337;
 
-	&:focus-visible, &:active, #{$focus}, #{$active} {
-		background: var(--#{$shale}code-background);
-		border-radius: 15px;
-		border: 3px solid var(--#{$shale}button-border-active);
-		box-shadow: var(--#{$shale}shadow-puffy);
-		color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
-		font-size: 1rem;
-		height: auto;
-		left: 1rem;
-		margin: 1rem .5rem;
-		outline: none;
-		overflow: auto;
-		padding: .5rem 1rem;
-		text-align: center;
-		text-decoration: none;
-		width: auto;
-		z-index: 6969;
-	}
+  &:focus-visible,
+  &:active,
+  #{$focus},
+  #{$active} {
+    background: var(--#{$shale}code-background);
+    border-radius: 15px;
+    border: 3px solid var(--#{$shale}button-border-active);
+    box-shadow: var(--#{$shale}shadow-puffy);
+    color: var(--#{$shale}code-text-colour, var(--#{$shale}text-colour));
+    font-size: 1rem;
+    height: auto;
+    left: 1rem;
+    margin: 1rem 0.5rem;
+    outline: none;
+    overflow: auto;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    z-index: 6969;
+  }
 }

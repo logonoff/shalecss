@@ -1,5 +1,13 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Header, HeaderText, HeaderTitle, Html, MenuBarButton, Nav, SkipToContent } from "@shalecss/react";
+import {
+  Header,
+  HeaderText,
+  HeaderTitle,
+  Html,
+  MenuBarButton,
+  Nav,
+  SkipToContent,
+} from "@shalecss/react";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 
@@ -30,11 +38,8 @@ export default function RootLayout({
       <Html lang="en" className={ubuntu.className} theme="dark" webkitScrollbar>
         <body className="shale-v1-body">
           <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
-
           <PageHeader />
-          <ViewTransition name="page">
-            {children}
-          </ViewTransition>
+          <ViewTransition name="page">{children}</ViewTransition>
           <PageFooter />
         </body>
       </Html>

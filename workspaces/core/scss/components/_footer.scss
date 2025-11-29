@@ -4,10 +4,10 @@
  * Footer
  */
 .#{$shale}footer {
-	background: var(--#{$shale}footer-background);
-	border-top: 1px solid var(--#{$shale}secondary-border);
-	box-shadow: var(--#{$shale}shadow-puffy);
-	color: var(--#{$shale}text-colour);
-	font-size: var(--#{$shale}font-0);
-	width: 100%;
+  background: var(--#{$shale}footer-background);
+  border-top: 1px solid var(--#{$shale}secondary-border);
+  box-shadow: var(--#{$shale}shadow-puffy);
+  color: var(--#{$shale}text-colour);
+  font-size: var(--#{$shale}font-0);
+  width: 100%;
 }

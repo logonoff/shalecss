@@ -1,26 +1,44 @@
-import { css } from '../utils/css';
-import type { PolymorphicComponent } from '../types/helpers';
-import { FlexItem } from './FlexItem';
-import { ShadowVariant } from '../types/variants';
+import { css } from "../utils/css";
+import type { PolymorphicComponent } from "../types/helpers";
+import { FlexItem } from "./FlexItem";
+import { ShadowVariant } from "../types/variants";
 
 /** @alpha */
 export interface CardProps {
-    /** The type of shadow to apply to the card */
-    shadow?: ShadowVariant;
+  /** The type of shadow to apply to the card */
+  shadow?: ShadowVariant;
 }
 
 /**
- * A card component that can have different shadow styles.
+ * `Card` is a flexible container based on {@link FlexItem} that provides a
+ * card-like visual presentation with optional shadow variants.
+ *
+ * @example Basic usage
+ * ```tsx
+ * <Card shadow="moderate">This is a card with a moderate shadow</Card>
+ * ```
+ *
+ * @example With different shadows
+ * ```tsx
+ * <FlexContainer variant="space-between">
+ *   <Card flex="third" shadow="subtle">subtle shadows</Card>
+ *   <Card flex="third" shadow="moderate">moderate shadows</Card>
+ *   <Card flex="third" shadow="puffy">puffy shadows</Card>
+ * </FlexContainer>
+ * ```
  *
  * @alpha
  */
-export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({ Component = FlexItem, ...props }) => (
-    <Component
-        {...props}
-        className={css(
-            'shale-v1-card',
-            { [`shale-v1--${props.shadow}`]: props.shadow },
-            props?.className
-        )}
-    />
+export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({
+  Component = FlexItem,
+  ...props
+}) => (
+  <Component
+    {...props}
+    className={css(
+      "shale-v1-card",
+      { [`shale-v1--${props.shadow}`]: props.shadow },
+      props?.className,
+    )}
+  />
 );

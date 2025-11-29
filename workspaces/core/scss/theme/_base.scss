@@ -13,46 +13,81 @@ $hover: ".#{$shale}-hover" !default;
 $indeterminate: ".#{$shale}-indeterminate" !default;
 
 :root {
-    /* Typography */
-    --#{$shale}font-family: 'Ubuntu', Cantarell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --#{$shale}font-family-mono: 'Ubuntu Mono', 'Consolas', 'Lucida Console', 'Monaco', monospace;
+  /* Typography */
+  --#{$shale}font-family:
+    "Ubuntu", Cantarell, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, "Open Sans", "Helvetica Neue", sans-serif;
+  --#{$shale}font-family-mono:
+    "Ubuntu Mono", "Consolas", "Lucida Console", "Monaco", monospace;
 
-    --#{$shale}font-scale: 1.25;
+  --#{$shale}font-scale: 1.25;
 
-    --#{$shale}font-5: calc(var(--#{$shale}font-4) * var(--#{$shale}font-scale));
-    --#{$shale}font-4: calc(var(--#{$shale}font-3) * var(--#{$shale}font-scale));
-    --#{$shale}font-3: calc(var(--#{$shale}font-2) * var(--#{$shale}font-scale));
-    --#{$shale}font-2: calc(var(--#{$shale}font-1) * var(--#{$shale}font-scale));
-    --#{$shale}font-1: calc(var(--#{$shale}font-0) * var(--#{$shale}font-scale));
-    --#{$shale}font-0: 1rem;
-    --#{$shale}font--1: calc(var(--#{$shale}font-0) / var(--#{$shale}font-scale));
+  --#{$shale}font-5: calc(var(--#{$shale}font-4) * var(--#{$shale}font-scale));
+  --#{$shale}font-4: calc(var(--#{$shale}font-3) * var(--#{$shale}font-scale));
+  --#{$shale}font-3: calc(var(--#{$shale}font-2) * var(--#{$shale}font-scale));
+  --#{$shale}font-2: calc(var(--#{$shale}font-1) * var(--#{$shale}font-scale));
+  --#{$shale}font-1: calc(var(--#{$shale}font-0) * var(--#{$shale}font-scale));
+  --#{$shale}font-0: 1rem;
+  --#{$shale}font--1: calc(var(--#{$shale}font-0) / var(--#{$shale}font-scale));
 
-    /* Shadows */
-    --#{$shale}shadow-subtle: 0 2px 4px 0 rgba(0, 0, 0, .12);
-    --#{$shale}shadow-moderate: 0 4px 8px 0 rgba(0, 0, 0, .24);
-    --#{$shale}shadow-puffy: 0 8px 16px 0 rgba(0, 0, 0, .32);
+  /* Shadows */
+  --#{$shale}shadow-subtle: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  --#{$shale}shadow-moderate: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+  --#{$shale}shadow-puffy: 0 8px 16px 0 rgba(0, 0, 0, 0.32);
 
-    --#{$shale}text-shadow-subtle: 0 0 2px rgba(0, 0, 0, .24);
-    --#{$shale}text-shadow-moderate: 0 0 4px rgba(0, 0, 0, .48);
-    --#{$shale}text-shadow-puffy: 0 0 8px rgba(0, 0, 0, .64);
+  --#{$shale}text-shadow-subtle: 0 0 2px rgba(0, 0, 0, 0.24);
+  --#{$shale}text-shadow-moderate: 0 0 4px rgba(0, 0, 0, 0.48);
+  --#{$shale}text-shadow-puffy: 0 0 8px rgba(0, 0, 0, 0.64);
 
-    --#{$shale}filter-shadow-subtle: drop-shadow(0 2px 4px rgba(0, 0, 0, .12));
-    --#{$shale}filter-shadow-moderate: drop-shadow(0 4px 8px rgba(0, 0, 0, .24));
-    --#{$shale}filter-shadow-puffy: drop-shadow(0 8px 16px rgba(0, 0, 0, .32));
+  --#{$shale}filter-shadow-subtle: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+  --#{$shale}filter-shadow-moderate: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.24));
+  --#{$shale}filter-shadow-puffy: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.32));
 
-    /* Dynamic accent colour */
-    --#{$shale}accent: #65dae0;
-    --#{$shale}accent-light-tint: white;
-    --#{$shale}accent-dark-tint: black;
+  /* Dynamic accent colour */
+  --#{$shale}accent: #65dae0;
+  --#{$shale}accent-light-tint: white;
+  --#{$shale}accent-dark-tint: black;
 
-    // calculated shades
-    --#{$shale}accent-100: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 80%);
-    --#{$shale}accent-200: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 60%);
-    --#{$shale}accent-300: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 40%);
-    --#{$shale}accent-400: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-light-tint) 20%);
-    --#{$shale}accent-500: var(--#{$shale}accent);
-    --#{$shale}accent-600: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 10%);
-    --#{$shale}accent-700: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 20%);
-    --#{$shale}accent-800: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 30%);
-    --#{$shale}accent-900: color-mix(in hsl, var(--#{$shale}accent), var(--#{$shale}accent-dark-tint) 40%);
+  // calculated shades
+  --#{$shale}accent-100: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-light-tint) 80%
+  );
+  --#{$shale}accent-200: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-light-tint) 60%
+  );
+  --#{$shale}accent-300: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-light-tint) 40%
+  );
+  --#{$shale}accent-400: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-light-tint) 20%
+  );
+  --#{$shale}accent-500: var(--#{$shale}accent);
+  --#{$shale}accent-600: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-dark-tint) 10%
+  );
+  --#{$shale}accent-700: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-dark-tint) 20%
+  );
+  --#{$shale}accent-800: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-dark-tint) 30%
+  );
+  --#{$shale}accent-900: color-mix(
+    in hsl,
+    var(--#{$shale}accent),
+    var(--#{$shale}accent-dark-tint) 40%
+  );
 }
