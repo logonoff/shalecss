@@ -39,7 +39,7 @@ export default function DocsPage({ children }: Readonly<{ children: React.ReactN
                         <FlexContainer style={{ flexDirection: 'column', gap: 'var(--shale-v1-font--1)' }}>
                             {
                                 components.map((component) => (
-                                    <Button variant="secondary" Component={Link} key={component.name} href={component.href} state={currentPage.href === component.href ? 'active' : undefined}>
+                                    <Button variant="secondary" Component={Link} scroll={false} key={component.name} href={component.href} state={currentPage.href === component.href ? 'active' : undefined}>
                                         {component.name}
                                     </Button>
                                 ))

@@ -1,7 +1,7 @@
 import { css } from '../utils/css';
 import type { PolymorphicComponent } from '../types/helpers';
 
-export const CaptionButton: PolymorphicComponent<'button'> = ({ Component = 'button', darkDisabled, contrastDisabled, ...props }) => (
+export const CaptionButton: PolymorphicComponent<'button'> = ({ Component = 'button', ...props }) => (
     <Component
         {...props}
         className={css(
