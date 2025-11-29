@@ -28,12 +28,12 @@
     "react-dom": "^19.2.0"
   },
   "peerDependencies": {
-    "react": "^18.x | 19.x",
+    "react": "18.x | 19.x",
     "react-dom": "18.x | 19.x"
   },
   "devDependencies": {
-    "@typescript/native-preview": "^7.0.0-dev.20251102.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2"
+    "@typescript/native-preview": "^7.0.0-dev.20251129.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
   }
 }
