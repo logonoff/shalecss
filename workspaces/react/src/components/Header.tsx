@@ -93,7 +93,7 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
     className={css(
       "shale-v1-header",
       { [`shale-v1--${state}`]: state },
-      props?.className
+      props?.className,
     )}
   />
 );

@@ -34,7 +34,7 @@ export const Button: PolymorphicComponent<"button", BaseButtonProps> = ({
         "shale-v1-button",
         { "shale-v1--secondary": variant === "secondary" },
         { [`shale-v1--${state}`]: state },
-        props?.className
+        props?.className,
       )}
     />
   );

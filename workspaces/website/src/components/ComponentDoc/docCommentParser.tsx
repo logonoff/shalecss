@@ -85,7 +85,7 @@ export interface DocCommentParseResult {
  */
 const extractReactNodeFromText = (
   node: DocNode,
-  key?: number
+  key?: number,
 ): React.ReactNode => {
   switch (node.kind) {
     case DocNodeKind.PlainText:
@@ -126,7 +126,7 @@ const extractReactNodeFromText = (
     case DocNodeKind.Section: {
       const container = node as DocParagraph | DocSection;
       return container.nodes.map((child, i) =>
-        extractReactNodeFromText(child, i)
+        extractReactNodeFromText(child, i),
       );
     }
 
@@ -145,7 +145,7 @@ const extractReactNodeFromText = (
   // Fallback for any unhandled node types with children
   if ("nodes" in node) {
     return (node as DocParagraph).nodes.map((child, i) =>
-      extractReactNodeFromText(child, i)
+      extractReactNodeFromText(child, i),
     );
   }
   return null;
@@ -155,7 +155,7 @@ const extractReactNodeFromText = (
  * Converts a TSDoc section into React nodes.
  */
 const getReactNodeFromSection = (
-  section: DocSection | undefined
+  section: DocSection | undefined,
 ): React.ReactNode => {
   if (!section) return null;
   return section.nodes.map((node, i) => extractReactNodeFromText(node, i));
@@ -165,7 +165,7 @@ const getReactNodeFromSection = (
  * Parses example blocks from TSDoc custom blocks.
  */
 const parseExamplesFromBlocks = (
-  blocks: readonly DocBlock[]
+  blocks: readonly DocBlock[],
 ): ParsedExample[] => {
   const examples: ParsedExample[] = [];
 
@@ -175,7 +175,7 @@ const parseExamplesFromBlocks = (
     const title =
       (
         block.content.nodes.find(
-          (node) => node.kind === DocNodeKind.Paragraph
+          (node) => node.kind === DocNodeKind.Paragraph,
         ) as DocParagraph
       )?.nodes
         .map((child) => {
@@ -189,7 +189,7 @@ const parseExamplesFromBlocks = (
 
     const code = (
       block.content.nodes.find(
-        (node) => node.kind === DocNodeKind.FencedCode
+        (node) => node.kind === DocNodeKind.FencedCode,
       ) as DocFencedCode
     )?.code.trim();
 
@@ -205,7 +205,7 @@ const parseExamplesFromBlocks = (
  * Converts an API Extractor release tag to a release stage string.
  */
 const getReleaseStage = (
-  releaseTag: ReleaseTag
+  releaseTag: ReleaseTag,
 ): "alpha" | "beta" | "public" | undefined => {
   switch (releaseTag) {
     case ReleaseTag.Alpha:
@@ -223,7 +223,7 @@ const getReleaseStage = (
  * Checks if an API member is deprecated and extracts the deprecation message.
  */
 const getIsDeprecated = (
-  deprecatedBlock: DocBlock | undefined
+  deprecatedBlock: DocBlock | undefined,
 ): React.ReactNode | undefined => {
   if (!deprecatedBlock) {
     return undefined;
@@ -251,7 +251,7 @@ const findMember = (name: string): ApiItem | undefined => {
  * Searches for interfaces matching patterns like `ComponentProps` or `BaseComponentProps`.
  */
 const findPropsInterface = (
-  componentMember: ApiVariable
+  componentMember: ApiVariable,
 ): ApiInterface | undefined => {
   const entryPoint = apiPackage.entryPoints[0];
   if (!entryPoint) return undefined;
@@ -289,7 +289,7 @@ const findPropsInterface = (
  * Extracts prop definitions from a props interface.
  */
 const extractProps = (
-  propsInterface: ApiInterface | undefined
+  propsInterface: ApiInterface | undefined,
 ): ParsedProp[] => {
   if (!propsInterface) return [];
 
@@ -303,7 +303,7 @@ const extractProps = (
 
       if (propMember instanceof ApiDocumentedItem && propMember.tsdocComment) {
         description = getReactNodeFromSection(
-          propMember.tsdocComment.summarySection
+          propMember.tsdocComment.summarySection,
         );
 
         // Look for @defaultValue block
@@ -347,13 +347,13 @@ const getDefaultElement = (member: ApiVariable): string | undefined => {
  * @throws Error if the component is not found in the API documentation
  */
 export const parseDocComment = (
-  componentName: keyof typeof import("@shalecss/react")
+  componentName: keyof typeof import("@shalecss/react"),
 ): DocCommentParseResult => {
   const member = findMember(componentName);
 
   if (!member) {
     throw new Error(
-      `Component "${componentName}" not found in API documentation.`
+      `Component "${componentName}" not found in API documentation.`,
     );
   }
 

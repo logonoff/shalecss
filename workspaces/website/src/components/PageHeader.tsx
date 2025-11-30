@@ -22,7 +22,7 @@ export const PageHeader: FC = () => {
   const currentPage = metadata.find(
     (page) =>
       (page.path !== "/" && currentPath.startsWith(page.path)) ||
-      currentPath === page.path
+      currentPath === page.path,
   ) || { title: "Page", path: currentPath };
 
   return (

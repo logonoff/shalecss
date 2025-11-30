@@ -89,7 +89,7 @@ export const Icon: React.FC<IconProps> = ({
         "shale-v1-icon-flip-x": flipX,
         "shale-v1-icon-flip-y": flipY,
       },
-      props?.className
+      props?.className,
     )}
   >
     <use xlinkHref={`${iconPath}#icon-${icon}`} />

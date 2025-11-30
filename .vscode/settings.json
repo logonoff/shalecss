@@ -1,14 +1,14 @@
 {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "typescript.preferences.preferTypeOnlyAutoImports": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        }
-    },
-    "files.associations": {
-        "**/api-extractor.json": "jsonc"
-    },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  },
+  "files.associations": {
+    "**/api-extractor.json": "jsonc"
+  }
 }

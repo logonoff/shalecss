@@ -57,7 +57,7 @@ export const MenuBarButton: PolymorphicComponent<
       "shale-v1-menu-bar-button",
       { "shale-v1-current": current },
       { [`shale-v1--${state}`]: state },
-      props?.className
+      props?.className,
     )}
   />
 );

@@ -88,7 +88,7 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
         "shale-v1-flex-quarter": flex === "quarter",
         "shale-v1-flex-custom": flex === "custom",
       },
-      props?.className
+      props?.className,
     )}
   />
 );

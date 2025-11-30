@@ -42,7 +42,7 @@ const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
 const makeTypography =
   (
     variant: TypographyVariant,
-    Component: React.ElementType = variant
+    Component: React.ElementType = variant,
   ): PolymorphicComponent<typeof Component, BaseTypographyProps> =>
   (props: any) => (
     <Typography Component={Component} {...props} variant={variant} />

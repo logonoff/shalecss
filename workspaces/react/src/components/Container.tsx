@@ -66,7 +66,7 @@ export const FlexContainer: PolymorphicComponent<
         "shale-v1-flex-center": variant === "center",
         "shale-v1-flex-align-center": variant === "align-center",
       },
-      props?.className
+      props?.className,
     )}
   />
 );
