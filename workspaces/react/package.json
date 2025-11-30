@@ -28,8 +28,7 @@
   "author": "logonoff",
   "license": "MIT",
   "dependencies": {
-    "@shalecss/core": "*",
-    "clsx": "^2.1.1"
+    "@shalecss/core": "*"
   },
   "peerDependencies": {
     "react": "^18 | ^19",
