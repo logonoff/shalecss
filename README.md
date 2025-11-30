@@ -2,18 +2,16 @@
 
 flat-skeuomorph css components
 
-## Building
+## Want to read more mes?
 
-To build the css file, run the following command:
+This project is made up of two main packages:
 
-```bash
-npm ci
-npm run build
-```
-
-The css file will be output to `workspaces/core/dist/shale.css`.
+- [core](workspaces/core/README.md) - core CSS styles
+- [react](workspaces/react/README.md) - a thin React wrapper over said CSS styles
 
 ## Development
+
+### Start a development server
 
 To start a development server with hot reloading, run the following command:
 
@@ -26,18 +24,26 @@ This will run a next.js development server at `http://localhost:3000`, as well
 as a watch process to rebuild any css files or React components. Documentation
 is written in the TSdoc of each component directly in the React workspace.
 
-## Want to read more mes?
+### Building
 
-This project is made up of two main packages:
+To build the css file, run the following command:
 
-- [core](workspaces/core/README.md) - core CSS styles
-- [react](workspaces/react/README.md) - a thin React wrapper over said CSS styles
+```bash
+npm ci
+npm run build
+```
 
-## Usage
+The css file will be output to `workspaces/core/dist/shale.css`.
 
-Include the following files in your project:
+### Releasing a new version
 
-- `build/shale.css`
-- `build/shale.css.map` (optional)
-- `build/icons.svg`
-- `shalecss.js` (optional if you don't want theme switching)
+1. Edit the version in `package.json` files in the root workspace with the desired version.
+2. Run the following:
+
+```
+npm run version
+git tag x.y.z
+git push origin x.y.z
+```
+
+3. The GitHub action hopefully does the rest
