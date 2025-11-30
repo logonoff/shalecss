@@ -31,13 +31,14 @@ export interface CardProps {
  */
 export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({
   Component = FlexItem,
+  shadow,
   ...props
 }) => (
   <Component
     {...props}
     className={css(
       "shale-v1-card",
-      { [`shale-v1--${props.shadow}`]: props.shadow },
+      { [`shale-v1--${shadow}`]: shadow },
       props?.className,
     )}
   />
