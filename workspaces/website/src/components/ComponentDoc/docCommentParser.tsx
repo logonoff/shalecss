@@ -1,29 +1,29 @@
 import {
-  ApiModel,
-  ApiItem,
   ApiDeclaredItem,
   ApiDocumentedItem,
-  ApiPropertyItem,
   ApiInterface,
+  ApiItem,
+  ApiModel,
+  ApiPropertyItem,
+  ApiReleaseTagMixin,
   ApiVariable,
   ReleaseTag,
-  ApiReleaseTagMixin,
 } from "@microsoft/api-extractor-model";
 import {
-  DocSection,
   DocBlock,
-  DocFencedCode,
-  DocPlainText,
-  DocParagraph,
-  DocNode,
-  DocNodeKind,
   DocCodeSpan,
   DocEscapedText,
+  DocFencedCode,
   DocLinkTag,
+  DocNode,
+  DocNodeKind,
+  DocParagraph,
+  DocPlainText,
+  DocSection,
 } from "@microsoft/tsdoc";
-import path from "path";
-import apiJson from "@shalecss/react/temp/react.api.json";
 import { Code } from "@shalecss/react";
+import apiJson from "@shalecss/react/temp/react.api.json";
+import path from "path";
 
 // Include apiJson to ensure that nextjs watches it and rebuilds on change
 void apiJson;

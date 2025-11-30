@@ -1,8 +1,8 @@
 "use client";
 
 import { CaptionButton, CaptionMenu, Icon } from "@shalecss/react";
-import { useTheme } from "./ThemeProvider";
 import type { FC } from "react";
+import { useTheme } from "./ThemeProvider";
 
 export const ToggleTheme: FC = () => {
   const { theme, setTheme } = useTheme();

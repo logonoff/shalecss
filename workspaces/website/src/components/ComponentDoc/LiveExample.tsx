@@ -1,8 +1,8 @@
 "use client";
 
 import * as shalecss from "@shalecss/react";
-import { Note, Code } from "@shalecss/react";
-import { LiveProvider, LivePreview, LiveError, LiveEditor } from "react-live";
+import { Code, Note } from "@shalecss/react";
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live";
 
 interface LiveExampleProps {
   code: string;

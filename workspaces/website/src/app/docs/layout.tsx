@@ -4,8 +4,7 @@ import {
   Button,
   Container,
   FlexContainer,
-  FlexItem,
-  H1,
+  FlexItem
 } from "@shalecss/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

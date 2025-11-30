@@ -1,19 +1,18 @@
 import {
-  FlexItem,
+  Button,
   Code,
+  FlexContainer,
+  FlexItem,
   H2,
   H3,
   H4,
-  P,
   Note,
-  Button,
-  FlexContainer,
+  P,
 } from "@shalecss/react";
 import {
   parseDocComment,
   type DocCommentParseResult,
 } from "./docCommentParser";
-import { Fragment } from "react";
 import { LiveExample } from "./LiveExample";
 
 interface ComponentDocProps {

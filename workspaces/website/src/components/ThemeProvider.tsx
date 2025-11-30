@@ -3,10 +3,10 @@
 import {
   createContext,
   FC,
-  useContext,
-  useState,
   ReactNode,
+  useContext,
   useEffect,
+  useState,
 } from "react";
 
 type Theme = "light" | "dark" | "contrast";

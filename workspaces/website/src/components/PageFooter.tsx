@@ -1,11 +1,10 @@
 import {
-  Code,
   Container,
   FlexItem,
   Footer,
   H6,
   Link,
-  P,
+  P
 } from "@shalecss/react";
 
 export const PageFooter: React.FC = () => (
