@@ -9,12 +9,20 @@
     "./dist/icons.svg": "./dist/icons.svg"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "generate:banner": "node ./scripts/generate-banner.js",
     "prebuild": "mkdir -p dist && cp ./shalecss.js ./dist/shalecss.js && cp ./icons.svg ./dist/icons.svg && npm run generate:banner",
     "build": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=compressed --error-css",
-    "dev": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=expanded --error-css --watch"
+    "dev": "npm run prebuild && sass scss/shale.scss:dist/shale.css --style=expanded --error-css --watch",
+    "prepublishOnly": "pushd ../ && npm run version"
   },
+  "keywords": [
+    "shalecss",
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/logonoff/shalecss.git"

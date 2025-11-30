@@ -13,7 +13,7 @@
     "build": "npm run build:core && npm run build:react && npm run build:website",
     "dev": "concurrently --names core,react,website 'npm run dev:core' 'npm run dev:react' 'npm run dev:website'",
     "pretty": "prettier --write . \"!**/reports/*.md\"",
-    "version": "node ./scripts/version-bump.mjs && npm install && npm run build"
+    "version": "npm run pretty && node ./scripts/version-bump.mjs && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",

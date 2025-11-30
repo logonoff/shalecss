@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Button,
-  Container,
-  FlexContainer,
-  FlexItem
-} from "@shalecss/react";
+import { Button, Container, FlexContainer, FlexItem } from "@shalecss/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

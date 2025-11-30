@@ -26,6 +26,13 @@ This will run a next.js development server at `http://localhost:3000`, as well
 as a watch process to rebuild any css files or React components. Documentation
 is written in the TSdoc of each component directly in the React workspace.
 
+## Want to read more mes?
+
+This project is made up of two main packages:
+
+- [core](workspaces/core/README.md) - core CSS styles
+- [react](workspaces/react/README.md) - a thin React wrapper over said CSS styles
+
 ## Usage
 
 Include the following files in your project:
