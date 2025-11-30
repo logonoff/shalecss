@@ -1,6 +1,6 @@
 {
   "name": "@shalecss/root",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "a pseudo-skeuomorph CSS framework",
   "scripts": {

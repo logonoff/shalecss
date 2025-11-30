@@ -1,6 +1,6 @@
 {
   "name": "@shalecss/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a pseudo-skeuomorph CSS framework",
   "main": "dist/shalecss.js",
   "exports": {
