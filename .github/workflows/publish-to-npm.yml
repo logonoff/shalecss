@@ -28,10 +28,10 @@ jobs:
         run: npm run build
 
       - name: Publish @shalecss/core
-        run: npm publish --workspace=@shalecss/core --access public --provenance --tolerate-republish
+        run: npm publish --workspace=@shalecss/core --access public --provenance
 
       - name: Publish @shalecss/react
-        run: npm publish --workspace=@shalecss/react --access public --provenance --tolerate-republish
+        run: npm publish --workspace=@shalecss/react --access public --provenance
 
       - name: Create GitHub release
         env:
