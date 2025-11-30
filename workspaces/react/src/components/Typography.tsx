@@ -24,15 +24,8 @@ export interface BaseTypographyProps {
 
 /**
  * A typography component that can render different HTML tags based on the variant.
- *
- * @example Basic usage
- * ```tsx
- * <Typography variant="h1">Heading 1</Typography>
- * ```
- *
- * @alpha
  */
-export const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
+const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
   variant = "p",
   Component = variant,
   ...props

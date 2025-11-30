@@ -1,8 +1,6 @@
 {
   "name": "@shalecss/core",
-  "version": "1.0.0-prerelease",
-  "private": true,
-  "type": "module",
+  "version": "0.0.1",
   "description": "a pseudo-skeuomorph CSS framework",
   "main": "dist/shalecss.js",
   "exports": {
@@ -10,6 +8,7 @@
     "./dist/shale.css": "./dist/shale.css",
     "./dist/icons.svg": "./dist/icons.svg"
   },
+  "type": "module",
   "scripts": {
     "generate:banner": "node ./scripts/generate-banner.js",
     "prebuild": "mkdir -p dist && cp ./shalecss.js ./dist/shalecss.js && cp ./icons.svg ./dist/icons.svg && npm run generate:banner",
