@@ -118,16 +118,6 @@ export const HeaderText: PolymorphicComponent<"p", {}>;
 // @alpha
 export const HeaderTitle: PolymorphicComponent<"div", {}>;
 
-// @alpha @deprecated
-export const Html: React.FC<HtmlProps>;
-
-// @alpha (undocumented)
-export interface HtmlProps extends React.HTMLAttributes<HTMLHtmlElement> {
-    Component?: React.ElementType;
-    theme: "light" | "dark" | "contrast";
-    webkitScrollbar?: boolean;
-}
-
 // @alpha
 export const Icon: React.FC<IconProps>;
 

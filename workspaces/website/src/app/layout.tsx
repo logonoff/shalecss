@@ -35,14 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <Html lang="en" className={ubuntu.className} theme="dark" webkitScrollbar>
+      <html lang="en" className={`${ubuntu.className} shale-v1-webkit-scrollbar shale-v1-light`}>
         <body className="shale-v1-body">
           <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
           <PageHeader />
           <ViewTransition name="page">{children}</ViewTransition>
           <PageFooter />
         </body>
-      </Html>
+      </html>
     </ThemeProvider>
   );
 }

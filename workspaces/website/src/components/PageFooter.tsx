@@ -13,8 +13,7 @@ export const PageFooter: React.FC = () => (
     <Container>
       <FlexItem>
         <P>
-          shale.css <Code>v1.0.0-prerelease</Code> (and it will probably stay
-          prerelease forever)
+          shale.css prerelease (and it will probably stay prerelease forever)
         </P>
         <H6 Component="div">
           (c) 2017-2025 <Link href="https://logonoff.co">logonoff</Link>.

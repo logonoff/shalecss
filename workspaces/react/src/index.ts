@@ -13,9 +13,6 @@ export type {
 export type { StateVariant, ShadowVariant } from "./types/variants";
 
 // Layout & Structure
-export { Html } from "./components/Html";
-export type { HtmlProps } from "./components/Html";
-
 export { Container, FlexContainer, FlexForm } from "./components/Container";
 export type { BaseFlexContainerProps } from "./components/Container";
 

@@ -3,7 +3,8 @@ import type { StateVariant } from "../types/variants";
 import type { PolymorphicComponent } from "../types/helpers";
 
 /**
- * The navigation component.
+ * The navigation component. We expect you to use {@link MenuBarButton} inside
+ * as well as wrap this in a Header.
  *
  * @example Basic navigation
  * ```tsx
