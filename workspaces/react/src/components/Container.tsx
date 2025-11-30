@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
+import { css } from "../utils/css";
 
 /**
  * Container components provide layout structure and organization.
@@ -66,7 +66,7 @@ export const FlexContainer: PolymorphicComponent<
         "shale-v1-flex-center": variant === "center",
         "shale-v1-flex-align-center": variant === "align-center",
       },
-      props?.className,
+      props?.className
     )}
   />
 );

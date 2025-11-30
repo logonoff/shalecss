@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
+import { css } from "../utils/css";
 
 /**
  * A skip to content link component for accessibility. This link becomes visible when focused,

@@ -24,7 +24,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const useLocalStorage = <T,>(
   key: string,
-  initialValue: T,
+  initialValue: T
 ): [T, (value: T) => void] => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === "undefined") {
@@ -57,14 +57,14 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useLocalStorage<Theme>("shalecss.theme", "light");
   const [size, setSize] = useLocalStorage<FontSize>(
     "shalecss.fontSize",
-    "regular",
+    "regular"
   );
 
   useEffect(() => {
     document.documentElement.classList.remove(
       "shale-v1-light",
       "shale-v1-dark",
-      "shale-v1-contrast",
+      "shale-v1-contrast"
     );
     document.documentElement.classList.add(`shale-v1-${theme}`);
 

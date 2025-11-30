@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
+import { css } from "../utils/css";
 
 /**
  * A footer component for displaying stuff at the so-called "foot".

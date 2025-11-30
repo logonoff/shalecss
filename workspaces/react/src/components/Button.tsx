@@ -1,6 +1,6 @@
-import { css } from "../utils/css";
-import type { StateVariant } from "../types/variants";
 import type { PolymorphicComponent } from "../types/helpers";
+import type { StateVariant } from "../types/variants";
+import { css } from "../utils/css";
 
 /** @alpha */
 export interface BaseButtonProps {
@@ -34,7 +34,7 @@ export const Button: PolymorphicComponent<"button", BaseButtonProps> = ({
         "shale-v1-button",
         { "shale-v1--secondary": variant === "secondary" },
         { [`shale-v1--${state}`]: state },
-        props?.className,
+        props?.className
       )}
     />
   );

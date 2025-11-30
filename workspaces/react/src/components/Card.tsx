@@ -1,7 +1,7 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
-import { FlexItem } from "./FlexItem";
 import { ShadowVariant } from "../types/variants";
+import { css } from "../utils/css";
+import { FlexItem } from "./FlexItem";
 
 /** @alpha */
 export interface CardProps {
@@ -39,7 +39,7 @@ export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({
     className={css(
       "shale-v1-card",
       { [`shale-v1--${shadow}`]: shadow },
-      props?.className,
+      props?.className
     )}
   />
 );

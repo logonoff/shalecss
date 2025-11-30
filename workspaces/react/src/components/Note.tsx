@@ -1,6 +1,6 @@
+import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 import { FlexItem } from "./FlexItem";
-import type { PolymorphicComponent } from "../types/helpers";
 
 /** @alpha */
 export interface NoteProps {

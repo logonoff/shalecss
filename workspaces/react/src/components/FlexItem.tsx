@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
+import { css } from "../utils/css";
 
 /** @alpha */
 export type FlexItemProps =
@@ -88,7 +88,7 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
         "shale-v1-flex-quarter": flex === "quarter",
         "shale-v1-flex-custom": flex === "custom",
       },
-      props?.className,
+      props?.className
     )}
   />
 );

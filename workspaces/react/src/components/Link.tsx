@@ -1,6 +1,6 @@
-import { css } from "../utils/css";
-import type { StateVariant } from "../types/variants";
 import type { PolymorphicComponent } from "../types/helpers";
+import type { StateVariant } from "../types/variants";
+import { css } from "../utils/css";
 
 /** @alpha */
 export interface BaseLinkProps {
@@ -33,7 +33,7 @@ export const Link: PolymorphicComponent<"a", BaseLinkProps> = ({
     className={css(
       "shale-v1-link",
       { [`shale-v1--${state}`]: state },
-      props?.className,
+      props?.className
     )}
   />
 );

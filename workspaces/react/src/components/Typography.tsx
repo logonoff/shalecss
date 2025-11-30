@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { PolymorphicComponent } from "../types/helpers";
+import { css } from "../utils/css";
 
 /**
  * The possible variants of typography components. Corresponds to HTML tags.
@@ -42,7 +42,7 @@ const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
 const makeTypography =
   (
     variant: TypographyVariant,
-    Component: React.ElementType = variant,
+    Component: React.ElementType = variant
   ): PolymorphicComponent<typeof Component, BaseTypographyProps> =>
   (props: any) => (
     <Typography Component={Component} {...props} variant={variant} />

@@ -1,6 +1,6 @@
-import { css } from "../utils/css";
-import type { StateVariant } from "../types/variants";
 import type { PolymorphicComponent } from "../types/helpers";
+import type { StateVariant } from "../types/variants";
+import { css } from "../utils/css";
 
 /**
  * The navigation component. We expect you to use {@link MenuBarButton} inside
@@ -57,7 +57,7 @@ export const MenuBarButton: PolymorphicComponent<
       "shale-v1-menu-bar-button",
       { "shale-v1-current": current },
       { [`shale-v1--${state}`]: state },
-      props?.className,
+      props?.className
     )}
   />
 );

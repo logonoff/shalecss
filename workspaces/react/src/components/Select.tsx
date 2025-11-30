@@ -1,5 +1,5 @@
-import { css } from "../utils/css";
 import type { StateVariant } from "../types/variants";
+import { css } from "../utils/css";
 
 /** @alpha */
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {

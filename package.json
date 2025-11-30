@@ -12,7 +12,7 @@
     "dev:website": "cd workspaces/website && npm run dev",
     "build": "npm run build:core && npm run build:react && npm run build:website",
     "dev": "concurrently --names core,react,website 'npm run dev:core' 'npm run dev:react' 'npm run dev:website'",
-    "pretty": "prettier --write . \"!**/reports/*.md\"",
+    "pretty": "prettier --write . \"!**/reports/*.md\" --list-different",
     "version": "npm run pretty && node ./scripts/version-bump.mjs && npm install && npm run build"
   },
   "devDependencies": {

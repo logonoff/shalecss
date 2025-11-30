@@ -1,11 +1,10 @@
+import { PageFooter } from "@/components/PageFooter";
+import { PageHeader } from "@/components/PageHeader";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import "@shalecss/core/dist/shale.css";
 import { SkipToContent } from "@shalecss/react";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
-
-import { PageFooter } from "@/components/PageFooter";
-import { PageHeader } from "@/components/PageHeader";
-import "@shalecss/core/dist/shale.css";
 import { ViewTransition } from "react";
 
 const ubuntu = Ubuntu({
