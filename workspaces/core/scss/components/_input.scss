@@ -25,10 +25,9 @@
       0 0 0 2px var(--#{$shale}input-inner-border);
     color: var(--#{$shale}text);
     font-family: inherit;
-    image-rendering: pixelated;
     outline: 0;
     line-height: 1.5;
-    padding: 0.5em;
+    padding: 0.35em;
     transition: 0.3s box-shadow ease;
 
     &:hover,

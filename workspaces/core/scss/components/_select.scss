@@ -51,11 +51,6 @@
       );
     }
 
-    &:focus,
-    &#{$focus} {
-      outline: 2px solid var(--#{$shale}button-border-active);
-    }
-
     option,
     optgroup {
       background: var(--#{$shale}card-background);

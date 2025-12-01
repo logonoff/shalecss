@@ -54,6 +54,7 @@
 }
 
 .#{$shale}flex-form {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: var(--#{$shale}font-2);
