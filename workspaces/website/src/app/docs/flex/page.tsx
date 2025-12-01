@@ -1,5 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => (
-  <ComponentDocs components={["FlexContainer", "FlexItem", "FlexForm"]} />
-);
+export default () => <ComponentDocs pathname="/docs/flex" />;

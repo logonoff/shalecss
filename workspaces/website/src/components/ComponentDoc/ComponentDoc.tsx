@@ -1,3 +1,4 @@
+import { components } from "@/app/docs/components";
 import {
   Button,
   Code,
@@ -31,7 +32,7 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
 
   return (
     <FlexItem>
-      <H2>{component}</H2>
+      <H2 id={component}>{component}</H2>
 
       {doc.sourcePath && (
         <div style={{ marginBottom: "var(--shale-v1-font-1)" }}>
@@ -139,10 +140,10 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
 };
 
 export interface ComponentDocsProps {
-  components: (keyof typeof import("@shalecss/react"))[];
+  pathname: keyof typeof components;
 }
 
-export const ComponentDocs: React.FC<ComponentDocsProps> = ({ components }) => {
+export const ComponentDocs: React.FC<ComponentDocsProps> = ({ pathname }) => {
   return (
     <FlexContainer
       style={{
@@ -152,7 +153,7 @@ export const ComponentDocs: React.FC<ComponentDocsProps> = ({ components }) => {
         marginBottom: "var(--shale-v1-font-5)",
       }}
     >
-      {components.map((component) => (
+      {components[pathname].components.map((component) => (
         <ComponentDoc key={component} component={component} />
       ))}
     </FlexContainer>

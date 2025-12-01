@@ -1,5 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => (
-  <ComponentDocs components={["CaptionButton", "CaptionMenu"]} />
-);
+export default () => <ComponentDocs pathname="/docs/caption-button" />;

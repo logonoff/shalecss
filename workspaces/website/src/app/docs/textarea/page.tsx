@@ -1,3 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => <ComponentDocs components={["Textarea"]} />;
+export default () => <ComponentDocs pathname="/docs/textarea" />;

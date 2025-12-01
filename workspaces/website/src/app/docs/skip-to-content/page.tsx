@@ -1,3 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => <ComponentDocs components={["SkipToContent"]} />;
+export default () => <ComponentDocs pathname="/docs/skip-to-content" />;

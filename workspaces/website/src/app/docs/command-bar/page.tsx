@@ -1,3 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => <ComponentDocs components={["CommandBar"]} />;
+export default () => <ComponentDocs pathname="/docs/command-bar" />;

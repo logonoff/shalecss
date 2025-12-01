@@ -1,3 +1,3 @@
 import { ComponentDocs } from "@/components/ComponentDoc/ComponentDoc";
 
-export default () => <ComponentDocs components={["Button"]} />;
+export default () => <ComponentDocs pathname="/docs/button" />;
