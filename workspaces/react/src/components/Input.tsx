@@ -27,6 +27,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
  *   <Input id="input-month" placeholder="month" type="month" />
  *   <Input id="input-week" placeholder="week" type="week" />
  *   <Input id="input-color" placeholder="color" type="color" />
+ *   <Input id="input-file" placeholder="file" type="file" />
  * </FlexForm>
  * ```
  *
@@ -46,6 +47,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
  *   <Input id="input-month-disabled" disabled placeholder="month" type="month" />
  *   <Input id="input-week-disabled" disabled placeholder="week" type="week" />
  *   <Input id="input-color-disabled" disabled placeholder="color" type="color" />
+ *   <Input id="input-file-disabled" disabled placeholder="file" type="file" />
  * </FlexForm>
  * ```
  *
