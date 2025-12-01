@@ -79,6 +79,10 @@ export const FlexContainer: PolymorphicComponent<
  * <FlexForm onSubmit={(e) => { e.preventDefault(); alert('Form submitted!'); }}>
  *   <Input type="text" placeholder="Name" />
  *   <Input type="email" placeholder="Email" />
+ *   <Select>
+ *     <option value="option1">Option 1</option>
+ *     <option value="option2">Option 2</option>
+ *   </Select>
  *   <Button type="submit">Submit</Button>
  * </FlexForm>
  * ```

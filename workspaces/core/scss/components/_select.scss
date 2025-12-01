@@ -28,11 +28,11 @@
     color: var(--#{$shale}button-text-colour, var(--#{$shale}text-colour));
     cursor: inherit;
     font-family: inherit;
-    font-size: inherit;
+    font-size: var(--#{$shale}font--1);
     grid-area: select;
     line-height: inherit;
     width: 100%;
-    padding: 0.25em 1.5em 0.25em 0.5em;
+    padding: 0.25em 1.75em 0.25em 0.5em;
     z-index: 1;
 
     &:hover,
