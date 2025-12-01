@@ -52,7 +52,7 @@ export default () => (
         {componentLinks.map(({ href, name }) => (
           <Card
             Component={(props: any) => <Button Component="a" {...props} />}
-            href={href}
+            href={href.replace("/docs/", "./docs/")}
             key={name}
             style={{ marginBottom: "var(--shale-v1-font-2)" }}
           >
