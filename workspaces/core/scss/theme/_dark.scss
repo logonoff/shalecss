@@ -33,15 +33,11 @@
   --#{$shale}header-background-disabled: #787878
     linear-gradient(#8a8a8a, #787878);
   --#{$shale}header-text: white;
-  --#{$shale}header-bar-current: color-mix(
-    in srgb,
-    var(--#{$shale}accent-400),
-    transparent 20%
-  );
-  --#{$shale}header-glow-current: var(--#{$shale}accent-400);
+  --#{$shale}header-bar-current: var(--#{$shale}accent-300);
+  --#{$shale}header-glow-current: var(--#{$shale}accent-300);
   --#{$shale}header-bar-hover: var(--#{$shale}accent-400);
   --#{$shale}header-glow-hover: var(--#{$shale}accent-400);
-  --#{$shale}header-bar-active: var(--#{$shale}accent-800);
+  --#{$shale}header-bar-active: var(--#{$shale}accent-400);
 
   /* Footer */
   --#{$shale}footer-background: #4e4e4e linear-gradient(#646464, #4e4e4e);
@@ -72,7 +68,7 @@
   --#{$shale}button: #333 linear-gradient(#474747, #333);
   --#{$shale}button-hover: #595959 linear-gradient(#595959, #505050);
   --#{$shale}button-active: linear-gradient(
-    var(--#{$shale}accent-700),
+    var(--#{$shale}accent-600),
     var(--#{$shale}accent-900)
   );
   --#{$shale}button-disabled: #2d2d2d;
