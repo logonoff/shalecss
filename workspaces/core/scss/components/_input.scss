@@ -4,6 +4,12 @@
  * Checkboxes and Radio
  */
 .#{$shale}input {
+  display: flex;
+
+  label {
+    color: var(--#{$shale}text-colour-secondary);
+  }
+
   input[type="text"],
   input[type="password"],
   input[type="email"],
@@ -25,6 +31,7 @@
       0 0 0 2px var(--#{$shale}input-inner-border);
     color: var(--#{$shale}text);
     font-family: inherit;
+    order: 1;
     outline: 0;
     line-height: 1.5;
     padding: 0.35em;
@@ -49,6 +56,11 @@
       --#{$shale}input-inner-border: var(
         --#{$shale}input-inner-border-disabled
       );
+    }
+
+    + label {
+      margin-right: 0.5em;
+      order: 0;
     }
   }
 
