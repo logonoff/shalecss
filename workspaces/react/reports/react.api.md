@@ -133,7 +133,7 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
 export const Input: React.FC<InputProps>;
 
 // @alpha (undocumented)
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.ComponentProps<"input"> {
     id?: string;
     label?: string;
 }
