@@ -38,10 +38,10 @@
     "@microsoft/api-extractor": "^7.55.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "^7.0.0-dev.20251129.1",
+    "@typescript/native-preview": "^7.0.0-dev.20251203.1",
     "npm-watch": "0.13.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "watch": {
     "build": {
