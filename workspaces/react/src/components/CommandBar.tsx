@@ -1,10 +1,13 @@
 import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
+import { FlexContainer } from "./Container";
 
 /** @alpha */
 export interface BaseCommandBarProps {
   /** Whether to make the command bar grow to fill available space */
   flexGrow?: boolean;
+  /** Whether to add padding around the command bar */
+  gutter?: boolean;
 }
 
 /**
@@ -22,16 +25,16 @@ export interface BaseCommandBarProps {
  *
  * @alpha
  */
-export const CommandBar: PolymorphicComponent<"div", BaseCommandBarProps> = ({
-  Component = "div",
-  flexGrow,
-  ...props
-}) => (
+export const CommandBar: PolymorphicComponent<
+  typeof FlexContainer,
+  BaseCommandBarProps
+> = ({ Component = FlexContainer, flexGrow, gutter, ...props }) => (
   <Component
     {...props}
     className={css(
       "shale-v1-command-bar",
       { "shale-v1-flex-grow": flexGrow },
+      { "shale-v1-command-bar--gutter": gutter },
       props?.className,
     )}
   />

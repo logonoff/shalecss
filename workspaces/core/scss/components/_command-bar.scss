@@ -10,3 +10,8 @@
   align-items: center;
   color: var(--#{$shale}text-colour);
 }
+
+.#{$shale}command-bar--gutter {
+  padding-inline: var(--#{$shale}font-2);
+  padding-block: var(--#{$shale}font--1);
+}

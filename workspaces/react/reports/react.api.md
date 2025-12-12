@@ -17,6 +17,7 @@ export interface BaseButtonProps {
 // @alpha (undocumented)
 export interface BaseCommandBarProps {
     flexGrow?: boolean;
+    gutter?: boolean;
 }
 
 // @alpha (undocumented)
@@ -61,7 +62,7 @@ export interface CardProps {
 export const Code: PolymorphicComponent<"code">;
 
 // @alpha
-export const CommandBar: PolymorphicComponent<"div", BaseCommandBarProps>;
+export const CommandBar: PolymorphicComponent<typeof FlexContainer, BaseCommandBarProps>;
 
 // @alpha (undocumented)
 export type ComponentProp<C extends ElementType> = {
