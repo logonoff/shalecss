@@ -70,6 +70,7 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
         <FlexItem Component="section">
           <H3>Examples</H3>
           <FlexContainer
+            variant="space-between"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -146,6 +147,7 @@ export interface ComponentDocsProps {
 export const ComponentDocs: React.FC<ComponentDocsProps> = ({ pathname }) => {
   return (
     <FlexContainer
+      variant="space-between"
       style={{
         display: "flex",
         flexDirection: "column",

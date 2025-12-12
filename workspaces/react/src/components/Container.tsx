@@ -57,7 +57,7 @@ export interface BaseFlexContainerProps {
 export const FlexContainer: PolymorphicComponent<
   "div",
   BaseFlexContainerProps
-> = ({ Component = "div", variant = "space-between", ...props }) => (
+> = ({ Component = "div", variant, ...props }) => (
   <Component
     {...props}
     className={css(

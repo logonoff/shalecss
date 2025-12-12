@@ -19,6 +19,7 @@ export default function DocsPage({
       <FlexContainer variant="center">
         <FlexItem flex="custom" flexAmount="10%">
           <FlexContainer
+            variant="space-between"
             style={{
               flexDirection: "column",
               gap: "var(--shale-v1-font--2)",
