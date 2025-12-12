@@ -85,6 +85,9 @@
   --#{$shale}button-inset-border-hover: #666;
   --#{$shale}button-inset-border-active: var(--#{$shale}accent-800);
 
+  /* Dialog */
+  --#{$shale}dialog-backdrop: rgba(0, 0, 0, 0.6);
+
   /* Input */
   --#{$shale}input-background: #555 linear-gradient(#606060, #555);
   --#{$shale}input-background-disabled: #444 linear-gradient(#444, #333);

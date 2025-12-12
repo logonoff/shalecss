@@ -17,6 +17,7 @@ export const components: Record<
   "/docs/card": { name: "Card", components: ["Card"] },
   "/docs/command-bar": { name: "CommandBar", components: ["CommandBar"] },
   "/docs/container": { name: "Container", components: ["Container"] },
+  "/docs/dialog": { name: "Dialog", components: ["Dialog"] },
   "/docs/flex": {
     name: "Flex",
     components: ["FlexContainer", "FlexItem", "FlexForm"],

@@ -87,6 +87,9 @@
   --#{$shale}button-inset-border-hover: #fdfdfd;
   --#{$shale}button-inset-border-active: var(--#{$shale}accent-200);
 
+  /* Dialog */
+  --#{$shale}dialog-backdrop: rgba(0, 0, 0, 0.6);
+
   /* Input */
   --#{$shale}input-background: white linear-gradient(#f9f9f9, white);
   --#{$shale}input-background-disabled: #e3e3e3

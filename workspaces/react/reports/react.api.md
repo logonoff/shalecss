@@ -73,6 +73,13 @@ export type ComponentProp<C extends ElementType> = {
 export const Container: PolymorphicComponent<"div", {}>;
 
 // @alpha
+export const Dialog: FC<DialogProps>;
+
+// @alpha (undocumented)
+export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {
+}
+
+// @alpha
 export const FlexContainer: PolymorphicComponent<"div", BaseFlexContainerProps>;
 
 // @alpha

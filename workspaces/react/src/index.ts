@@ -7,11 +7,11 @@
 
 // Core types
 export type {
+  ComponentProp,
   PolymorphicComponent,
   PolymorphicComponentProp,
-  ComponentProp,
 } from "./types/helpers";
-export type { StateVariant, ShadowVariant } from "./types/variants";
+export type { ShadowVariant, StateVariant } from "./types/variants";
 
 // Layout & Structure
 export { Container, FlexContainer, FlexForm } from "./components/Container";
@@ -23,8 +23,12 @@ export type { FlexItemProps } from "./components/FlexItem";
 export { Card } from "./components/Card";
 export type { CardProps } from "./components/Card";
 
+// Dialog
+export { Dialog } from "./components/Dialog";
+export type { DialogProps } from "./components/Dialog";
+
 // Typography
-export { H1, H2, H3, H4, H5, H6, P, Code } from "./components/Typography";
+export { Code, H1, H2, H3, H4, H5, H6, P } from "./components/Typography";
 
 // Forms & Inputs
 export { Button } from "./components/Button";
@@ -43,11 +47,11 @@ export { Link } from "./components/Link";
 export type { BaseLinkProps } from "./components/Link";
 
 // Navigation
-export { Header, HeaderTitle, HeaderText } from "./components/Header";
+export { Header, HeaderText, HeaderTitle } from "./components/Header";
 export type { BaseHeaderProps } from "./components/Header";
 
 export { Footer } from "./components/Footer";
-export { Nav, MenuBarButton } from "./components/Nav";
+export { MenuBarButton, Nav } from "./components/Nav";
 
 export type { BaseMenuBarButtonProps } from "./components/Nav";
 export { SkipToContent } from "./components/SkipToContent";
