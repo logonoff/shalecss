@@ -26,7 +26,7 @@
     display: inline-block;
     fill: var(--#{$shale}header-text);
     filter: var(--#{$shale}filter-shadow-moderate);
-    font-size: 1rem;
+    font-size: var(--#{$shale}font-1);
     font-weight: bold;
     opacity: 0.75;
     outline-color: var(--#{$shale}accent-400);

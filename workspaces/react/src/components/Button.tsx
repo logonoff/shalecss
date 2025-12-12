@@ -20,6 +20,15 @@ export interface BaseButtonProps {
  * <Button variant="primary">Click Me</Button>;
  * ```
  *
+ * @example With icon
+ *
+ * ```tsx
+ * <Button state="active">
+ *   <Icon icon="download" />
+ *   Download
+ * </Button>;
+ * ```
+ *
  * @alpha
  */
 export const Button: PolymorphicComponent<"button", BaseButtonProps> = ({

@@ -79,7 +79,9 @@
   vertical-align: middle;
 
   .#{$shale}icon {
-    font-size: 0.75em;
-    padding-left: 0.25em;
+    font-size: var(--#{$shale}font-1);
+    padding: 0.1rem;
+    display: inline-block;
+    vertical-align: text-bottom;
   }
 }

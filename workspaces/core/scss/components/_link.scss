@@ -9,7 +9,7 @@
 
   .#{$shale}icon {
     fill: var(--#{$shale}link-colour);
-    font-size: 0.75em;
+    font-size: var(--#{$shale}font-0);
     padding-left: 0.25em;
   }
 

@@ -33,7 +33,7 @@
     & .#{$shale}header-title {
       align-items: center;
       flex-grow: 1;
-      font-size: 1rem;
+      font-size: var(--#{$shale}font-0);
     }
 
     & .#{$shale}caption-menu {
