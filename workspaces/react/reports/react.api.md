@@ -27,6 +27,8 @@ export interface BaseFlexContainerProps {
 
 // @alpha (undocumented)
 export interface BaseHeaderProps {
+    compact?: boolean;
+    invertBorder?: boolean;
     state?: StateVariant;
 }
 

@@ -14,7 +14,7 @@ export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {}
  *   <Button type="button" command="show-modal" commandfor="my-dialog" aria-haspopup="dialog">Open Dialog</Button>
  *
  *   <Dialog id="my-dialog" style={{ minWidth: "400px" }}>
- *     <Header>
+ *     <Header compact>
  *       <HeaderTitle>
  *         <HeaderText>This is a dialog</HeaderText>
  *       </HeaderTitle>

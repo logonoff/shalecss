@@ -8,7 +8,7 @@
   align-items: center;
   display: flex;
   gap: 0.75rem;
-  height: 3rem;
+  height: var(--#{$shale}header-height, 3rem);
   padding-right: 0.75rem;
   pointer-events: auto;
   position: absolute;
@@ -29,13 +29,15 @@
 
 /* Header + Menu Bar */
 .#{$shale}header {
+  --#{$shale}header-height: 3rem;
+
   background: var(--#{$shale}header-background);
   border-bottom: 1px solid var(--#{$shale}secondary-border);
   box-shadow: var(--#{$shale}shadow-moderate);
   color: var(--#{$shale}header-text);
   display: block;
   position: sticky;
-  top: -3rem;
+  top: calc(-1 * var(--#{$shale}header-height));
   user-select: none;
   width: 100%;
   z-index: 41;
@@ -43,6 +45,24 @@
   &-invert-border {
     border-top: 1px solid var(--#{$shale}secondary-border);
     border-bottom: 0;
+  }
+
+  &-compact {
+    --#{$shale}header-height: 2.25rem;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .#{$shale}header-title {
+      align-items: center;
+      flex-grow: 1;
+      font-size: 1rem;
+    }
+
+    & .#{$shale}caption-menu {
+      height: var(--#{$shale}header-height);
+    }
   }
 
   &[disabled],
@@ -53,8 +73,8 @@
 
 .#{$shale}header-title {
   font-size: var(--#{$shale}font-1);
-  height: 3rem;
-  line-height: 3rem;
+  height: var(--#{$shale}header-height);
+  line-height: var(--#{$shale}header-height);
   opacity: 0.7;
   text-align: center;
   text-shadow: var(--#{$shale}text-shadow-puffy);

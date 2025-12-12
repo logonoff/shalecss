@@ -29,6 +29,8 @@ $indeterminate: ".#{$shale}-indeterminate" !default;
   --#{$shale}font-1: calc(var(--#{$shale}font-0) * var(--#{$shale}font-scale));
   --#{$shale}font-0: 1rem;
   --#{$shale}font--1: calc(var(--#{$shale}font-0) / var(--#{$shale}font-scale));
+  --#{$shale}font--2: calc(var(--#{$shale}font--1) / var(--#{$shale}font-scale));
+  --#{$shale}font--3: calc(var(--#{$shale}font--2) / var(--#{$shale}font-scale));
 
   /* Shadows */
   --#{$shale}shadow-subtle: 0 2px 4px 0 rgba(0, 0, 0, 0.12);

@@ -34,7 +34,7 @@ export const CommandBar: PolymorphicComponent<
     className={css(
       "shale-v1-command-bar",
       { "shale-v1-flex-grow": flexGrow },
-      { "shale-v1-command-bar--gutter": gutter },
+      { "shale-v1-command-bar-gutter": gutter },
       props?.className,
     )}
   />

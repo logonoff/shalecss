@@ -6,6 +6,10 @@ import { css } from "../utils/css";
 export interface BaseHeaderProps {
   /** The initial state of the header (if you want to force a specific state) */
   state?: StateVariant;
+  /** Move the border to the top instead of the bottom */
+  invertBorder?: boolean;
+  /** More compact styles for use in a titlebar */
+  compact?: boolean;
 }
 
 /**
@@ -86,6 +90,8 @@ export interface BaseHeaderProps {
 export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
   Component = "header",
   state,
+  invertBorder = false,
+  compact = false,
   ...props
 }) => (
   <Component
@@ -93,6 +99,8 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
     className={css(
       "shale-v1-header",
       { [`shale-v1--${state}`]: state },
+      { "shale-v1-header-invert-border": invertBorder },
+      { "shale-v1-header-compact": compact },
       props?.className,
     )}
   />
