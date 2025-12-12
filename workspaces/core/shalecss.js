@@ -5,9 +5,9 @@
 "use strict";
 
 /**
- * toggles dark theme
+ * Toggles dark theme
  *
- * @param {Element} e element which has a .icon elem as a child
+ * @param {Element} e Element which has a .icon elem as a child
  */
 function toggleDark(e) {
   if (document.documentElement.classList.contains("shale-v1-dark")) {
@@ -22,9 +22,9 @@ function toggleDark(e) {
 }
 
 /**
- * toggles contrast theme
+ * Toggles contrast theme
  *
- * @param {Element} e element which has a .icon elem as a child
+ * @param {Element} e Element which has a .icon elem as a child
  */
 function toggleContrast(e) {
   if (document.documentElement.classList.contains("shale-v1-contrast")) {
@@ -39,9 +39,9 @@ function toggleContrast(e) {
 }
 
 /**
- * toggles larger text size
+ * Toggles larger text size
  *
- * @param {Element} e element which has a .icon elem as a child
+ * @param {Element} e Element which has a .icon elem as a child
  */
 function toggleTextSize(e) {
   if (document.documentElement.classList.contains("shale-v1-bigger-text")) {

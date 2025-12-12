@@ -12,13 +12,17 @@ export interface BaseLinkProps {
  * A link component.
  *
  * @example Basic link
+ *
  * ```tsx
- * <Link href="https://example.com">Visit Example</Link>
+ * <Link href="https://example.com">Visit Example</Link>;
  * ```
  *
  * @example Link with forced state
+ *
  * ```tsx
- * <Link href="/page" state="hover">Hovered Link</Link>
+ * <Link href="/page" state="hover">
+ *   Hovered Link
+ * </Link>;
  * ```
  *
  * @alpha

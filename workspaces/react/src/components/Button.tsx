@@ -15,8 +15,9 @@ export interface BaseButtonProps {
  * used to trigger actions when clicked.
  *
  * @example Simple Button
+ *
  * ```tsx
- * <Button variant="primary">Click Me</Button>
+ * <Button variant="primary">Click Me</Button>;
  * ```
  *
  * @alpha

@@ -12,35 +12,39 @@ export interface NoteProps {
  * A note component to highlight important information.
  *
  * @example Info note
+ *
  * ```tsx
  * <Note variant="info">
  *   <Icon icon="info" /> <strong>Note</strong>
  *   <NoteText>This is an informational note.</NoteText>
- * </Note>
+ * </Note>;
  * ```
  *
  * @example Alert note
+ *
  * ```tsx
  * <Note variant="alert">
  *   <Icon icon="warning" /> <strong>Alert</strong>
  *   <NoteText>This is an alert message!</NoteText>
- * </Note>
+ * </Note>;
  * ```
  *
  * @example Warning note
+ *
  * ```tsx
  * <Note variant="warn">
  *   <Icon icon="danger" /> <strong>Warning</strong>
  *   <NoteText>This is a warning message.</NoteText>
- * </Note>
+ * </Note>;
  * ```
  *
  * @example Tip note
+ *
  * ```tsx
  * <Note variant="tip">
  *   <Icon icon="lightbulb" /> <strong>Tip</strong>
  *   <NoteText>This is a helpful tip.</NoteText>
- * </Note>
+ * </Note>;
  * ```
  *
  * @alpha
@@ -60,8 +64,9 @@ export const Note: PolymorphicComponent<typeof FlexItem, NoteProps> = ({
  * A text component for the content inside a Note.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <NoteText>Content inside a note.</NoteText>
+ * <NoteText>Content inside a note.</NoteText>;
  * ```
  *
  * @alpha

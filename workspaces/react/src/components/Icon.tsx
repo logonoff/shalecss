@@ -13,19 +13,23 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
 }
 
 /**
- * The `Icon` component displays SVG icons from an icon sprite sheet using SVG's `<use>` element.
+ * The `Icon` component displays SVG icons from an icon sprite sheet using SVG's
+ * `<use>` element.
  *
  * @example Basic icon
+ *
  * ```tsx
- * <Icon icon="search" />
+ * <Icon icon="search" />;
  * ```
  *
  * @example Flipped icon
+ *
  * ```tsx
- * <Icon icon="search" flipX flipY />
+ * <Icon icon="search" flipX flipY />;
  * ```
  *
  * @example All icons provided by default
+ *
  * ```tsx
  * <FlexContainer variant="space-between">
  *   <Icon icon="a-lowercase" />
@@ -69,7 +73,7 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
  *   <Icon icon="windows" />
  *   <Icon icon="windows8" />
  *   <Icon icon="youtube" />
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @alpha

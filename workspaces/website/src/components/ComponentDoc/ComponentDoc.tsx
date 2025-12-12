@@ -24,9 +24,7 @@ function formatType(str: string): string {
   return str.replace(/\n/g, " ");
 }
 
-/**
- * Renders the TSDoc for a given shalecss export
- */
+/** Renders the TSDoc for a given shalecss export */
 export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
   const doc: DocCommentParseResult = parseDocComment(component);
 

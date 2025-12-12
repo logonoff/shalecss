@@ -32,9 +32,7 @@ const apiModel = new ApiModel();
 const apiJsonPath = path.resolve(process.cwd(), "../react/temp/react.api.json");
 const apiPackage = apiModel.loadPackage(apiJsonPath);
 
-/**
- * Represents a parsed code example from documentation.
- */
+/** Represents a parsed code example from documentation. */
 export interface ParsedExample {
   /** The title of the example */
   title: string;
@@ -42,9 +40,7 @@ export interface ParsedExample {
   code: string;
 }
 
-/**
- * Represents a parsed prop from a component's props interface.
- */
+/** Represents a parsed prop from a component's props interface. */
 export interface ParsedProp {
   /** The name of the prop */
   name: string;
@@ -58,9 +54,7 @@ export interface ParsedProp {
   description?: React.ReactNode;
 }
 
-/**
- * The result of parsing a component's documentation comment.
- */
+/** The result of parsing a component's documentation comment. */
 export interface DocCommentParseResult {
   /** The name of the component */
   name: string;
@@ -81,7 +75,8 @@ export interface DocCommentParseResult {
 }
 
 /**
- * Extracts React nodes from a TSDoc node, converting documentation markup to renderable components.
+ * Extracts React nodes from a TSDoc node, converting documentation markup to
+ * renderable components.
  */
 const extractReactNodeFromText = (
   node: DocNode,
@@ -151,9 +146,7 @@ const extractReactNodeFromText = (
   return null;
 };
 
-/**
- * Converts a TSDoc section into React nodes.
- */
+/** Converts a TSDoc section into React nodes. */
 const getReactNodeFromSection = (
   section: DocSection | undefined,
 ): React.ReactNode => {
@@ -161,9 +154,7 @@ const getReactNodeFromSection = (
   return section.nodes.map((node, i) => extractReactNodeFromText(node, i));
 };
 
-/**
- * Parses example blocks from TSDoc custom blocks.
- */
+/** Parses example blocks from TSDoc custom blocks. */
 const parseExamplesFromBlocks = (
   blocks: readonly DocBlock[],
 ): ParsedExample[] => {
@@ -201,9 +192,7 @@ const parseExamplesFromBlocks = (
   return examples;
 };
 
-/**
- * Converts an API Extractor release tag to a release stage string.
- */
+/** Converts an API Extractor release tag to a release stage string. */
 const getReleaseStage = (
   releaseTag: ReleaseTag,
 ): "alpha" | "beta" | "public" | undefined => {
@@ -219,9 +208,7 @@ const getReleaseStage = (
   }
 };
 
-/**
- * Checks if an API member is deprecated and extracts the deprecation message.
- */
+/** Checks if an API member is deprecated and extracts the deprecation message. */
 const getIsDeprecated = (
   deprecatedBlock: DocBlock | undefined,
 ): React.ReactNode | undefined => {
@@ -231,9 +218,7 @@ const getIsDeprecated = (
   return getReactNodeFromSection(deprecatedBlock.content);
 };
 
-/**
- * Finds an API member by name in the loaded API package.
- */
+/** Finds an API member by name in the loaded API package. */
 const findMember = (name: string): ApiItem | undefined => {
   const entryPoint = apiPackage.entryPoints[0];
   if (!entryPoint) return undefined;
@@ -247,8 +232,8 @@ const findMember = (name: string): ApiItem | undefined => {
 };
 
 /**
- * Finds the props interface for a component variable.
- * Searches for interfaces matching patterns like `ComponentProps` or `BaseComponentProps`.
+ * Finds the props interface for a component variable. Searches for interfaces
+ * matching patterns like `ComponentProps` or `BaseComponentProps`.
  */
 const findPropsInterface = (
   componentMember: ApiVariable,
@@ -285,9 +270,7 @@ const findPropsInterface = (
   return undefined;
 };
 
-/**
- * Extracts prop definitions from a props interface.
- */
+/** Extracts prop definitions from a props interface. */
 const extractProps = (
   propsInterface: ApiInterface | undefined,
 ): ParsedProp[] => {
@@ -331,8 +314,9 @@ const extractProps = (
 };
 
 /**
- * Extracts the default HTML element from a polymorphic component's type signature.
- * Looks for patterns like `<"button",` or `<"div">` in the type excerpt.
+ * Extracts the default HTML element from a polymorphic component's type
+ * signature. Looks for patterns like `<"button",` or `<"div">` in the type
+ * excerpt.
  */
 const getDefaultElement = (member: ApiVariable): string | undefined => {
   const excerpt = member.excerpt.text;
@@ -342,7 +326,8 @@ const getDefaultElement = (member: ApiVariable): string | undefined => {
 };
 
 /**
- * Parses the documentation comment for a component from the API Extractor output.
+ * Parses the documentation comment for a component from the API Extractor
+ * output.
  *
  * @throws Error if the component is not found in the API documentation
  */

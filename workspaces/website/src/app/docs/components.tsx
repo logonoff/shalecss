@@ -1,6 +1,4 @@
-/**
- * A list of shalecss exports and what page they belong to
- */
+/** A list of shalecss exports and what page they belong to */
 export const components: Record<
   string,
   {

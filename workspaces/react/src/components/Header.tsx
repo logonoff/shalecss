@@ -16,17 +16,18 @@ export interface BaseHeaderProps {
  * A header component.
  *
  * @example Simple example
+ *
  * ```tsx
  * <Header>
  *   <HeaderTitle>
  *     <HeaderText>example header bar (just the header)</HeaderText>
  *   </HeaderTitle>
- * </Header>
+ * </Header>;
  * ```
  *
  * @example With disabled state
+ *
  * ```tsx
-
  * <Header state="disabled">
  *   <HeaderTitle>
  *     <HeaderText>example header bar (disabled)</HeaderText>
@@ -44,10 +45,11 @@ export interface BaseHeaderProps {
  *     <MenuBarButton href="#">idle</MenuBarButton>
  *     <MenuBarButton state="disabled">disabled</MenuBarButton>
  *   </Nav>
- * </Header>
+ * </Header>;
  * ```
  *
  * @example With all the bells and whistles
+ *
  * ```tsx
  * <Header>
  *   <HeaderTitle>
@@ -56,12 +58,22 @@ export interface BaseHeaderProps {
  *     </HeaderText>
  *     <CaptionMenu>
  *       <CaptionButton title="Toggle text size">
- *         <Icon icon="a-lowercase" className="shale-v1-bigger-text-enabled" />
- *         <Icon icon="a-uppercase" className="shale-v1-bigger-text-disabled" />
+ *         <Icon
+ *           icon="a-lowercase"
+ *           className="shale-v1-bigger-text-enabled"
+ *         />
+ *         <Icon
+ *           icon="a-uppercase"
+ *           className="shale-v1-bigger-text-disabled"
+ *         />
  *       </CaptionButton>
  *       <CaptionButton title="Toggle contrast">
  *         <Icon icon="contrast" className="shale-v1-contrast-enabled" />
- *         <Icon icon="contrast" flipX className="shale-v1-contrast-disabled" />
+ *         <Icon
+ *           icon="contrast"
+ *           flipX
+ *           className="shale-v1-contrast-disabled"
+ *         />
  *       </CaptionButton>
  *       <CaptionButton title="Toggle dark mode">
  *         <Icon icon="moon-stroke" className="shale-v1-dark-enabled" />
@@ -70,19 +82,31 @@ export interface BaseHeaderProps {
  *     </CaptionMenu>
  *   </HeaderTitle>
  *   <Nav>
- *     <MenuBarButton href="#" current>current option</MenuBarButton>
- *     <MenuBarButton href="#" state="hover">hovered over</MenuBarButton>
- *     <MenuBarButton href="#" state="active">clicked on</MenuBarButton>
+ *     <MenuBarButton href="#" current>
+ *       current option
+ *     </MenuBarButton>
+ *     <MenuBarButton href="#" state="hover">
+ *       hovered over
+ *     </MenuBarButton>
+ *     <MenuBarButton href="#" state="active">
+ *       clicked on
+ *     </MenuBarButton>
  *     <MenuBarButton href="#">idle</MenuBarButton>
  *     <MenuBarButton state="disabled">disabled</MenuBarButton>
  *   </Nav>
  *   <CommandBar>
- *     <Button Component="a" href="#" variant="secondary">😂 Live</Button>
- *     <Button Component="a" href="#" variant="secondary">🤔 Laugh</Button>
- *     <Button Component="a" href="#" variant="secondary">🥰 Love</Button>
+ *     <Button Component="a" href="#" variant="secondary">
+ *       😂 Live
+ *     </Button>
+ *     <Button Component="a" href="#" variant="secondary">
+ *       🤔 Laugh
+ *     </Button>
+ *     <Button Component="a" href="#" variant="secondary">
+ *       🥰 Love
+ *     </Button>
  *     (command bar for optional actions)
  *   </CommandBar>
- * </Header>
+ * </Header>;
  * ```
  *
  * @alpha
@@ -110,8 +134,9 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
  * A header title component, for use in {@link Header}.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <HeaderTitle>My Application</HeaderTitle>
+ * <HeaderTitle>My Application</HeaderTitle>;
  * ```
  *
  * @alpha
@@ -130,8 +155,9 @@ export const HeaderTitle: PolymorphicComponent<"div", {}> = ({
  * Text for the header component, for use in {@link HeaderTitle}.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <HeaderText>A description or subtitle for the header.</HeaderText>
+ * <HeaderText>A description or subtitle for the header.</HeaderText>;
  * ```
  *
  * @alpha

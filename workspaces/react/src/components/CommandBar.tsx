@@ -11,16 +11,17 @@ export interface BaseCommandBarProps {
 }
 
 /**
- * The `CommandBar` component provides a container for command-based UI elements,
- * typically used for toolbars or action bars.
+ * The `CommandBar` component provides a container for command-based UI
+ * elements, typically used for toolbars or action bars.
  *
  * @example Basic usage
+ *
  * ```tsx
  * <CommandBar>
  *   <Button variant="secondary">Save</Button>
  *   <Button variant="secondary">Edit</Button>
  *   <Button variant="secondary">Delete</Button>
- * </CommandBar>
+ * </CommandBar>;
  * ```
  *
  * @alpha

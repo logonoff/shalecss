@@ -3,16 +3,19 @@ import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
 /**
- * The navigation component. We expect you to use {@link MenuBarButton} inside
- * as well as wrap this in a Header.
+ * The navigation component. We expect you to use {@link MenuBarButton} inside as
+ * well as wrap this in a Header.
  *
  * @example Basic navigation
+ *
  * ```tsx
  * <Nav>
  *   <MenuBarButton href="/">Home</MenuBarButton>
  *   <MenuBarButton href="/about">About</MenuBarButton>
- *   <MenuBarButton href="/contact" current>Contact</MenuBarButton>
- * </Nav>
+ *   <MenuBarButton href="/contact" current>
+ *     Contact
+ *   </MenuBarButton>
+ * </Nav>;
  * ```
  *
  * @alpha
@@ -28,7 +31,10 @@ export const Nav: PolymorphicComponent<"nav", {}> = ({
 export interface BaseMenuBarButtonProps {
   /** Whether this menu item is the current page */
   current?: boolean;
-  /** The initial state of the menu button (if you want to force a specific state) */
+  /**
+   * The initial state of the menu button (if you want to force a specific
+   * state)
+   */
   state?: StateVariant;
 }
 
@@ -36,13 +42,17 @@ export interface BaseMenuBarButtonProps {
  * A menu bar button component.
  *
  * @example Basic menu button
+ *
  * ```tsx
- * <MenuBarButton href="/page">Page Link</MenuBarButton>
+ * <MenuBarButton href="/page">Page Link</MenuBarButton>;
  * ```
  *
  * @example Current page indicator
+ *
  * ```tsx
- * <MenuBarButton href="/current" current>Current Page</MenuBarButton>
+ * <MenuBarButton href="/current" current>
+ *   Current Page
+ * </MenuBarButton>;
  * ```
  *
  * @alpha

@@ -1,6 +1,6 @@
 /**
- * `@shalecss/react` is a React component library that provides
- * a thin wrapper around `@shalecss/core` CSS styles.
+ * `@shalecss/react` is a React component library that provides a thin wrapper
+ * around `@shalecss/core` CSS styles.
  *
  * @packageDocumentation
  */

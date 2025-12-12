@@ -7,8 +7,9 @@ export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextArea
  * A textarea component.
  *
  * @example Basic textarea
+ *
  * ```tsx
- * <Textarea placeholder="Enter your message..." rows={4} />
+ * <Textarea placeholder="Enter your message..." rows={4} />;
  * ```
  *
  * @alpha

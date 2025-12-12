@@ -1,11 +1,14 @@
 /**
- * A string always representing a class name, undefined does nothing,
- * and an object represents conditional class names. The keys are the class names,
- * and the values are truthy/falsy values for if we should include them.
+ * A string always representing a class name, undefined does nothing, and an
+ * object represents conditional class names. The keys are the class names, and
+ * the values are truthy/falsy values for if we should include them.
  */
 export type ClassValue = string | undefined | Record<string, any>;
 
-/** Utility function to conditionally join `classNames` together. Returns undefined if no classes are provided. */
+/**
+ * Utility function to conditionally join `classNames` together. Returns
+ * undefined if no classes are provided.
+ */
 export const css = (...args: ClassValue[]): string | undefined => {
   let result = "";
 

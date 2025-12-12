@@ -18,51 +18,61 @@ export type FlexItemProps =
  * A flex item component. Components like {@link Card} are based on this.
  *
  * @example Flex grow
+ *
  * ```tsx
- * <Card flex="grow">This item will grow to fill space</Card>
+ * <Card flex="grow">This item will grow to fill space</Card>;
  * ```
  *
  * @example Half flex
+ *
  * ```tsx
  * <FlexContainer variant="center">
  *   <Card flex="half">half</Card>
  *   <Card flex="half">half</Card>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @example Third flex
+ *
  * ```tsx
  * <FlexContainer variant="center">
  *   <Card flex="third">third</Card>
  *   <Card flex="third">third</Card>
  *   <Card flex="third">third</Card>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @example Quarter flex
+ *
  * ```tsx
  * <FlexContainer variant="center">
  *   <Card flex="quarter">quarter</Card>
  *   <Card flex="quarter">quarter</Card>
  *   <Card flex="quarter">quarter</Card>
  *   <Card flex="quarter">quarter</Card>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @example Fractional flex
+ *
  * ```tsx
- * <div style={{ display: 'flex' }}>
+ * <div style={{ display: "flex" }}>
  *   <Card flex="half">Half width</Card>
  *   <Card flex="half">Half width</Card>
- * </div>
+ * </div>;
  * ```
  *
  * @example Weird flex but ok
+ *
  * ```tsx
- * <div style={{ display: 'flex' }}>
- *   <Card flex="custom" flexAmount="2">Grows twice as much</Card>
- *   <Card flex="custom" flexAmount="1">Grows once</Card>
- * </div>
+ * <div style={{ display: "flex" }}>
+ *   <Card flex="custom" flexAmount="2">
+ *     Grows twice as much
+ *   </Card>
+ *   <Card flex="custom" flexAmount="1">
+ *     Grows once
+ *   </Card>
+ * </div>;
  * ```
  *
  * @alpha

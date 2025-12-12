@@ -9,8 +9,8 @@ interface LiveExampleProps {
 }
 
 /**
- * Client component that renders a live code example using react-live.
- * Expects plain JSX code that can be rendered directly.
+ * Client component that renders a live code example using react-live. Expects
+ * plain JSX code that can be rendered directly.
  */
 export const LiveExample: React.FC<LiveExampleProps> = ({ code }) => {
   return (

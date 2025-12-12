@@ -14,17 +14,25 @@ export interface CardProps {
  * card-like visual presentation with optional shadow variants.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <Card shadow="moderate">This is a card with a moderate shadow</Card>
+ * <Card shadow="moderate">This is a card with a moderate shadow</Card>;
  * ```
  *
  * @example With different shadows
+ *
  * ```tsx
  * <FlexContainer variant="space-between">
- *   <Card flex="third" shadow="subtle">subtle shadows</Card>
- *   <Card flex="third" shadow="moderate">moderate shadows</Card>
- *   <Card flex="third" shadow="puffy">puffy shadows</Card>
- * </FlexContainer>
+ *   <Card flex="third" shadow="subtle">
+ *     subtle shadows
+ *   </Card>
+ *   <Card flex="third" shadow="moderate">
+ *     moderate shadows
+ *   </Card>
+ *   <Card flex="third" shadow="puffy">
+ *     puffy shadows
+ *   </Card>
+ * </FlexContainer>;
  * ```
  *
  * @alpha

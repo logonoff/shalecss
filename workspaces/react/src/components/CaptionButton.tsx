@@ -8,8 +8,9 @@ import { css } from "../utils/css";
  * Use within a {@link CaptionMenu} to render multiple at once.
  *
  * @example Basic example
+ *
  * ```tsx
- * <CaptionButton>×</CaptionButton>
+ * <CaptionButton>×</CaptionButton>;
  * ```
  *
  * @alpha
@@ -29,6 +30,7 @@ export const CaptionButton: PolymorphicComponent<"button"> = ({
  * arranging them in a horizontal layout suitable for window controls.
  *
  * @example Window controls
+ *
  * ```tsx
  * <Header>
  *   <HeaderTitle>
@@ -39,7 +41,7 @@ export const CaptionButton: PolymorphicComponent<"button"> = ({
  *       <CaptionButton>×</CaptionButton>
  *     </CaptionMenu>
  *   </HeaderTitle>
- * </Header>
+ * </Header>;
  * ```
  *
  * @alpha

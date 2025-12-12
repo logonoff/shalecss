@@ -1,6 +1,4 @@
-/**
- * @fileoverview Generates the banner SCSS file with the current version.
- */
+/** @file Generates the banner SCSS file with the current version. */
 
 import { readFileSync, writeFileSync } from "fs";
 

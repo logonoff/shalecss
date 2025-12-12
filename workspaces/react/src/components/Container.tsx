@@ -5,8 +5,9 @@ import { css } from "../utils/css";
  * Container components provide layout structure and organization.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <Container>Content goes here</Container>
+ * <Container>Content goes here</Container>;
  * ```
  *
  * @alpha
@@ -31,25 +32,28 @@ export interface BaseFlexContainerProps {
  * A flexible container with built-in flexbox layout variants.
  *
  * @example Space between
+ *
  * ```tsx
  * <FlexContainer variant="space-between">
  *   <FlexItem>Left</FlexItem>
  *   <FlexItem>Right</FlexItem>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @example Center
+ *
  * ```tsx
  * <FlexContainer variant="center">
  *   <FlexItem>Centered Content</FlexItem>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @example Align center
+ *
  * ```tsx
  * <FlexContainer variant="align-center">
  *   <FlexItem>Vertically Centered Content</FlexItem>
- * </FlexContainer>
+ * </FlexContainer>;
  * ```
  *
  * @alpha
@@ -75,8 +79,14 @@ export const FlexContainer: PolymorphicComponent<
  * A flex form component that aligns all form items in a single line.
  *
  * @example Basic usage
+ *
  * ```tsx
- * <FlexForm onSubmit={(e) => { e.preventDefault(); alert('Form submitted!'); }}>
+ * <FlexForm
+ *   onSubmit={(e) => {
+ *     e.preventDefault();
+ *     alert("Form submitted!");
+ *   }}
+ * >
  *   <Input type="text" placeholder="Name" />
  *   <Input type="email" placeholder="Email" />
  *   <Select>
@@ -84,7 +94,7 @@ export const FlexContainer: PolymorphicComponent<
  *     <option value="option2">Option 2</option>
  *   </Select>
  *   <Button type="submit">Submit</Button>
- * </FlexForm>
+ * </FlexForm>;
  * ```
  *
  * @alpha
