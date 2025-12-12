@@ -1,28 +1,32 @@
 import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 
+/** @alpha */
+export interface CaptionButtonProps {
+  /** The content of the `CaptionButton`. */
+  children?: React.ReactNode;
+  /** Props for the wrapper element. */
+  wrapperProps?: React.HTMLAttributes<HTMLLIElement>;
+}
+
 /**
  * `CaptionButton` component provide specialized button and menu styling,
- * typically used for window controls or compact UI elements.
+ * typically used for window controls or the header.
  *
- * Use within a {@link CaptionMenu} to render multiple at once.
- *
- * @example Basic example
- *
- * ```tsx
- * <CaptionButton>×</CaptionButton>;
- * ```
+ * Must be used within a {@link CaptionMenu} component.
  *
  * @alpha
  */
-export const CaptionButton: PolymorphicComponent<"button"> = ({
-  Component = "button",
-  ...props
-}) => (
-  <Component
-    {...props}
-    className={css("shale-v1-caption-button", props?.className)}
-  />
+export const CaptionButton: PolymorphicComponent<
+  "button",
+  CaptionButtonProps
+> = ({ Component = "button", wrapperProps, ...props }) => (
+  <li {...wrapperProps}>
+    <Component
+      {...props}
+      className={css("shale-v1-caption-button", props?.className)}
+    />
+  </li>
 );
 
 /**
@@ -47,7 +51,7 @@ export const CaptionButton: PolymorphicComponent<"button"> = ({
  * @alpha
  */
 export const CaptionMenu: PolymorphicComponent<"span", {}> = ({
-  Component = "span",
+  Component = "menu",
   ...props
 }) => (
   <Component

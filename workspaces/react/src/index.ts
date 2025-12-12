@@ -67,3 +67,4 @@ export { CommandBar } from "./components/CommandBar";
 export type { BaseCommandBarProps } from "./components/CommandBar";
 
 export { CaptionButton, CaptionMenu } from "./components/CaptionButton";
+export type { CaptionButtonProps } from "./components/CaptionButton";

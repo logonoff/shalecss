@@ -47,7 +47,13 @@ export interface BaseMenuBarButtonProps {
 export const Button: PolymorphicComponent<"button", BaseButtonProps>;
 
 // @alpha
-export const CaptionButton: PolymorphicComponent<"button">;
+export const CaptionButton: PolymorphicComponent<"button", CaptionButtonProps>;
+
+// @alpha (undocumented)
+export interface CaptionButtonProps {
+    children?: React.ReactNode;
+    wrapperProps?: React.HTMLAttributes<HTMLLIElement>;
+}
 
 // @alpha
 export const CaptionMenu: PolymorphicComponent<"span", {}>;

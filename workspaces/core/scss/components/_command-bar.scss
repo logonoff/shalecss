@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   color: var(--#{$shale}text-colour);
+  list-style: none;
 
   &-gutter {
     padding-inline: var(--#{$shale}font--3);
