@@ -36,12 +36,12 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.55.2",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "^7.0.0-dev.20251211.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260127.1",
     "npm-watch": "0.13.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "watch": {
     "build": {

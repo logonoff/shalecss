@@ -13,13 +13,13 @@
     "@microsoft/tsdoc": "^0.16.0",
     "@shalecss/core": "*",
     "@shalecss/react": "*",
-    "@types/node": "25.0.1",
-    "@types/react": "^19.2.7",
+    "@types/node": "25.0.10",
+    "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
-    "next": "16.0.10",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "next": "16.1.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-live": "^4.1.8",
     "typescript": "^5.9.3"
   }

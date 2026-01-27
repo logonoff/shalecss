@@ -31,6 +31,6 @@
   "author": "logonoff",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.96.0"
+    "sass": "^1.97.3"
   }
 }
