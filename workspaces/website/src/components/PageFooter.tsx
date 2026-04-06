@@ -8,7 +8,7 @@ import {
   P,
 } from "@shalecss/react";
 
-import packageJson from "../../package.json" assert { type: "json" };
+import packageJson from "../../package.json" with { type: "json" };
 
 export const PageFooter: React.FC = () => (
   <Footer>
