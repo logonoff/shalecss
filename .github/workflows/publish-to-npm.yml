@@ -14,6 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          fetch-tags: true
 
       - name: Use Node.js
         uses: actions/setup-node@v6
@@ -33,6 +36,24 @@ jobs:
       - name: Publish @shalecss/react
         run: npm publish --workspace=@shalecss/react --access public --provenance
 
+      - name: Generate release notes
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || git rev-list --max-parents=0 HEAD)
+          REPO_URL="https://github.com/logonoff/shalecss"
+
+          for workspace in core react; do
+            echo "## \`@shalecss/${workspace}\`:"
+            commits=$(git log --format="- %h %s" "${PREV_TAG}..HEAD" -- "workspaces/${workspace}/")
+            if [ -z "$commits" ]; then
+              echo "- No changes"
+            else
+              echo "$commits"
+            fi
+            echo ""
+          done > notes.md
+
+          echo "**Full Changelog**: ${REPO_URL}/compare/${PREV_TAG}...${{ github.ref_name }}" >> notes.md
+
       - name: Create GitHub release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,4 +62,4 @@ jobs:
 
           gh release create "$tag" \
             --title="$tag" \
-            --generate-notes
+            --notes-file notes.md
