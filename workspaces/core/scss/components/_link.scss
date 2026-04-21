@@ -40,10 +40,13 @@
       background-color: currentColor;
       color: currentColor;
       content: "(opens in new tab)";
-      display: inline;
+      display: inline-block;
       font-size: 0;
-      padding: var(--#{$shale}font--3) var(--#{$shale}font--2);
-      vertical-align: bottom;
+      height: var(--#{$shale}font--1);
+      line-height: 0;
+      margin-left: 2px; // em doesn't work because font-size is 0
+      vertical-align: var(--#{$shale}font--1);
+      width: var(--#{$shale}font--1);
     }
   }
 }
