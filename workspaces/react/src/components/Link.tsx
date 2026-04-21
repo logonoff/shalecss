@@ -13,8 +13,9 @@ export interface BaseLinkProps {
 /**
  * A link component.
  *
- * External links (links with `target="_blank"`) will automatically show an external link icon, but you can also
- * explicitly set `isExternal` to `true` to show the icon, or set it to `false` to hide the icon.
+ * External links (links with `target="_blank"`) will automatically show an
+ * external link icon, but you can also explicitly set `isExternal` to `true` to
+ * show the icon, or set it to `false` to hide the icon.
  *
  * @example Basic link
  *
@@ -33,7 +34,12 @@ export interface BaseLinkProps {
  * @example External link
  *
  * ```tsx
- * <Link href="https://example.com" state="hover" target="_blank" rel="noopener noreferrer">
+ * <Link
+ *   href="https://example.com"
+ *   state="hover"
+ *   target="_blank"
+ *   rel="noopener noreferrer"
+ * >
  *   Go to Example
  * </Link>;
  * ```
