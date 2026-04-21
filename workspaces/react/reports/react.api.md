@@ -34,6 +34,7 @@ export interface BaseHeaderProps {
 
 // @alpha (undocumented)
 export interface BaseLinkProps {
+    isExternal?: boolean;
     state?: StateVariant;
 }
 
