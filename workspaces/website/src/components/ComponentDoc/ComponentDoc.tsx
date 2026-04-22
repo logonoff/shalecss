@@ -1,12 +1,12 @@
 import { components } from "@/app/docs/components";
 import {
-  Button,
   Code,
   FlexContainer,
   FlexItem,
   H2,
   H3,
   H4,
+  Link,
   Note,
   P,
 } from "@shalecss/react";
@@ -34,15 +34,14 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
 
       {doc.sourcePath && (
         <div style={{ marginBottom: "var(--shale-v1-font-1)" }}>
-          <Button
+          <Link
             Component="a"
             href={`https://github.com/logonoff/shalecss/blob/main/workspaces/react/${doc.sourcePath}`}
             rel="noopener noreferrer"
             target="_blank"
-            variant="secondary"
           >
-            View Source
-          </Button>
+            View source
+          </Link>
         </div>
       )}
 
