@@ -16,7 +16,7 @@
     "version": "npm run pretty && node ./scripts/version-bump.mjs && npm install && npm run build"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.3",
     "prettier": "3.8.3",
     "prettier-plugin-jsdoc": "1.8.0"
   },
