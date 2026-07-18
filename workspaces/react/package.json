@@ -12,7 +12,7 @@
   "scripts": {
     "api-extractor": "api-extractor run --local --verbose",
     "clean": "rm -rf dist",
-    "build": "tsgo -p tsconfig.json && npm run api-extractor",
+    "build": "tsc -p tsconfig.json && npm run api-extractor",
     "dev": "npm-watch",
     "prepublishOnly": "pushd ../ && npm run version"
   },
@@ -35,13 +35,13 @@
     "react-dom": "^18 | ^19"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.58.7",
-    "@types/react": "^19.2.14",
+    "@microsoft/api-extractor": "^7.58.11",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@typescript/native-preview": "^7.0.0-dev.20260513.1",
+    "typescript": "^7.0.2",
     "npm-watch": "0.13.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "watch": {
     "build": {
