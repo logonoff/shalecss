@@ -15,26 +15,12 @@ export default () => (
     <H2>shale.css</H2>
     <P>
       shale.css is a simple CSS framework / React component library which
-      provides some pesudo-skeuomorphic looking components for quick
-      prototyping.
+      provides some pesudo-skeuomorphic looking components and styles.
     </P>
 
     <P>
-      The project grew out of the old{" "}
-      <Link
-        href="https://startnine.github.io/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Start9 website
-      </Link>{" "}
-      CSS. I wanted to do something with it after the project was discontinued
-      because of sunk-cost fallacy.
-    </P>
-
-    <P>
-      The project is WIP and is not meant to be enterprise or anything. You can
-      try it out on{" "}
+      The component and style library is for "simple" use and is not meant to be
+      enterprise-grade. You can try it out on{" "}
       <Link
         href="https://www.npmjs.com/package/@shalecss/react"
         target="_blank"
@@ -45,8 +31,15 @@ export default () => (
       or without npm by simply including the CSS file in your project.
     </P>
 
+    <P>
+      This project is also not supposed to replace all of your CSS needs. You'll
+      likely want to write your own CSS, especially for small adjustments or for
+      layouts. This is by design, by not including "everything but the kitchen
+      sink" I can avoid writing all of that stuff and you can avoid loading it.
+    </P>
+
     <FlexContainer Component="section">
-      <H3>A list of components that have documentation</H3>
+      <H3>Components</H3>
 
       <FlexContainer variant="space-between">
         {componentLinks.map(({ href, name }) => (

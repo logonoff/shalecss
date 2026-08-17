@@ -67,13 +67,13 @@ export interface CardProps {
     shadow?: ShadowVariant;
 }
 
-// @alpha
+// @public
 export const Code: PolymorphicComponent<"code">;
 
 // @alpha
 export const CommandBar: PolymorphicComponent<typeof FlexContainer, BaseCommandBarProps>;
 
-// @alpha (undocumented)
+// @public (undocumented)
 export type ComponentProp<C extends ElementType> = {
     Component?: C;
 };
@@ -108,22 +108,22 @@ export type FlexItemProps = {
 // @alpha
 export const Footer: PolymorphicComponent<"footer", {}>;
 
-// @alpha
+// @public
 export const H1: PolymorphicComponent<"h1">;
 
-// @alpha
+// @public
 export const H2: PolymorphicComponent<"h2">;
 
-// @alpha
+// @public
 export const H3: PolymorphicComponent<"h3">;
 
-// @alpha
+// @public
 export const H4: PolymorphicComponent<"h4">;
 
-// @alpha
+// @public
 export const H5: PolymorphicComponent<"h5">;
 
-// @alpha
+// @public
 export const H6: PolymorphicComponent<"h6">;
 
 // @alpha
@@ -175,13 +175,13 @@ export interface NoteProps {
 // @alpha
 export const NoteText: PolymorphicComponent<"p", {}>;
 
-// @alpha
+// @public
 export const P: PolymorphicComponent<"p">;
 
-// @alpha
+// @public
 export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <C extends ElementType = DefaultElement>(props: PolymorphicComponentProp<C, Readonly<P>>) => ReturnType<FC<P>>;
 
-// @alpha (undocumented)
+// @public (undocumented)
 export type PolymorphicComponentProp<C extends ElementType, Props = {}> = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
 
 // @alpha
@@ -211,16 +211,16 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
 // @alpha (undocumented)
 export type ShadowVariant = "subtle" | "moderate" | "puffy";
 
-// @alpha
+// @public
 export const SkipToContent: PolymorphicComponent<"a">;
 
 // @alpha (undocumented)
 export type StateVariant = "hover" | "active" | "focus" | "disabled";
 
-// @alpha
+// @public
 export const Textarea: React.FC<TextareaProps>;
 
-// @alpha (undocumented)
+// @public (undocumented)
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 

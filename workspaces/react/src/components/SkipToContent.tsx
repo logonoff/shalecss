@@ -6,7 +6,7 @@ import { css } from "../utils/css";
  * when focused, allowing keyboard users to skip navigation and jump directly to
  * main content.
  *
- * @alpha
+ * @public
  */
 export const SkipToContent: PolymorphicComponent<"a"> = ({
   Component = "a",

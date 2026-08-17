@@ -4,12 +4,12 @@ import { css } from "../utils/css";
 /**
  * The possible variants of typography components. Corresponds to HTML tags.
  *
- * @alpha
+ * @public
  */
 export type TypographyVariant =
   "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "code";
 
-/** @alpha */
+/** @public */
 export interface BaseTypographyProps {
   /** The variant style to apply */
   variant?: TypographyVariant;
@@ -44,7 +44,7 @@ const makeTypography =
  * <H1>Main Page Title</H1>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H1: PolymorphicComponent<"h1"> = makeTypography("h1");
 
@@ -57,7 +57,7 @@ export const H1: PolymorphicComponent<"h1"> = makeTypography("h1");
  * <H2>Section Title</H2>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H2: PolymorphicComponent<"h2"> = makeTypography("h2");
 
@@ -70,7 +70,7 @@ export const H2: PolymorphicComponent<"h2"> = makeTypography("h2");
  * <H3>Subsection Title</H3>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H3: PolymorphicComponent<"h3"> = makeTypography("h3");
 
@@ -83,7 +83,7 @@ export const H3: PolymorphicComponent<"h3"> = makeTypography("h3");
  * <H4>Minor Heading</H4>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H4: PolymorphicComponent<"h4"> = makeTypography("h4");
 
@@ -96,7 +96,7 @@ export const H4: PolymorphicComponent<"h4"> = makeTypography("h4");
  * <H5>Small Heading</H5>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H5: PolymorphicComponent<"h5"> = makeTypography("h5");
 
@@ -109,7 +109,7 @@ export const H5: PolymorphicComponent<"h5"> = makeTypography("h5");
  * <H6>Smallest Heading</H6>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const H6: PolymorphicComponent<"h6"> = makeTypography("h6");
 
@@ -122,7 +122,7 @@ export const H6: PolymorphicComponent<"h6"> = makeTypography("h6");
  * <P>This is a paragraph of text.</P>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const P: PolymorphicComponent<"p"> = makeTypography("p");
 
@@ -146,6 +146,6 @@ export const P: PolymorphicComponent<"p"> = makeTypography("p");
  * </Code>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const Code: PolymorphicComponent<"code"> = makeTypography("code");
