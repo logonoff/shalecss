@@ -90,15 +90,12 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
         ? { "--shale-v1-flex--width": flexAmount, ...(props.style || {}) }
         : props.style
     }
-    className={css(
-      props,
-      {
-        "shale-v1-flex-grow": flex === "grow",
-        "shale-v1-flex-half": flex === "half",
-        "shale-v1-flex-third": flex === "third",
-        "shale-v1-flex-quarter": flex === "quarter",
-        "shale-v1-flex-custom": flex === "custom",
-      },
-    )}
+    className={css(props, {
+      "shale-v1-flex-grow": flex === "grow",
+      "shale-v1-flex-half": flex === "half",
+      "shale-v1-flex-third": flex === "third",
+      "shale-v1-flex-quarter": flex === "quarter",
+      "shale-v1-flex-custom": flex === "custom",
+    })}
   />
 );

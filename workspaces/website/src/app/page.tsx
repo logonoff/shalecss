@@ -67,18 +67,20 @@ export default function Home() {
 
       <Card>
         <FlexContainer variant="space-between">
-          {['100', '200', '300', '400', '500', '600', '700', '800', '900'].map((num) => (
-            <div
-              key={num}
-              className="shale-v1-flex-grow"
-              style={{
-                padding: "1em",
-                backgroundColor: `var(--shale-v1-accent-${num})`,
-              }}
-            >
-              {num}
-            </div>
-          ))}
+          {["100", "200", "300", "400", "500", "600", "700", "800", "900"].map(
+            (num) => (
+              <div
+                key={num}
+                className="shale-v1-flex-grow"
+                style={{
+                  padding: "1em",
+                  backgroundColor: `var(--shale-v1-accent-${num})`,
+                }}
+              >
+                {num}
+              </div>
+            ),
+          )}
         </FlexContainer>
       </Card>
 

@@ -44,10 +44,6 @@ export const Card: PolymorphicComponent<typeof FlexItem, CardProps> = ({
 }) => (
   <Component
     {...props}
-    className={css(
-      props,
-      "shale-v1-card",
-      { [`shale-v1--${shadow}`]: shadow },
-    )}
+    className={css(props, "shale-v1-card", { [`shale-v1--${shadow}`]: shadow })}
   />
 );

@@ -228,7 +228,7 @@ export const Input: React.FC<InputProps> = ({ label, id, ...props }) => {
   }
 
   return (
-    <div className={css(props,"shale-v1-input")}>
+    <div className={css(props, "shale-v1-input")}>
       <input {...props} />
     </div>
   );

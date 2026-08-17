@@ -39,4 +39,8 @@ export const components: Record<
     name: "Typography",
     components: ["H1", "H2", "H3", "H4", "H5", "H6", "P", "Code"],
   },
+  "/docs/popover": {
+    name: "Popover",
+    components: ["PopoverToggle", "PopoverContent"],
+  },
 };

@@ -15,12 +15,7 @@ import { css } from "../utils/css";
 export const Container: PolymorphicComponent<"div", {}> = ({
   Component = "div",
   ...props
-}) => (
-  <Component
-    {...props}
-    className={css(props, "shale-v1-container")}
-  />
-);
+}) => <Component {...props} className={css(props, "shale-v1-container")} />;
 
 /** @alpha */
 export interface BaseFlexContainerProps {
@@ -64,14 +59,11 @@ export const FlexContainer: PolymorphicComponent<
 > = ({ Component = "div", variant, ...props }) => (
   <Component
     {...props}
-    className={css(
-      props,
-      {
-        "shale-v1-flex-space-between": variant === "space-between",
-        "shale-v1-flex-center": variant === "center",
-        "shale-v1-flex-align-center": variant === "align-center",
-      },
-    )}
+    className={css(props, {
+      "shale-v1-flex-space-between": variant === "space-between",
+      "shale-v1-flex-center": variant === "center",
+      "shale-v1-flex-align-center": variant === "align-center",
+    })}
   />
 );
 
@@ -102,9 +94,4 @@ export const FlexContainer: PolymorphicComponent<
 export const FlexForm: PolymorphicComponent<"form", {}> = ({
   Component = "form",
   ...props
-}) => (
-  <Component
-    {...props}
-    className={css(props, "shale-v1-flex-form")}
-  />
-);
+}) => <Component {...props} className={css(props, "shale-v1-flex-form")} />;

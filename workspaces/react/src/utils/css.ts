@@ -8,12 +8,15 @@ export type ClassValue = string | undefined | Record<string, any>;
 /**
  * Utility function to conditionally join `classNames` together.
  *
- * @param props component props for parsing `class` and `className`
- * @param classes additional class names to conditionally join
+ * @param props Component props for parsing `class` and `className`
+ * @param classes Additional class names to conditionally join
  *
- * @returns undefined if no classes are provided.
+ * @returns Undefined if no classes are provided.
  */
-export const css = (props: { [key: string]: any } = {}, ...classes: ClassValue[]): string | undefined => {
+export const css = (
+  props: { [key: string]: any } = {},
+  ...classes: ClassValue[]
+): string | undefined => {
   let result = "";
 
   const args = [props?.class, props?.className, ...classes];

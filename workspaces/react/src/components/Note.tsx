@@ -54,10 +54,7 @@ export const Note: PolymorphicComponent<typeof FlexItem, NoteProps> = ({
   variant,
   ...props
 }) => (
-  <Component
-    {...props}
-    className={css(props,`shale-v1-note-${variant}`)}
-  />
+  <Component {...props} className={css(props, `shale-v1-note-${variant}`)} />
 );
 
 /**
@@ -74,9 +71,4 @@ export const Note: PolymorphicComponent<typeof FlexItem, NoteProps> = ({
 export const NoteText: PolymorphicComponent<"p", {}> = ({
   Component = "p",
   ...props
-}) => (
-  <Component
-    {...props}
-    className={css(props, "shale-v1-note-text")}
-  />
-);
+}) => <Component {...props} className={css(props, "shale-v1-note-text")} />;

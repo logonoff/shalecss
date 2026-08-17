@@ -11,6 +11,4 @@ import { css } from "../utils/css";
 export const SkipToContent: PolymorphicComponent<"a"> = ({
   Component = "a",
   ...props
-}) => (
-  <Component {...props} className={css(props,"shale-v1-skip")} />
-);
+}) => <Component {...props} className={css(props, "shale-v1-skip")} />;

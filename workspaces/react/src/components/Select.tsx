@@ -23,7 +23,9 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
  * @alpha
  */
 export const Select: React.FC<SelectProps> = ({ state, ...props }) => (
-  <div className={css(props, "shale-v1-select", { [`shale-v1--${state}`]: state })}>
+  <div
+    className={css(props, "shale-v1-select", { [`shale-v1--${state}`]: state })}
+  >
     <select {...props} className={props?.className} />
   </div>
 );

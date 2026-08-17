@@ -23,9 +23,7 @@ import { css } from "../utils/css";
 export const Nav: PolymorphicComponent<"nav", {}> = ({
   Component = "nav",
   ...props
-}) => (
-  <Component {...props} className={css(props, "shale-v1-nav")} />
-);
+}) => <Component {...props} className={css(props, "shale-v1-nav")} />;
 
 /** @alpha */
 export interface BaseMenuBarButtonProps {

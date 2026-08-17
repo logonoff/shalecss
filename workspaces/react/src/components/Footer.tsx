@@ -19,6 +19,4 @@ import { css } from "../utils/css";
 export const Footer: PolymorphicComponent<"footer", {}> = ({
   Component = "footer",
   ...props
-}) => (
-  <Component {...props} className={css(props, "shale-v1-footer")} />
-);
+}) => <Component {...props} className={css(props, "shale-v1-footer")} />;

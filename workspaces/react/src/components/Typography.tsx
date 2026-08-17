@@ -7,14 +7,7 @@ import { css } from "../utils/css";
  * @alpha
  */
 export type TypographyVariant =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6"
-  | "p"
-  | "code";
+  "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "code";
 
 /** @alpha */
 export interface BaseTypographyProps {
@@ -30,12 +23,7 @@ const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
   variant = "p",
   Component = variant,
   ...props
-}) => (
-  <Component
-    {...props}
-    className={css(props, `shale-v1-${variant}`)}
-  />
-);
+}) => <Component {...props} className={css(props, `shale-v1-${variant}`)} />;
 
 /** Internal helper to create specific typography components. */
 const makeTypography =
