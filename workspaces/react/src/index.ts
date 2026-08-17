@@ -27,6 +27,13 @@ export type { CardProps } from "./components/Card";
 export { Dialog } from "./components/Dialog";
 export type { DialogProps } from "./components/Dialog";
 
+// Popover
+export { PopoverContent, PopoverToggle } from "./components/Popover";
+export type {
+  PopoverContentProps,
+  PopoverToggleProps,
+} from "./components/Popover";
+
 // Typography
 export { Code, H1, H2, H3, H4, H5, H6, P } from "./components/Typography";
 

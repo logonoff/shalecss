@@ -185,6 +185,22 @@ export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <
 export type PolymorphicComponentProp<C extends ElementType, Props = {}> = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
 
 // @alpha
+export const PopoverContent: PolymorphicComponent<"menu", PopoverContentProps>;
+
+// @alpha (undocumented)
+export interface PopoverContentProps {
+    name: string;
+}
+
+// @alpha
+export const PopoverToggle: PolymorphicComponent<"div", PopoverToggleProps>;
+
+// @alpha (undocumented)
+export interface PopoverToggleProps {
+    name: string;
+}
+
+// @alpha
 export const Select: React.FC<SelectProps>;
 
 // @alpha (undocumented)

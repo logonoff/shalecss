@@ -1,0 +1,37 @@
+@use "../theme/base" as *;
+
+.#{$shale}popover-toggle {
+  anchor-name: var(--#{$shale}popover-anchor-name);
+  text-align: left;
+  width: 100%;
+}
+
+.#{$shale}popover-content {
+  background: var(--#{$shale}card-background);
+  border-radius: 0.2em;
+  border: 1px solid var(--#{$shale}card-border-color);
+  box-shadow: var(--#{$shale}shadow-puffy);
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0.1em;
+
+  inset: unset;
+
+  position-anchor: var(--#{$shale}popover-anchor-name);
+  position: absolute;
+
+  left: anchor(left);
+  top: anchor(bottom);
+  position-area: bottom;
+
+  > li {
+    display: flex;
+    flex-direction: row;
+
+    > * {
+      flex-grow: 1;
+    }
+  }
+}
