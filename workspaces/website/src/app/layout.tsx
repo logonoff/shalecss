@@ -5,7 +5,6 @@ import "@shalecss/core/dist/shale.css";
 import { SkipToContent } from "@shalecss/react";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
-import { ViewTransition } from "react";
 
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
@@ -32,7 +31,7 @@ export default function RootLayout({
         <body className="shale-v1-body">
           <SkipToContent href="#maincontent">Skip to Content</SkipToContent>
           <PageHeader />
-          <ViewTransition name="page">{children}</ViewTransition>
+          {children}
           <PageFooter />
         </body>
       </html>

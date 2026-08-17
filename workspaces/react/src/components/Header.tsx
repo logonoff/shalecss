@@ -121,11 +121,11 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
   <Component
     {...props}
     className={css(
+      props,
       "shale-v1-header",
       { [`shale-v1--${state}`]: state },
       { "shale-v1-header-invert-border": invertBorder },
       { "shale-v1-header-compact": compact },
-      props?.className,
     )}
   />
 );
@@ -147,7 +147,7 @@ export const HeaderTitle: PolymorphicComponent<"div", {}> = ({
 }) => (
   <Component
     {...props}
-    className={css("shale-v1-header-title", props?.className)}
+    className={css(props, "shale-v1-header-title")}
   />
 );
 
@@ -168,6 +168,6 @@ export const HeaderText: PolymorphicComponent<"p", {}> = ({
 }) => (
   <Component
     {...props}
-    className={css("shale-v1-header-text", props?.className)}
+    className={css(props, "shale-v1-header-text")}
   />
 );

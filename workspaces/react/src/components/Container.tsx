@@ -18,7 +18,7 @@ export const Container: PolymorphicComponent<"div", {}> = ({
 }) => (
   <Component
     {...props}
-    className={css("shale-v1-container", props?.className)}
+    className={css(props, "shale-v1-container")}
   />
 );
 
@@ -65,12 +65,12 @@ export const FlexContainer: PolymorphicComponent<
   <Component
     {...props}
     className={css(
+      props,
       {
         "shale-v1-flex-space-between": variant === "space-between",
         "shale-v1-flex-center": variant === "center",
         "shale-v1-flex-align-center": variant === "align-center",
       },
-      props?.className,
     )}
   />
 );
@@ -105,6 +105,6 @@ export const FlexForm: PolymorphicComponent<"form", {}> = ({
 }) => (
   <Component
     {...props}
-    className={css("shale-v1-flex-form", props?.className)}
+    className={css(props, "shale-v1-flex-form")}
   />
 );

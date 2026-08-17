@@ -88,12 +88,12 @@ export const Icon: React.FC<IconProps> = ({
   <svg
     {...props}
     className={css(
+      props,
       "shale-v1-icon",
       {
         "shale-v1-icon-flip-x": flipX,
         "shale-v1-icon-flip-y": flipY,
       },
-      props?.className,
     )}
   >
     <use xlinkHref={`${iconPath}#icon-${icon}`} />

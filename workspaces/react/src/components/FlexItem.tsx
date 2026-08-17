@@ -91,6 +91,7 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
         : props.style
     }
     className={css(
+      props,
       {
         "shale-v1-flex-grow": flex === "grow",
         "shale-v1-flex-half": flex === "half",
@@ -98,7 +99,6 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
         "shale-v1-flex-quarter": flex === "quarter",
         "shale-v1-flex-custom": flex === "custom",
       },
-      props?.className,
     )}
   />
 );

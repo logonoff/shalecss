@@ -10,9 +10,6 @@ const nextConfig: NextConfig = {
     "@microsoft/tsdoc",
     "@microsoft/tsdoc-config",
   ],
-  experimental: {
-    viewTransition: true,
-  },
   // support for GH pages
   output: "export",
   basePath: process.env.PAGES_BASE_PATH,

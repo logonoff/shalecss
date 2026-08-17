@@ -12,5 +12,5 @@ export const SkipToContent: PolymorphicComponent<"a"> = ({
   Component = "a",
   ...props
 }) => (
-  <Component {...props} className={css("shale-v1-skip", props?.className)} />
+  <Component {...props} className={css(props,"shale-v1-skip")} />
 );

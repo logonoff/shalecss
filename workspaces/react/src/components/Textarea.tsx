@@ -16,6 +16,6 @@ export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextArea
  */
 export const Textarea: React.FC<TextareaProps> = ({ ...props }) => (
   <div className="shale-v1-input">
-    <textarea {...props} className={css(props?.className)} />
+    <textarea {...props} className={css(props)} />
   </div>
 );

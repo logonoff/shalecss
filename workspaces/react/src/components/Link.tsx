@@ -55,11 +55,11 @@ export const Link: PolymorphicComponent<"a", BaseLinkProps> = ({
   <Component
     {...props}
     className={css(
+      props,
       "shale-v1-link",
       { [`shale-v1--${state}`]: state },
       { "shale-v1--external": isExternal === true },
       { "shale-v1--no-icon": isExternal === false },
-      props?.className,
     )}
   />
 );

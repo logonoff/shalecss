@@ -24,7 +24,7 @@ export const CaptionButton: PolymorphicComponent<
   <li {...wrapperProps}>
     <Component
       {...props}
-      className={css("shale-v1-caption-button", props?.className)}
+      className={css(props, "shale-v1-caption-button")}
     />
   </li>
 );
@@ -56,6 +56,6 @@ export const CaptionMenu: PolymorphicComponent<"span", {}> = ({
 }) => (
   <Component
     {...props}
-    className={css("shale-v1-caption-menu", props?.className)}
+    className={css(props, "shale-v1-caption-menu")}
   />
 );

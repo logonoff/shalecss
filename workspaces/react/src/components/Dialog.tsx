@@ -60,7 +60,7 @@ export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {}
  */
 export const Dialog: FC<DialogProps> = (props) => {
   return (
-    <dialog {...props} className={css("shale-v1-dialog", props.className)}>
+    <dialog {...props} className={css(props, "shale-v1-dialog")}>
       {props.children}
     </dialog>
   );

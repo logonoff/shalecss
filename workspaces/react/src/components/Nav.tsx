@@ -24,7 +24,7 @@ export const Nav: PolymorphicComponent<"nav", {}> = ({
   Component = "nav",
   ...props
 }) => (
-  <Component {...props} className={css("shale-v1-nav", props?.className)} />
+  <Component {...props} className={css(props, "shale-v1-nav")} />
 );
 
 /** @alpha */
@@ -64,10 +64,10 @@ export const MenuBarButton: PolymorphicComponent<
   <Component
     {...props}
     className={css(
+      props,
       "shale-v1-menu-bar-button",
       { "shale-v1-current": current },
       { [`shale-v1--${state}`]: state },
-      props?.className,
     )}
   />
 );

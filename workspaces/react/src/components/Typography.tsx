@@ -33,7 +33,7 @@ const Typography: PolymorphicComponent<"p", BaseTypographyProps> = ({
 }) => (
   <Component
     {...props}
-    className={css(`shale-v1-${variant}`, props.className)}
+    className={css(props, `shale-v1-${variant}`)}
   />
 );
 

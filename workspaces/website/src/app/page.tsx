@@ -67,87 +67,18 @@ export default function Home() {
 
       <Card>
         <FlexContainer variant="space-between">
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-100)",
-            }}
-          >
-            100
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-200)",
-            }}
-          >
-            200
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-300)",
-            }}
-          >
-            300
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-400)",
-            }}
-          >
-            400
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-500)",
-            }}
-          >
-            500
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-600)",
-            }}
-          >
-            600
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-700)",
-            }}
-          >
-            700
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-800)",
-            }}
-          >
-            800
-          </div>
-          <div
-            className="shale-v1-flex-grow"
-            style={{
-              padding: "1em",
-              backgroundColor: "var(--shale-v1-accent-900)",
-            }}
-          >
-            900
-          </div>
+          {['100', '200', '300', '400', '500', '600', '700', '800', '900'].map((num) => (
+            <div
+              key={num}
+              className="shale-v1-flex-grow"
+              style={{
+                padding: "1em",
+                backgroundColor: `var(--shale-v1-accent-${num})`,
+              }}
+            >
+              {num}
+            </div>
+          ))}
         </FlexContainer>
       </Card>
 
