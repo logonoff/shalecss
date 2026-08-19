@@ -60,10 +60,12 @@ export interface MenuBarButtonProps {
  *
  * @alpha
  */
-export const MenuBarButton: PolymorphicComponent<
-  "a",
-  MenuBarButtonProps
-> = ({ Component = "a", current, state, ...props }) => (
+export const MenuBarButton: PolymorphicComponent<"a", MenuBarButtonProps> = ({
+  Component = "a",
+  current,
+  state,
+  ...props
+}) => (
   <Component
     {...props}
     className={css(

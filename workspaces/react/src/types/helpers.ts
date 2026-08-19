@@ -14,8 +14,8 @@ export type ComponentProp<C extends ElementType> = {
 };
 
 /**
- * Provides the props for a polymorphic component, allowing the base component to be
- * overridden while still maintaining type safety for its props.
+ * Provides the props for a polymorphic component, allowing the base component
+ * to be overridden while still maintaining type safety for its props.
  *
  * @public
  */

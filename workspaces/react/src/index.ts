@@ -9,7 +9,7 @@
 export type {
   ComponentProp,
   PolymorphicComponent,
-  PolymorphicComponentProp
+  PolymorphicComponentProp,
 } from "./types/helpers";
 export type { ShadowVariant, StateVariant } from "./types/variants";
 
@@ -31,7 +31,7 @@ export type { DialogProps } from "./components/Dialog";
 export { PopoverContent, PopoverToggle } from "./components/Popover";
 export type {
   PopoverContentProps,
-  PopoverToggleProps
+  PopoverToggleProps,
 } from "./components/Popover";
 
 // Typography

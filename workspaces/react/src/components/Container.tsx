@@ -57,10 +57,11 @@ export interface FlexContainerProps {
  *
  * @alpha
  */
-export const FlexContainer: PolymorphicComponent<
-  "div",
-  FlexContainerProps
-> = ({ Component = "div", variant, ...props }) => (
+export const FlexContainer: PolymorphicComponent<"div", FlexContainerProps> = ({
+  Component = "div",
+  variant,
+  ...props
+}) => (
   <Component
     {...props}
     className={css(props, {
