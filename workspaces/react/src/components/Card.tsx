@@ -3,14 +3,18 @@ import { ShadowVariant } from "../types/variants";
 import { css } from "../utils/css";
 import { FlexItem } from "./FlexItem";
 
-/** @alpha */
+/**
+ * The base props for {@link Card}.
+ *
+ * @alpha
+ */
 export interface CardProps {
   /** The type of shadow to apply to the card */
   shadow?: ShadowVariant;
 }
 
 /**
- * `Card` is a flexible container based on {@link FlexItem} that provides a
+ * A `Card` is a flexible container based on {@link FlexItem} that provides a
  * card-like visual presentation with optional shadow variants.
  *
  * @example Basic usage

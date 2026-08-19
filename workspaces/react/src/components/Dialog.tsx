@@ -1,13 +1,16 @@
 import type { FC } from "react";
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link Dialog}.
+ *
+ * @alpha
+ */
 export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {}
 
 /**
- * The Dialog component is a modal dialog box that overlays the current page. It
- * is based on the native HTML `<dialog>` element and cannot be moved or
- * resized.
+ * A `Dialog` is a modal dialog box that overlays the current page. It is based
+ * on the native HTML `<dialog>` element and cannot be moved or resized.
  *
  * @example Basic usage with actions
  *

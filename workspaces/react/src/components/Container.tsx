@@ -2,7 +2,7 @@ import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 
 /**
- * Container components provide layout structure and organization.
+ * A `Container` components provides a simple layout for organizing content.
  *
  * @example Basic usage
  *
@@ -17,14 +17,18 @@ export const Container: PolymorphicComponent<"div", {}> = ({
   ...props
 }) => <Component {...props} className={css(props, "shale-v1-container")} />;
 
-/** @alpha */
-export interface BaseFlexContainerProps {
+/**
+ * The base props for {@link FlexContainer}.
+ *
+ * @alpha
+ */
+export interface FlexContainerProps {
   /** The flex layout variant */
   variant?: "space-between" | "center" | "align-center";
 }
 
 /**
- * A flexible container with built-in flexbox layout variants.
+ * A `FlexContainer` is a flexbox-based container with built-in layout variants.
  *
  * @example Space between
  *
@@ -55,7 +59,7 @@ export interface BaseFlexContainerProps {
  */
 export const FlexContainer: PolymorphicComponent<
   "div",
-  BaseFlexContainerProps
+  FlexContainerProps
 > = ({ Component = "div", variant, ...props }) => (
   <Component
     {...props}
@@ -68,7 +72,8 @@ export const FlexContainer: PolymorphicComponent<
 );
 
 /**
- * A flex form component that aligns all form items in a single line.
+ * A `FlexForm` is a flex form component that aligns all form items in a single
+ * line.
  *
  * @example Basic usage
  *

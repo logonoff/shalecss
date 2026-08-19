@@ -2,14 +2,18 @@ import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 import { FlexItem } from "./FlexItem";
 
-/** @alpha */
+/**
+ * The base props for {@link Note}.
+ *
+ * @alpha
+ */
 export interface NoteProps {
   /** The variant/type of note */
   variant: "info" | "alert" | "warn" | "tip";
 }
 
 /**
- * A note component to highlight important information.
+ * A Note highlights important information.
  *
  * @example Info note
  *
@@ -58,7 +62,7 @@ export const Note: PolymorphicComponent<typeof FlexItem, NoteProps> = ({
 );
 
 /**
- * A text component for the content inside a Note.
+ * A `NoteText` displays text content inside a {@link Note}.
  *
  * @example Basic usage
  *

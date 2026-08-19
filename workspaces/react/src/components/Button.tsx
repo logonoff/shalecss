@@ -2,8 +2,12 @@ import type { PolymorphicComponent } from "../types/helpers";
 import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
-/** @alpha */
-export interface BaseButtonProps {
+/**
+ * The base props for {@link Button}.
+ *
+ * @beta
+ */
+export interface ButtonProps {
   /** The variant of the button */
   variant?: "primary" | "secondary";
   /** The initial state of the button (if you want to force a specific state) */
@@ -11,8 +15,7 @@ export interface BaseButtonProps {
 }
 
 /**
- * The `Button` component is based off of the HTML `<button>` element and can be
- * used to trigger actions when clicked.
+ * A `Button` is used to trigger actions when clicked.
  *
  * @example Simple Button
  *
@@ -29,9 +32,9 @@ export interface BaseButtonProps {
  * </Button>;
  * ```
  *
- * @alpha
+ * @beta
  */
-export const Button: PolymorphicComponent<"button", BaseButtonProps> = ({
+export const Button: PolymorphicComponent<"button", ButtonProps> = ({
   Component = "button",
   variant = "primary",
   state,

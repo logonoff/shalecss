@@ -2,8 +2,12 @@ import type { PolymorphicComponent } from "../types/helpers";
 import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
-/** @alpha */
-export interface BaseHeaderProps {
+/**
+ * The base props for {@link Header}.
+ *
+ * @beta
+ */
+export interface HeaderProps {
   /** The initial state of the header (if you want to force a specific state) */
   state?: StateVariant;
   /** Move the border to the top instead of the bottom */
@@ -13,7 +17,8 @@ export interface BaseHeaderProps {
 }
 
 /**
- * A header component.
+ * A `Header` is a container containing information which should be displayed at
+ * the top of the page, such as a title, navigation, and common actions.
  *
  * @example Simple example
  *
@@ -109,9 +114,9 @@ export interface BaseHeaderProps {
  * </Header>;
  * ```
  *
- * @alpha
+ * @beta
  */
-export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
+export const Header: PolymorphicComponent<"header", HeaderProps> = ({
   Component = "header",
   state,
   invertBorder = false,
@@ -131,7 +136,7 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
 );
 
 /**
- * A header title component, for use in {@link Header}.
+ * A `HeaderTitle` contains a title for the {@link Header} component.
  *
  * @example Basic usage
  *
@@ -139,7 +144,7 @@ export const Header: PolymorphicComponent<"header", BaseHeaderProps> = ({
  * <HeaderTitle>My Application</HeaderTitle>;
  * ```
  *
- * @alpha
+ * @beta
  */
 export const HeaderTitle: PolymorphicComponent<"div", {}> = ({
   Component = "div",
@@ -147,7 +152,8 @@ export const HeaderTitle: PolymorphicComponent<"div", {}> = ({
 }) => <Component {...props} className={css(props, "shale-v1-header-title")} />;
 
 /**
- * Text for the header component, for use in {@link HeaderTitle}.
+ * A `HeaderText` displays text for the {@link Header} component, typically
+ * placed as a child of {@link HeaderTitle}.
  *
  * @example Basic usage
  *
@@ -155,7 +161,7 @@ export const HeaderTitle: PolymorphicComponent<"div", {}> = ({
  * <HeaderText>A description or subtitle for the header.</HeaderText>;
  * ```
  *
- * @alpha
+ * @beta
  */
 export const HeaderText: PolymorphicComponent<"p", {}> = ({
   Component = "p",

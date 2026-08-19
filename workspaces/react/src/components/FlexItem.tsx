@@ -1,7 +1,11 @@
 import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link FlexItem}.
+ *
+ * @alpha
+ */
 export type FlexItemProps =
   | {
       /** The flex grow value */
@@ -15,7 +19,8 @@ export type FlexItemProps =
     };
 
 /**
- * A flex item component. Components like {@link Card} are based on this.
+ * A `FlexItem` is a child component of a flex container. Components like
+ * {@link Card} are based on this.
  *
  * @example Flex grow
  *

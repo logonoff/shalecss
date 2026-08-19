@@ -2,21 +2,30 @@ import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 import { Button } from "./Button";
 
-/** @alpha */
+/**
+ * The base props for {@link PopoverToggle}.
+ *
+ * @alpha
+ */
 export interface PopoverToggleProps {
   /** The ID of the `Popover`. Must be unique to other `id`s in the DOM. */
   name: string;
 }
 
-/** @alpha */
+/**
+ * The base props for {@link PopoverContent}.
+ *
+ * @alpha
+ */
 export interface PopoverContentProps {
   /** The ID of the `Popover`. Must be unique to other `id`s in the DOM. */
   name: string;
 }
 
 /**
- * Toggles a popover with the given name. The `name` must match the `name` of
- * the `PopoverContent` that you want to toggle.
+ * A `PopoverToggle` is a button that toggles a popover with the given name. The
+ * `name` must match the `name` of the `PopoverContent` that you want to
+ * toggle.
  *
  * @example Custom toggle element
  *
@@ -48,7 +57,7 @@ export const PopoverToggle: PolymorphicComponent<"div", PopoverToggleProps> = ({
 );
 
 /**
- * Displays the contents of a popover.
+ * A `PopoverContent` displays the contents of a popover.
  *
  * Popover children will automatically be given `flex-grow` of `1` to fill the
  * content.

@@ -19,7 +19,8 @@ export default function Home() {
           <H1>shale.css</H1>
           <H4>simple pseudo-skeuomorph CSS styles</H4>
           <P>
-            shale.css provides a simple set of lightweight CSS styles and components
+            shale.css provides a simple set of lightweight CSS styles and
+            components
           </P>
         </FlexItem>
         <FlexContainer variant="align-center">

@@ -1,6 +1,10 @@
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link Icon}.
+ *
+ * @alpha
+ */
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
   /** The icon ID from the icons.svg sprite */
   icon: string;
@@ -13,8 +17,8 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
 }
 
 /**
- * The `Icon` component displays SVG icons from an icon sprite sheet using SVG's
- * `<use>` element.
+ * An `Icon` displays SVG icons from an icon sprite sheet using SVG's `<use>`
+ * element.
  *
  * @example Basic icon
  *

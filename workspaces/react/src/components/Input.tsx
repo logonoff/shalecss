@@ -1,6 +1,10 @@
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link Input}.
+ *
+ * @public
+ */
 export interface InputProps extends React.ComponentProps<"input"> {
   /** The label text for the input */
   label?: string;
@@ -9,7 +13,8 @@ export interface InputProps extends React.ComponentProps<"input"> {
 }
 
 /**
- * An input component. The `type` prop is required if you want styling.
+ * An `Input` allows users to enter data into a form. As it wraps the HTML
+ * `<input>` element, the `type` attribute is required.
  *
  * @example Basic inputs
  *
@@ -215,7 +220,7 @@ export interface InputProps extends React.ComponentProps<"input"> {
  * </FlexForm>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const Input: React.FC<InputProps> = ({ label, id, ...props }) => {
   if (label && id) {

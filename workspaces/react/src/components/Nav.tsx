@@ -3,8 +3,8 @@ import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
 /**
- * The navigation component. We expect you to use {@link MenuBarButton} inside as
- * well as wrap this in a Header.
+ * A `Nav` contains the navigation links for a page. It expects to be wrapped in
+ * a `Header` as well as using {@link MenuBarButton}s as children.
  *
  * @example Basic navigation
  *
@@ -25,8 +25,12 @@ export const Nav: PolymorphicComponent<"nav", {}> = ({
   ...props
 }) => <Component {...props} className={css(props, "shale-v1-nav")} />;
 
-/** @alpha */
-export interface BaseMenuBarButtonProps {
+/**
+ * The base props for {@link MenuBarButton}.
+ *
+ * @alpha
+ */
+export interface MenuBarButtonProps {
   /** Whether this menu item is the current page */
   current?: boolean;
   /**
@@ -37,7 +41,8 @@ export interface BaseMenuBarButtonProps {
 }
 
 /**
- * A menu bar button component.
+ * A `MenuBarButton` is a button used inside of a {@link Nav}, typically for
+ * navigation.
  *
  * @example Basic menu button
  *
@@ -57,7 +62,7 @@ export interface BaseMenuBarButtonProps {
  */
 export const MenuBarButton: PolymorphicComponent<
   "a",
-  BaseMenuBarButtonProps
+  MenuBarButtonProps
 > = ({ Component = "a", current, state, ...props }) => (
   <Component
     {...props}

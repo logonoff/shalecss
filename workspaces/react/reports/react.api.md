@@ -8,61 +8,31 @@ import type { ComponentPropsWithoutRef } from 'react';
 import type { ElementType } from 'react';
 import type { FC } from 'react';
 
-// @alpha (undocumented)
-export interface BaseButtonProps {
+// @beta
+export const Button: PolymorphicComponent<"button", ButtonProps>;
+
+// @beta
+export interface ButtonProps {
     state?: StateVariant;
     variant?: "primary" | "secondary";
 }
 
-// @alpha (undocumented)
-export interface BaseCommandBarProps {
-    flexGrow?: boolean;
-    gutter?: boolean;
-}
-
-// @alpha (undocumented)
-export interface BaseFlexContainerProps {
-    variant?: "space-between" | "center" | "align-center";
-}
-
-// @alpha (undocumented)
-export interface BaseHeaderProps {
-    compact?: boolean;
-    invertBorder?: boolean;
-    state?: StateVariant;
-}
-
-// @alpha (undocumented)
-export interface BaseLinkProps {
-    isExternal?: boolean;
-    state?: StateVariant;
-}
-
-// @alpha (undocumented)
-export interface BaseMenuBarButtonProps {
-    current?: boolean;
-    state?: StateVariant;
-}
-
-// @alpha
-export const Button: PolymorphicComponent<"button", BaseButtonProps>;
-
 // @alpha
 export const CaptionButton: PolymorphicComponent<"button", CaptionButtonProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface CaptionButtonProps {
     children?: React.ReactNode;
     wrapperProps?: React.HTMLAttributes<HTMLLIElement>;
 }
 
-// @alpha
+// @beta
 export const CaptionMenu: PolymorphicComponent<"span", {}>;
 
 // @alpha
 export const Card: PolymorphicComponent<typeof FlexItem, CardProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface CardProps {
     shadow?: ShadowVariant;
 }
@@ -71,9 +41,15 @@ export interface CardProps {
 export const Code: PolymorphicComponent<"code">;
 
 // @alpha
-export const CommandBar: PolymorphicComponent<typeof FlexContainer, BaseCommandBarProps>;
+export const CommandBar: PolymorphicComponent<typeof FlexContainer, CommandBarProps>;
 
-// @public (undocumented)
+// @alpha
+export interface CommandBarProps {
+    flexGrow?: boolean;
+    gutter?: boolean;
+}
+
+// @public
 export type ComponentProp<C extends ElementType> = {
     Component?: C;
 };
@@ -84,12 +60,17 @@ export const Container: PolymorphicComponent<"div", {}>;
 // @alpha
 export const Dialog: FC<DialogProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {
 }
 
 // @alpha
-export const FlexContainer: PolymorphicComponent<"div", BaseFlexContainerProps>;
+export const FlexContainer: PolymorphicComponent<"div", FlexContainerProps>;
+
+// @alpha
+export interface FlexContainerProps {
+    variant?: "space-between" | "center" | "align-center";
+}
 
 // @alpha
 export const FlexForm: PolymorphicComponent<"form", {}>;
@@ -97,7 +78,7 @@ export const FlexForm: PolymorphicComponent<"form", {}>;
 // @alpha
 export const FlexItem: PolymorphicComponent<"div", FlexItemProps>;
 
-// @alpha (undocumented)
+// @alpha
 export type FlexItemProps = {
     flex?: "grow" | "half" | "third" | "quarter";
 } | {
@@ -105,7 +86,7 @@ export type FlexItemProps = {
     flexAmount: string;
 };
 
-// @alpha
+// @public
 export const Footer: PolymorphicComponent<"footer", {}>;
 
 // @public
@@ -126,19 +107,26 @@ export const H5: PolymorphicComponent<"h5">;
 // @public
 export const H6: PolymorphicComponent<"h6">;
 
-// @alpha
-export const Header: PolymorphicComponent<"header", BaseHeaderProps>;
+// @beta
+export const Header: PolymorphicComponent<"header", HeaderProps>;
 
-// @alpha
+// @beta
+export interface HeaderProps {
+    compact?: boolean;
+    invertBorder?: boolean;
+    state?: StateVariant;
+}
+
+// @beta
 export const HeaderText: PolymorphicComponent<"p", {}>;
 
-// @alpha
+// @beta
 export const HeaderTitle: PolymorphicComponent<"div", {}>;
 
 // @alpha
 export const Icon: React.FC<IconProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
     flipX?: boolean;
     flipY?: boolean;
@@ -146,20 +134,32 @@ export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
     iconPath?: string;
 }
 
-// @alpha
+// @public
 export const Input: React.FC<InputProps>;
 
-// @alpha (undocumented)
+// @public
 export interface InputProps extends React.ComponentProps<"input"> {
     id?: string;
     label?: string;
 }
 
-// @alpha
-export const Link: PolymorphicComponent<"a", BaseLinkProps>;
+// @public
+export const Link: PolymorphicComponent<"a", LinkProps>;
+
+// @public
+export interface LinkProps {
+    isExternal?: boolean;
+    state?: StateVariant;
+}
 
 // @alpha
-export const MenuBarButton: PolymorphicComponent<"a", BaseMenuBarButtonProps>;
+export const MenuBarButton: PolymorphicComponent<"a", MenuBarButtonProps>;
+
+// @alpha
+export interface MenuBarButtonProps {
+    current?: boolean;
+    state?: StateVariant;
+}
 
 // @alpha
 export const Nav: PolymorphicComponent<"nav", {}>;
@@ -167,7 +167,7 @@ export const Nav: PolymorphicComponent<"nav", {}>;
 // @alpha
 export const Note: PolymorphicComponent<typeof FlexItem, NoteProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface NoteProps {
     variant: "info" | "alert" | "warn" | "tip";
 }
@@ -181,13 +181,13 @@ export const P: PolymorphicComponent<"p">;
 // @public
 export type PolymorphicComponent<DefaultElement extends ElementType, P = {}> = <C extends ElementType = DefaultElement>(props: PolymorphicComponentProp<C, Readonly<P>>) => ReturnType<FC<P>>;
 
-// @public (undocumented)
+// @public
 export type PolymorphicComponentProp<C extends ElementType, Props = {}> = Props & Omit<ComponentPropsWithoutRef<C>, keyof (ComponentProp<C> & Props)> & ComponentProp<C>;
 
 // @alpha
 export const PopoverContent: PolymorphicComponent<"menu", PopoverContentProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface PopoverContentProps {
     name: string;
 }
@@ -195,32 +195,32 @@ export interface PopoverContentProps {
 // @alpha
 export const PopoverToggle: PolymorphicComponent<"div", PopoverToggleProps>;
 
-// @alpha (undocumented)
+// @alpha
 export interface PopoverToggleProps {
     name: string;
 }
 
-// @alpha
+// @public
 export const Select: React.FC<SelectProps>;
 
-// @alpha (undocumented)
+// @public
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
     state?: StateVariant;
 }
 
-// @alpha (undocumented)
+// @public
 export type ShadowVariant = "subtle" | "moderate" | "puffy";
 
 // @public
 export const SkipToContent: PolymorphicComponent<"a">;
 
-// @alpha (undocumented)
+// @public
 export type StateVariant = "hover" | "active" | "focus" | "disabled";
 
 // @public
 export const Textarea: React.FC<TextareaProps>;
 
-// @public (undocumented)
+// @public
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 

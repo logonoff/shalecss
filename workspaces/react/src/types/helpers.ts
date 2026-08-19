@@ -1,6 +1,10 @@
 import type { ComponentPropsWithoutRef, ElementType, FC } from "react";
 
-/** @public */
+/**
+ * Provides a `Component` prop for overriding a component's base
+ *
+ * @public
+ */
 export type ComponentProp<C extends ElementType> = {
   /**
    * Overrides the base React component / HTML element that is used for this
@@ -9,7 +13,12 @@ export type ComponentProp<C extends ElementType> = {
   Component?: C;
 };
 
-/** @public */
+/**
+ * Provides the props for a polymorphic component, allowing the base component to be
+ * overridden while still maintaining type safety for its props.
+ *
+ * @public
+ */
 export type PolymorphicComponentProp<
   C extends ElementType,
   Props = {},

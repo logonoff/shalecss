@@ -10,10 +10,7 @@ import {
   Note,
   P,
 } from "@shalecss/react";
-import {
-  parseDocComment,
-  type DocCommentParseResult,
-} from "./docCommentParser";
+import { parseDocComment } from "./docCommentParser";
 import { LiveExample } from "./LiveExample";
 
 interface ComponentDocProps {
@@ -26,7 +23,7 @@ function formatType(str: string): string {
 
 /** Renders the TSDoc for a given shalecss export */
 export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
-  const doc: DocCommentParseResult = parseDocComment(component);
+  const doc = parseDocComment(component);
 
   return (
     <FlexItem>

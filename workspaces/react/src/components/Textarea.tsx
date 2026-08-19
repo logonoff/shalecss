@@ -1,10 +1,14 @@
 import { css } from "../utils/css";
 
-/** @public */
+/**
+ * The base props for {@link Textarea}.
+ *
+ * @public
+ */
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 /**
- * A textarea component.
+ * A `Textarea` component allows users to enter multi-line text.
  *
  * @example Basic textarea
  *

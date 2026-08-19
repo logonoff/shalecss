@@ -2,7 +2,7 @@ import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 
 /**
- * A footer component for displaying stuff at the so-called "foot".
+ * A `Footer` displays stuff at the so-called "foot".
  *
  * @example Basic usage
  *
@@ -14,7 +14,7 @@ import { css } from "../utils/css";
  * </Footer>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const Footer: PolymorphicComponent<"footer", {}> = ({
   Component = "footer",

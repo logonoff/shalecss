@@ -2,8 +2,12 @@ import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 import { FlexContainer } from "./Container";
 
-/** @alpha */
-export interface BaseCommandBarProps {
+/**
+ * The base props for {@link CommandBar}.
+ *
+ * @alpha
+ */
+export interface CommandBarProps {
   /** Whether to make the command bar grow to fill available space */
   flexGrow?: boolean;
   /** Whether to add padding around the command bar */
@@ -11,8 +15,8 @@ export interface BaseCommandBarProps {
 }
 
 /**
- * The `CommandBar` component provides a container for command-based UI
- * elements, typically used for toolbars or action bars.
+ * A `CommandBar` provides a container for command-based UI elements, typically
+ * used for toolbars or action bars.
  *
  * @example Basic usage
  *
@@ -28,7 +32,7 @@ export interface BaseCommandBarProps {
  */
 export const CommandBar: PolymorphicComponent<
   typeof FlexContainer,
-  BaseCommandBarProps
+  CommandBarProps
 > = ({ Component = FlexContainer, flexGrow, gutter, ...props }) => (
   <Component
     {...props}

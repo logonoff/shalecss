@@ -2,8 +2,12 @@ import type { PolymorphicComponent } from "../types/helpers";
 import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
-/** @alpha */
-export interface BaseLinkProps {
+/**
+ * The base props for {@link Link}.
+ *
+ * @public
+ */
+export interface LinkProps {
   /** The initial state of the link (if you want to force a specific state) */
   state?: StateVariant;
   /** Shows an external link icon */
@@ -11,7 +15,7 @@ export interface BaseLinkProps {
 }
 
 /**
- * A link component.
+ * A `Link` is used to navigate to other pages or sections of a page.
  *
  * External links (links with `target="_blank"`) will automatically show an
  * external link icon, but you can also explicitly set `isExternal` to `true` to
@@ -44,9 +48,9 @@ export interface BaseLinkProps {
  * </Link>;
  * ```
  *
- * @alpha
+ * @public
  */
-export const Link: PolymorphicComponent<"a", BaseLinkProps> = ({
+export const Link: PolymorphicComponent<"a", LinkProps> = ({
   Component = "a",
   state,
   isExternal,

@@ -1,7 +1,11 @@
 import type { PolymorphicComponent } from "../types/helpers";
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link CaptionButton}.
+ *
+ * @alpha
+ */
 export interface CaptionButtonProps {
   /** The content of the `CaptionButton`. */
   children?: React.ReactNode;
@@ -10,8 +14,8 @@ export interface CaptionButtonProps {
 }
 
 /**
- * `CaptionButton` component provide specialized button and menu styling,
- * typically used for window controls or the header.
+ * A `CaptionButton` provides specialized button and menu styling, typically
+ * used for window controls or the header.
  *
  * Must be used within a {@link CaptionMenu} component.
  *
@@ -27,8 +31,8 @@ export const CaptionButton: PolymorphicComponent<
 );
 
 /**
- * A `CaptionMenu` component serves as a container for {@link CaptionButton},
- * arranging them in a horizontal layout suitable for window controls.
+ * A `CaptionMenu` serves as a container for {@link CaptionButton}, arranging
+ * them in a horizontal layout suitable for window controls.
  *
  * @example Window controls
  *
@@ -45,7 +49,7 @@ export const CaptionButton: PolymorphicComponent<
  * </Header>;
  * ```
  *
- * @alpha
+ * @beta
  */
 export const CaptionMenu: PolymorphicComponent<"span", {}> = ({
   Component = "menu",

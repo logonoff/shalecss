@@ -9,13 +9,13 @@
 export type {
   ComponentProp,
   PolymorphicComponent,
-  PolymorphicComponentProp,
+  PolymorphicComponentProp
 } from "./types/helpers";
 export type { ShadowVariant, StateVariant } from "./types/variants";
 
 // Layout & Structure
 export { Container, FlexContainer, FlexForm } from "./components/Container";
-export type { BaseFlexContainerProps } from "./components/Container";
+export type { FlexContainerProps } from "./components/Container";
 
 export { FlexItem } from "./components/FlexItem";
 export type { FlexItemProps } from "./components/FlexItem";
@@ -31,7 +31,7 @@ export type { DialogProps } from "./components/Dialog";
 export { PopoverContent, PopoverToggle } from "./components/Popover";
 export type {
   PopoverContentProps,
-  PopoverToggleProps,
+  PopoverToggleProps
 } from "./components/Popover";
 
 // Typography
@@ -39,7 +39,7 @@ export { Code, H1, H2, H3, H4, H5, H6, P } from "./components/Typography";
 
 // Forms & Inputs
 export { Button } from "./components/Button";
-export type { BaseButtonProps } from "./components/Button";
+export type { ButtonProps } from "./components/Button";
 
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
@@ -51,16 +51,16 @@ export { Textarea } from "./components/Textarea";
 export type { TextareaProps } from "./components/Textarea";
 
 export { Link } from "./components/Link";
-export type { BaseLinkProps } from "./components/Link";
+export type { LinkProps } from "./components/Link";
 
 // Navigation
 export { Header, HeaderText, HeaderTitle } from "./components/Header";
-export type { BaseHeaderProps } from "./components/Header";
+export type { HeaderProps } from "./components/Header";
 
 export { Footer } from "./components/Footer";
 export { MenuBarButton, Nav } from "./components/Nav";
 
-export type { BaseMenuBarButtonProps } from "./components/Nav";
+export type { MenuBarButtonProps } from "./components/Nav";
 export { SkipToContent } from "./components/SkipToContent";
 
 // UI Components
@@ -71,7 +71,7 @@ export { Note, NoteText } from "./components/Note";
 export type { NoteProps } from "./components/Note";
 
 export { CommandBar } from "./components/CommandBar";
-export type { BaseCommandBarProps } from "./components/CommandBar";
+export type { CommandBarProps } from "./components/CommandBar";
 
 export { CaptionButton, CaptionMenu } from "./components/CaptionButton";
 export type { CaptionButtonProps } from "./components/CaptionButton";

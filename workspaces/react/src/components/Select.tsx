@@ -1,14 +1,18 @@
 import type { StateVariant } from "../types/variants";
 import { css } from "../utils/css";
 
-/** @alpha */
+/**
+ * The base props for {@link Select}.
+ *
+ * @public
+ */
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   /** The initial state of the select (if you want to force a specific state) */
   state?: StateVariant;
 }
 
 /**
- * A select component.
+ * A `Select` component allows selection of multiple options.
  *
  * @example Basic select
  *
@@ -20,7 +24,7 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
  * </Select>;
  * ```
  *
- * @alpha
+ * @public
  */
 export const Select: React.FC<SelectProps> = ({ state, ...props }) => (
   <div

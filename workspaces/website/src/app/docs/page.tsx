@@ -1,4 +1,15 @@
-import { Button, Card, FlexContainer, H2, H3, Link, P } from "@shalecss/react";
+import { parseDocComment } from "@/components/ComponentDoc/docCommentParser";
+import {
+  Button,
+  Card,
+  FlexContainer,
+  H2,
+  H3,
+  H4,
+  H5,
+  Link,
+  P,
+} from "@shalecss/react";
 import { components } from "./components";
 
 const componentLinks = Object.entries(components)
@@ -38,20 +49,37 @@ export default () => (
       sink" I can avoid writing all of that stuff and you can avoid loading it.
     </P>
 
-    <FlexContainer Component="section">
+    <FlexContainer variant="space-between" Component="section">
       <H3>Components</H3>
 
       <FlexContainer variant="space-between">
-        {componentLinks.map(({ href, name }) => (
-          <Card
-            Component={(props: any) => <Button Component="a" {...props} />}
-            href={href.replace("/docs/", "./docs/")}
-            key={name}
-            style={{ marginBottom: "var(--shale-v1-font-2)" }}
-          >
-            {name}
-          </Card>
-        ))}
+        {componentLinks.map(({ href, name }) => {
+          const doc = parseDocComment(name);
+
+          return (
+            <Card
+              Component={(props: any) => <Button Component="a" {...props} />}
+              href={href.replace("/docs/", "./docs/")}
+              className="shale-v1-flex-third"
+              key={name}
+              style={{
+                marginBottom: "var(--shale-v1-font-2)",
+                fontSize: "var(--shale-v1-font--2)",
+                textAlign: "left",
+              }}
+            >
+              {doc.isDeprecated ||
+              doc.releaseStage === "alpha" ||
+              doc.releaseStage === "beta" ? (
+                <H5 Component="span">
+                  {doc.isDeprecated ? "(deprecated)" : `(${doc.releaseStage})`}
+                </H5>
+              ) : null}
+              <H4>{doc.name}</H4>
+              <P>{doc.description}</P>
+            </Card>
+          );
+        })}
       </FlexContainer>
     </FlexContainer>
   </>
