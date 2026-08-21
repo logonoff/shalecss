@@ -33,11 +33,11 @@
   --#{$shale}header-background-disabled: #787878
     linear-gradient(#8a8a8a, #787878);
   --#{$shale}header-text: white;
-  --#{$shale}header-bar-current: var(--#{$shale}accent-300);
-  --#{$shale}header-glow-current: var(--#{$shale}accent-300);
-  --#{$shale}header-bar-hover: var(--#{$shale}accent-200);
-  --#{$shale}header-glow-hover: var(--#{$shale}accent-300);
-  --#{$shale}header-bar-active: var(--#{$shale}accent-300);
+  --#{$shale}header-bar-current: var(--#{$shale}accent-400);
+  --#{$shale}header-glow-current: var(--#{$shale}accent-400);
+  --#{$shale}header-bar-hover: var(--#{$shale}accent-500);
+  --#{$shale}header-glow-hover: var(--#{$shale}accent-500);
+  --#{$shale}header-bar-active: var(--#{$shale}accent-500);
 
   /* Footer */
   --#{$shale}footer-background: #e6e6e6 linear-gradient(#fcfcfc, #e6e6e6);
