@@ -76,14 +76,17 @@
   --#{$shale}button-text-colour: var(--#{$shale}text-colour);
   --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
   --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-disabled-text-colour: var(--#{$shale}text-colour-secondary);
 
   --#{$shale}button-border: #1c1c1c;
   --#{$shale}button-border-hover: #353535;
   --#{$shale}button-border-active: var(--#{$shale}accent-700);
+  --#{$shale}button-border-disabled: #2d2d2d;
 
   --#{$shale}button-inset-border: #555;
   --#{$shale}button-inset-border-hover: #666;
   --#{$shale}button-inset-border-active: var(--#{$shale}accent-800);
+  --#{$shale}button-inset-border-disabled: #404040;
 
   /* Dialog */
   --#{$shale}dialog-backdrop: rgba(0, 0, 0, 0.6);

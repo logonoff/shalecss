@@ -56,12 +56,16 @@
 
   &:disabled,
   &#{$disabled} {
+    --#{$shale}button-text-colour: var(
+      --#{$shale}button-disabled-text-colour,
+      var(--#{$shale}text-colour)
+    );
     background: var(--#{$shale}button-disabled);
     border-color: var(
       --#{$shale}button-border-disabled,
       var(--#{$shale}button-border)
     );
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border-disabled);
   }
 }
 

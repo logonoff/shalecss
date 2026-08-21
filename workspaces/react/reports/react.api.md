@@ -193,7 +193,7 @@ export interface PopoverContentProps {
 }
 
 // @alpha
-export const PopoverToggle: PolymorphicComponent<"div", PopoverToggleProps>;
+export const PopoverToggle: PolymorphicComponent<typeof Button, PopoverToggleProps>;
 
 // @alpha
 export interface PopoverToggleProps {

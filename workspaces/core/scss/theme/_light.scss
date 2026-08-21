@@ -73,15 +73,17 @@
       var(--#{$shale}accent-100),
       var(--#{$shale}accent-300)
     );
-  --#{$shale}button-disabled: #ccc linear-gradient(#ccc, #aaa);
+  --#{$shale}button-disabled: #c6c6c6 linear-gradient(#c6c6c6, #b6b6b6);
 
   --#{$shale}button-text-colour: var(--#{$shale}text-colour);
   --#{$shale}button-hover-text-colour: var(--#{$shale}text-colour);
   --#{$shale}button-active-text-colour: var(--#{$shale}text-colour);
+  --#{$shale}button-disabled-text-colour: var(--#{$shale}text-colour-secondary);
 
   --#{$shale}button-border: #b5b5b5;
   --#{$shale}button-border-hover: #cecece;
   --#{$shale}button-border-active: var(--#{$shale}accent);
+  --#{$shale}button-border-disabled: #9d9d9d;
 
   --#{$shale}button-inset-border: #e3e3e3;
   --#{$shale}button-inset-border-hover: #fdfdfd;
