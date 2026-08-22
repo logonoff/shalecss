@@ -219,6 +219,16 @@ export const SkipToContent: PolymorphicComponent<"a">;
 // @public
 export type StateVariant = "hover" | "active" | "focus" | "disabled";
 
+// @alpha
+export const Switch: React.FC<SwitchProps>;
+
+// @alpha
+export interface SwitchProps extends Omit<React.ComponentProps<"input">, "type"> {
+    id?: string;
+    label?: string;
+    type: "checkbox" | "radio";
+}
+
 // @public
 export const Textarea: React.FC<TextareaProps>;
 

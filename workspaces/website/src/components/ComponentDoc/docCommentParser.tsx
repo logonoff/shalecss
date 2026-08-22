@@ -168,7 +168,9 @@ const getReactNodeFromSection = (
   linkToDocs: boolean = true,
 ): React.ReactNode => {
   if (!section) return null;
-  return section.nodes.map((node, i) => extractReactNodeFromText(node, linkToDocs, i));
+  return section.nodes.map((node, i) =>
+    extractReactNodeFromText(node, linkToDocs, i),
+  );
 };
 
 /** Parses example blocks from TSDoc custom blocks. */
@@ -366,7 +368,10 @@ export const parseDocComment = (
   let isDeprecated: DocCommentParseResult["isDeprecated"];
 
   if (member instanceof ApiDocumentedItem && member.tsdocComment) {
-    description = getReactNodeFromSection(member.tsdocComment.summarySection, linkToDocs);
+    description = getReactNodeFromSection(
+      member.tsdocComment.summarySection,
+      linkToDocs,
+    );
     examples = parseExamplesFromBlocks(member.tsdocComment.customBlocks);
     isDeprecated = getIsDeprecated(member.tsdocComment.deprecatedBlock);
   }

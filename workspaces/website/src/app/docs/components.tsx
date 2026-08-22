@@ -34,6 +34,7 @@ export const components: Record<
     name: "SkipToContent",
     components: ["SkipToContent"],
   },
+  "/docs/switch": { name: "Switch", components: ["Switch"] },
   "/docs/textarea": { name: "Textarea", components: ["Textarea"] },
   "/docs/typography": {
     name: "Typography",

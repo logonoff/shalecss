@@ -47,6 +47,9 @@ export type { InputProps } from "./components/Input";
 export { Select } from "./components/Select";
 export type { SelectProps } from "./components/Select";
 
+export { Switch } from "./components/Switch";
+export type { SwitchProps } from "./components/Switch";
+
 export { Textarea } from "./components/Textarea";
 export type { TextareaProps } from "./components/Textarea";
 
