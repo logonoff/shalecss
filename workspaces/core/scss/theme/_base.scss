@@ -56,22 +56,22 @@ $indeterminate: ".#{$shale}-indeterminate" !default;
 
   // calculated shades
   --#{$shale}accent-100: color-mix(
-    in hsl,
+    in oklab,
     var(--#{$shale}accent),
     var(--#{$shale}accent-light-tint) 80%
   );
   --#{$shale}accent-200: color-mix(
-    in hsl,
+    in oklab,
     var(--#{$shale}accent),
     var(--#{$shale}accent-light-tint) 60%
   );
   --#{$shale}accent-300: color-mix(
-    in hsl,
+    in oklab,
     var(--#{$shale}accent),
     var(--#{$shale}accent-light-tint) 40%
   );
   --#{$shale}accent-400: color-mix(
-    in hsl,
+    in oklab,
     var(--#{$shale}accent),
     var(--#{$shale}accent-light-tint) 20%
   );
