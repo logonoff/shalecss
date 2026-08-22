@@ -1,3 +1,4 @@
+import { components } from "@/app/docs/components";
 import {
   ApiDeclaredItem,
   ApiDocumentedItem,
@@ -21,7 +22,7 @@ import {
   DocPlainText,
   DocSection,
 } from "@microsoft/tsdoc";
-import { Code } from "@shalecss/react";
+import { Code, Link } from "@shalecss/react";
 import apiJson from "@shalecss/react/temp/react.api.json";
 import path from "path";
 
@@ -109,12 +110,26 @@ const extractReactNodeFromText = (
     case DocNodeKind.LinkTag: {
       const linkTag = node as DocLinkTag;
       // For {@link ComponentName} references, just show the text
-      const linkText =
-        linkTag.linkText ||
+      const linkText = linkTag.linkText;
+      const identifier =
         linkTag.codeDestination?.memberReferences?.[0]?.memberIdentifier
-          ?.identifier ||
-        "link";
-      return <Code key={key}>{linkText}</Code>;
+          ?.identifier;
+
+      return identifier ? (
+        <Code
+          Component={Link}
+          href={`${
+            Object.entries(components).find(([, component]) =>
+              component.components?.includes(identifier as any),
+            )?.[0] || ""
+          }#${identifier}`}
+          key={key}
+        >
+          {linkText || identifier}
+        </Code>
+      ) : (
+        <Code>{linkText || identifier}</Code>
+      );
     }
 
     case DocNodeKind.Paragraph:
