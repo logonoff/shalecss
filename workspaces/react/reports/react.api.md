@@ -81,9 +81,11 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps>;
 // @alpha
 export type FlexItemProps = {
     flex?: "grow" | "half" | "third" | "quarter";
+    collapseOnMobile?: boolean;
 } | {
     flex: "custom";
     flexAmount: string;
+    collapseOnMobile?: boolean;
 };
 
 // @public

@@ -10,12 +10,16 @@ export type FlexItemProps =
   | {
       /** The flex grow value */
       flex?: "grow" | "half" | "third" | "quarter";
+      /** Will collapse on mobile (768px and below) */
+      collapseOnMobile?: boolean;
     }
   | {
       /** The flex grow value as a CSS value */
       flex: "custom";
       /** The custom flex grow value */
       flexAmount: string;
+      /** Will collapse on mobile (768px and below) */
+      collapseOnMobile?: boolean;
     };
 
 /**
@@ -47,14 +51,22 @@ export type FlexItemProps =
  * </FlexContainer>;
  * ```
  *
- * @example Quarter flex
+ * @example Quarter flex that responds to viewport
  *
  * ```tsx
  * <FlexContainer variant="center">
- *   <Card flex="quarter">quarter</Card>
- *   <Card flex="quarter">quarter</Card>
- *   <Card flex="quarter">quarter</Card>
- *   <Card flex="quarter">quarter</Card>
+ *   <Card collapseOnMobile flex="quarter">
+ *     quarter
+ *   </Card>
+ *   <Card collapseOnMobile flex="quarter">
+ *     quarter
+ *   </Card>
+ *   <Card collapseOnMobile flex="quarter">
+ *     quarter
+ *   </Card>
+ *   <Card collapseOnMobile flex="quarter">
+ *     quarter
+ *   </Card>
  * </FlexContainer>;
  * ```
  *
@@ -86,6 +98,7 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
   Component = "div",
   flex,
   flexAmount,
+  collapseOnMobile,
   ...props
 }) => (
   <Component
@@ -101,6 +114,7 @@ export const FlexItem: PolymorphicComponent<"div", FlexItemProps> = ({
       "shale-v1-flex-third": flex === "third",
       "shale-v1-flex-quarter": flex === "quarter",
       "shale-v1-flex-custom": flex === "custom",
+      "shale-v1-flex-collapse-on-mobile": collapseOnMobile,
     })}
   />
 );

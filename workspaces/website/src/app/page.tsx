@@ -35,7 +35,7 @@ export default function Home() {
       </Card>
 
       <FlexContainer variant="space-between">
-        <Card flex="third">
+        <Card flex="third" collapseOnMobile>
           <H3>customizable</H3>
           <P>
             every colour is set by a CSS variable to make it easier to change
@@ -43,14 +43,14 @@ export default function Home() {
             included
           </P>
         </Card>
-        <Card flex="third">
+        <Card flex="third" collapseOnMobile>
           <H3>no overrides</H3>
           <P>
             shale.css does not override any global styles, so it can be used in
             any project, alongside any other CSS framework if you'd like
           </P>
         </Card>
-        <Card flex="third">
+        <Card flex="third" collapseOnMobile>
           <H3>based on browser elements</H3>
           <P>
             no wonky custom components. shale.css directly uses browser

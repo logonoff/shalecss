@@ -42,11 +42,10 @@ export interface PopoverContentProps {
  *
  * @alpha
  */
-export const PopoverToggle: PolymorphicComponent<typeof Button, PopoverToggleProps> = ({
-  Component = Button,
-  name,
-  ...props
-}) => (
+export const PopoverToggle: PolymorphicComponent<
+  typeof Button,
+  PopoverToggleProps
+> = ({ Component = Button, name, ...props }) => (
   <Component
     {...props}
     className={css(props, "shale-v1-popover-toggle")}

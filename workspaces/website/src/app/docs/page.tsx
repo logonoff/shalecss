@@ -60,7 +60,7 @@ export default () => (
             <Card
               Component={(props: any) => <Button Component="a" {...props} />}
               href={href.replace("/docs/", "./docs/")}
-              className="shale-v1-flex-third"
+              className="shale-v1-flex-third shale-v1-flex-collapse-on-mobile"
               key={name}
               style={{
                 marginBottom: "var(--shale-v1-font-2)",

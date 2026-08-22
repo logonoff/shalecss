@@ -53,6 +53,12 @@
   flex: 1 1 calc(25% - var(--#{$shale}font-2));
 }
 
+@media (max-width: 768px) {
+  .#{$shale}flex-collapse-on-mobile {
+    flex: 1 1 100%;
+  }
+}
+
 .#{$shale}flex-form {
   align-items: center;
   display: flex;
