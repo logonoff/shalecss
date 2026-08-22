@@ -81,6 +81,7 @@ export interface DocCommentParseResult {
  */
 const extractReactNodeFromText = (
   node: DocNode,
+  linkToDocs: boolean = true,
   key?: number,
 ): React.ReactNode => {
   switch (node.kind) {
@@ -115,7 +116,7 @@ const extractReactNodeFromText = (
         linkTag.codeDestination?.memberReferences?.[0]?.memberIdentifier
           ?.identifier;
 
-      return identifier ? (
+      return linkToDocs && identifier ? (
         <Code
           Component={Link}
           href={`${
@@ -128,7 +129,7 @@ const extractReactNodeFromText = (
           {linkText || identifier}
         </Code>
       ) : (
-        <Code>{linkText || identifier}</Code>
+        <Code key={key}>{linkText || identifier}</Code>
       );
     }
 
@@ -136,7 +137,7 @@ const extractReactNodeFromText = (
     case DocNodeKind.Section: {
       const container = node as DocParagraph | DocSection;
       return container.nodes.map((child, i) =>
-        extractReactNodeFromText(child, i),
+        extractReactNodeFromText(child, linkToDocs, i),
       );
     }
 
@@ -155,7 +156,7 @@ const extractReactNodeFromText = (
   // Fallback for any unhandled node types with children
   if ("nodes" in node) {
     return (node as DocParagraph).nodes.map((child, i) =>
-      extractReactNodeFromText(child, i),
+      extractReactNodeFromText(child, linkToDocs, i),
     );
   }
   return null;
@@ -164,9 +165,10 @@ const extractReactNodeFromText = (
 /** Converts a TSDoc section into React nodes. */
 const getReactNodeFromSection = (
   section: DocSection | undefined,
+  linkToDocs: boolean = true,
 ): React.ReactNode => {
   if (!section) return null;
-  return section.nodes.map((node, i) => extractReactNodeFromText(node, i));
+  return section.nodes.map((node, i) => extractReactNodeFromText(node, linkToDocs, i));
 };
 
 /** Parses example blocks from TSDoc custom blocks. */
@@ -348,6 +350,7 @@ const getDefaultElement = (member: ApiVariable): string | undefined => {
  */
 export const parseDocComment = (
   componentName: keyof typeof import("@shalecss/react"),
+  linkToDocs: boolean = true,
 ): DocCommentParseResult => {
   const member = findMember(componentName);
 
@@ -363,7 +366,7 @@ export const parseDocComment = (
   let isDeprecated: DocCommentParseResult["isDeprecated"];
 
   if (member instanceof ApiDocumentedItem && member.tsdocComment) {
-    description = getReactNodeFromSection(member.tsdocComment.summarySection);
+    description = getReactNodeFromSection(member.tsdocComment.summarySection, linkToDocs);
     examples = parseExamplesFromBlocks(member.tsdocComment.customBlocks);
     isDeprecated = getIsDeprecated(member.tsdocComment.deprecatedBlock);
   }

@@ -54,7 +54,7 @@ export default () => (
 
       <FlexContainer variant="space-between">
         {componentLinks.map(({ href, name }) => {
-          const doc = parseDocComment(name);
+          const doc = parseDocComment(name, false);
 
           return (
             <Card
