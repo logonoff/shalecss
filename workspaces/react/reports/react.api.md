@@ -202,6 +202,14 @@ export interface PopoverToggleProps {
     name: string;
 }
 
+// @alpha
+export const Progress: PolymorphicComponent<"progress", ProgressProps>;
+
+// @alpha
+export interface ProgressProps {
+    variant?: "info" | "alert" | "warn" | "tip";
+}
+
 // @public
 export const Select: React.FC<SelectProps>;
 

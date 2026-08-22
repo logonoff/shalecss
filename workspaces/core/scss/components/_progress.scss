@@ -1,0 +1,77 @@
+@use "../theme/base" as *;
+
+/*
+* Progress
+*/
+.#{$shale}progress {
+  --#{$shale}progress-background: var(--#{$shale}button-active);
+  --#{$shale}progress-border: var(--#{$shale}button-border-active);
+  --#{$shale}progress-height: var(--#{$shale}font-0);
+
+  appearance: none;
+  background: var(--#{$shale}button);
+  border-radius: 3px;
+  border: 1px solid var(--#{$shale}button-border);
+  box-shadow: inset 0 0 0 1px var(--#{$shale}button-inset-border);
+  overflow: hidden;
+  width: 100%;
+  height: var(--#{$shale}progress-height);
+
+  &::-webkit-progress-bar,
+  &::-webkit-meter-bar {
+    background: transparent;
+    height: calc(var(--#{$shale}progress-height) - 2px);
+  }
+
+  &::-moz-progress-bar,
+  &::-moz-meter-bar,
+  &::-webkit-meter-optimum-value,
+  &::-webkit-meter-suboptimum-value,
+  &::-webkit-meter-even-less-good-value,
+  &::-webkit-progress-value,
+  &:indeterminate::-webkit-progress-bar {
+    background: var(--#{$shale}progress-background);
+    box-shadow: inset 0 0 0 1px var(--#{$shale}progress-border);
+  }
+
+  &:indeterminate {
+    &::-moz-progress-bar,
+    &::-webkit-progress-bar {
+      animation: #{$shale}-progress-indeterminate 2s linear infinite;
+      mask-image: radial-gradient(circle, black 70%, transparent 100%);
+      width: 50%;
+    }
+  }
+
+  &.#{$shale}progress-tip,
+  &:-moz-meter-optimum,
+  &::-webkit-meter-optimum-value {
+    --#{$shale}progress-background: var(--#{$shale}note-tip-base);
+    --#{$shale}progress-border: var(--#{$shale}note-tip-border);
+  }
+  &.#{$shale}progress-warn,
+  &:-moz-meter-sub-optimum,
+  &::-webkit-meter-suboptimum-value {
+    --#{$shale}progress-background: var(--#{$shale}note-warn-base);
+    --#{$shale}progress-border: var(--#{$shale}note-warn-border);
+  }
+  &.#{$shale}progress-alert,
+  &:-moz-meter-sub-sub-optimum,
+  &::-webkit-meter-even-less-good-value {
+    --#{$shale}progress-background: var(--#{$shale}note-alert-base);
+    --#{$shale}progress-border: var(--#{$shale}note-alert-border);
+  }
+  &.#{$shale}progress-info {
+    --#{$shale}progress-background: var(--#{$shale}note-info-base);
+    --#{$shale}progress-border: var(--#{$shale}note-info-border);
+  }
+}
+
+@keyframes #{$shale}-progress-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}

@@ -78,3 +78,6 @@ export type { CommandBarProps } from "./components/CommandBar";
 
 export { CaptionButton, CaptionMenu } from "./components/CaptionButton";
 export type { CaptionButtonProps } from "./components/CaptionButton";
+
+export { Progress } from "./components/Progress";
+export type { ProgressProps } from "./components/Progress";
