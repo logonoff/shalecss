@@ -19,25 +19,35 @@ export interface InputProps extends React.ComponentProps<"input"> {
  * @example Basic inputs
  *
  * ```tsx
- * <FlexForm>
- *   <Input id="input-text" placeholder="text" type="text" />
- *   <Input id="input-password" placeholder="password" type="password" />
- *   <Input id="input-email" placeholder="email" type="email" />
- *   <Input id="input-url" placeholder="url" type="url" />
- *   <Input id="input-tel" placeholder="tel" type="tel" />
- *   <Input id="input-number" placeholder="number" type="number" />
- *   <Input id="input-search" placeholder="search" type="search" />
- *   <Input id="input-date" placeholder="date" type="date" />
- *   <Input id="input-time" placeholder="time" type="time" />
- *   <Input
- *     id="input-datetime"
- *     placeholder="datetime-local"
- *     type="datetime-local"
- *   />
- *   <Input id="input-month" placeholder="month" type="month" />
- *   <Input id="input-week" placeholder="week" type="week" />
- *   <Input id="input-color" placeholder="color" type="color" />
- *   <Input id="input-file" placeholder="file" type="file" />
+ * <FlexForm onSubmit={(e) => e.preventDefault()}>
+ *   {[
+ *     "button",
+ *     "color",
+ *     "date",
+ *     "datetime-local",
+ *     "email",
+ *     "file",
+ *     "hidden",
+ *     "month",
+ *     "number",
+ *     "password",
+ *     "range",
+ *     "reset",
+ *     "search",
+ *     "submit",
+ *     "tel",
+ *     "text",
+ *     "time",
+ *     "url",
+ *     "week",
+ *   ].map((type) => (
+ *     <Input
+ *       key={type}
+ *       id={`input-${type}`}
+ *       placeholder={type}
+ *       type={type}
+ *     />
+ *   ))}
  * </FlexForm>;
  * ```
  *
@@ -45,80 +55,35 @@ export interface InputProps extends React.ComponentProps<"input"> {
  *
  * ```tsx
  * <FlexForm>
- *   <Input
- *     id="input-text-disabled"
- *     disabled
- *     placeholder="text"
- *     type="text"
- *   />
- *   <Input
- *     id="input-password-disabled"
- *     disabled
- *     placeholder="password"
- *     type="password"
- *   />
- *   <Input
- *     id="input-email-disabled"
- *     disabled
- *     placeholder="email"
- *     type="email"
- *   />
- *   <Input id="input-url-disabled" disabled placeholder="url" type="url" />
- *   <Input id="input-tel-disabled" disabled placeholder="tel" type="tel" />
- *   <Input
- *     id="input-number-disabled"
- *     disabled
- *     placeholder="number"
- *     type="number"
- *   />
- *   <Input
- *     id="input-search-disabled"
- *     disabled
- *     placeholder="search"
- *     type="search"
- *   />
- *   <Input
- *     id="input-date-disabled"
- *     disabled
- *     placeholder="date"
- *     type="date"
- *   />
- *   <Input
- *     id="input-time-disabled"
- *     disabled
- *     placeholder="time"
- *     type="time"
- *   />
- *   <Input
- *     id="input-datetime-disabled"
- *     disabled
- *     placeholder="datetime-local"
- *     type="datetime-local"
- *   />
- *   <Input
- *     id="input-month-disabled"
- *     disabled
- *     placeholder="month"
- *     type="month"
- *   />
- *   <Input
- *     id="input-week-disabled"
- *     disabled
- *     placeholder="week"
- *     type="week"
- *   />
- *   <Input
- *     id="input-color-disabled"
- *     disabled
- *     placeholder="color"
- *     type="color"
- *   />
- *   <Input
- *     id="input-file-disabled"
- *     disabled
- *     placeholder="file"
- *     type="file"
- *   />
+ *   {[
+ *     "button",
+ *     "color",
+ *     "date",
+ *     "datetime-local",
+ *     "email",
+ *     "file",
+ *     "hidden",
+ *     "month",
+ *     "number",
+ *     "password",
+ *     "range",
+ *     "reset",
+ *     "search",
+ *     "submit",
+ *     "tel",
+ *     "text",
+ *     "time",
+ *     "url",
+ *     "week",
+ *   ].map((type) => (
+ *     <Input
+ *       key={type}
+ *       id={`input-${type}-disabled`}
+ *       disabled
+ *       placeholder={type}
+ *       type={type}
+ *     />
+ *   ))}
  * </FlexForm>;
  * ```
  *
@@ -163,9 +128,7 @@ export interface InputProps extends React.ComponentProps<"input"> {
  *     id="checkbox3"
  *     label="Checkbox3"
  *   />
- *   <Button Component="button" type="reset">
- *     Add indeterminate
- *   </Button>
+ *   <Button type="reset">Add indeterminate</Button>
  * </FlexForm>;
  * ```
  *
@@ -214,9 +177,7 @@ export interface InputProps extends React.ComponentProps<"input"> {
  *     id="checkbox6"
  *     label="Checkbox6"
  *   />
- *   <Button Component="button" type="reset">
- *     Add indeterminate
- *   </Button>
+ *   <Button type="reset">Add indeterminate</Button>
  * </FlexForm>;
  * ```
  *

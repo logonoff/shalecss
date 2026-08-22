@@ -69,7 +69,11 @@
   }
 }
 
-.#{$shale}button {
+.#{$shale}button,
+.#{$shale}input input[type="button"],
+.#{$shale}input input[type="reset"],
+.#{$shale}input input[type="submit"],
+.#{$shale}input input[type="color"] {
   @include button-style;
   border-radius: 3px;
   display: inline-block;
