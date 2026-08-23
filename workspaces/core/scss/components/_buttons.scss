@@ -73,8 +73,16 @@
 .#{$shale}input input[type="button"],
 .#{$shale}input input[type="reset"],
 .#{$shale}input input[type="submit"],
-.#{$shale}input input[type="color"] {
+.#{$shale}input input[type="color"],
+.#{$shale}select {
   @include button-style;
+}
+
+.#{$shale}button,
+.#{$shale}input input[type="button"],
+.#{$shale}input input[type="reset"],
+.#{$shale}input input[type="submit"],
+.#{$shale}input input[type="color"] {
   border-radius: 3px;
   display: inline-block;
   font-size: var(--#{$shale}font--1);

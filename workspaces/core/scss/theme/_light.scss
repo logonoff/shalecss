@@ -110,6 +110,12 @@
   --#{$shale}input-fill: var(--#{$shale}accent-900)
     linear-gradient(var(--#{$shale}accent-800), var(--#{$shale}accent-900));
 
+  /* Table */
+  --#{$shale}table-background: #fff;
+  --#{$shale}thead-background: var(--#{$shale}card-background);
+  --#{$shale}table-striped-background: #f0f0f0;
+  --#{$shale}table-border: #d5d5d5;
+
   /* Scrollbar */
   --#{$shale}scrollbar-corner: #f0f0f0;
 

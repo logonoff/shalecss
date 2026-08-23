@@ -35,6 +35,21 @@ export const components: Record<
     components: ["SkipToContent"],
   },
   "/docs/switch": { name: "Switch", components: ["Switch"] },
+  "/docs/table": {
+    name: "Table",
+    components: [
+      "Table",
+      "Caption",
+      "Colgroup",
+      "Col",
+      "Thead",
+      "Tbody",
+      "Tfoot",
+      "Tr",
+      "Th",
+      "Td",
+    ],
+  },
   "/docs/textarea": { name: "Textarea", components: ["Textarea"] },
   "/docs/typography": {
     name: "Typography",

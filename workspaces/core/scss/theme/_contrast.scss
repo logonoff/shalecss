@@ -117,6 +117,12 @@
     --#{$shale}scrollbar-thumb: Highlight;
   }
 
+  /* Table */
+  --#{$shale}table-background: Canvas;
+  --#{$shale}thead-background: var(--#{$shale}card-background);
+  --#{$shale}table-striped-background: Highlight;
+  --#{$shale}table-border: CanvasText;
+
   /* Shadows */
   --#{$shale}shadow-subtle: unset;
   --#{$shale}shadow-moderate: unset;

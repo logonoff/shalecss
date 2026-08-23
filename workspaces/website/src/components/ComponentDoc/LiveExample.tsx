@@ -15,19 +15,12 @@ interface LiveExampleProps {
 export const LiveExample: React.FC<LiveExampleProps> = ({ code }) => {
   return (
     <LiveProvider code={code} scope={shalecss} noInline={false}>
-      <div
-        style={{
-          background: "var(--shale-v1-background)",
-          borderRadius: "var(--shale-v1-font-0)",
-          boxShadow: "var(--shale-v1-text-shadow-puffy)",
-          marginBottom: "var(--shale-v1-font-1)",
-          padding: "var(--shale-v1-font-1)",
-        }}
-      >
-        <Note Component={LiveError} variant="alert" />
-        <LivePreview />
-      </div>
-      <Code Component={LiveEditor} style={{ background: "rgb(1, 22, 39)" }} />
+      <Note Component={LiveError} variant="alert" />
+      <LivePreview />
+      <Code
+        Component={LiveEditor}
+        style={{ background: "rgb(1, 22, 39)", overflowX: "scroll" }}
+      />
     </LiveProvider>
   );
 };

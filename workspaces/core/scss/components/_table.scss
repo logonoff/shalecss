@@ -1,0 +1,107 @@
+@use "../theme/base" as *;
+@use "buttons";
+
+/*
+ * Table
+ */
+.#{$shale}table-container {
+  max-width: 100%;
+
+  &.#{$shale}table-scrollable {
+    overflow-x: scroll;
+  }
+}
+
+.#{$shale}table {
+  background: var(--#{$shale}table-background);
+  outline: 1px solid var(--#{$shale}table-border);
+  border-collapse: collapse;
+  display: table;
+  text-align: left;
+  max-width: 100%;
+
+  &.#{$shale}table-striped {
+    .#{$shale}tbody {
+      > .#{$shale}tr:nth-of-type(even) {
+        background: var(--#{$shale}table-striped-background);
+      }
+    }
+  }
+
+  > .#{$shale}thead {
+    background: var(--#{$shale}thead-background);
+
+    > .#{$shale}tr {
+      > .#{$shale}th {
+        border-bottom: 1px solid var(--#{$shale}table-border);
+
+        &.#{$shale}-selectable {
+          @include buttons.button-style;
+          border-radius: 3px;
+          background: transparent;
+          border-color: transparent;
+          box-shadow: none;
+
+          &:hover,
+          &#{$hover},
+          &:active,
+          &#{$active},
+          &:focus-visible,
+          &#{$focus},
+          &:disabled,
+          &#{$disabled} {
+            border-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  > .#{$shale}tbody,
+  > .#{$shale}thead,
+  > .#{$shale}tfoot {
+    > .#{$shale}tr {
+      > .#{$shale}td:not(:last-child),
+      > .#{$shale}th:not(:last-child) {
+        border-right: 1px solid var(--#{$shale}table-border);
+      }
+
+      &.#{$shale}-selectable {
+        @include buttons.button-style;
+        border-radius: 3px;
+        background: transparent;
+        border-color: transparent;
+        box-shadow: none;
+
+        &:hover,
+        &#{$hover},
+        &:active,
+        &#{$active},
+        &:focus-visible,
+        &#{$focus},
+        &:disabled,
+        &#{$disabled} {
+          > .#{$shale}td,
+          > .#{$shale}th {
+            border-color: transparent;
+          }
+        }
+      }
+
+      > .#{$shale}td,
+      > .#{$shale}th {
+        padding: 0.1em 0.4em;
+      }
+    }
+  }
+
+  > .#{$shale}caption {
+    background: var(--#{$shale}thead-background);
+    border-bottom: 1px solid var(--#{$shale}table-border);
+    caption-side: top;
+  }
+
+  > .#{$shale}tfoot {
+    border-top: 1px solid var(--#{$shale}table-border);
+  }
+}

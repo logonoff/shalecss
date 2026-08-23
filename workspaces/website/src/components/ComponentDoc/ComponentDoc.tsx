@@ -9,6 +9,12 @@ import {
   Link,
   Note,
   P,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
 } from "@shalecss/react";
 import { parseDocComment } from "./docCommentParser";
 import { LiveExample } from "./LiveExample";
@@ -26,7 +32,7 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
   const doc = parseDocComment(component);
 
   return (
-    <FlexItem>
+    <FlexItem style={{ maxWidth: "100%" }}>
       <H2 id={component}>{component}</H2>
 
       {doc.sourcePath && (
@@ -70,10 +76,11 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
               flexDirection: "column",
               gap: "var(--shale-v1-font-2)",
               marginBottom: "var(--shale-v1-font-2)",
+              boxSizing: "border-box",
             }}
           >
             {doc.examples.map((example, index) => (
-              <div key={index}>
+              <div style={{ overflowX: "scroll" }} key={index}>
                 <H4>{example.title}</H4>
                 <LiveExample code={example.code} />
               </div>
@@ -85,49 +92,54 @@ export const ComponentDoc: React.FC<ComponentDocProps> = ({ component }) => {
       {doc.props.length > 0 && (
         <FlexItem Component="section">
           <H3>Props</H3>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
+          <Table scrollable>
+            <Thead>
+              <Tr>
+                <Th>Name</Th>
+                <Th>Type</Th>
+                <Th>Default</Th>
+                <Th>Description</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
               {doc.props.map((prop) => (
-                <tr key={prop.name}>
-                  <td>
+                <Tr key={prop.name}>
+                  <Td>
                     {prop.name}
                     {prop.isOptional ? (
                       ""
                     ) : (
-                      <span aria-label="Required">*</span>
+                      <span
+                        aria-label="Required"
+                        style={{ color: "var(--shale-v1-note-alert-text)" }}
+                      >
+                        *
+                      </span>
                     )}
-                  </td>
-                  <td>
+                  </Td>
+                  <Th>
                     <Code>{formatType(prop.type)}</Code>
-                  </td>
-                  <td>
+                  </Th>
+                  <Td>
                     {prop.defaultValue ? <Code>{prop.defaultValue}</Code> : "-"}
-                  </td>
-                  <td>{prop.description}</td>
-                </tr>
+                  </Td>
+                  <Td>{prop.description}</Td>
+                </Tr>
               ))}
               {doc.defaultElement && (
-                <tr>
-                  <td>Component</td>
-                  <td>
+                <Tr>
+                  <Td>Component</Td>
+                  <Td>
                     <Code>React.ElementType</Code>
-                  </td>
-                  <td>
+                  </Td>
+                  <Td>
                     <Code>'{doc.defaultElement}'</Code>
-                  </td>
-                  <td>The underlying HTML element to render.</td>
-                </tr>
+                  </Td>
+                  <Td>The underlying HTML element to render.</Td>
+                </Tr>
               )}
-            </tbody>
-          </table>
+            </Tbody>
+          </Table>
         </FlexItem>
       )}
     </FlexItem>

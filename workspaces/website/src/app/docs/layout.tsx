@@ -54,7 +54,7 @@ export default function DocsPage({
             </FlexContainer>
           </Card>
         </FlexItem>
-        <FlexItem flex="custom" flexAmount="80%">
+        <FlexItem flex="custom" flexAmount="80%" style={{ maxWidth: "100%" }}>
           {children}
         </FlexItem>
       </FlexContainer>

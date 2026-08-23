@@ -81,3 +81,28 @@ export type { CaptionButtonProps } from "./components/CaptionButton";
 
 export { Progress } from "./components/Progress";
 export type { ProgressProps } from "./components/Progress";
+
+export {
+  Caption,
+  Col,
+  Colgroup,
+  Table,
+  Tbody,
+  Td,
+  Tfoot,
+  Th,
+  Thead,
+  Tr,
+} from "./components/Table";
+export type {
+  CaptionProps,
+  ColgroupProps,
+  ColProps,
+  TableProps,
+  TbodyProps,
+  TdProps,
+  TfootProps,
+  TheadProps,
+  ThProps,
+  TrProps,
+} from "./components/Table";

@@ -5,7 +5,6 @@
  * Select
  */
 .#{$shale}select {
-  @include buttons.button-style;
   align-items: center;
   border-radius: 3px;
   display: inline-grid;

@@ -18,6 +18,9 @@ export interface ButtonProps {
 }
 
 // @alpha
+export const Caption: React.FC<CaptionProps>;
+
+// @alpha
 export const CaptionButton: PolymorphicComponent<"button", CaptionButtonProps>;
 
 // @alpha
@@ -30,6 +33,10 @@ export interface CaptionButtonProps {
 export const CaptionMenu: PolymorphicComponent<"span", {}>;
 
 // @alpha
+export interface CaptionProps extends React.HTMLAttributes<HTMLTableCaptionElement> {
+}
+
+// @alpha
 export const Card: PolymorphicComponent<typeof FlexItem, CardProps>;
 
 // @alpha
@@ -39,6 +46,20 @@ export interface CardProps {
 
 // @public
 export const Code: PolymorphicComponent<"code">;
+
+// @alpha
+export const Col: React.FC<ColProps>;
+
+// @alpha
+export const Colgroup: React.FC<ColgroupProps>;
+
+// @alpha
+export interface ColgroupProps extends React.ColgroupHTMLAttributes<HTMLTableColElement> {
+}
+
+// @alpha
+export interface ColProps extends React.ColHTMLAttributes<HTMLTableColElement> {
+}
 
 // @alpha
 export const CommandBar: PolymorphicComponent<typeof FlexContainer, CommandBarProps>;
@@ -237,11 +258,66 @@ export interface SwitchProps extends Omit<React.ComponentProps<"input">, "type">
     type: "checkbox" | "radio";
 }
 
+// @alpha
+export const Table: React.FC<TableProps>;
+
+// @alpha
+export interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {
+    scrollable?: boolean;
+    striped?: boolean;
+}
+
+// @alpha
+export const Tbody: React.FC<TbodyProps>;
+
+// @alpha
+export interface TbodyProps extends React.TableHTMLAttributes<HTMLTableSectionElement> {
+}
+
+// @alpha
+export const Td: React.FC<TdProps>;
+
+// @alpha
+export interface TdProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
+}
+
 // @public
 export const Textarea: React.FC<TextareaProps>;
 
 // @public
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+}
+
+// @alpha
+export const Tfoot: React.FC<TfootProps>;
+
+// @alpha
+export interface TfootProps extends React.TableHTMLAttributes<HTMLTableSectionElement> {
+}
+
+// @alpha
+export const Th: React.FC<ThProps>;
+
+// @alpha
+export const Thead: React.FC<TheadProps>;
+
+// @alpha
+export interface TheadProps extends React.TableHTMLAttributes<HTMLTableSectionElement> {
+}
+
+// @alpha
+export interface ThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
+    selectable?: boolean;
+    state?: StateVariant;
+}
+
+// @alpha
+export const Tr: React.FC<TrProps>;
+
+// @alpha
+export interface TrProps extends React.HTMLAttributes<HTMLTableRowElement> {
+    selectable?: boolean;
+    state?: StateVariant;
 }
 
 ```
