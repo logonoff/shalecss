@@ -44,6 +44,9 @@ export type { ButtonProps } from "./components/Button";
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
 
+export { Fieldset } from "./components/Fieldset";
+export type { FieldsetProps } from "./components/Fieldset";
+
 export { Select } from "./components/Select";
 export type { SelectProps } from "./components/Select";
 

@@ -86,6 +86,14 @@ export interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {
 }
 
 // @alpha
+export const Fieldset: React.FC<FieldsetProps>;
+
+// @alpha
+export interface FieldsetProps extends React.HTMLAttributes<HTMLFieldSetElement> {
+    label: string;
+}
+
+// @alpha
 export const FlexContainer: PolymorphicComponent<"div", FlexContainerProps>;
 
 // @alpha

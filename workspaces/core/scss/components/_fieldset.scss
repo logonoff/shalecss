@@ -1,0 +1,10 @@
+@use "../theme/base" as *;
+
+.#{$shale}fieldset {
+  border: 1px solid var(--#{$shale}secondary-border);
+  border-radius: 0.2em;
+
+  legend {
+    color: var(--#{$shale}text-colour);
+  }
+}
