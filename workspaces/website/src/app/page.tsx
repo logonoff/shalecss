@@ -16,8 +16,10 @@ export default function Home() {
     <Container Component="main" id="maincontent">
       <Card Component={FlexContainer} variant="space-between" flex="grow">
         <FlexItem>
-          <H1>shale.css</H1>
-          <H4>simple pseudo-skeuomorph CSS styles</H4>
+          <hgroup>
+            <H1>shale.css</H1>
+            <H4 Component="p">simple pseudo-skeuomorph CSS styles</H4>
+          </hgroup>
           <P>
             shale.css provides a simple set of lightweight CSS styles and
             components
