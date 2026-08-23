@@ -10,7 +10,8 @@
     color: var(--#{$shale}text-colour-secondary);
   }
 
-  input {
+  input,
+  textarea {
     font-family: var(--#{$shale}font-family);
   }
 
