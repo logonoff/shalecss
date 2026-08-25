@@ -24,7 +24,7 @@ export const components: Record<
   "/docs/footer": { name: "Footer", components: ["Footer"] },
   "/docs/header": {
     name: "Header",
-    components: ["Header", "HeaderText", "HeaderTitle", "Nav"],
+    components: ["Header", "HeaderText", "HeaderTitle", "Nav", "MenuBarButton"],
   },
   "/docs/icon": { name: "Icon", components: ["Icon"] },
   "/docs/input": { name: "Input", components: ["Input"] },
