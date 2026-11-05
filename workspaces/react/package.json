@@ -39,15 +39,15 @@
     }
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.59.3",
-    "@microsoft/api-extractor-model": "^7.33.14",
+    "@microsoft/api-extractor": "^7.60.1",
+    "@microsoft/api-extractor-model": "^7.33.16",
     "@microsoft/tsdoc": "^0.17.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "typescript": "^7.0.2",
     "npm-watch": "0.13.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "watch": {
     "build": {
